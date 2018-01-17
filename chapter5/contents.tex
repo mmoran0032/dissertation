@@ -1,0 +1,239 @@
+\chapter{RESULTS}
+
+
+
+\section{Detector Spectrum
+Verification}\label{detector-spectrum-verification}
+
+Due to the suboptimal energy resolution of the Si strip detector, caused
+by the decreased bias voltage and increased leakage current, a
+well-defined spectrum for the produced $\alpha$ particles was not
+obtained. The spectra for each run and each strip show a wide peak at
+the expected location of the $\alpha$ energy peak which we need to
+verify that it represents the same underlying expected energy peak
+produced in the reaction. This final verification is a convolution of
+the incident beam energy, the properties of the target, the cross
+section domain that we are probing, and the energy resolution of the
+detector. Each of these components will be discussed in turn.
+
+To reduce this check to a smaller subset of possibilities, only the two
+resonance energy runs will be checked, but the same process described
+below can be repeated for any energy in question, given the existence of
+the required files to support the analysis.
+
+This analysis relies on the usage of SRIM/TRIM [CITE] to generate
+the files describing the target effects, and those files should be
+generated according to the steps described below before the analysis is
+begun. The file generation can be done programmatically following the
+SRIM user guide, or ``by hand'' using the included GUI, both of which
+are standard procedures and will not be discussed here.
+
+
+\subsection{Assumptions}\label{assumptions}
+
+In order to fully describe reaction process from incident beam to
+detector energy spectrum, we must make some assumptions and check that
+they are approximately true for the desired reaction.
+
+First, the stopping power of the target must be slowly varying across
+the width of the target. This assumption reduces the number of required
+SRIM files, as described below. The definition of ``slowly varying'' in
+this case is that the stopping power can be locally modeled as a linear
+function of the beam energy, and that the coefficient relating the
+energy to the stopping power be relatively small.
+
+Second, knowledge of the underlying cross section is required. The
+procudure described below can be inverted slightly to move from the
+detector energy spectrum to the reaction cross section, knowing all
+other parts, but this more-complex procedure was not required for the
+reaction in question. Using known resonance properties, the
+\react{\mnuc{27}{Al}}{rm{p}}{alpha}{} reaction cross section
+can be modeled with the AZURE [CITE] $R$-Matrix code to produce
+the file. The energies returned from this code should be transformed
+into lab coordinates.
+
+Third, the target should be thin enough that the beam can pass through
+the target relatively unimpeded. Should this assumption not be met, the
+procedure outlined must be updated to account for the additional
+straggling, especially where the exit angle of the particles is
+sufficiently spread out.
+
+Finally, the thickness of the target in energy for the incident beam
+energies must be known. Given that the thickness in
+$mu\rm{g}/\rm{cm}^2$ can be measured using standard techniques,
+the thickness in energy can be determined by
+\[
+    EQUATION HERE,
+\]
+where $d\rm{E}/dx$ is the stopping power in units of [UNITS]. The
+target thickness only needs to be determined for the incident beam, as
+this defines the cross section energy domain.
+
+The additional knowledge required to perform the following analysis,
+such as the incident beam energy uncertainty and the detector energy
+resolution, will not be discussed separately.
+
+
+\subsection{Required SRIM Files}\label{required-srim-files}
+
+The pre-generation of SRIM files requires special note to justify the
+energy and depths used. In cases where the incident beam energy spread
+is greater, the target is thicker, the stopping power varies quickly, or
+any other deviation from the assumptions above, the procedure below must
+be amended and additional SRIM files will most likely need to be
+generated to account for those changes.
+
+The incident beam files describe the target effects on the beam energy
+at multiple depths within the target. To simplify, all incident
+particles are assumed to strike the target perpendicular to the target,
+and the angles for each particle following their interaction with the
+target are saved but not used within the analysis. While the primary
+goal of this portion of the analysis is verifying the energy spectrum,
+the slight corrections to the energy loss attributed to the angle of the
+particles, these corrections would be minimal and do not affect the
+final result. The initial energies chosen for the incident beam protons
+are the central resonance energies, and the energies chosen for the
+$\alpha$ particles cover the expected range on possible energies based
+on previous kinematics studies.
+
+The depths probed for the target are in percents of the total thickness
+in Angstroms. For this analysis, depths from 1 to 99\,\% in steps of 2\,\%
+were used, which provides adequate coverage of the energy loss through
+the target while minimizing the amount of runs required for SRIM. Both
+the incident beam protons and the produced $\alpha$ particles require
+thicknesses across the entire range of the target thickness. Note that
+depths of 0 and 100\,\% were not used; depths of zero percent have no
+meaning for the incident beam case, and depths of 100\,\% are unphysical
+since the incident particle will have left the target without reacting.
+
+All files simulated 10k particles, and the final energies of those
+particles were saved.
+
+
+\subsection{Simulating the reaction}\label{simulating-the-reaction}
+
+The process below describes how the full reaction, from the incident
+beam to the final detector energy spectrum, can be simulated. The SRIM
+files required are assumed to be generated beforehand. The process has
+been wrapped within the \verb+pyne+ package under the \verb+tree+
+submodule, which takes as input the path to the generated files and the
+masses and energies of the particles in question.
+
+\subsubsection{Simulating the incident
+beam}\label{simulating-the-incident-beam}
+
+The incident beam energy for the resonance scans were determined by the
+5U's analyzing magnet settings. The 5U provides a small energy
+uncertainty particle beam to the target area, meaning that we have
+approximately a monoenergetic beam striking our target. The generated
+SRIM files for the incident beam are this central beam energy at
+multiple depths within the target. To simulate the known spread of the
+beam energy around this central value, the deviation from this central
+value was randomly assigned, assuming a Gaussian distribution of
+energies. The individual particle energies are given as
+\[
+    E\_i sim E_{\rm{Resonance}} + \rm{Normal}(0, \sigma),
+\]
+where $\sigma = 300$~eV is the measured beam energy uncertainty of the 5U.
+
+The cross section that the incident particles will probe is defined by
+the initial energy of the beam and the thickness of the target in units
+of energy. For the target in question, the energy thickness is
+approximately 10~keV for both resonances. The cross
+section within this energy domain was determined for the central
+resonance energy, which is an approximation that initially ignores the
+energy spread of the beam. As this energy spread is less than 0.1\,\%,
+the effect of this choice is minimal and helps to simplify the process
+since a single probability distribution for the cross section needs to
+be determined. The cross section within the energy range is divided into
+energy bins of 1\,\%, with the values interpolated where the results of
+the $R$-matrix calculation do not match with the integer depth values.
+These depths are then randomly chosen based on the normalized cross
+section in that region. An example is shown in [FIGURE].
+
+[FIGURE]
+
+Once a simulated depth is assigned to each particle, the SRIM results at
+that depth are used to simulate the final energy of that particle before
+it reacts with the target. As the energy distributions returned by SRIM
+are not analytic, we can draw from the 10k simulated values, assuming
+equal probability for each, which for large sample sizes is
+approximately equivalent. Each incident particle is now associated with
+an initial energy deviation from the resonance energy, the depth at
+which it reacts, and a final energy at that depth. The initial simulated
+energy is added to the final energy to give the textit{reaction
+energy} of the incident proton.
+
+
+\subsubsection{Simulating the produced
+particles}\label{simulating-the-produced-particles}
+
+From these reaction energies, the $\alpha$ energy is determined through
+basic kinematics. Again, any potential angular spreads are not
+considered for this stage. As the detected $\alpha$ particles left the
+target within a solid angle cone of opening angle
+40~mrad, we know that we are limited to a small solid
+angle region that we are actually seeing at the detector. The produced
+$\alpha$ particles now have an initial energy and a depth within the
+target, meaning that each particle also has a known target thickness
+that they must pass through.
+
+The generated $\alpha$ particle SRIM files are used to find the exit
+energy of the particles in the same way that the final proton energy was
+found above. In this case, instead of the energies being defined in
+reference to a well-defined input energy, the deviation from the closest
+generated $\alpha$ energy in the SRIM files is used, and that file is
+used to simulate the exit energy for that particle's depth. The energy
+deviation is added back to the simulated energy drawn from the samples
+obtained through SRIM to give a final \textit{exit energy} for that
+$\alpha$ particle.
+
+
+\subsubsection{Detector spectrum
+comparison}\label{detector-spectrum-comparison}
+
+The generated exit energy spectrum of the $\alpha$ particles describes
+the energy of the recoils as they enter St.\ George. The angle of these
+particles can be descirbed by the kinematics of the reaction instead of
+through the SRIM calculations, so the angle is again ignored for these
+particles. Since this analysis is focused on the energy spectrum seen at
+the detector, the angular effects do not need to enter into this
+calculation.
+
+The energy resolution of the detector was previously measured to be
+[VALUE] (see [SECTION]), which we must convolve with the exit
+energy of the $\alpha$ particles. For each particle, a random energy
+was generated from a Gaussian distribution centered around that
+particle's exit energy, according to
+\[
+    E_{\rm{detector}} = \rm{Normal}(E_{\rm{exit}},\sigma_{\rm{detector}}),
+\]
+where $\sigma_{\rm{detector}}$ is the energy resolution
+of the detector. This final spectrum is a representation of what the
+experimenter would see from the detector system and must be related to
+the actual experimental data.
+
+Note that this spectrum assumed that every particle that entered our
+target reacted, so we can't directly use it to measure the yield.
+Relating this simulation to the actual spectrum can be done by scaling
+each particle to the cross section at the location it ``reacted'', and
+scaling the number of particles at each final energy by a factor
+proportional to the determined incident beam current during this
+experiment. An alternative approach is to scale both the simulated
+spectrum and the measured spectrum to unit area, which would conserve
+the number of particles reaching the detector. The previous two options
+are useful for checking if the calculated reaction rate in the two cases
+are consistent with each other. A final option would be to see if the
+two spectra could have been generated from the same underlying
+distribution, which avoids having to scale either distribution, through a
+KS test.
+
+The simulated distribution is approximately Gaussian, but the actual
+distribution is a skewed Gaussian due to the detector response (seen in
+energy resolution studies too). Not sure how to model this...
+
+
+\subsection{SRIM Results}
+
+Insert this here, maybe...?
+

@@ -1,0 +1,79 @@
+\chapter{ANALYSIS PACKAGE}
+
+The analysis and plots contained within this dissertation were completed
+using Python and a small set of standard scientific python packages:
+
+\begin{itemize}
+% \tightlist
+\item
+    \emph{NumPy}: a standard numeric package that adds array (vector and
+    matrix) computing;
+\item
+    \emph{Scipy}: a scientific utilities package built on top of NumPy
+    that includes general-purpose routines such as curve fitting, root
+    finding, signal processing and more; and
+\item
+    \emph{Matplotlib}: a 2D plotting package that supports multiple
+    backends and output formats.
+\end{itemize}
+
+These three packages are standard components of the Python Scientific
+Stack, and their usage and internals are well-documented and trusted by
+many scientists in multiple fields. The usage of Python in the
+scientific community has increased steadily over the years, with
+multiple special purpose packages built on top of the foundation of
+these three packages, particularly NumPy.
+
+For the actual analysis, a two-part analysis framework was developed in
+tandem with the analysis work: Python for Nuclear Experiments (PyNE) and
+the St. George Analysis Package (SAP). These packages are designed to be
+extensible by other research groups, guided by the requirements of the
+St. George group, while providing an easy-to-use and understand
+object-oriented interface to performing nuclear astrophysics research.
+Development work was chronicled on the packages' GitHub
+page\footnote{\url{https://github.com/mmoran0032/pyne}}, and may be
+installed from there.
+
+These packages would not be possible without two other important
+packages: the ROOT\footnote{\url{http://root.cern.ch/}}
+Data Analysis Framework\cite{ROOT} and
+\texttt{evt2root}\footnote{\url{https://github.com/ksmith0/evt2root}}.
+The
+decision to not use these packages (and thus, C++) for the analysis will
+be discussed following the description of the packages themselves.
+
+\section{Python for Nuclear Experiments}
+
+
+\section{St. George Analysis Package}
+
+
+\section{Justification}
+
+The \texttt{pyne} (Python for Nuclear Experiments) data framework is
+based on two main analysis codes and frameworks: the \texttt{ROOT} data
+analysis framework, and Dr. Karl Smith's \texttt{evt2root} conversion
+utility. The pyne environment is designed to be similar to these
+packages, but since its development was alongside the analysis done for
+this experiment, additional functionality not needed for this analysis
+was not included. In particular, the buffer file processing only handles
+\texttt{.evt} and \texttt{.Chn} files, and the crate focus was on just a
+single ADC module. Additionally, most of the analysis work with these
+basic structures should be done using a separate package (such as the
+sap (St. George Analysis Package)), and keeping the two responsibilities
+of data conversion and structure and analysis of said data results in
+cleaner code for the user.
+
+Development of \texttt{pyne} started in March 2016, and the current
+version can be found on the package's GitHub page. Within that same
+repository is the \texttt{sap} package, but that code is not reproduced
+here. The code listed is from version 0.6.0 (updated on May 12, 2017).
+The packages outside of the Python standard library required for use are
+\texttt{numpy}, a standard numeric package for scientific Python,
+\texttt{scipy}, a scientific analysis package built on top of
+\texttt{numpy}, and \texttt{matplotlib}, a 2D plotting interface. All
+three of these packages are standards for scientific computing with
+Python. Currently, only Python 3.X is supported. As official support for
+Python 2.7 is set to terminate in 2020, and most scientific package
+managers have already switched to Python 3.X, this decision is
+warranted.

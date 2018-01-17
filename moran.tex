@@ -1,0 +1,69 @@
+\documentclass[final, twoadvisors]{nddiss2e}
+              % draft + 10pt/11pt/12pt + twoadvisors + textrefs
+              % review + noinfo + twoadvisors + textrefs
+              % final + noinfo + twoadvisors + textrefs
+
+\usepackage{gensymb}
+\usepackage{siunitx}
+
+\newcommand{\nuc}[2]{${}^{#1}\textrm{#2}$}
+\newcommand{\mnuc}[2]{{}^{#1}\textrm{#2}}
+\newcommand{\react}[4]{$#1(#2,#3)#4$}
+\newcommand{\mreact}[4]{#1(#2,#3)#4}
+\newcommand{\alpa}{\react{\mnuc{27}{Al}}{\textrm{p}}{\alpha}{\mnuc{24}{Mg}}}
+
+\begin{document}
+
+% Everything before first chapter goes here
+\frontmatter
+
+\title{SOME TITLE}
+\author{Michael Thaddeus Moran}
+\work{Dissertation}
+\degaward{Doctor of Philosophy}
+\advisor{Mano\"{e}l Couder}
+\secondadvisor{Michael C.\ F.\ Wiescher}
+\department{Physics}
+
+\maketitle
+
+\include{abstract/abstract}
+
+\begin{dedication}
+To Laura, my rock.
+\end{dedication}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+% \include{acknowledgements/acknowledgements}
+
+\begin{dedication}
+Your confusing thesis has captured my attention. Tell me more.
+\newline\---{} Phil Hartman as Bill McNeill (Newsradio)
+\end{dedication}
+
+% All main text goes here
+\mainmatter
+\include{chapter1/contents}
+\include{chapter2/contents}
+\include{chapter3/contents}
+\include{chapter4/contents}
+\include{chapter5/contents}
+\include{chapter6/contents}
+
+\appendix
+\include{appendix/pole_tip}
+\include{appendix/run_details}
+\include{appendix/deflector}
+\include{appendix/pyne_sap}
+
+% Bibliography and index
+\backmatter
+
+\bibliographystyle{nddiss2e}
+\bibliography{references}
+
+\end{document}
+\endinput
