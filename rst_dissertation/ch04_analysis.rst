@@ -332,4 +332,3 @@ particular setting of St. George.
 
 .. Things to do: generate tables for held variables for all runs
 .. generate table for the finasl uncertainties/acceptances
-
