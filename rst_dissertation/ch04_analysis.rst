@@ -137,7 +137,6 @@ target area. The beam energy and resolution were determined through a series of
 accelerator and beamline commissioning experiments performed before this
 experiment was performed.
 
-
 .. Similar experiments showed that the energy resolution
 .. of the beam is approximately 300 keV. To be conservative, a value of 500 keV
 .. was used for all runs.
