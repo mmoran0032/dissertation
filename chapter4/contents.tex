@@ -1,50 +1,43 @@
 \chapter{MEASURING THE \alpa{} CROSS SECTION}
 
-% \begin{center}\textit{Alphas have more mass because they spend so much time at the gym
-% getting swole. \---{} Laura Moran}\end{center}
+% \begin{center}\textit{Alphas have more mass because they spend so much
+% time at the gym getting swole. \---{} Laura Moran}\end{center}
 
 An experimental campaign to study the \alpa{} reaction with the St.\ George
 recoil separator was undertaken at the NSL. Runs were completed in December
 2016 and February 2017, with runs focusing on determining the correct magnetic
 fields within St.\ George completed in Fall 2016 and February 2017. Two low
 energy resonances were measured with beam currents in the $2-3$~$\mu$A range in
-February 2017.
+February 2017. Studying this reaction provides a test of the angular and energy
+acceptances of St.\ George in preparation for studying $(\alpha,\gamma)$
+reactions across a wide range of targets and energies.
 
 The first portion of these runs fall under general St.\ George
 commissioning work as discussed in Chapter~\ref{ch:commissioning} and will not
 be repeated here. The second portion of the runs involved characterizing the
 target and the detector, finalizing the optimal settings for the separator, and
 performing the experiment. The reaction of interest produces $\alpha$ particles
-in the energy range of $2-3$~MeV for the desired proton energy range. Resonance
-properties were determined and compared to predicted results from the
-$R$-matrix formalism.
-
-The experiment was devised as a way to verify some of the acceptance properties
-of St.\ George \emph{in situ} and as a proof-of-concept for studying
-$(\alpha,\gamma)$ reactions across a wide range of targets and energies.
-Additional work was done to try to observe the $(\alpha_1,\gamma)$ channel, but
-due to the kinematics of this case, it was not observed with a low enough beam
-background at the detector.
+in the energy range of $2-3$~MeV for the desired proton energy range.
 
 
 \section{Altered Tune}
 
 The magnet settings for St.\ George were determined to transport $\alpha$
-particles with a minimal energy spread within the full 40~mrad acceptance cone
-to the $F_2$ focal plane after the Wien filter. Additionally, the first two
-sections must match up the phase space of these produced produced particles to
-the Si detector. For experiments using the entirety of St.\ George, this phase
-space matching is done by the final section, with the first two sections
-providing charge and mass selection. The beam spot at $F_2$ for these studies
-maximizes this requirement by having a narrow (within the dispersive $x$-plane)
-and tall (within the $y$-plane) physical beam spot at $F_2$. The requirements
-on the beam spot for measuring $(\alpha,\gamma)$ reactions at this focal plane
-require an approximately symmetric spot size in both directions and one that
-is smaller than the physical face of the detector. For these reasons, an
-alternate tune for St.\ George needed to be devised to achieve these desired
-beam properties.
+particles, where the entirety of the particle envelope is described by a
+characteristic energy and angular [term]. The produced $\alpha$ particles had
+a low (values?) energy spread and a high angular spread, where only those
+particles emitted within the desired 40~mrad acceptance cone for St.\ George
+were tuned to reach the detector focal plane $F_2$ after the Wien filter and
+impinge the installed Si strip detector.
 
-The initial COSY code for St.\ George (see Section~\ref{sec:cosy}) was altered
+The restrictions on the beam spot for measuring $(\rm{p}\alpha)$ reactions
+at this focal plane require an approximately symmetric spot size in both
+directions and one that
+is smaller than the physical face of the detector, whereas the standard tune
+for studying $(\alpha,\gamma)$ reactions required that beam spot to be
+asymmetric with the beam spot being narrow in the dispersive $x$-plane and
+tall in the $y$-plane. The initial COSY code for St.\ George
+(see Section~\ref{sec:cosy}) was altered
 to model the shortened separator and provide information on the beam
 characteristics at the new detector focal plane. The magnetic field settings
 for the seven quadrupoles $Q_{1-7}$ were adjusted to transport the recoil
@@ -52,7 +45,58 @@ particles to the detector plane with a final beam spot no larger than the face
 of the Si detector of $58\times 58$~mm. Final pole tip fields are given in
 Table~\ref{tab:poletip}.
 
-% The smaller energy spread of the produced $\alpha$ particles allowed for a
+\begin{table}
+    \begin{center}
+        \caption{POLE TIP FIELDS FOR $(\alpha,\gamma)$ AND
+            $(\rm{p},\alpha)$ STUDIES}
+        \label{tab:poletip}
+        \begin{tabular}{cS[table-format=2.9]S[table-format=2.6]}
+            \toprule
+            \midrule
+             & \multicolumn{2}{c}{\textbf{Pole Tip Field [T]}} \\
+            \textbf{Quadrupole} & {$(\alpha,\gamma)$} & {$(\rm{p},\alpha)$} \\
+            \midrule
+            1  & -0.16303276 & -0.157\\
+            2  &  0.18882363 &  0.187\\
+            3  &  0.09384148 &  0.09411\\
+            4  & -0.12620402 & -0.04\\
+            5  &  0.10032405 &  0.092 \\
+            6  &  0.04693654 &  0.0585 \\
+            7  &  0.0        & -0.015 \\
+            8  & -0.09779179 & \\
+            9  &  0.17439627 & \\
+            10 &  0.21092228 & \\
+            11 & -0.13962355 & \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{table}
+
+For the $(\rm{p},\alpha)$ experiment, the transported $\alpha$ particles
+have the properties listed in Table~\ref{tab:alpha_prop}. The incident proton
+beam is rejected within the COSY ion optics solution after the first dipole
+doublet $B_1B_2$, and the beam properties are not listed here.
+
+\begin{table}
+    \begin{center}
+        \caption{ALPHA PARTICLE PROPERTIES}
+        \label{tab:alpha_prop}
+        \begin{tabular}{cc}
+            \toprule
+            \midrule
+            \textbf{Property [Unit]} & \textbf{Value} \\
+            \midrule
+            Energy [MeV]        & 2.504 \\
+            $\Delta$Energy [\%] & 3 \\
+            Angular spread [mrad] & 40 \\
+            Target diameter [mm] & 3 \\
+            $Q$ [$e$]           & 2 \\
+            $B\rho$ [Tm]        & 0.228 \\
+            $E\rho$ [MV]        & 4.0 \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{table}
 
 
 
