@@ -54,19 +54,44 @@ result in reaction channels or sequences becoming either energetically
 favorable or unfavorable.
 
 The two primary reactions that will
-be discussed, \alpa{} and \react{\nuc{14}{N}}{\alpha}{\gamma}{\mnuc{18}{F}},
+be discussed, \alpa{} and \nag{},
 are important reactions in a number of different reaction chains that take
 place throughout the lifecycle of stars, and the impact of these reactions will
 be explored.
 
-\subsection{CNO Cycle}
+\subsection{Hydrogen Burning}
 
-The Carbon-Nitrogen-Oxygen (CNO) cycle is one pathway for stars to fuse
-hydrogen into helium as a source of thermonuclear power. The pathway cycles the
-catalytic nuclei to produce \nuc{4}{He} through the reaction sequences
+Hydrogen burning is the net fusion of four protons into a single Helium
+nucleus. Stable hydrogen burning is the process wherein the reaction chains
+involved take place within a star during its regular lifecycle.
+
+\subsubsection{$pp$ Chain}
+
+Stars similar to our Sun fuse hydrogen through the $pp$ chains, which are
+described by the reaction sequences
+\begin{align*}
+    \rm{PP-1}& \mreact{\rm{p}}{\rm}{e^+\nu_e}{\mnuc{2}{H}} \
+    \rm{PP-2}& \
+    \rm{PP-3}&
+\end{align*}
+The net effect of these reaction sequences is the reaction
 \[
-    \mreact{}{}{}{}
+    4\rm{p} \rightarrow \mnuc{4}{He} + 2e^+ + 2\nu_e,
 \]
+with the primary difference being what intermediate nuclei the reaction
+progresses through. Each of the identified $pp$-chain sequences releases the
+same amount of energy (XXX MeV) and become energetically favorable in different
+temperature ranges inside of stars.
+
+\subsubsection{CNO Cycle}
+
+The Carbon-Nitrogen-Oxygen (CNO) cycle is an additional pathway for stable
+hydrogen burning making use of catalytic nuclei to produce \nuc{4}{He} through
+the reaction sequences
+\begin{align*}
+    \rm{CNO-1}& \mreact{}{}{}{} \
+    \rm{CNO-2}&
+\end{align*}
 The CNO cycles dominate the energy production of heavy stars with properties
 [MASS and TEMPERATURE].
 
@@ -77,9 +102,11 @@ The CNO cycles dominate the energy production of heavy stars with properties
 - s-process progresses in AGB stars over long timescales
 - produces high mass nuclei near the valley of stability
 
-\subsection{Other Channels}
+\subsection{Other Channels...?}
 
 - where does 27Al(p,a) fit in?
+- hydrostatic hydrogen burning in AGB stars
+- explosive hydrogen burning in a nova
 
 
 \section{Recoil Mass Separation}
@@ -152,11 +179,11 @@ assuming that there is no spread in the momentum, the use of electrostatic
 elements can separate the recoils from the beam based on their different
 magnetic and electric rigidities, defined as
 \[
-    B\rho\rm{ [Tm] } = \frac{p}{q} = \frac{\sqrt{2mT}}{q}
+    B\rho\,\rm{[Tm]} = \frac{p}{q} = \frac{\sqrt{2mT}}{q}
 \]
 and
 \[
-    E\rho\rm{ [MV] } = \frac{pv}{q} = \frac{2T}{q},
+    E\rho\,\rm{[MV]} = \frac{pv}{q} = \frac{2T}{q},
 \]
 respectively, where $q$ is the charge, $T$ is the kinetic energy, $m$ is the
 mass, and $v$ is the velocity of the particle. With a single momentum and
