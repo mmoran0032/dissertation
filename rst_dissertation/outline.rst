@@ -36,4 +36,3 @@ Thesis Outline
     #.  Future Directions
 
 ``pandoc --from=rst --to=latex --output=outline.pdf outline.rst``
-
