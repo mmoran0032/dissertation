@@ -13,6 +13,10 @@ acceptance is based on the properties of the target, incident beam,
 detector, and recoil separator and the decisions relating to the
 experiment itself.
 
+The measurement of the yields near and on the two resonances can also be used
+to determine the properties, such as the resonance strength, related to those
+resonances.
+
 All code was written using the scientific Python stack (numpy, scipy,
 matplotlib, pandas, pymc3). An analysis framework pyne was developed
 concurrently in python to aide in direct analysis of the run information
@@ -39,23 +43,25 @@ chamber. Each run lasted approximately 600~s and were performed
 immediately following each other. The detector was calibrated using the
 spectrum from the first run without the target in place, using the known
 energies of the peaks (see Table XX). The energy calibration parameters
-were determined through a combined Monte Carlo and Bayesian procedure:
+were determined through a combined Monte Carlo and Bayesian procedure, as
+outlined below.
 
-\begin{enumerate}
-\item
+\textbf{Step 1:}
   New spectra were simulated by sampling a single value for each bin
-  from the Poisson distribution $n \sim Poisson(\lambda)$,
+  from the Poisson distribution $n \sim \rm{Poisson}(\lambda)$,
   where $n$ is the simulated counts in that bin and $\lambda$ is the scale
   parameter for the distribution, which is taken to be the detected
   counts for that bin. A total of 2000 spectra were generated in this
   fashion.
-\item
+
+\textbf{Step 2:}
   The two largest peaks were identified first through a continuous
   wavelet transformation to get an approximate peak center. The final
   peak center was determined by taking a weighted average of the eleven
   bins centered on the selected bin to get the final bin value for the
   peak center.
-\item
+
+\textbf{Step 3:}
   A linear regression is fit, using the peaks found from the simulations
   and the known calibration energies of the alpha peaks. By fitting the
   entire sample of peak locations, we determine a global fit for our
@@ -71,7 +77,6 @@ E &\sim \Normal(\mu, \sigma)
 
   The Bayesian model allows for the uncertainty on the fit to be
   propagated forward.
-\end{enumerate}
 
 Table XX: Alpha-particle energies for the 241Am/148Gd mixed source:
 
@@ -88,25 +93,26 @@ the lower count rate due to the target being in place, only the largest
 peaks could be identified. The procedure to determine the energy loss is
 similar to that previously described for the energy calibration:
 
-\begin{enumerate}
-\tightlist
-\item
+\textbf{Step 1:}
   New spectra based on the spectrum with the target in place were
   generated in the same manner as before. A total of 2000 spectra were
   generated.
-\item
+
+\textbf{Step 2:}
   For each spectra, a linear model was sampled from the fitted Bayesian
   linear model and applied to the spectra to convert the bin numbers to
   energy.
-\item The two largest peaks were identified first with a continuous wavelet
+
+\textbf{Step 3:}
+  The two largest peaks were identified first with a continuous wavelet
   transformation then a weighted average of the counts to find the central
   energy of the peak.
-\item
+
+\textbf{Step 4:}
   The energy of the peaks were subtracted from the known energies of the
   peaks to determine the energy loss through the sample for two known
   input energies. The uncertainty in the sample alpha energies was
   assumed to be negligible and was not considered in the calculations.
-\end{enumerate}
 
 This energy loss may be related to the target thickness through the use
 of the computer code SRIM. The stopping and range table for alpha
@@ -230,24 +236,28 @@ produced alpha particles through the remainder of the target, and the
 energy resolution of the detector to generate an expected energy
 spectrum. The procedure for this simulation is as follows:
 
-\begin{enumerate}
-\item
+
+\textbf{Step 1:}
   An energy deviation drawn from the Normal(0, sigma) distribution
   (where sigma is the beam energy resolution) for 2000 particles. This
   energy deviation is the difference in energy from the central energy.
-\item
+
+\textbf{Step 2:}
   SRIM files for the central energy were generated for fractional depths
   within the target, where the output is the beam energy profile at that
   target depth.
-\item
+
+\textbf{Step 3:}
   Using the expected cross section from the AZURE2 R-matrix calculation,
   a depth for each of the simulated particles was generated to determine
   the location within the target that the reaction takes place.
-\item
+
+\textbf{Step 4:}
   A beam energy $E_d$ is generated from the distribution of beam energies
   at the given depth, and the initial deviation for that particle is
   added to the energy to give the final beam energy.
-\item
+
+\textbf{Step 5:}
   The beam energy is converted to the produced alpha particle energy
   through the kinematic equation
 
@@ -255,17 +265,19 @@ spectrum. The procedure for this simulation is as follows:
     E_{\alpha} = Q + E_{\rm p}\left(1 - \frac{m_{\rm p}}{m_{\rm p} + m_{\nuc{27}{Al}}}
 \end{equation}
 
-\item
+
+\textbf{Step 6:}
   The deviation of the alpha particle from a known alpha energy (used to
   generate SRIM files at various depths) was recorded.
-\item
+
+\textbf{Step 7:}
   An alpha energy was generated for each particle based on the remainder
   of the target that it needs to travel through from the final energy
   distribution generated for particles traveling through that thickness.
-\item
+
+\textbf{Step 8:}
   The energy deviation is added back to the alpha particle's energy to
   give its final energy.
-\end{enumerate}
 
 This procedure generates an alpha-particle energy spectrum following the
 target location given the known parameters about the target thickness
@@ -276,7 +288,7 @@ resolution of the detector, a final energy spectrum can be generated by
 drawing new alpha particle energies from the distribution:
 
 \begin{equation}
-    E_{\alpha,\rm{detector}} \sim \Normal(E_{\alpha},\sigma_{\rm detector})
+    E_{\alpha,\rm{detector}} \sim \rm{Normal}(E_{\alpha},\sigma_{\rm detector})
 \end{equation}
 
 An example of the output of this procedure is given in {[}FIGURE{]},
@@ -286,7 +298,8 @@ the detected particles is not modeled in our simulated spectrum, as we
 don't know the full characteristics for the detector response.
 
 
-\section{Additional Parameters}\label{additional-parameters}
+\section{Additional Parameters}
+\label{sec:additional-parameters}
 
 Additional inputs into the final calculation of the acceptance of St.
 George are the cross section determined from an R-matrix fit on several
@@ -319,8 +332,8 @@ detector were monitored, and potential counts from the direct proton
 beam were excluded from the final counts with the energy discriminator
 previously described.
 
-\section{Final Acceptance
-Measurements}\label{final-acceptance-measurements}
+\section{Final Acceptance Measurements}
+\label{sec:final-acceptance-measurements}
 
 The acceptance of St.\ George can be found for each energy value by
 comparing the detected counts to the expected yield for that incident
@@ -354,31 +367,44 @@ individually, as shown in FIGURE and TABLE. The process for
 calculating the uncertainty bounds is given by the following, repeated
 2000 times to have enough confidence in the final values:
 
-\begin{enumerate}
-\tightlist
-\item
+\textbf{Step 1:}
   The beam energy, beam current, and time are sampled from a normal
-  distribution $Normal(\mu,\sigma)$, where $\mu$ and $\sigma$ are for the value
+  distribution $\rm{Normal}(\mu,\sigma)$, where $\mu$ and $\sigma$ are for the value
   (energy, current, or time) in question.
-\item
+
+\textbf{Step 2:}
   The incident number of particles is calculated from the current and
   time.
-\item
+
+\textbf{Step 3:}
   The target thickness in energy is calculated from finding the stopping
   power at the incident beam energy from the SRIM tables, and sampling
   from the distribution of target thicknesses in terms of atoms/cm${}^{2}$.
-\item
+
+\textbf{Step 4:}
   The yield is determined by integrating EQUATION between the
   entrance energy and the lower energy given by that entrance energy
   minus the target thickness.
-\item
+
+\textbf{Step 5:}
   The experimental yield is drawn from a poisson distribution
-  $Poisson(c)$, where $c$ is the number of counts detected.
-\item
+  $\rm{Poisson}(c)$, where $c$ is the number of counts detected.
+
+\textbf{Step 6:}
   The acceptance for the iteration is caluclated by EQUATION.
-\end{enumerate}
 
 The distribution of values generated by the process above can be used to
 find the acceptance and confidence intervals for the run in question.
 Each run has an acceptance described by its distribution, which is the
 run for that particular setting of St.\ George.
+
+
+\section{Resonance Parameters}
+
+Determine resonance parameters
+
+Find area under yield curve
+
+Relate to equation
+
+Repeat a bunch of times to include energy, yield, and acceptance uncertainty (?)
