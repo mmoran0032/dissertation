@@ -1,6 +1,7 @@
 % Kings County 2.5 yr peated bourbon (Brooklyn, NY)
 
-\chapter{ANALYSIS}\label{analysis}
+\chapter{ANALYSIS}
+\label{ch:analysis}
 
 The angular acceptance of St.\ George can be determined by comparing the
 expected yield from the reaction at the desired energies to the actual
@@ -23,7 +24,8 @@ concurrently in python to aide in direct analysis of the run information
 from the raw data files.
 
 
-\section{Target Properties}\label{target-properties}
+\section{Target Properties}
+\label{sec:target-properties}
 
 A self-supporting \nuc{27}{Al} target was used for the entirety of the
 experiment. The target thickness was measured using an offline detector
@@ -156,7 +158,8 @@ and the stopping power of the material. The energy loss of the beam will
 be discussed in the next section.
 
 
-\section{Beam Properties}\label{beam-properties}
+\section{Beam Properties}
+\label{sec:beam-properties}
 
 The incident proton beam was produced by the 5U and delivered to the St.
 George target area. The beam energy and resolution were determined
@@ -196,7 +199,8 @@ target chamber, periodic direct measurements of the current using the
 Faraday cup at the target location were required to measure the beam
 intensity.
 
-\section{Detector Properties}\label{detector-properties}
+\section{Detector Properties}
+\label{sec:detector-properties}
 
 A 16-strip Si detector was used to detect the produced alpha particles
 during the experiment. A calibration run was performed following the
@@ -340,7 +344,7 @@ comparing the detected counts to the expected yield for that incident
 beam energy. The yield is found from:
 
 \begin{equation}
-    Y(E) = N_r / N_b,
+    Y(E) = \frac{N_r}{N_b},
 \end{equation}
 
 where $N_r$ is the number of reaction products produced and $N_b$ is the
@@ -350,7 +354,7 @@ total counts at the detector (for the experimental yield) or the
 integration of target and cross section properties following
 
 \begin{equation}
-    Y(E_0) = \int \sigma(E)/\epsilon(E)\,\rm{d}E
+    Y(E_0) = \int \frac{\sigma(E)}{\epsilon(E)}\,\rm{d}E
 \end{equation}
 
 In both cases, the detector efficiency and St.\ George transport

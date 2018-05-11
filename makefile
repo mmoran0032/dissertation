@@ -1,16 +1,16 @@
-MAIN_TEX = moran.tex
+MAIN_TEX = dissertation.tex
 CHAP_CITE_TEX =
 
 OTHER_SRC_FILES = \
 	references.bib \
-	acknowledgements/acknowledgements.tex \
-	abstract/abstract.tex \
-	chapter1/contents.tex \
-	chapter2/contents.tex \
-	chapter3/contents.tex \
-	chapter4/contents.tex \
-	chapter5/contents.tex \
-	chapter6/contents.tex \
+	acknowledgements.tex \
+	abstract.tex \
+	chapters/chapter_01.tex \
+	chapters/chapter_02.tex \
+	chapters/chapter_03.tex \
+	chapters/chapter_04.tex \
+	chapters/chapter_05.tex \
+	chapters/chapter_06.tex \
 	appendix/*.tex
 
 LATEX = latex
