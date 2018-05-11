@@ -1,0 +1,383 @@
+\chapter{INTRODUCTION}
+
+The elements making up the universe were formed during a variety of processes,
+beginning with Big Bang Nucleosynthesis (BBN) that formed the lightest
+elements. Those elements common to life on Earth were primarily formed through
+burning processes inside of stars, grouped together under the title of
+Stellar Nucleosynthesis. Depending on the conditions within the stellar
+environment, which are characterized by macroscopic qualities about the star
+(temperature, pressure, mass, etc.) and the elemental composition of the
+stellar interior where the burning process takes place, the reactions
+accessible to the nuclei within the star differ. The creation and destruction
+of different elements and isotopes may be inhibited or enhanced by these
+differing conditions, and the study of these processes at the nuclear level
+has spawned the field of nuclear astrophysics in order to understand the inner
+workings of these stars.
+
+The study of these reactions has increasingly taken place within nuclear
+accelerator laboratories, which can attempt to replicate the conditions inside
+of stars in order to measure the qualities of the reactions as they take place
+in the cosmos. Individual reactions may be isolated by the choice of the
+accelerated beam particle and its properties, and the choice of target material
+and its properties. As the underlying cross section governing the observed
+properties of the reaction may change rapidly within a narrow band of energy,
+immense amounts of work and effort has been expended in order to detect these
+changes with enough precision in order to be confident that the cross section
+has been accurately described. Whole classes of reactions and detection methods
+have been devised to study those reactions previous out-of-reach to experiment,
+either due to the energies in question or the complexities of detecting the
+desired particles.
+
+In order to properly measure a single cross section, a [COMPLETE?] knowledge of
+the relevant physical processes and experimental methods is paramount. The
+astrophysical motivation for studying certain reactions and the experimental
+techniques devised to study these reactions will be explored.
+
+% some more lead-in...?
+
+
+\section{Astrophysical Reaction Channels}
+\label{sec:ch01-astrophysical-reaction-channels}
+
+The specific and directed study of those nuclear reactions that have an effect
+on the properties or life cycle of celestial bodies is grouped under the
+umbrella term \emph{nuclear astrophysics}. These reactions may take place
+during the standard lifecycle of a star, called \emph{stable burning}
+processes; during the death throws of a star, called \emph{explosive burning}
+processes; or during the grander timeline of the universe as a whole, among
+other coarse groupings of reactions. A more-complete exploration of these
+aspects of nuclear astrophysics was first laid out in [B2FH].
+
+Within the realm of stable burning processes, changes in temperature commonly
+result in reaction channels or sequences becoming either energetically
+favorable or unfavorable.
+
+The two primary reactions that will
+be discussed, \alpa{} and \nag{},
+are important reactions in a number of different reaction chains that take
+place throughout the lifecycle of stars, and the impact of these reactions will
+be explored.
+
+\subsection{Hydrogen Burning}
+
+Hydrogen burning is the net fusion of four protons into a single Helium
+nucleus. Stable hydrogen burning is the process wherein the reaction chains
+involved take place within a star during its regular lifecycle.
+
+\subsubsection{$pp$ Chain}
+
+Stars similar to our Sun fuse hydrogen through the $pp$ chains, which are
+described by the reaction sequences
+\begin{align*}
+    \rm{PP-1}& \mreact{\rm{p}}{\rm}{e^+\nu_e}{\mnuc{2}{H}} \
+    \rm{PP-2}& \
+    \rm{PP-3}&
+\end{align*}
+The net effect of these reaction sequences is the reaction
+\[
+    4\rm{p} \rightarrow \mnuc{4}{He} + 2e^+ + 2\nu_e,
+\]
+with the primary difference being what intermediate nuclei the reaction
+progresses through. Each of the identified $pp$-chain sequences releases the
+same amount of energy (XXX MeV) and become energetically favorable in different
+temperature ranges inside of stars.
+
+\subsubsection{CNO Cycle}
+
+The Carbon-Nitrogen-Oxygen (CNO) cycle is an additional pathway for stable
+hydrogen burning making use of catalytic nuclei to produce \nuc{4}{He} through
+the reaction sequences
+\begin{align*}
+    \rm{CNO-1}& \mreact{}{}{}{} \
+    \rm{CNO-2}&
+\end{align*}
+The CNO cycles dominate the energy production of heavy stars with properties
+[MASS and TEMPERATURE].
+
+\subsection{$s$-Process Nucleosynthesis}
+
+- end state of CNO is more 14N than anything else
+- Breakout reaction feeds into s-process by generating seed nuclei
+- s-process progresses in AGB stars over long timescales
+- produces high mass nuclei near the valley of stability
+
+\subsection{Other Channels...?}
+
+- where does 27Al(p,a) fit in?
+- hydrostatic hydrogen burning in AGB stars
+- explosive hydrogen burning in a nova
+- np-process, sp-process, r-process, etc?
+
+
+\section{Recoil Mass Separation}
+\label{sec:ch01-recoil-mass-separation}
+
+When measuring a cross section, the experimenter must make a decision as to
+whether to detect $\gamma$-ray particles or nuclear particles. Each of these
+two overarching goals carries with it their own complications and
+considerations, creating a variety of techniques to attempt to study the
+reaction in question. For some reactions of interest within the domain of
+low-energy nuclear astrophysics, both or these experimental directions are
+possible.
+
+Gamma-ray detection suffers from background radiation producing $\gamma$ rays
+that are picked up by the detector. This background radiation is produced by
+the construction materials within the laboratory in question, cosmic radiation,
+and the $\gamma$-ray producing reactions involving contaminants within the
+target material. The solutions for reducing the background from each of these
+sources are varied, from surrounding the detector with additional detectors to
+create an active shield that rejects detections that appear in both detectors
+within some window of time (the anti-coincidence method), to the extreme case
+of placing the laboratory deep underground to use hundreds of meters of the
+Earth's crust as a passive shield against cosmic radiation. None of the
+techniques, however, addresses the inherent limitation of $\gamma$-ray
+detection: the low efficiency of the detectors that must be used. This problem
+is exasperated by the extremely low cross sections common for reactions of
+astrophysical interest, making studies away from nuclear reasonances uncommon.
+The other irreducible problem with these techniques is when the produced
+$\gamma$ ray of interest is close in or the same energy as a prominent
+background line.
+%, such as the 511~keV $e^+e^-$ annihilation peak.
+
+Alternatively, the produced nuclear particles may be detected instead with a
+high-efficiency detector. The various experimental requirements for these
+experiments will be discussed, along with the additional considerations that
+must be accounted for. For convenience, the rest of this discussion will assume
+that the reaction of interest is radiative alpha capture ($(\alpha,\gamma)$),
+where the reaction is being studied in reverse kinematics, except where
+otherwise noted.
+
+% This previous paragraph is weird... I'm not sure how to transition here
+
+St. George (Stong Gradient Electromagnetic Online Recoil separator for capture
+Gamma ray Experiments) is a recoil separator designed to primarily study
+$(\alpha,\gamma)$ reactions at low energy using stable beams provided by St.
+Ana (Stable beam Accelerator for Nuclear Astrophysics). The design of the
+separator was guided by the principles to be discussed and on the experience
+gained from previous recoil separators.
+
+
+\subsection{Motivation}
+
+Recoil mass separation was conceived as an alternate way to measure the cross
+sections of radiative capture reactions. These reactions had previously been
+studied by detecting the produced $\gamma$ rays, subject to the limitations
+previously discussed. The heavy reaction product can instead be detected by a
+detector situated behind the target, assuming that the target is thin enough to
+allow the produced recoils to leave the target. In this thin target case, the
+incident beam will likely pass through the target as well, making it a source
+of background at the detector plane. In the cases of interest for nuclear
+astrophysics, this background count rate could be $\times 10^{15}$ that of the
+particles of interest and may cause damage to the detector.
+
+The produced recoils may be filtered out from the incident beam by
+electromagnetic elements situated between the target and the detector. The
+interaction between the heavy incident beam with mass $A$ and linear momentum
+$p$ and the $\alpha$ particles within
+the target produces a heavy compound nucleus with mass $A + 4$ and momentum
+$p$. Ignoring the effect of the emitted $\gamma$ ray on the momentum and
+assuming that there is no spread in the momentum, the use of electrostatic
+elements can separate the recoils from the beam based on their different
+magnetic and electric rigidities, defined as
+\[
+    B\rho\,\rm{[Tm]} = \frac{p}{q} = \frac{\sqrt{2mT}}{q}
+\]
+and
+\[
+    E\rho\,\rm{[MV]} = \frac{pv}{q} = \frac{2T}{q},
+\]
+respectively, where $q$ is the charge, $T$ is the kinetic energy, $m$ is the
+mass, and $v$ is the velocity of the particle. With a single momentum and
+velocity (or kinetic energy) selected for, the recoil particles of interest can
+be uniquely identified by the optical system. The design of recoil separators
+make use of this relatively simple idea as the basis of their design. Despite
+this, there have been relatively few recoil separators that have been brought
+into service due to the complexities of their design and operation that are not
+adequately taken into account in this description.
+
+
+\subsection{Background Sources}
+
+A recoil separator primarily utilizes two different methods to reduce the
+background at the detector system: the separation of isotopes based on their
+rigidities to reduce the number of incident beam particles that reach the
+detector, and the direct detection of the heavy nuclear particles compared to
+the detection of the $\gamma$ rays particles produced in the reaction at the
+target location. These reduction techniques have been briefly introduced.
+
+Within the separator, the rejected incident beam particles (those which do not
+have the desired rigidities $B\rho$ and $E\rho$) are still traveling within
+the separator. Their final rejection and the reduction of their induced
+background at the detector plane must be performed by some physical element
+interior to the separator. A common choice of element are slits: physical
+barriers that stop any particle which strikes them located within the
+separator. The physical gap between the slits allow the desired recoil
+particles to pass between them while stopping the unwanted beam particles from
+continuing down the separator. The location of these slits is dependent on the
+design and the beam optics of the separator.
+
+While these slits stop errant beam particles, there is a possibility of those
+particles scattering off of the edge of the slit if the beam properties are
+not properly matched to the internal position or gap of the slits. These
+scattering events, depending on where in the separator they occur in relation
+to the other magentic and electric elements and to the detector system, may
+allow some passage of beam particles to the detector plane and must be either
+rejected before that plane or taken into account in the operation of the
+detector system. The scattering events may also take place off of the interior
+of the vacuum chamber of the separator, the residual vacuum within the vacuum
+chamber, or diagnostic equipment installed to aide the experimenter.
+
+The reaction also does not take place at a single energy. The incident beam
+invariably will have an energy spread associated with its production and will
+lose energy within the target before reacting with the target particles. The
+produced reaction products will necessarily not be mono-energetic, and
+additional energy spread will result from the subsequent interaction with the
+residual target. The reaction products also undergo either a single photon
+emission or a gamma cascade which will alter the reaction products' momentum
+vectors, adding futher spread to the momentum and energy of the products that
+must be detected at the detector plane. Additional sources of background
+reduction beyond the separator must be included due to the realities of
+performing the experiment.
+
+
+\subsubsection{Detection System}
+
+The detector system following the separator may be used to provide this
+additional required beam and background suppression. Due to the separation of
+the recoil particles by their rigidity, a detector sensitive to both the energy
+and the momentum of the particles can unique identify those particles. There
+are multiple ways in which this can be achieved, but one common design is to
+make use of a \textit{time-of-flight} (TOF) detector to determine the velocity
+of the particles reaching the detector, and an energy-sensitive detector,
+measuring the total energy deposited in the detector, to provide this
+identification. Depending on the resolutions of the two systems, the recoils of
+interest can be identified by the recorded TOF and $E$. More importantly, those
+other particles that happen to reach the detector would have drastically
+different TOF or $E$ or both, allowing those detections to be rejected as they
+did not originate from recoil particles.
+
+The two coupled detectors would be operated in coincidence, such that those
+events that create a timing signal within the TOF detector must also create an
+energy signal in the following energy-sensitive detector in order for the
+event to be recorded. This operation further suppresses errant background
+counts at the detector system. The timing window must be matched to the
+properties and response of the detectors in order to ensure that the
+coincidence measurements from the paired detectors arise from a single
+particle.
+
+
+\subsection{Recoil Separators}
+\label{sec:ch01-recoil-separators}
+
+% The implementation of recoil separation into experimental campaigns has been
+% explored recently at a number of facilities, primarily with a focus on studying
+% astrophysically relevant reactions. When considering each separator facility and
+% the capabilities of that system, the separator must be considered alongside the
+% target, detector, accelerator, source, and other essential elements within the
+% entire laboratory.
+% St.\ GEORGE (Strong Gradient Electromagnetic Online Recoil separator for
+% capture Gamma ray Experiments, henceforth simply \emph{St.\ George}), is one
+% recent recoil separator, installed at the Nuclear Science Laboratory (NSL)
+% at the University of Notre Dame~\cite{Couder2008}.
+% The design for St.\ George is based on knowledge gained by
+% designing, constructing, and using these previous
+% separator systems for scientific research.
+% Where these systems are similar and
+% differ from the system in place at the University of Notre Dame will be briefly
+% discussed. Additionally, a brief description of the St.\ George separator will
+% be included here and further discussed in Sec.~\ref{sec:stg}.
+
+The use of recoil separators to study radiative capture reactions has been
+explored recently at a number of facilities. The design of St. George is based
+on the knowledge gained from the design, construction, and operation of these
+previous recoil separator systems. The entire system, inclusive of the beam
+source, target, and detector, must be discussed as a whole when evaluating the
+capabilities of a given separator.
+
+
+\subsubsection{CalTech Separator}
+
+% The design and use of recoil separators for astrophysical studies was first
+% pursued by Smith \textit{et al.}~\cite{Smith1991}. The requirements of radioactive
+% beam studies required the need to develop new detection systems, especially
+% considering the effect of differing beam property limits (intensity, purity,
+% and emittance) and the desire to detect the produced nuclei to further probe
+% the astrophysical conditions. As the initial feasibility system to provide a
+% technical proof-of-concept, many of the design choices made and techniques
+% used have been adopted by following separators. These include the use of a Wien
+% filter for velocity selection, dipole magnets for momentum selection, an
+% electrostatic deflector for energy selection, and the use of a gaseous target.
+% Additionally, the use of a gamma-ray detector in coincidence with the final
+% recoil detection and beam monitoring with an offset Si detector at the target
+% location are also common choices that have been adapted at the other separators.
+
+The design and use of recoil separators for nuclear astrophysics research was
+pioneered by Smith *et al.*. This separator was a proof-of-concept design to
+determine the feasibility of performing reaction studies with this technique.
+
+
+\subsubsection{ARES}
+
+The Astrophysics REcoil Separator (ARES) was built at Louvain-la-Neuve to
+study $(\rm{p},\gamma)$ and $(\alpha,\gamma)$ reactions using radioactive
+incident beams provided by the CYCLONE44 cyclotron~\cite{Angulo2001}.
+Self-supporting solid
+targets, containing the required H or He, were used for the reaction
+studies. The system is designed with a single magnetic dipole for momentum
+selection and a Wien filter for velocity selection, along with multiple
+magnetic quadrupoles to maintain the transportation of the to the detector
+system. The condensed and limited size of the separator is based on the
+constraints of the experimental hall~\cite{Couder2003}.
+The detector system consists of a single
+$\Delta E − E$ telescope which separates out the reaction products from the
+remaining incident beam particles. The initial test of the separator used a
+stable incident beam to compare to results obtained by other methods within
+the lab, and the focus of the initial work was on low-lying resonances of
+astrophysical interest.
+
+
+\subsubsection{DRAGON}
+
+The DRAGON recoil separator at TRIUMF-ISAC was built for the same reasons as ARES,
+but differs in the actual construction and usage of the separator.
+% Success of separator
+The separator
+itself uses two large magnetic dipoles for momentum separation and to electric
+dipoles for energy selection~\cite{Engel2005}. The separator also contains
+steering elements within the beamline to aide in transporting the recoils to
+the detector plane. The extended gas target is surrounded by a large BGO
+gamma-ray detector for coincidence purposes
+
+\subsubsection{ERNA}
+
+% Look up ERNA design/commission paper(s)
+The ERNA (acronym) recoil separator at (location)...
+
+
+\subsubsection{St. GEORGE}
+The separator consists of six dipole magnets, eleven quadrupole magnets, and a
+Wien filter. The separator was designed to accept recoils with a maximum
+energy and angular spread of $\Delta E/E = \pm7.5\%$ and
+$\Delta\theta = \pm40$~mrad, respectively, and to provide a mass separation
+of $m/\Delta m = 100$ and beam suppression of a factor $\geq 10^{15}$. Combined
+with the HIPPO (High-Pressure Point-like target) supersonic gas jet target,
+St.\ George will be primarily used to study low energy $(\alpha,\gamma)$
+reactions using stable beams.
+
+
+
+\section{Beam Optics}
+
+% quadrupole and dipole fields...?
+
+The understanding of how recoil separators work is grounded in the theory of
+beam optics which describe the effect of electric and magnetic fields on moving
+charged particles. These moving particles are focused and directed by the
+electromagnetic elements, and their action on particles can be modeled and
+optimized to transport particles with various properties down a beam line to a
+desired location.
+
+- parts of beam optics?
+- Louisville theorom (conservation of phase space)
+- connection to properties (resolution?)
+- references to code/COSY?
