@@ -70,11 +70,11 @@ outlined below.
   detector. The linear model used is a Bayesian model described by:
 
 \begin{align*}
-E &\sim \Normal(\mu, \sigma)
-\mu &= \alpha + \beta \rm{bin}
-\alpha &\sim \Normal(28, 10)
-\beta &\sim \Normal(5, 5)
-\sigma &\sim \Lognormal(2, 10)
+    E &\sim \rm{Normal}(\mu, \sigma) \
+    \mu &= \alpha + \beta \rm{bin} \
+    \alpha &\sim \rm{Normal}(28, 10) \
+    \beta &\sim \rm{Normal}(5, 5) \
+    \sigma &\sim \rm{Lognormal}(2, 10)
 \end{align*}
 
   The Bayesian model allows for the uncertainty on the fit to be
