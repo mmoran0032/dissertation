@@ -33,7 +33,7 @@ the energy dependence of the cross section to be determined. Due to the
 decreasing cross sections, work has primarily focused on strong resonances in
 this low-energy regime.
 
-\section{Stellar Burning}
+\section{Stellar Burning as Nuclear Processes}
 
 Stars in hydrostatiic equilibrium can produce energy through a number of
 different reaction channels based on the mass, temperature, and isotopic
@@ -176,10 +176,49 @@ stars.
 -   Discuss burning regimes (termal pulse, s-process, \alpa{}/MgAl, etc)
 
 
-\section{Resonant Capture Reaction Theory}
+\subsection{Resonant Capture Reaction Theory}
+
+The outcome of a particular reaction is tied to the underlying properties of
+the reaction and the nuclei in question. For \alpa{}, the reaction progresses
+through the compound nucleus \nuc{28}{Si}, as shown in the diagram below.
+
+[FIGURE]
+
+The energy levels within \nuc{28}{Si} govern how the reaction progresses. When
+the incident energy of the proton beam directly matches an energy level within
+\nuc{28}{Si}, the reaction is described as a \emph{resonant capture} reaction,
+where the likelihood of that reaction taking place is higher due to the energy
+of the incident beam and the energy level within the compound nucleus. The
+likelihood of the reaction, extended across the entire energy domain, is the
+\emph{cross section} of the reaction. This cross section, for a given reaction,
+is a measure of the likelihood of the reaction for any inicident beam energy,
+and is related to the properties of the energy levels within the compound
+nucleus. Additionally, if a reaction is being studied at a particular angle for
+the emitted particle, in this case the produced $\alpha$, the cross section
+also includes information about this likelihood.
+
+The properties of the cross section, and thus the underlying energy levels
+within the compound nucleus, depend on the properties of the energy levels,
+specifically the spin-parity of the nuclear state. The spin and parity of the
+nuclear states available for resonant reactions are determined by the quantum
+mechanical selection rules from the spin, parity, and angular momentum of the
+target and projectile nuclei, given as
+\[
+    \left|J_{\rm{p}} - J_{\mnuc{27}{Al}}\right|
+    \leq J_{\mnuc{28}{Si}} \leq
+    \left|J_{\rm{p}} + J_{\mnuc{27}{Al}}\right|
+\]
+and
+\[
+    \pi_{\mnuc{28}{Si}} = \pi_{\rm{p}}\pi_{\mnuc{27}{Al}}(-1)^{\ell_{\rm{p}}},
+\]
+where the properties of the compound nuclear state in \nuc{28}{Si} are
+$J_{\mnuc{28}{Si}}$ and $\pi_{\mnuc{28}{Si}}$. Given that the ground state of
+\nuc{27}{Al} is $5/2+$ and the spin-parity of protons are $1/2+$, the only
+accessbile spins for the reaction are $J = 2\rm{, }3$.
+
 -   Cross sections
 -   Reaction rates
--   R-Matrix formalism (?, maybe not needed since I'm not doing a full fit)
 
 
 %%% end section %%%
