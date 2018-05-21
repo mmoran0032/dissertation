@@ -158,6 +158,8 @@ and reducing the burning rate, which in turn ends the shell flash. As the
 He burning subsides, the H burning shell can reactivate, restarting the
 cycle~\cite{CarrollOstlie}.
 
+- temperature of burning
+
 During these shell flashes, additional He burning reactions activate. Two such
 reactions, \react{\mnuc{13}{C}}{\alpha}{\rm{p}}{\mnuc{16}{O}} and
 \react{\mnuc{22}{Ne}}{\alpha}{\rm{n}}{\mnuc{25}{Mg}}, are sources for the
@@ -237,28 +239,26 @@ the reaction products.
 
 \subsubsection{Reaction Rate}
 Under astrophysical conditions, the quantity of interest is the nuclear
-reaction rate within an energy window related to the temperature of the stellar
-environment. The reaction rate per particle pair is given by
+reaction rate evvaluated at the temperature of the stellar environment. The
+reaction rate is related to the temperature and the energy-dependent cross
+section $\sigma(E)$ through
 \begin{equation}
 \label{eq:reaction-rate}
-    \langle\sigma\nu\rangle_{01} = \left(\frac{8}{\pi m_{01}}\right)^{1/2}
+    N_A\langle\sigma\nu\rangle_{01} = N_A\left(\frac{8}{\pi m_{01}}\right)^{1/2}
         \frac{1}{(kT)^{3/2}}\int_0^{\infty} E\sigma(E)e^{-E/kT}\,\rm{d}E,
 \end{equation}
-where $m_{01} = m_0m_1/(m_0 + m_1)$ is the reduced pass of the particle
-pair~\cite{Iliadis}.
-- reaction rate when using $N_A$ is called...?
-
-In cases where a single narrow resonance dominates the cross section,
-Eq.~\ref{eq:reaction-rate} may be simplified to
+where $m_{01} = m_0m_1/(m_0 + m_1)$ is the reduced mass of the particle
+pair~\cite{Iliadis}. In cases where a single narrow resonance dominates the
+cross section, Eq.~\ref{eq:reaction-rate} may be simplified to
 \[
     N_A\langle\sigma\nu\rangle = N_A\left(\frac{2\pi}{m_{01}kT}\right)^{3/2}
         \hbar^2e^{-E_r/kT}\omega\gamma,
 \]
 where $E_r$ is the resonance energy and $\omega\gamma$ is the resonance
 strength~\cite{Iliadis}. The resonance strength is defined in reference to the
-partial widths of the reaction $\omega\gamma = \omega\Gamma_a\Gamma_b/\Gamma$.
-
-- temperatures for AGB stars?
+partial widths of the reaction $\omega\gamma = \omega\Gamma_a\Gamma_b/\Gamma$,
+where $a$ and $b$ are possible decay channels for the given compound nuclear
+state.
 
 
 %%% end section %%%
