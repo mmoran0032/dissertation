@@ -434,12 +434,46 @@ such as a spectrograph or a recoil mass separator.
 
 When studying radiative capture reactions \react{A}{a}{\gamma}{B}, the emitted
 $\gamma$ arises from the decay of the excited state within the compound nucleus
-$B$ as it is emitted. This $\gamma$ ray may be due to a single transition to
+$B$ as it is emitted. Radiative capture reactions produce a compound nucleus in
+an excited state that
+has the same linear momentum in the lab frame, given as
+\[
+    p^*_{\rm{recoil}} = \sqrt(2m_aE_a),
+\]
+where $*$ denotes that the recoil is in an excited state. When this state
+deexcites, it produces a $\gamma$ ray, either due to a single transition to
 the ground state or a cascade of $\gamma$s through intermediate states. As $B$
-is produced in an excited state without orientation (?), the $\gamma$ may be
-emitted in any direction.
+is produced in an excited state, the $\gamma$ may be emitted in any direction,
+which affects the final momentum of the recoil.
 
-EQUATIONS FROM SIDE LOGBOOKS
+If the $\gamma$ is emitted along the $z$-axis (the incident beam direction),
+the momentum of the final recoil is given by
+\[
+    p_{\rm{recoil}} = \sqrt{2m_aE_a} \pm p_{\gamma},
+\]
+where $p_{\gamma} = E_{\gamma}/c$. In this case, no angular change is imparted
+to the recoil, so it can be assumed to still be traveling along the beam axis.
+At the opposite end, if the $\gamma$ is emitted perpendicular to the beam axis,
+there is a maximal angular change, where the lab angle of the recoil is
+given by
+\[
+    \theta_{\rm{recoil}} = \rm{atan}\left(\frac{p_{\gamma}}{\sqrt{2m_aE_a}}\right).
+\]
+There is a small change to the total momentum of the recoil from the imparted
+transverse momentum from the emitted $\gamma$. In cases where the $\gamma$ is
+emitted somewhere between these two extremes, there will be a smaller angular
+change imparted than the transverse case and a smaller momentum change than in
+the longitudinal case.
+
+In this case, the emitted recoils are confined within a forward cone with
+some opening angle and with some momentum spread. The various properties of
+the separator will be based on these kinematics for the reactions of interest,
+with those reactions that have smaller angular and momentum spreads than the
+initial design reactions still under the possibility of study. The final design
+for the recoil separator will take into account both the central value of the
+recoil momentum distribution as well as the limits for the angular and momentum
+distribution. We can consider the momentum and energy distributions as
+essentially interchangeable, since the mass of the desired recoil is known.
 
 
 \subsection{Beam Optics}
@@ -485,8 +519,6 @@ magentic dipole and Wien filter must be used. While a single element of each
 type is the minimum requirement, physical separators commonly have multiple
 elements due to the physical nature of the beam envelope within the beam line
 and the restrictions of the physical laboratory space.
-
-\subsubsection{Resolution}
 
 
 \subsection{Recoil Separator Facilities}
