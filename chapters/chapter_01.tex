@@ -442,6 +442,53 @@ emitted in any direction.
 EQUATIONS FROM SIDE LOGBOOKS
 
 
+\subsection{Beam Optics}
+% still unsure how much will go in here...probably just the absolute basics
+% check out later chapters, because I have some stuff in there
+
+The understanding of how recoil separators work is grounded in the theory of
+beam optics which describe the effect of electric and magnetic fields on moving
+charged particles. These moving particles are focused and directed by the
+electromagnetic elements, and their action on particles can be modeled and
+optimized to transport particles with various properties down a beam line to a
+desired location.
+
+\subsubsection{Mass Dispersion}
+
+A recoil separator is designed to have a mass dispersion at at least one point
+within the separator where the incident beam with a different mass is rejected.
+This location is commonly before the detector plane to avoid the potentially
+high count rates from the high intensity incident beam.
+
+Mass dispersion can be described by the coefficients within the designed
+transport matrix at the point where the mass dispersion should be located
+within the separator. We can determine the distance in the dispersive $x$ plane
+between the incident beam and the desired heavy recoils to first order as
+\[
+    x = (x|x)x_0 + (x|\theta)\theta_0 + (x|\delta_E)\delta_E + (x|\delta_M)\delta_M,
+\]
+where $\delta_E = \Delta E/E_0$ and $\delta_M = \Delta M/M_0$ are the energy
+and mass dispersions, respectively~\cite{Davids2003}. Since we require that
+there be a mass dispersion, the coefficient $(x|\delta_M)$ must be non-zero and
+we must have no energy dispersion, so $(x|\delta_E)$ must be zero.
+Additionally, we would want a focus in the $x$ plane, which required that the
+coefficient $(x|\theta)$ be zero.
+
+To higher orders, the design of the transport matrix and through that the
+decision on what electromagnetic elements and their properties for the physical
+recoil separator need to be designed by some computational codes. Within the
+physical separator, at least two of the available dispersive elements magnetic
+dipole, electric dipole, or Wien filter must be used to achieve a dispersion at
+a focal plane of mass/charge~\cite{Davids2003}. In order to leave that
+dispersion at the focal plane, either magentic and electric dipoles or a
+magentic dipole and Wien filter must be used. While a single element of each
+type is the minimum requirement, physical separators commonly have multiple
+elements due to the physical nature of the beam envelope within the beam line
+and the restrictions of the physical laboratory space.
+
+\subsubsection{Resolution}
+
+
 \subsection{Recoil Separator Facilities}
 
 The use of recoil separators to study radiative capture reactions has been
@@ -514,26 +561,3 @@ reactions using stable beams.
 
 
 %%% end section %%%
-
-\section{Beam Optics}
-\label{sec:ch01-beam-optics}
-% still unsure how much will go in here...probably just the absolute basics
-% check out later chapters, because I have some stuff in there
-
-The understanding of how recoil separators work is grounded in the theory of
-beam optics which describe the effect of electric and magnetic fields on moving
-charged particles. These moving particles are focused and directed by the
-electromagnetic elements, and their action on particles can be modeled and
-optimized to transport particles with various properties down a beam line to a
-desired location.
-
-- parts of beam optics?
-
-- Louisville theorom (conservation of phase space)
-
-- connection to properties (resolution?)
-
-- references to code/COSY?
-
-\subsection{Considerations}
-\subsection{Resolution}
