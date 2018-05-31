@@ -521,6 +521,23 @@ type is the minimum requirement, physical separators commonly have multiple
 elements due to the physical nature of the beam envelope within the beam line
 and the restrictions of the physical laboratory space.
 
+\subsubsection{Beam Suppression}
+Recoil separators must achieve a certain level of beam-induced background
+suppression, henceforth \emph{beam suppression}, in order to observe the
+relatively uncommon produced recoils from the reaction. This beam suppression
+can be achieved by the separator and detector system combined, with a majority
+of the beam suppression obtained by the separator. We will define beam
+suppression as
+\[
+    S = \frac{N_{b,\rm{incident}}}{N_{b,\rm{target}}},
+\]
+or the number of incident beam particles that will lead to a single beam
+particle detection at the detector system. Beam suppression is linked to the
+reaction in question, the rigidities of the beam and recoil, the energies of
+interest, and the detector system used. Values of $S$ for existing separator
+systems will be cited, with larger values more successful at rejecting beam and
+more able to measure cross sections with lower yields.
+
 \subsection{Recoil Separator Facilities}
 
 The use of recoil separators to study radiative capture reactions has been
@@ -604,7 +621,11 @@ The European Recoil separator for Nuclear Astrophysics (ERNA) at (location)...
 ERNA uses two Wien filters and a single magnetic dipole to provide the velocity
 and momentum separation. The primary target is an extended gas target with
 offset Si detectors to measure the elastic scattering yield to monitor the
-beam current~\cite{DiLeva2008}.
+beam current~\cite{DiLeva2008}. ERNA has been used to measure
+\react{\mnuc{3}{He}}{\alpha}{\gamma}{\mnuc{7}{Be}} and \textbf{others?} at low
+center-of-mass energies important for nuclear astrophysics. For the
+\react{\mnuc{3}{He}}{\alpha}{\gamma}{\mnuc{7}{Be}} reaction, beam suppression
+in the range $10^{10} - 10^{12}$ was observed~\cite{DiLeva2008}.
 
 Design papers(?):
 - D. Rogalla, et al., Nucl. Instr. and Meth. Phys. Res. A 513 (2003) 573
