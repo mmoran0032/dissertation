@@ -208,7 +208,72 @@ discussion will focus on \alpa{} as an example.
 
 %%% section %%%
 
-\section{Resonant Capture Reaction Theory}
+\section{Capture Reactions}
+
+% notes
+% - define radiative capture reactions
+% - introduce cross section
+% - cross section decreases due to Coulomb barrier
+- can reframe cross section as S-factor to see structure
+- stars burn at lower energies, so Gamow window important
+- reaction rate
+- what are resonances, and why are they important?
+- reaction rate for resonances, resonance strength
+- can study resonances through the use of recoil separators (transition paragraph)
+% end notes
+
+Most astophysical reactions in the low mass regime can be considered as capture
+reactions, where a lighter particle with mass $m_a$ combines with a heavier
+particle with mass $m_A$, forming a compound nucleus with mass
+$m_C = m_a + m_A$. This compound nucleus is produced within an excited state,
+and will decay through particle emission, resulting in two particles $b$ and
+$B$. The overall reaction can be written as \react{A}{a}{b}{B}, where we
+consider the lighter particle to be impinging on the heavier particle in the
+entrance channel $a + A$. The compound nucleus $C$ is not explicitly denoted
+in this equation. The reaction \alpa{} can be considered as this type of
+compound reaction, where a compound nucleus \nuc{28}{Si} is created by the
+direct capture of the proton by \nuc{27}{Al}, followed by the emission of the
+$\alpha$ particle, leaving behind \nuc{24}{Mg}. If the light particle $b$ is a
+$\gamma$ ray, the reaction is a \emph{radiative capture reaction}, written as
+\react{A}{a}{\gamma}. Both types of reactions can be studied and understood in
+similar ways.
+
+\subsection{Cross Section and $S$-factor}
+The probability that a reaction will occur is the reaction's
+\emph{cross section}. The cross section can be defined as the ratio between the
+number of reactions that actually took place and the total numbers of incident
+target particles within some time frame, or
+\[
+    \sigma = \frac{N_{\rm{reactions}} / t}{N_{\rm{beam}} / t N_{\rm{target}} / A},
+\]
+where $A$ is the overlapping area between the target and the incident beam of
+particles~\cite{Iliadis}. The above equation is implicitly energy dependent, as
+the number of reactions may change with changing beam energy. Additionally, the
+reaction products may be emitted through different solid angles at different
+rates. In these cases, the differential cross section
+$\rm{d}\sigma/\rm{d}\Omega$ is measured. The differential cross section can be
+integrated over the complete solid angle to obtain the total cross section
+\[
+    \sigma = \int \left(\frac{\rm{d}\sigma}{\rm{d}\Omega}\right)\,\rm{d}\Omega.
+\]
+The cross section is the primary quantity of interest when studying nuclear
+reactions.
+
+The cross section for charged particle reactions drops off precipitously as
+the energy decreases due to repulsion from the Coulomb barrier. At the energy
+decreases, the cross section drops by orders of magnitude, which can make
+analysis of low energy phenomena more difficult. A solution to this problem is
+to define the \emph{astrophysical $S$-factor} which helps to mitigate this
+problem.
+
+The $S$-factor is defined in reference to the energy-dependent cross section
+$\sigma(E)$ as
+\[
+    S(E) = E\sigma(E)e^{2\pi\eta},
+\]
+where $\eta = EQUATION$ is the Sommerfield parameter.
+
+%% old below
 
 The outcome of a particular reaction is tied to the underlying properties of
 the reaction and the nuclei in question. For \alpa{}, the reaction progresses
@@ -292,19 +357,6 @@ peak.
 
 - cite energies of interest for ALPA
 
-\subsubsection{Astrophysical $S$-factor}
-The cross section for charged particle reactions drops off precipitously as
-the energy decreases due to repulsion from the Coulomb barrier. At the energy
-decreases, the cross section drops by orders of magnitude, which can make
-analysis of low energy phenomena more difficult. A solution to this problem is
-to define the \emph{astrophysical $S$-factor} which helps to mitigate this
-problem.
-
-The $S$-factor is defined in reference to the cross section $\sigma(E)$ as
-\[
-    S(E) = E\sigma(E)e^{2\pi\eta},
-\]
-where $\eta = EQUATION$ is the Sommerfield parameter.
 
 \subsubsection{Angular Correlation}
 The state within \nuc{28}{Si} that gets populated during the reaction also
