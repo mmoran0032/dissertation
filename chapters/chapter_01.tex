@@ -257,7 +257,21 @@ integrated over the complete solid angle to obtain the total cross section
     \sigma = \int \left(\frac{\rm{d}\sigma}{\rm{d}\Omega}\right)\,\rm{d}\Omega.
 \]
 The cross section is the primary quantity of interest when studying nuclear
-reactions.
+reactions. The cross section for the \alpa{} reaction is shown in
+Fig.~\ref{fig:alpa-cross-section}, where the structure will be described later.
+
+\begin{figure}[t]
+    \begin{center}
+        \label{fig:alpa-cross-section}
+        % \centerline{\includegraphics[width=0.95\textwidth]%
+        %     {figures/cno_nena_mgal.pdf}}
+        \caption[Cross section for the \alpa{} reaction]{Cross section for the
+            \alpa{} reaction around the energy range of interest for the
+            experiment. Shown is the differential cross section at
+            $\theta_{\rm{lab}} = 0\degree$, as St.\ George is designed to study
+            reactions at 0\degree.}
+    \end{center}
+\end{figure}
 
 The cross section for charged particle reactions drops off precipitously as
 the energy decreases due to repulsion from the Coulomb barrier. At the energy
@@ -266,12 +280,17 @@ analysis of low energy phenomena more difficult. A solution to this problem is
 to define the \emph{astrophysical $S$-factor} which helps to mitigate this
 problem.
 
+% Samuel Adams' Boston Lager
+
 The $S$-factor is defined in reference to the energy-dependent cross section
 $\sigma(E)$ as
 \[
-    S(E) = E\sigma(E)e^{2\pi\eta},
+    \sigma(E) \equiv S(E)e^{-2\pi\eta} / E,
 \]
-where $\eta = EQUATION$ is the Sommerfield parameter.
+where $\eta = Z_1Z_2e^2\sqrt{\mu_{01} / 2E\hbar^2}$ is the Sommerfeld
+parameter. The full Gamow factor $\rm{exp}(-2\pi\eta)$ is the probability that
+an s-wave nuclei penetrates the Coulomb barrier and is the primary cause of the
+strong decrease in the cross section at lower energies.
 
 %% old below
 
