@@ -42,56 +42,34 @@ neutron flux and exposure are comparable to that during He burning. (Pignatari
 et al, 2010; Raiteri et al, 1991a)
 
 
-STELLAR H BURNING
-=================
+---
 
-Massive stars preferentially fuse H into He via the CNO cycles, which work to
-convert the initial catalytic isotopes (12C and 16O, primarily) into 14N.
-(Goerres et al, 2000; 2)
+Beam suppression: N_leaky / N_beam -- estimate for our runs
 
+---
 
-STELLAR He BURNING
-==================
-
-Stellar He burning is the dominant energy source in red giant stars, dominated
-by the triple alpha reaction. (Goerres et al, 2000; Rolfs & Wodney, 1988)
-
-He burning phases within stars are relatively cool, so the neutron production
-for the s-Process doesn't ignite until the end of core burning and the core
-contracts gravitationally. (Goerres et al, 2000)
+1.1 -- end of section: need transition saying just focusing on just this
+        reaction
 
 
-14N(a,g)18F
-===========
+1.2 -- energies relevant to burning processes
+    -   globally cross section decreases due to Coulomb barrier
+    -   s-factor used since cross section drops dramatically
+        -   l=0 of coulomb barrier removed
+    -   low energies in stars, so Gamow window
+    -   reaction rate
+    -   resonances and reaction rate specific to it
+        -   resonance strength here
 
-22Ne abundance in the He core is produced from initial CNO isotopes which are
-converted to 14N during H burning and then 22Ne via 18F(b+)18O(a,g)22Ne.
-(Pignatari et al, 2010)
+Advantage: define quantities that are global, then move to specifics
+beef up definition of resonance
 
-Reaction rate within the stellar temperature range is determined by low energy
-resonances. (Goerres et al, 2000)
+define radiativve capture earlier
 
-The rate is dominated by a Jpi = 1- resonance at E_alpha = 572 keV (lab) within
-the stellar temperature range 0.1-0.5 GK. At higher temperatures, additional
-resonances at 1136, 1398, 1527, 1529, and 1618 keV become important. At lower
-temperatures, the low-energy tail of the 572 keV resonance, direct capture, and
-a Jpi = 4+, T=1 resonance at 305 keV come into play. (Goerres et al, 2000; 7-9)
+recoil separators are needed to measure stuff, and that stuff is important
 
+justify the work that I'm going to present
 
-PAPERS
-======
-
-Awakening of the DRAGON (S. Engel, PhD thesis)
-----------------------------------------------
-
-
-Low-energy resonances in 14N(a,g)18F (Goerres et al, 2000)
-----------------------------------------------------------
-
-Steller He burning dominant for red giant stars' energy production.
-
-H burning produces He which is burned through triple-alpha and 12C(a,g)16O
-
-Depending on mass of star, either pp or CNO is dominant H burning
-
-For post-CNO, 14N from that phase breeds neutron source for weak s-process
+conclude chapter with: how do we determine if a separator is working, and
+how do we use it to measure reactions?
+-   transition saying this is what's going to happen next
