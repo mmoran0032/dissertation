@@ -214,9 +214,9 @@ discussion will focus on \alpa{} as an example.
 % - define radiative capture reactions
 % - introduce cross section
 % - cross section decreases due to Coulomb barrier
-- can reframe cross section as S-factor to see structure
-- stars burn at lower energies, so Gamow window important
-- reaction rate
+% - can reframe cross section as S-factor to see structure
+% - stars burn at lower energies, so Gamow window important
+% - reaction rate
 - what are resonances, and why are they important?
 - reaction rate for resonances, resonance strength
 - can study resonances through the use of recoil separators (transition paragraph)
@@ -239,6 +239,7 @@ $\gamma$ ray, the reaction is a \emph{radiative capture reaction}, written as
 similar ways.
 
 \subsection{Cross Section and $S$-factor}
+
 The probability that a reaction will occur is the reaction's
 \emph{cross section}. The cross section can be defined as the ratio between the
 number of reactions that actually took place and the total numbers of incident
@@ -288,15 +289,53 @@ $\sigma(E)$ as
     \sigma(E) \equiv S(E)e^{-2\pi\eta} / E,
 \]
 where $\eta = Z_1Z_2e^2\sqrt{\mu_{01} / 2E\hbar^2}$ is the Sommerfeld
-parameter. The full Gamow factor $\rm{exp}(-2\pi\eta)$ is the probability that
-an s-wave nuclei penetrates the Coulomb barrier and is the primary cause of the
-strong decrease in the cross section at lower energies.
+parameter. The term $\mu_{01}$ is the reduced mass of the system, given as
+$\mu_{01} = m_0m_1/(m_0 + m_1)$. The full Gamow factor $\rm{exp}(-2\pi\eta)$ is
+the probability that an s-wave nuclei penetrates the Coulomb barrier and is the
+primary cause of the strong decrease in the cross section at lower energies.
 
-%% old below
+\subsection{Reaction Rate}
 
-The outcome of a particular reaction is tied to the underlying properties of
-the reaction and the nuclei in question. For \alpa{}, the reaction progresses
-through the compound nucleus \nuc{28}{Si}, as shown in Figure~\ref{fig:alpa}.
+Under astrophysical conditions, instead of focusing on the probability of a
+single reaction taking place, it is common to discuss the number of reactions
+that take place under given conditions, primarily the interior temperature of
+the burning process. We can define a quantity called the \emph{reaction rate}
+that describes the number of reactions within a given volume per unit time in
+terms of the energy-dependent cross section $\sigma(E)$ as
+\begin{equation}
+\label{eq:reaction-rate}
+    N_A\langle\sigma\nu\rangle_{01} = N_A\left(\frac{8}{\pi\mu_{01}}\right)^{1/2}
+        \frac{1}{(kT)^{3/2}}\int_0^{\infty} E\sigma(E)e^{-E/kT}\,\rm{d}E,
+\end{equation}
+where the term $\rm{exp}(-E/kT)$ originates from the Maxwell-Boltzmann
+distribution~\cite{Iliadis}. Based on the knowledge of the temperature of the
+stellar interior, the reaction rate can be calculated for any reaction, given
+the cross section.
+
+For those stellar interiors, there are some energies that will dominate the
+overall determination of the reaction rate. The contribution to the reaction
+rate will be dominated by energies where the product of the two exponential
+terms, $\rm{exp}(-E/kT)$ and $\rm{exp}(-2\pi\eta)$, is near their maximum. This
+distribution can be approximated by a gaussian peak, with the central energy
+called the \emph{Gamow energy}, given by
+\[
+    E_{\rm{Gamow}} = ...,
+\]
+and the width of the peak describing the \emph{Gamow window} given by
+\[
+    \Delta_{\rm{Gamow}} = ...,
+\]
+where $TERMS NEEDED$~\cite{Iliadis}. This energy window has been the focus of
+low energy nuclear astrophysics and improves the extrapolation of the
+$S$-factor to lower energies.
+
+\subsection{Resonances}
+
+In the absence of nuclear structure, the above description encompasses what is
+necessary to determine how the nuclear reaction progresses in stellar
+interiors. For the \alpa{} reaction, the compound nucleus \nuc{28}{Si} has a
+number of energy levels that can affect the progress of the reaction, with
+some of those levels shown schematically in Fig.~\ref{fig:alpa}.
 
 \begin{figure}[t]
     \begin{center}
@@ -308,6 +347,8 @@ through the compound nucleus \nuc{28}{Si}, as shown in Figure~\ref{fig:alpa}.
             measured at zero degrees for the energy range of interest.}
     \end{center}
 \end{figure}
+
+%% old below
 
 The energy levels within \nuc{28}{Si} govern how the reaction progresses. When
 the incident energy of the proton beam directly matches an energy level within
@@ -360,21 +401,6 @@ interest can be determined and compared to experimental yields or compared
 between methods. In some situations, simplifications can be done so that the
 entire cross section does not need to be determined, or a particular range of
 energies can be probed instead of the entire range of values.
-
-\subsubsection{Gamow Energy}
-I think this is necessary from a discussion standpoint, but I am almost
-positive that we were way above the Gamow energy anyway, so do we really need
-this?
-
-Within each stellar environment and reaction of interest, the energy range
-where the reaction will take place within the star is described as the Gamow
-peak.
-
-- description of why this is the peak (electric potential barrier and thermal increase)
-
-- peak energy and width
-
-- cite energies of interest for ALPA
 
 
 \subsubsection{Angular Correlation}
