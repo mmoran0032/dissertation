@@ -39,10 +39,17 @@ experiment. The target thickness was measured using an offline detector
 station and a mixed \nuc{241}{Am}/\nuc{148}{Gd} alpha-particle source. The
 target thickness was measured by observing the energy loss of the two
 alpha peaks and using a Monte Carlo method to determine the value and
-uncertainty. The measure target thickness is
-$63.8^{+2.0}_{-1.7}$~$\mu$g/cm${}^{2}$, which does not include the uncertainty
-due to SRIM, and can be used to determine the energy
-loss for other particles at any energy.
+uncertainty. The measured target thickness is
+$63.8^{+2.0}_{-1.7}$~$\mu$g/cm${}^{2}$ (95\,\% confidence interval), which does
+not include the uncertainty due to SRIM, and can be used to determine the
+energy loss for other particles at any energy.
+
+In our energy range of interest for both protons and $\alpha$ particles, the
+uncertainty in the stopping power in the SRIM results is approximately 3-5\,\%,
+based on the spread in experimental values from different data sources. To be
+conservative, an uncertainty of 5\,\% is adopted for all calculations. When
+taking the SRIM uncertainty into account, our measured thickness is
+$63.8^{+6.7}_{-6.6}$~$\mu$g/cm${}^{2}$ (95\,\% confidence intervals).
 
 % see foil_thickness/target_thickness_20180403.ipynb
 
@@ -66,6 +73,7 @@ loss for other particles at any energy.
     \end{center}
 \end{table}
 
+% rework below...?
 For subsequent calculations, the
 thickness used was sampled from this distribution.
 
