@@ -49,7 +49,7 @@ uncertainty in the stopping power in the SRIM results is approximately 3-5\,\%,
 based on the spread in experimental values from different data sources. To be
 conservative, an uncertainty of 5\,\% is adopted for all calculations. When
 taking the SRIM uncertainty into account, our measured thickness is
-$63.8^{+6.7}_{-6.6}$~$\mu$g/cm${}^{2}$ (95\,\% confidence intervals).
+$63.8^{+6.7}_{-6.6}$~$\mu$g/cm${}^{2}$ (95\,\% confidence interval).
 
 % see foil_thickness/target_thickness_20180403.ipynb
 
@@ -88,12 +88,15 @@ data is normally distributed.
 
 For most of the following calculations, the number of target nuclei per
 square centimeter is used instead of the thickness in $\mu$g/cm${}^{2}$. Our
-target thickness is then $1.42^{+0.06}_{-0.06} \times 10^{18}$ nuclei/cm${}^{2}$.
+target thickness is then $1.42^{+0.15}_{-0.15} \times 10^{18}$ nuclei/cm${}^{2}$
+(95\,\% confidence interval), including our SRIM uncertainty.
 This value is useful for calculating the energy loss of the proton
 through the target, as that relies on the number density of the target
 and the stopping power of the material. The energy loss of the beam will
 be discussed in the next section.
 
+% update foil_thickness/target_thickness_201804XX.ipynb to include the SRIM
+% uncertainties directly
 
 \section{Beam Properties}
 \label{sec:beam-properties}
