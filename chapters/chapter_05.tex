@@ -3,27 +3,31 @@
 \chapter{ANALYSIS}
 \label{ch:analysis}
 
-The angular acceptance of St.\ George can be determined by comparing the
-expected yield from the reaction at the desired energies to the actual
-counts measured at the detector plane. If we assume a symmetric angular
-acceptance, the opening angle of the acceptance cone can be directly
-calculated and compared to the anticipated angular acceptance opening
-angle of 40~mrad. The angular acceptance and its uncertainty for each
-energy can be determined independently of the other points. The angular
-acceptance is based on the properties of the target, incident beam,
-detector, and recoil separator and the decisions relating to the
-experiment itself.
+The angular acceptance of St.\ George can be determined for a given energy by
+comparing the expected yield based on the known reaction properties to the
+actual counts measured at the detector plane. Here, we use ``energy'' as the
+central energy of the recoil distribution, which is based on the incident beam
+energy and the measured target properties. The acceptance of St.\ George is
+based on the tune of the separator for a given recoil energy, meaning that
+each run that occurs at a different beam energy, and thus a different tune for
+St.\ George, has an associated angular acceptance. The desired end state for
+the separator is to verify the angular acceptance for particle rigidities
+within the possible phase space anticipated for the produced recoils of
+astrophysical interest (see Fig.~\ref{fig:rigidity-phase-space}). From the
+experimental data, the properties of the resonance can be determined if the
+angular and energy acceptances are known, allowing St.\ George to be used for
+nuclear astrophysics research.
 
-The measurement of the yields near and on the two resonances can also be used
-to determine the properties, such as the resonance strength, related to those
-resonances.
-
-% cite python packages here
-All code was written using the scientific Python stack (NumPy, SciPy,
-MatPlotLib, Pandas, PyMC3). An analysis framework pyne was developed
-concurrently in python to aide in direct analysis of the run information
-from the raw data files.
-% reference appendix ("for more details...")
+The experimental work to determine the angular acceptance is one aspect of
+commissioning the separator and has been one of the most challenging aspects of
+the work. The \alpa{} reaction runs performed provided an \emph{in situ} test
+of the angular acceptance by focusing on well-understood resonances within the
+cross section. The analysis of the experimental results was performed using
+libraries within the Python scientific stack: NumPy, SciPy, Matplotlib, Pandas,
+and PyMC3~\cite{NumPy, SciPy}...other sources. The routines have been packaged
+within an analysis framework, \verb+pyne+, to improve the processing and
+reproducability of experimental results. See Appendix~\ref{ch:pyne} for
+details.
 
 
 \section{Target Properties}
