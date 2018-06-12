@@ -18,126 +18,55 @@ The measurement of the yields near and on the two resonances can also be used
 to determine the properties, such as the resonance strength, related to those
 resonances.
 
-All code was written using the scientific Python stack (numpy, scipy,
-matplotlib, pandas, pymc3). An analysis framework pyne was developed
+% cite python packages here
+All code was written using the scientific Python stack (NumPy, SciPy,
+MatPlotLib, Pandas, PyMC3). An analysis framework pyne was developed
 concurrently in python to aide in direct analysis of the run information
 from the raw data files.
+% reference appendix ("for more details...")
 
 
 \section{Target Properties}
 \label{sec:target-properties}
 
+% measuring foil thickness should be a sentance or two
+% cite stopping power website for SRIM for the SRIM uncertainty (around 3%)
+% H and He should be similar
+% there is enough data in the energy range in question to justify it
+
 A self-supporting \nuc{27}{Al} target was used for the entirety of the
 experiment. The target thickness was measured using an offline detector
 station and a mixed \nuc{241}{Am}/\nuc{148}{Gd} alpha-particle source. The
 target thickness was measured by observing the energy loss of the two
-alpha peaks as compared to the direct detection of the alpha particles
-by the detector. That energy loss is converted to a target thickness in
-$\mu$g/cm${}^{2}$ which can be used to determine the energy loss for other
-particles at any energy. The measured thickness was $63.8^{+2.0}_{-1.7}$~
-$\mu$g/cm${}^{2}$.
+alpha peaks and using a Monte Carlo method to determine the value and
+uncertainty. The measure target thickness is
+$63.8^{+2.0}_{-1.7}$~$\mu$g/cm${}^{2}$, which does not include the uncertainty
+due to SRIM, and can be used to determine the energy
+loss for other particles at any energy.
 
 % see foil_thickness/target_thickness_20180403.ipynb
 
-Two runs were performed, one without the target in place and one with
-the target in place, using an annular Si detector placed within a vacuum
-chamber. Each run lasted approximately 600~s and were performed
-immediately following each other. The detector was calibrated using the
-spectrum from the first run without the target in place, using the known
-energies of the peaks (see Table XX). The energy calibration parameters
-were determined through a combined Monte Carlo and Bayesian procedure, as
-outlined below.
+\begin{table}
+    \begin{center}
+        \caption{ALPHA PARTICLE ENERGIES FOR THE \nuc{241}{Am}/\nuc{148}{Gd}
+            MIXED SOURCE}
+        \label{tab:mixed-source}
+        \begin{tabular}{rS[table-format=2.4]S[table-format=2.4]}
+            \toprule
+            \midrule
+            {\textbf{Isotope}} & {\textbf{Energy [keV]}} &
+                {\textbf{Relative Intensity [\%]}} \\
+            \midrule
+            \nuc{148}{Gd} & 3182.69 & 100   \\
+            \nuc{241}{Am} & 5388    &   1.6 \\
+                          & 5442.8  &  13.1 \\
+                          & 5485.56 &  84.8 \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{table}
 
-\textbf{Step 1:}
-  New spectra were simulated by sampling a single value for each bin
-  from the Poisson distribution $n \sim \rm{Poisson}(\lambda)$,
-  where $n$ is the simulated counts in that bin and $\lambda$ is the scale
-  parameter for the distribution, which is taken to be the detected
-  counts for that bin. A total of 2000 spectra were generated in this
-  fashion.
-
-\textbf{Step 2:}
-  The two largest peaks were identified first through a continuous
-  wavelet transformation to get an approximate peak center. The final
-  peak center was determined by taking a weighted average of the eleven
-  bins centered on the selected bin to get the final bin value for the
-  peak center.
-
-\textbf{Step 3:}
-  A linear regression is fit, using the peaks found from the simulations
-  and the known calibration energies of the alpha peaks. By fitting the
-  entire sample of peak locations, we determine a global fit for our
-  detector. The linear model used is a Bayesian model described by:
-
-\begin{align*}
-    E &\sim \rm{Normal}(\mu, \sigma) \\
-    \mu &= \alpha + \beta \rm{bin} \\
-    \alpha &\sim \rm{Normal}(28, 10) \\
-    \beta &\sim \rm{Normal}(5, 5) \\
-    \sigma &\sim \rm{Lognormal}(2, 10)
-\end{align*}
-
-  The Bayesian model allows for the uncertainty on the fit to be
-  propagated forward.
-
-Table XX: Alpha-particle energies for the 241Am/148Gd mixed source:
-
-\begin{verbatim}
-148Gd   3182.69     100
-241Am   5388          1.6
-        5442.8       13.1
-        5485.56      84.8
-\end{verbatim}
-
-From the linear model, an energy calibration can be applied to the
-in-target run to determine the energy of the two largest peaks. Due to
-the lower count rate due to the target being in place, only the largest
-peaks could be identified. The procedure to determine the energy loss is
-similar to that previously described for the energy calibration:
-
-\textbf{Step 1:}
-  New spectra based on the spectrum with the target in place were
-  generated in the same manner as before. A total of 2000 spectra were
-  generated.
-
-\textbf{Step 2:}
-  For each spectra, a linear model was sampled from the fitted Bayesian
-  linear model and applied to the spectra to convert the bin numbers to
-  energy.
-
-\textbf{Step 3:}
-  The two largest peaks were identified first with a continuous wavelet
-  transformation then a weighted average of the counts to find the central
-  energy of the peak.
-
-\textbf{Step 4:}
-  The energy of the peaks were subtracted from the known energies of the
-  peaks to determine the energy loss through the sample for two known
-  input energies. The uncertainty in the sample alpha energies was
-  assumed to be negligible and was not considered in the calculations.
-
-This energy loss may be related to the target thickness through the use
-of the computer code SRIM. The stopping and range table for alpha
-particles passing through \nuc{27}{Al} was generated. A linear spline
-(i.e. each data point from the range table connected by a linear fit)
-was generated for the range, and the range for each fitted peak energy
-from the spectra generated from the in-target run was determined. This
-range was subtracted from the alpha ranges for the known calibration
-energies and multiplied by the density of aluminium to getthe thickness
-in $\mu$g/cm${}^{2}$. The uncertainties in the calibration alpha energies and
-in the SRIM data were assumed to be negligible and were not considered
-during the analysis.
-
-Finally, as each simulated spectra was assumed to be an independent
-sample, the two thicknesses determined from the two alpha peaks were
-averaged to get a single value for the thickness from each iteration.
-The thickness distribution generated in this case was compared against
-the dsitribution of 4000 samples (2 dependent thickness measurements for
-each of the 2000 samples), with the averaged thickness case exhibiting a
-slightly narrower distribution. The averaged thickness samples were used
-for the remainder of the analysis. The thickness of $63.8^{+2.0}_{-1.7}$~
-$\mu$g/cm${}^{2}$ is the mean and 95\, \% confidence interval from this
-distribution of thickness samples. For subsequent calculations, the
+For subsequent calculations, the
 thickness used was sampled from this distribution.
 
 The uncertainties present in each step of the procedure laid out above
