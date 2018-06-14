@@ -91,8 +91,8 @@ wrong assumptions about the values in question, such as that all of the
 data is normally distributed.
 
 For most of the following calculations, the number of target nuclei per
-square centimeter is used instead of the thickness in $\mu$g/cm${}^{2}$. Our
-target thickness is then $1.42^{+0.15}_{-0.15} \times 10^{18}$ nuclei/cm${}^{2}$
+square centimeter is used instead of the thickness in $\mu$g/cm\squared{}. Our
+target thickness is then $1.42^{+0.15}_{-0.15} \times 10^{18}$~nuclei/cm\squared{}
 (95\,\% confidence interval), including our SRIM uncertainty.
 This value is useful for calculating the energy loss of the proton
 through the target, as that relies on the number density of the target
@@ -116,7 +116,7 @@ performed before this experiment was performed.
 
 The beam energy was determined from the calibration of the 5U analyzing
 magnet performed during a different experiment. During the experiment,
-the magentic changes were performed slowly such that the magnetic field
+the magnetic changes were performed slowly such that the magnetic field
 did not appreciably drift during the runs. The energy resolution can
 also be determined from the calibration runs, where the resolution is
 given by the energy width of the leading edge of the resonance scan.
@@ -146,22 +146,19 @@ intensity.
 \section{Detector Properties}
 \label{sec:detector-properties}
 
-A 16-strip Si detector was used to detect the produced alpha particles
-during the experiment. A calibration run was performed following the
-experiment using the same detector and data acquisition settings as used
-during the experiment. A \nuc{241}{Am}/\nuc{148}{Gd} mixed alpha source was used
-for calibrating the energy conversion and energy resolution of each
-strip separately. All of the strips were similar with approximately 2
-keV/bin for the calibration and approximately 2.75\,\% (90~keV) for the
-energy resolution.
+A 16-strip Si detector was used to detect the produced alpha particles during
+the experiment. A calibration run was performed following the experiment using
+the same detector and data acquisition settings as used during the experiment.
+A \nuc{241}{Am}/\nuc{148}{Gd} mixed alpha source was used for calibrating the
+energy conversion and energy resolution of each strip separately. All of the
+strips were similar with approximately 2~keV/bin for the calibration and
+approximately 2.75\,\% (90~keV) for the energy resolution. The poor
+energy resolution of the detector resulted from the lower-than-optimal
+bias voltage setting used during the experiment.
 
-The calibration run resulted in a single spectrum. Due to the poor
-energy resolution of the detector resulting from the lower-than-optimal
-bias voltage setting used during the experiment, only the two highest
-intensity peaks could be resolved above the background. As the alpha
-peak resulting from \nuc{148}{Gd} is closer in energy to the alpha
-particles produced in the experiment, The alpha peaks also exhibit long
-low-energy tails such that the particles produced in the reaction are
+In the calibration runs, only the two highest intensity peaks could be resolved
+above the background. The alpha peaks also exhibit long
+low-energy tails such that the particles produced in the \alpa{} reaction are
 smeared out in energy. For the experimental run, an energy threshold was
 set to exclude incident proton counts, where counts appearing above the
 threshold are considered to be from alpha particles. That threshold was
@@ -177,8 +174,9 @@ supporting the St.\ George detector system resulted in efficiencies above
 99\,\% for all strips.
 
 A simulation of the expected energy spectrum at the target location was
-performed using SRIM data tables. The simulation looked at the known
-energy loss within the target of the incident beam, the expected cross
+performed using a combination of SRIM monte carlo results and Python. The
+simulation looked at the known energy loss within the target of the incident
+beam, the expected cross
 section within the energy limits of the target, the energy loss of the
 produced alpha particles through the remainder of the target, and the
 energy resolution of the detector to generate an expected energy
@@ -196,9 +194,12 @@ spectrum. The procedure for this simulation is as follows:
   target depth.
 
 \textbf{Step 3:}
-  Using the expected cross section from the AZURE2 R-matrix calculation,
-  a depth for each of the simulated particles was generated to determine
-  the location within the target that the reaction takes place.
+  For each simulated particle, a depth within the target is randomly generated
+  based on the underlying reaction cross section covered by the energy range of
+  the incident particles. This depth generation will favor depths that
+  energetically match portions of the cross section with larger values. The
+  underlying cross section was generated using the AZURE2 $R$-matrix
+  code~\cite{AZURE2, deBoer2017}.
 
 \textbf{Step 4:}
   A beam energy $E_d$ is generated from the distribution of beam energies
