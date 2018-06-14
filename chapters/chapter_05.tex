@@ -184,9 +184,10 @@ spectrum. The procedure for this simulation is as follows:
 
 
 \textbf{Step 1:}
-  An energy deviation drawn from the Normal(0, sigma) distribution
-  (where sigma is the beam energy resolution) for 2000 particles. This
-  energy deviation is the difference in energy from the central energy.
+  An energy deviation $\Delta_{E,0}$ drawn from the $\rm{Normal}(0,\sigma)$
+  distribution (where $\sigma$ is the beam energy resolution) for 2000
+  particles. This energy deviation is the difference in energy from the central
+  energy.
 
 \textbf{Step 2:}
   SRIM files for the central energy were generated for fractional depths
@@ -202,21 +203,22 @@ spectrum. The procedure for this simulation is as follows:
   code~\cite{AZURE2, deBoer2017}.
 
 \textbf{Step 4:}
-  A beam energy $E_d$ is generated from the distribution of beam energies
-  at the given depth, and the initial deviation for that particle is
-  added to the energy to give the final beam energy.
+  For each particle, an energy $E_d$ is randomly generated from the energy
+  distribution obtained from the SRIM monte carlo run to that depth within the
+  target. The final beam energy $E_{\rm{p},f} = E_d + \Delta_{E,0}$ is saved
+  for each particle.
 
 \textbf{Step 5:}
   The beam energy is converted to the produced alpha particle energy
   through the kinematic equation
-
-% for some reason, using mnuc didn't work...?
-\begin{equation}
-    E_{\alpha} = Q + E_{\rm p}\left(
-        1 - \frac{m_{\rm p}}{m_{\rm p} + m_{{}^{27}\rm{Al}}} %m_{\mnuc{27}{Al}}}
-    \right)
-\end{equation}
-
+  % for some reason, using mnuc didn't work...?
+  \[
+      E_{\alpha} = Q + E_{\rm p}\left(
+          1 - \frac{m_{\rm p}}{m_{\rm p} + m_{{}^{27}\rm{Al}}} %m_{\mnuc{27}{Al}}}
+      \right),
+  \]
+  where $Q$ is the $Q$-value of the reaction (see
+  Sec.~\ref{sec:01-capture-reactions}).
 
 \textbf{Step 6:}
   The deviation of the alpha particle from a known alpha energy (used to
