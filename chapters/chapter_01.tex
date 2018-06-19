@@ -216,7 +216,12 @@ reactions, where a lighter particle with mass $m_a$ combines with a heavier
 particle with mass $m_A$, forming a compound nucleus with mass
 $m_C = m_a + m_A$. This compound nucleus is produced within an excited state,
 and will decay through particle emission, resulting in two particles $b$ and
-$B$. The overall reaction can be written as \react{A}{a}{b}{B}, where we
+$B$. The overall reaction can be written as
+\[
+    \mreact{A}{a}{b}{B},
+\]
+where $A$ and $B$ denote our heavy particles and $a$ and $b$ denote our
+lighter particles. In most reactions, we
 consider the lighter particle to be impinging on the heavier particle in the
 entrance channel $a + A$. The compound nucleus $C$ is not explicitly denoted
 in this equation. The reaction \alpa{} can be considered as this type of
@@ -227,7 +232,27 @@ $\gamma$ ray, the reaction is a \emph{radiative capture reaction}, written as
 \react{A}{a}{\gamma}. Both types of reactions can be studied and understood in
 similar ways.
 
-Define $Q$-value
+The amount of energy either released in the reaction or required for the
+reaction to take place is called the reaction $Q$-value. The $Q$-value is
+defined as the energy difference between the entrance and exit channels, or
+\[
+    Q = (m_A + m_a - m_B - m_b)c^2,
+\]
+where $m_i$ is the mass of the denoted particle. Positive $Q$-values are
+exothermic reactions, where the particles produced in the exit channel carry
+away the excess energy, while negative $Q$-values are endothermic reactions,
+where a minimum amount of energy in the entrance channel is required in order
+for the reaction to take place.
+
+For reactions that go through a compound nucleus, the energy states accessible
+in the reaction are based on the beam energy and the reaction $Q$-value. The
+excitation energy in the compound nucleus is given as
+\[
+    E_x = Q + E_{\rm CM} = Q + E_a\frac{m_A}{m_a + m_A},
+\]
+where $E_{\rm CM}$ is the center of mass energy. Unless explicitly denoted as
+a different energy, in the following description $E = E_{\rm CM}$.
+
 
 \subsection{Cross Section and $S$-factor}
 
