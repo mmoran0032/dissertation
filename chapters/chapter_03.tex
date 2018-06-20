@@ -25,27 +25,41 @@ acceptances for a given desired global setting of the separator, have been
 undertaken. The two global settings are: (i) the designed parameters for St.\
 George for transporting heavy recoil products produced by $(\alpha,\gamma)$
 reactions in inverse kinematics through the entire separator, and (ii) the
-altered parameters for transporting $\alpha$ particles produced by
-$(\textrm{p},\alpha)$ reactions in forward kinematics to focal plane $F_2$.
+modified parameters for transporting $\alpha$ particles produced by
+$({\rm p},\alpha)$ reactions in forward kinematics to focal plane $F_2$.
 From each global setting, the separator elements can be scaled based on the
-desired transport particle's magnetic (Eq.~\ref{eq:brho}) and electric
-(Eq.~\ref{eq:erho}) rigidities. The experimentally determined values after
-scaling from the global setting may differ from the predicted scaled values
-when scaled over a large range, requiring multiple rigidities within the
-allowed rigidity phase space to be explored to fully commission the separator.
-For the
-altered forward kinematics separator settings, due to the relatively small
-rigidity phase space the initial test reaction covers and the fact that a
-direct $\alpha$ beam can be used, the element field strengths were directly
-determined prior to the data collection experiment.
+desired particle's magnetic (Eq.~\ref{eq:brho}) and electric
+(Eq.~\ref{eq:erho}) rigidities.
+The experimental settings for the separator achieving the required transport
+properties (acceptance and rejection) must be determined over a wide range of
+rigidities in order to ensure that the scaled settings still maintain the
+desired properties. Scaling the settings over a large range must make
+assumptions about \emph{how} those elements scale which may or may not be
+representive of the experimental situation. Thus, determining the acceptance
+and rejection for a variety of particle rigidities that adequately cover the
+allowed rigidities and those expected for astrophysical reactions is a
+requirement for the full commissioning of the separator system. For the
+modified tune settings to measure $({\rm p},\alpha)$ cross sections, the
+required field settings were determined by using a direct $\alpha$ beam at
+the expected energies. This situation is a special case due to the relatively
+small rigidity phase space covered by the experimental plan and the
+availability of a direct beam of the desired species, which most likely is not
+the case for many astrophysically important reactions.
 
 For the designed inverse kinematics separator settings, various beams spanning
 a large region within the desired rigidity phase space were used. Test beams
 included light beams (\nuc{1}{H} and \nuc{4}{He}) due to their ease of
 production and heavier beams (\nuc{16}{O} and \nuc{20}{Ne}) to simulate
-transporting heavy reaction products through the separator. Beam particle,
-charge state, and energy were limited by the capabilities of the 5U to produce
-the desired beam. The commissioning
+transporting heavy reaction products through the separator. The available
+test beams and their properties were based on the capabilities of the 5U and
+its ion source, including but not limitied to the species in question, the
+charge state, energy, and intensity of the beam, and the overall stability
+of the system. Here stability is diagnosed by the beam current at the
+diagnostic equipment: a current with constant mean and small variance over
+time is considered a "stable" beam. This stability is based on the entirety
+of the experimental system, from the initial beam produced at the ion source
+to the power supplies used for the various tuning elements along the beam
+line. The commissioning
 work was divided between focusing on the energy or angular acceptance
 relatively independent of the other. For some of the angular acceptance
 measurements, a small energy spread was included to better recreate the
@@ -81,7 +95,7 @@ conditions under which St.\ George will be used.
 
 % Possibly move this to Chapter 2...
 
-St.\ George was modeled within COSY Infinity (COSY-$\infty$, henceforth
+St.\ George was modeled using COSY Infinity (COSY-$\infty$, henceforth
 \emph{COSY}), a beam optics and transport language developed at Michigan State
 University~\cite{COSY}. The initial ion optics solution for the separator was
 calculated by
@@ -101,9 +115,9 @@ Fig.~\ref{fig:raytrace}. For the example shown, the quadrupole pole tip fields
 are given in
 Table~\ref{tab:poletip}, where negative values represent a quadrupole focusing
 in the $y$-direction. The pole tip fields for $(\alpha,\gamma)$ experiments are
-for the test particles shown, while those for $(\rm{p},\gamma)$ experiments are
-specific to this work (see Section~[REFERENCE]). The actual fields used will
-depend on the rigidity of the desired particle to transport through the
+for the test particles shown, while those for $({\rm p},\alpha)$ experiments
+are specific to this work (see Section~[REFERENCE]). The actual fields used
+will depend on the rigidity of the desired particle to transport through the
 separator and can be scaled from these values.
 
 The initial ion optics solution creates a transport map for particles passing
@@ -126,10 +140,11 @@ within St.\ George. The transport map is dependent on the quantities
         r_8 &= \delta_z = (z - z_0)/z_0,
     \end{split}
 \end{equation}
-where $a$ and $b$ are analogous to angles within each plane, $\delta_K$ is the
-energy difference from the desired energy $K_0$,
-$\delta_m$ is the mass difference from the desired mass $m_0$, and
-$\delta_z$ is the charge from the desired charge state $z_0$~\cite{COSY}.
+where $a$ and $b$ are treated similarly to angles within each plane,
+$\delta_K$ is the relative energy difference from the desired energy $K_0$,
+$\delta_m$ is the relative mass difference from the desired mass $m_0$, and
+$\delta_z$ is the relative charge from the desired charge state
+$z_0$~\cite{COSY}.
 The desired quantities are the values used to calculate the magnetic
 (Eq.~\ref{eq:brho}) and electric (Eq.~\ref{eq:erho}) rigidity, and thus set the
 fields of the elements within St.\ George,
