@@ -3,28 +3,30 @@
 \chapter{ANALYSIS}
 \label{ch:analysis}
 
-The angular acceptance of St.\ George can be determined for a given energy by
-comparing the expected yield based on the known reaction properties to the
-actual counts measured at the detector plane. Here, we use ``energy'' as the
-central energy of the recoil distribution, which is based on the incident beam
-energy and the measured target properties. The acceptance of St.\ George is
-based on the tune of the separator for a given recoil energy, meaning that
-each run that occurs at a different beam energy, and thus a different tune for
-St.\ George, has an associated angular acceptance. The desired end state for
-the separator is to verify the angular acceptance for particle rigidities
-within the possible phase space anticipated for the produced recoils of
-astrophysical interest (see Fig.~\ref{fig:rigidity-phase-space}). From the
-experimental data, the properties of the resonance can be determined if the
-angular and energy acceptances are known, allowing St.\ George to be used for
-nuclear astrophysics research.
+The angular acceptance of St.\ George can be determined for a given
+energy by comparing the expected yield based on the known reaction
+properties to the actual counts measured at the detector plane. Here, we
+use ``energy'' as the central energy of the recoil distribution, which
+is based on the incident beam energy and the measured target properties.
+The acceptance of St.\ George is based on the tune of the separator for
+a given recoil energy, meaning that each run that occurs at a different
+beam energy, and thus a different tune for St.\ George, has an
+associated angular acceptance. The desired end state for the separator
+is to verify the angular acceptance for particle rigidities within the
+possible phase space anticipated for the produced recoils of
+astrophysical interest (see Fig.~\ref{fig:rigidity-phase-space}). From
+the experimental data, the properties of the resonance can be determined
+if the angular and energy acceptances are known, allowing St.\ George to
+be used for nuclear astrophysics research.
 
-The experimental work to determine the angular acceptance is one aspect of
-commissioning the separator and has been one of the most challenging aspects of
-the work. The \alpa{} reaction runs performed provided an \emph{in situ} test
-of the angular acceptance by focusing on well-understood resonances within the
-cross section. The analysis of the experimental results was performed using
-libraries within the Python scientific stack: NumPy~\cite{NumPy},
-SciPy~\cite{SciPy}, Matplotlib~\cite{Matplotlib}, Pandas~\cite{Pandas}, and
+The experimental work to determine the angular acceptance is one aspect
+of commissioning the separator and has been one of the most challenging
+aspects of the work. The \alpa{} reaction runs performed provided an
+\emph{in situ} test of the angular acceptance by focusing on
+well-understood resonances within the cross section. The analysis of the
+experimental results was performed using libraries within the Python
+scientific stack: NumPy~\cite{NumPy}, SciPy~\cite{SciPy},
+Matplotlib~\cite{Matplotlib}, Pandas~\cite{Pandas}, and
 PyMC3~\cite{PyMC3}. The routines have been packaged within an analysis
 framework, \verb+pyne+, to improve the processing and reproducability of
 experimental results. See Appendix~\ref{ch:pyne} for details.
@@ -33,26 +35,27 @@ experimental results. See Appendix~\ref{ch:pyne} for details.
 \section{Target Properties}
 \label{sec:target-properties}
 
-% measuring foil thickness should be a sentance or two
-% cite stopping power website for SRIM for the SRIM uncertainty (around 3%)
-% H and He should be similar
-% there is enough data in the energy range in question to justify it
+% measuring foil thickness should be a sentance or two cite stopping
+% power website for SRIM for the SRIM uncertainty (around 3%) H and He
+% should be similar there is enough data in the energy range in question
+% to justify it
 
 A self-supporting \nuc{27}{Al} target was used for the entirety of the
 experiment. The target thickness was measured using an offline detector
-station and a mixed \nuc{241}{Am}/\nuc{148}{Gd} alpha-particle source. The
-target thickness was measured by observing the energy loss of the two
-alpha peaks and using a Monte Carlo method to determine the value and
-uncertainty. The measured target thickness is
-$63.8^{+2.0}_{-1.7}$~$\mu$g/cm\squared{} (95\,\% confidence interval), which does
-not include the uncertainty due to SRIM, and can be used to determine the
-energy loss for other particles at any energy.
+station and a mixed \nuc{241}{Am}/\nuc{148}{Gd} alpha-particle source.
+The target thickness was measured by observing the energy loss of the
+two alpha peaks and using a Monte Carlo method to determine the value
+and uncertainty. The measured target thickness is
+$63.8^{+2.0}_{-1.7}$~$\mu$g/cm\squared{} (95\,\% confidence interval),
+which does not include the uncertainty due to SRIM, and can be used to
+determine the energy loss for other particles at any energy.
 
-In our energy range of interest for both protons and $\alpha$ particles, the
-uncertainty in the stopping power in the SRIM results is approximately 3-5\,\%,
-based on the spread in experimental values from different data sources. To be
-conservative, an uncertainty of 5\,\% is adopted for all calculations. When
-taking the SRIM uncertainty into account, our measured thickness is
+In our energy range of interest for both protons and $\alpha$ particles,
+the uncertainty in the stopping power in the SRIM results is
+approximately 3-5\,\%, based on the spread in experimental values from
+different data sources. To be conservative, an uncertainty of 5\,\% is
+adopted for all calculations. When taking the SRIM uncertainty into
+account, our measured thickness is
 $63.8^{+6.7}_{-6.6}$~$\mu$g/cm\squared{} (95\,\% confidence interval).
 
 % see foil_thickness/target_thickness_20180403.ipynb
@@ -78,8 +81,8 @@ $63.8^{+6.7}_{-6.6}$~$\mu$g/cm\squared{} (95\,\% confidence interval).
 \end{table}
 
 % rework below...?
-For subsequent calculations, the
-thickness used was sampled from this distribution.
+For subsequent calculations, the thickness used was sampled from this
+distribution.
 
 The uncertainties present in each step of the procedure laid out above
 are automatically propagated forward due to the methods chosen. The
@@ -91,16 +94,16 @@ wrong assumptions about the values in question, such as that all of the
 data is normally distributed.
 
 For most of the following calculations, the number of target nuclei per
-square centimeter is used instead of the thickness in $\mu$g/cm\squared{}. Our
-target thickness is then $1.42^{+0.15}_{-0.15} \times 10^{18}$~nuclei/cm\squared{}
-(95\,\% confidence interval), including our SRIM uncertainty.
-This value is useful for calculating the energy loss of the proton
-through the target, as that relies on the number density of the target
-and the stopping power of the material. The energy loss of the beam will
-be discussed in the next section.
+square centimeter is used instead of the thickness in
+$\mu$g/cm\squared{}. Our target thickness is then $1.42^{+0.15}_{-0.15}
+\times 10^{18}$~nuclei/cm\squared{} (95\,\% confidence interval),
+including our SRIM uncertainty. This value is useful for calculating the
+energy loss of the proton through the target, as that relies on the
+number density of the target and the stopping power of the material. The
+energy loss of the beam will be discussed in the next section.
 
-% update foil_thickness/target_thickness_201804XX.ipynb to include the SRIM
-% uncertainties directly
+% update foil_thickness/target_thickness_201804XX.ipynb to include the
+% SRIM uncertainties directly
 
 \section{Beam Properties}
 \label{sec:beam-properties}
@@ -110,9 +113,9 @@ George target area. The beam energy and resolution were determined
 through a series of accelerator and beamline commissioning experiments
 performed before this experiment was performed.
 
-% Similar experiments showed that the energy resolution
-% of the beam is approximately 300 keV. To be conservative, a value of 500 keV
-% was used for all runs.
+% Similar experiments showed that the energy resolution of the beam is
+% approximately 300 keV. To be conservative, a value of 500 keV was used
+% for all runs.
 
 The beam energy was determined from the calibration of the 5U analyzing
 magnet performed during a different experiment. During the experiment,
@@ -126,9 +129,9 @@ energy calibration was performed with our specific experimental setup.
 The uncertainty in the analyzing magnet field is accounted for within
 this uncertainty and is not considered separately.
 
-% While the uncertainty in the field strength recorded is
-% not completely negligible, it is included within the beam energy resolution
-% and is not considered separately.
+% While the uncertainty in the field strength recorded is not completely
+% negligible, it is included within the beam energy resolution and is
+% not considered separately.
 
 The beam current was relatively stable during the experiment. During the
 longer runs, the beam current was measured every 15 minutes in order to
@@ -146,23 +149,24 @@ intensity.
 \section{Detector Properties}
 \label{sec:detector-properties}
 
-A 16-strip Si detector was used to detect the produced alpha particles during
-the experiment. A calibration run was performed following the experiment using
-the same detector and data acquisition settings as used during the experiment.
-A \nuc{241}{Am}/\nuc{148}{Gd} mixed alpha source was used for calibrating the
-energy conversion and energy resolution of each strip separately. All of the
-strips were similar with approximately 2~keV/bin for the calibration and
-approximately 2.75\,\% (90~keV) for the energy resolution. The poor
-energy resolution of the detector resulted from the lower-than-optimal
-bias voltage setting used during the experiment.
+A 16-strip Si detector was used to detect the produced alpha particles
+during the experiment. A calibration run was performed following the
+experiment using the same detector and data acquisition settings as used
+during the experiment. A \nuc{241}{Am}/\nuc{148}{Gd} mixed alpha source
+was used for calibrating the energy conversion and energy resolution of
+each strip separately. All of the strips were similar with approximately
+2~keV/bin for the calibration and approximately 2.75\,\% (90~keV) for
+the energy resolution. The poor energy resolution of the detector
+resulted from the lower-than-optimal bias voltage setting used during
+the experiment.
 
-In the calibration runs, only the two highest intensity peaks could be resolved
-above the background. The alpha peaks also exhibit long
-low-energy tails such that the particles produced in the \alpa{} reaction are
-smeared out in energy. For the experimental run, an energy threshold was
-set to exclude incident proton counts, where counts appearing above the
-threshold are considered to be from alpha particles. That threshold was
-set by the following:
+In the calibration runs, only the two highest intensity peaks could be
+resolved above the background. The alpha peaks also exhibit long
+low-energy tails such that the particles produced in the \alpa{}
+reaction are smeared out in energy. For the experimental run, an energy
+threshold was set to exclude incident proton counts, where counts
+appearing above the threshold are considered to be from alpha particles.
+That threshold was set by the following:
 
 \begin{equation}
     E_{\rm proton} + 3 \sigma_{\rm beam} + 3 \sigma_{\rm resolution}
@@ -170,27 +174,27 @@ set by the following:
 
 The detector efficiency was not directly measured and assumed to be
 100\,\%. Efficiency measurements performed during the commissioning work
-supporting the St.\ George detector system resulted in efficiencies above
-99\,\% for all strips.
+supporting the St.\ George detector system resulted in efficiencies
+above 99\,\% for all strips.
 
 \subsection{Simulating the energy spectrum}
 \label{sec:05-simulating-spectrum}
 
 A simulation of the expected energy spectrum at the target location was
-performed using a combination of SRIM monte carlo results and Python. The
-simulation looked at the known energy loss within the target of the incident
-beam, the expected cross
-section within the energy limits of the target, the energy loss of the
-produced alpha particles through the remainder of the target, and the
-energy resolution of the detector to generate an expected energy
-spectrum. The procedure for this simulation is as follows:
+performed using a combination of SRIM monte carlo results and Python.
+The simulation looked at the known energy loss within the target of the
+incident beam, the expected cross section within the energy limits of
+the target, the energy loss of the produced alpha particles through the
+remainder of the target, and the energy resolution of the detector to
+generate an expected energy spectrum. The procedure for this simulation
+is as follows:
 
 
 \textbf{Step 1:}
-  An energy deviation $\Delta_{E,{\rm p}}$ drawn from the ${\rm Normal}(0,\sigma)$
-  distribution (where $\sigma$ is the beam energy resolution) for 2000
-  particles. This energy deviation is the difference in energy from the central
-  energy $E_{{\rm p},0}$.
+  An energy deviation $\Delta_{E,{\rm p}}$ drawn from the ${\rm
+  Normal}(0,\sigma)$ distribution (where $\sigma$ is the beam energy
+  resolution) for 2000 particles. This energy deviation is the
+  difference in energy from the central energy $E_{{\rm p},0}$.
 
 \textbf{Step 2:}
   SRIM files for the central energy were generated for fractional depths
@@ -198,18 +202,18 @@ spectrum. The procedure for this simulation is as follows:
   target depth.
 
 \textbf{Step 3:}
-  For each simulated particle, a depth within the target is randomly generated
-  based on the underlying reaction cross section covered by the energy range of
-  the incident particles. This depth generation will favor depths that
-  energetically match portions of the cross section with larger values. The
-  underlying cross section was generated using the AZURE2 $R$-matrix
-  code~\cite{AZURE2, deBoer2017}.
+  For each simulated particle, a depth within the target is randomly
+  generated based on the underlying reaction cross section covered by
+  the energy range of the incident particles. This depth generation will
+  favor depths that energetically match portions of the cross section
+  with larger values. The underlying cross section was generated using
+  the AZURE2 $R$-matrix code~\cite{AZURE2, deBoer2017}.
 
 \textbf{Step 4:}
-  For each particle, an energy $E_d$ is randomly generated from the energy
-  distribution obtained from the SRIM monte carlo run to that depth within the
-  target. The final beam energy $E_{{\rm p},f} = E_d + \Delta_{E,0}$ is saved
-  for each particle.
+  For each particle, an energy $E_d$ is randomly generated from the
+  energy distribution obtained from the SRIM monte carlo run to that
+  depth within the target. The final beam energy $E_{{\rm p},f} = E_d +
+  \Delta_{E,0}$ is saved for each particle.
 
 \textbf{Step 5:}
   The beam energy is converted to the produced alpha particle energy
@@ -224,43 +228,46 @@ spectrum. The procedure for this simulation is as follows:
   Sec.~\ref{sec:01-capture-reactions}).
 
 \textbf{Step 6:}
-  The difference between the produced alpha energy $E_{\alpha,0}$ and the alpha
-  energy used to generate the SRIM files is recorded as $\Delta_{E,\alpha}$.
+  The difference between the produced alpha energy $E_{\alpha,0}$ and
+  the alpha energy used to generate the SRIM files is recorded as
+  $\Delta_{E,\alpha}$.
 
 \textbf{Step 7:}
-  For each particle, an exit energy $E_{\alpha,f}$ is generated based on the
-  SRIM monte carlo files. The exit energy is drawn from the distribution of
-  exit energies for a target thickness equal to the remainder of the target
-  thickness from the depth generated in Step 5.
+  For each particle, an exit energy $E_{\alpha,f}$ is generated based on
+  the SRIM monte carlo files. The exit energy is drawn from the
+  distribution of exit energies for a target thickness equal to the
+  remainder of the target thickness from the depth generated in Step 5.
 
 \textbf{Step 8:}
-  The energy of the alpha particle entering St.\ George is determined from
-  $E_{\alpha} = E_{\alpha,f} + \Delta_{E,\alpha}$, or adding the energy
-  deviation back to the generated energy.
+  The energy of the alpha particle entering St.\ George is determined
+  from $E_{\alpha} = E_{\alpha,f} + \Delta_{E,\alpha}$, or adding the
+  energy deviation back to the generated energy.
 
-This procedure generates an $\alpha$-particle energy spectrum for the particles
-entering St.\ George based on the known properties of the target, cross
-section, and beam. Using the known energy resolution of the detector, this
-spectrum can be converted into the detected spectrum
+This procedure generates an $\alpha$-particle energy spectrum for the
+particles entering St.\ George based on the known properties of the
+target, cross section, and beam. Using the known energy resolution of
+the detector, this spectrum can be converted into the detected spectrum
 \[
     E_{\alpha,{\rm detector},i} \sim {\rm Normal}(E_{\alpha,i},\sigma_{\rm detector}),
 \]
-where $i$ is for each individual particle within the final distribution. An
-example of the output of this procedure is given in Fig.~\ref{fig:sim-spectra}
+where $i$ is for each individual particle within the final distribution.
+An example of the output of this procedure is given in
+Fig.~\ref{fig:sim-spectra}
 % ,
-% where the agreement between the location and width of the alpha peak can
-% be seen in the normalized spectra. Note that the low energy tailing of
-% the detected particles is not modeled in our simulated spectrum, as we
-% don't know the full characteristics for the detector response.
+% where the agreement between the location and width of the alpha peak
+% can be seen in the normalized spectra. Note that the low energy
+% tailing of the detected particles is not modeled in our simulated
+% spectrum, as we don't know the full characteristics for the detector
+% response.
 
 \begin{figure}[t]
     \begin{center}
         \label{fig:sim-spectra}
         \centerline{\includegraphics[width=0.95\textwidth]%
-            {figures/cno_nena_mgal.pdf}}
-        \caption[Simulated detector $\alpha$ energy spectrum]{Simulated
-            detector $\alpha$ energy spectrum, following the procedure
-            outlined in Sec.~\ref{sec:05-simulating-spectrum}.}
+            {figures/cno_nena_mgal.pdf}} \caption[Simulated detector
+            $\alpha$ energy spectrum]{Simulated detector $\alpha$ energy
+            spectrum, following the procedure outlined in
+            Sec.~\ref{sec:05-simulating-spectrum}.}
     \end{center}
 \end{figure}
 
@@ -281,11 +288,11 @@ beam for an unspecified duration of time.
 The counts at each detector were the sum of all events above the
 threshold defined by the beam energy and detector resolution. The counts
 are Poisson distributed, with the length of time for the run was such
-that the uncertainty from the counts at the detector was not above 5\,\%,
-with most runs having a count uncertainty of a much lower value. The
-direct uncertainty of the counts at the detector is partially convolved
-with the run time; a lower counting uncertainty requires a longer run
-time and potentially a larger time uncertainty.
+that the uncertainty from the counts at the detector was not above
+5\,\%, with most runs having a count uncertainty of a much lower value.
+The direct uncertainty of the counts at the detector is partially
+convolved with the run time; a lower counting uncertainty requires a
+longer run time and potentially a larger time uncertainty.
 
 The direct beam reduction by St.\ George must be on the order of
 $10^{10}-10^{14}$ in order to avoid damaging the Si detector and to
@@ -322,21 +329,21 @@ integration of target and cross section properties following
 In both cases, the detector efficiency and St.\ George transport
 efficiency are 100\,\%, as previously discussed.
 
-If we assume that the angular acceptance is symmetric, the angular acceptance
-in mrad is given by
+If we assume that the angular acceptance is symmetric, the angular
+acceptance in mrad is given by
 \begin{equation}
     \theta = \arccos\left(1 - 2 \frac{Y_{\rm experiment}}{Y_{\rm theory}}\right)
 \end{equation}
 
 The angular acceptance can be calculated in this way for each run
-individually, as shown in FIGURE and TABLE. The process for
-calculating the uncertainty bounds is given by the following, repeated
-2000 times to have enough confidence in the final values:
+individually, as shown in FIGURE and TABLE. The process for calculating
+the uncertainty bounds is given by the following, repeated 2000 times to
+have enough confidence in the final values:
 
 \textbf{Step 1:}
   The beam energy, beam current, and time are sampled from a normal
-  distribution ${\rm Normal}(\mu,\sigma)$, where $\mu$ and $\sigma$ are for the value
-  (energy, current, or time) in question.
+  distribution ${\rm Normal}(\mu,\sigma)$, where $\mu$ and $\sigma$ are
+  for the value (energy, current, or time) in question.
 
 \textbf{Step 2:}
   The incident number of particles is calculated from the current and
@@ -345,16 +352,17 @@ calculating the uncertainty bounds is given by the following, repeated
 \textbf{Step 3:}
   The target thickness in energy is calculated from finding the stopping
   power at the incident beam energy from the SRIM tables, and sampling
-  from the distribution of target thicknesses in terms of atoms/cm\squared{}.
+  from the distribution of target thicknesses in terms of
+  atoms/cm\squared{}.
 
 \textbf{Step 4:}
-  The yield is determined by integrating EQUATION between the
-  entrance energy and the lower energy given by that entrance energy
-  minus the target thickness.
+  The yield is determined by integrating EQUATION between the entrance
+  energy and the lower energy given by that entrance energy minus the
+  target thickness.
 
 \textbf{Step 5:}
-  The experimental yield is drawn from a poisson distribution
-  ${\rm Poisson}(c)$, where $c$ is the number of counts detected.
+  The experimental yield is drawn from a poisson distribution ${\rm
+  Poisson}(c)$, where $c$ is the number of counts detected.
 
 \textbf{Step 6:}
   The acceptance for the iteration is caluclated by EQUATION.
