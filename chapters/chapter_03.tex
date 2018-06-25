@@ -254,12 +254,12 @@ was recently vented (exposed to atmospheric pressure gases).
 The properties (entrance and exit apertures, length, maximum field
 strength, good field region, etc.) were determined within the ion optics
 solution to transport the desired recoils, and built to match those
-specifications. The entrance and exit pole faces for the dipoles were
-designed to provide higher order corrections to the particle trajectory,
-since additional higher order magnets could not used~\cite{Couder2008}.
-Additionally, the shape of the Wien filter electrostatic plates were
-designed such that the electric and magnetic fringe fields were closely
-matched.
+specifications. Higher order corrections to the particle trajectory were
+achieved by shaping the entrance and exit faces of the dipoles instead
+of using higher order multipole magnets~\cite{Couder2008}. Additionally,
+the shape of the Wien filter electrostatic plates were designed such
+that the electric and magnetic fields, inclusing the fringe fields, were
+closely matched.
 
 
 \subsection{Magnetic Fringe Fields and Effective Field Lengths}
@@ -267,13 +267,12 @@ matched.
 Detailed two-dimensional magnetic field maps for multiple excitations of
 each magnet were provided by Bruker. The field maps allow a check on the
 good field region for each magnet and provide a description of the
-fringe fields. Field strengths at each location are measured in mT. The
-fringe fields for each magnet, excitation, and measurement radial
-distance can be analyzed separately if desired. From this data, the
-shape of the fringe field and the effective field length of the magnetic
-elements can be determined. As these values are essential to setting the
-necessary values for the quadrupoles, the analysis of the field maps
-focused on these elements.
+fringe fields. Field strengths at each location (distance along the beam
+axis and at a radial distance from the beam axis) are measured in mT.
+From this data, the shape of the fringe field and the effective field
+length of the magnetic elements can be determined. As these values are
+essential to setting the necessary values for the quadrupoles, the
+analysis of the field maps focused on these elements.
 
 A single edge fringe field is described by the Enge function given by
 \begin{equation}
@@ -328,7 +327,7 @@ central axis were not used for determining either the effective field
 length or the Enge coefficients. Additionally, the effective field
 length and the shape of the fringe field were assumed to not differ with
 different magnet excitations, so all available data were used for each
-magnet at the same time. An example using $Q_10$ of the normalized
+magnet at the same time. An example using $Q_{10}$ of the normalized
 fields used and the resulting fit is shown in Fig.~\ref{fig:enge_fit}.
 
 The effective field lengths were calculated directly from the field maps
@@ -341,8 +340,7 @@ outside of the integral. The integration was performed using the
 Simpson's Rule routine provided by the SciPy Python
 package~\cite{SciPy}. An average of these lengths was used. Differences
 between the calculated effective field length and those used within the
-initial ion optics solution were within 2\,\%. The new effective field
-lengths were used for all subsequent calculations.
+initial ion optics solution were within 2\,\%.
 
 Using the same normalized field ``traces'' along the $z$-axis, the Enge
 coefficients describing the shape of the fringe field may be determined.
@@ -409,6 +407,19 @@ default COSY parameters was significantly larger than that found through
 the minimization routine, and the difference was shown to be
 statistically significant. A visual comparison between the two models
 for $Q_{10}$ is shown in Fig.~\ref{fig:enge_comparison}.
+
+These new terms describing the effective field length and the fringe
+field can be used to provide a more realistic beam optics solution for
+St.\ George. To create this realistic solution, the magnetic elements
+within the separator were redefined with these newly found values. The
+beam optics solution was refit by minimizing a cost function defined in
+terms of our desired transfer matrix properties at our focal planes,
+such as the mass and energy dispersion at the post-Wien filter focal
+plane $F_2$, the beam spot size at the final detector plane $F_3$, and
+other properties. From this recalculated solution, new pole tip fields
+for the focusing quadrupoles are determined which can provide a more
+accurate estimate of the actual experimental field required for the
+experiment.
 
 
 \section{Energy and Angular Acceptance}
