@@ -203,21 +203,24 @@ entrance and exit of the filter to match the magnetic field field to the
 electric fringe field. These clamps must be adjusted to their proper
 positions before the magnetic field can be set.
 
-%%% HERE %%%
-
-The magnetic quadrupoles, due to the inability to directly observe the
-trajectory of the focused particles within the separator at all possible
-angles and energies concurrently to achieve the required acceptance
-properties of the separator, require a similarly complicated and
-restrictive procedure to determine the experimental settings that match
-the results of the beam optics calculations. The full procedure is
-outlined in \ref{sec:tuning_stg}.
+The magnetic quadrupoles require a more complex procedure in order to
+set their fields to the desired values. This complication arises from
+the inability to directly observe the trajectory of the focused
+particles within the separator at all possible angles and energies
+concurrently, and at multiple points within the separator itself. If
+these trajectories match the trajectories expected from the beam optics
+calculation, then the acceptance and rejection properties of the
+separator would be the desired values. Due to the inability to do this,
+the quadrupole tuning procedure must be adapted to work with the
+diagnostic equipment available. The full procedure is outlined in
+\ref{sec:tuning_stg}.
 
 
 \section{Separator Properties}
 
+% St George was installed the same year that I started grad school
 The elements, power supplies, and supports were provided by Bruker
-Biospin and installed in 200X. The separator design requirements for the
+Biospin and installed in 2011. The separator design requirements for the
 strengths of the optical elements were based on the maximum beam energy
 of the older KN single-ended Van de Graff accelerator and the possible
 charge states produced by its internal ion source. The 5U and ion source
@@ -234,9 +237,15 @@ The Wien filter electrode power supplies are set separately based on
 their voltage, with voltage stability $dV/V \approx 10^{-5}$ in the
 range commonly used for experiments. The upper limits for these power
 supplies are $\pm110$~kV, with voltages below $\approx 70$~kV used
-during previous work. The stability of the voltage is dependent on prior
-conditions within the vacuum chamber, requiring conditioning of the
-plates before higher voltages can be achieved. For voltages above
+during previous work. In order to reach voltages near the top range, the
+voltages need to be slowly ramped up to ``condition'' the plates at the
+higher voltage. This conditioning is required due to minor imperfections
+on the surface of the electrostatic plates, differences in the residual
+vacuum within the vacuum chamber, and buildup of C deposits on the
+plates and interior walls. Directly setting the plates to higher
+voltages without conditioning the plates would lead to large and
+frequent discharges of the electrostatic plates, preventing the Wien
+filter from being used in stable running conditions. For voltages above
 $\approx 50$~kV, the plates were conditioned to voltages at least 10~kV
 above the desired setpoint to provide a stable running condition. For
 lower voltages, no conditioning is necessary unless the vacuum chamber
