@@ -573,7 +573,7 @@ and monitored with the Faraday cup at the target location, called the
 \emph{target cup} for beam current stability. Diagnostic equipment
 before the target location are used as an aide to transport the beam and
 ensure that it has the desired properties. If necessary, the beam
-current is reduced. The quadrupole triplet is not be used at this point,
+current is reduced. The quadrupole triplet is not used at this point,
 since the beam may not be entering the element along its magnetic
 optical axis.
 
@@ -581,23 +581,24 @@ The beam is sent into St.\ George. With no field in $Q_1$, $Q_2$, and
 $B_1$, the beam hits the quartz viewer at the 0\degree{} exit port of
 the magnetic vacuum chamber, called the \emph{$B_1$ quartz}. If the beam
 does not strike the quartz, then the final set of steering elements
-needs to be adjusted to send the beam into the quartz. When using the
-angular deflection commissioning chamber, the current readbacks from the
-plates provides an additional diagnostic on the trajectory of the beam.
+needs to be adjusted to send the beam into the quartz.
 
 \textbf{Checking for steering:}
 Quadrupoles $Q_1$ and $Q_2$ are adjusted independently of each other,
 and the resulting motion of the beam on the quartz is recorded. If the
-beam is aligned with the central magnetic optical axis of either quartz,
-the quadrupole will only focus the beam and not shift its position on
-the quartz, i.e.\ the spread in the beam will change but not its central
-position. The two quadrupoles must be adjusted independently of each
-other as any induced steering from a beam misalignment in one may be
-counteracted by a misalignment in the other quadrupole. If the beam is
-steered by either quadrupole, the steering elements corresponding the
-the focus direction of the offending quadrupole ($Y_5$ and $Y_6$ for
-$Q_1$, the switching magnet and $X_6$ for $Q_2$) are adjusted to reduce
-the amount of steering by that quadrupole.
+beam is aligned with the central magnetic optical axis, the quadrupole
+will only focus the beam and not shift its position on the quartz, i.e.\
+the spread in the beam will change but not its central position. The two
+quadrupoles must be adjusted independently of each other as any induced
+steering from a beam misalignment in one may be counteracted by a
+misalignment in the other quadrupole. If the beam is steered by either
+quadrupole, the steering elements preceeding the offending quadrupole
+are adjusted to reduce that steering. Commonly, the elements that steer
+in the same direction as the focusing direction of the quadrupole (i.e.\
+$Y_5$ and $Y_6$ for $Q_1$, the switching magnet and $X_6$ for $Q_2$)
+will provide the largest improvement to the steering. Minor corrections
+to all preceeding steering elements may be required as the non-steering
+solution is approached.
 
 A quadrupole steers a beam when the beam enters the magnetic element
 misaligned with the optical magnetic axis. Assuming that the element is
@@ -605,21 +606,26 @@ brought from zero to defined strength, the focal length of the
 quadropule changes from $\infty$ to a length $f$. The effect on the beam
 is that those regions of the beam away from the optical axis are brought
 to pass through this focal point. When a beam is aligned with the
-optical axis, there is an equal amount of the beam on either side of
-this optical axis, so the beam spot will narrow along the focusing axis
-of the quadrupole. The beam will also extend along the other axis. If
-the beam is not aligned with the optical axis, this beam motion to the
-focal point will be viewed as a lateral motion along the focusing axis
-of the quadrupole. A sketch of this effect can be seen in
+magnetic optical axis, there is an equal amount of the beam on either
+side of this optical axis, so the beam spot will narrow along the
+focusing axis of the quadrupole. The beam will also extend along the
+other axis. If the beam is not aligned with the optical axis, this beam
+motion to the focal point will be viewed as a lateral motion along the
+focusing axis of the quadrupole. A sketch of this effect can be seen in
 Figure~\ref{fig:steering}.
 
 \begin{figure}[t]
-   \begin{center}
-       \centerline{\includegraphics[width=0.8\textwidth]
-           {figures/rigidity-phase-space.png}}
-       \caption[Sketch of quadrupole steering of misaligned beam]{}
-       \label{fig:steering}
-   \end{center}
+    \begin{center}
+        \centerline{\includegraphics[width=0.8\textwidth]
+        {figures/rigidity-phase-space.png}}
+        \caption[Sketch of quadrupole steering of misaligned beam]{Sketch
+        of the steering caused by a quadrupole magnet due to the beam
+        being misaligned to the magnetic optical axis. Assuming that no
+        higher order corrections are made, the beam appears to scan
+        across the observation plane as the magnetic field is
+        increased.}
+        \label{fig:steering}
+    \end{center}
 \end{figure}
 
 The goal for adjusting the steering elements before St.\ George is to
@@ -630,10 +636,13 @@ the beam switches from steering left to steering right for example, can
 be used to restrict the possible phase space of steerer values, as the
 beam must have a zero deflection position between those two extremes.
 
-While each direction should be independent of each other, if the beam is
-far from the magnetic optical axis, a single quad may induce steering in
-both directions. When minimizing steering in a single direction, say the
-$x$-direction, the other direction must also be checked frequently.
+A single quadrupole may induce steering in both directions based on the
+beam conditions. For example, a beam that is misaligned in both the $+x$
+and $+y$ direction entering into a quadrupole focusing in the $y$ plane
+will be steered in both the $+x$ and $-y$ direction. When minimizing
+steering in a single direction, the other direction must be periodically
+checked to ensure that a minimal steering solution is reached for both
+directions at the same time.
 
 At the end of this process, the beam is not deflected when the field
 strength for either $Q_1$ or $Q_2$ is increased or decreased
