@@ -738,25 +738,27 @@ of 0.1~G, read back by the Hall probes.
 Due to potentially small misalignments in the St.\ George quadrupoles in
 relation to each other, it is commonly not possible to have $Q_{1-5}$
 non-steering simultaneously (see \cite{Meisel2017}). In these cases,
-minimal steering can be achieved through $Q_{3-5}$ when $Q_1Q_2$ are
-non-steering by adjusting $B_1B_2$. At this point, dipoles $B_1B_2$ are
-set to the value corresponding to the magnetic rigidity of the particle
-and to maintain the test beam alignment to the optical axis.
+minimal steering can be achieved through $Q_{3-5}$ by adjusting $B_1B_2$
+when $Q_1Q_2$ are non-steering. At this point, dipoles $B_1B_2$ are set
+to the value corresponding to the magnetic rigidity of the particle and
+to maintain the test beam alignment to the optical axis.
 
 Dipoles $B_3B_4$ are brought up to their rough field value to send the
 beam through the WF and onto either the WF quartz or the $B_5$ quartz.
 The quadrupoles $Q_{6-9}$ are checked for steering, adjusting $B_3B_4$
-to minimize the steering. Since there is some residual magnetic field
-within the Wien filter, the electric field is brought up to compensate
-for this bending to keep the test beam along the optical axis through
-$Q_8Q_9$. The field required is calculated by determining the bending
-radius caused by the residual magnetic field and creating the equivalent
+to minimize the steering. The focus at this point is on getting a
+non-steering solution for $Q_6Q_7$, as $Q_8Q_9$ can also be corrected by
+the Wien filter. Since there is some residual magnetic field within the
+Wien filter, the electric field is brought up to compensate for this
+bending to keep the test beam along the optical axis through $Q_8Q_9$.
+The field required is calculated by determining the bending radius
+caused by the residual magnetic field and creating the equivalent
 bending radius in the opposite direction for the particle's $E\rho$.
 
 As the beam envelope has expanded, it will be necessary to bring
 $Q_{1-5}$ to their desired values in order to check the steering of the
 remaining quadrupoles. Since these quadrupoles have been shown to be
-minimally steering, their effect on the beam trajectory through
+minimally steering, their effect on the beam trajectory through the
 remainder of St.\ George should be negligible. It may be necessary to
 have a weak field in $B_5$ in order to see the beam on the $B_5$ quartz
 for the same reasons as explained previously for $B_3$.
@@ -768,15 +770,21 @@ based on the test beam's rigidity. Since the energy of the beam is well
 known and the charge of the beam is exact, the electric rigidity $E\rho$
 is also well known. The electric dipole within the WF is set for this
 rigidity and held constant for the remainder of the tuning process.
+% Manoel says that I should cite something here...? Email sent
 
 The magnetic field is set similarly to the other dipoles: to minimize
 the steering induced by the next set of quadrupoles ($Q_8Q_9$). Since
 the test beam was aligned to the optical magnetic axes of this
 quadrupole doublet in the previous step, the WF magnetic dipole must
-return the beam to this orientation. Additionally, since the elements
-within St.\ George act to prepare the beam to be separated by mass by
-the WF, the quadrupoles $Q_{1-7}$ must be set to the values determined
-by the test beam's magnetic rigidity $B\rho$.
+return the beam to this orientation. The preceeding magnetic quadrupoles
+$Q_{1-7}$ must also be set to their required values. These values are
+found by scaling the calculated tune based on the rigidity of the test
+beam; in cases where an optimal solution was found experimentally that
+differs from the COSY calculated values, those \emph{in situ} optimized
+values are used as the baseline. The quadrupoles are required to be set
+since the elements within St.\ George up to and including the Wien filter
+work to separate the beam particles by mass, so setting them mimics the
+situation during an experiment.
 
 The magnetic field for the WF is read back using a Hall probe located on
 the pole face. The field can be set precisely and related to the fields
@@ -816,21 +824,16 @@ steering at the target location, potentially moving the focal point
 radially from the optical magnetic axis. The target collimator position
 is then not a fixed value but must also be tuned to maximize
 transmission. Once the collimator position is found, the target position
-is immediately known.
-
-Rotation angles between $-5$ and $+25$\degree{}, where 0\degree{} is to
-the right from the beam's perspective, and extensions of $91-96$~mm of
-the mounted linear motion have been explored. Maximum transmission has
-been found for collimator positions within this range of rotation angles
-and extension distances for multiple beams, restricting the total
-possible search space for the collimator. Extensions of the target
-ladder of $\approx 94$~mm, and rotation angles near $+10$\degree{} are
-common ``best positions'' for the collimator.
+is immediately known. Empirically, a small range of possible values for
+the rotation and extension of the target ladder have been found to be
+optimal, restricting the search space when tuning.
 
 For acceptance measurements, the collimator is used to create a focal
 point at the target location. Once the beam preparation is complete, it
-is retracted from the beamline. When a target is used as a degrader, the
-collimator position is used to determine the target position.
+is retracted from the beamline. In situations where a target foil is
+used as a ``degrader'' to provide an angular and energy spread, the
+relative distance between the collimator and the foil is used to
+properly align the foil to the beam.
 
 \subsubsection{Additional Considerations}
 % fill out the rest of this...?
