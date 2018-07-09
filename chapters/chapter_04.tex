@@ -238,21 +238,46 @@ recycled and brought to their scaled values for the $\alpha$ particle
 energy in question. The recycling procedure ensures that the ...
 % self-magnetization? I don't remember the term
 
-\subsection{detector moving}
+\subsection{Measuring Beam Suppression}
 
--- slowly up to see if we have a massive count rate
--- if we do, something is wrong
+Once the incident beam is prepared, the next step is to see how much of
+the beam reaches the detector plane without the target in place. This
+step is a direct measurement of the suppression of the separator and is
+essential to ensuring that the count rate at the detector due to the
+beam is minimal. If the beam current at the detector due to the beam is
+too high, it is possible that the detector could be damaged or the
+signal of the produced $\alpha$ particles could be lost due to dead time
+considerations.
 
-\subsection{target in place}
+The detector at the focal plane is located behind a thin Al shield when
+fully retracted. This shield protects the exposed detector in situations
+where the direct beam is incident through St.\ George. To determine if
+the residual beam current at the detector plane is too high, the
+detector is slowly moved up while the data acquisition system is
+running. If the count rate is negligible, the detctor is slowly moved up
+in steps until it reaches its final position centered on the magnetic
+optical axis.
+
+Using the beam current at the target location, the suppression can be
+calculated from the yield of the incident proton beam at the detector
+plane. This suppression does not include the target effects, so it can be
+considered as an initial estimate of the rejection of the separator. The
+rejection is calculated by
+\[
+    R = \frac{N_{\rm beam at target}}{N_{\rm beam at detector}}.
+\]
+Initial measurements of the suppression of St.\ George for the altered
+tune are approximately $10^{13}$. Once the suppression is determined to
+be adequate for the experiment, the detector is again retracted to
+behind the shield.
+
+\subsection{Target Effects}
 
 -- use known position from beam preparation
-
-\subsection{detector moving up slowly}
-
 -- could change count rate from beam
 -- want to make sure on resonance not a lot of counts
 
-\subsection{shift WF E-field if needed}
+\subsection{Wien Filter Optimization}
 
 -- want count distribution across the strips centered
 -- E field set by known equation, but physical electrodes could
@@ -262,7 +287,7 @@ energy in question. The recycling procedure ensures that the ...
 
 -- checks vertical extent of the beam (assume vertical symmetry)
 
-\subsection{final run}
+\subsection{Experimental Run}
 
 -- run for 15 minutes or 20k counts (statistical uncertainty low),
    rinse and repeat
