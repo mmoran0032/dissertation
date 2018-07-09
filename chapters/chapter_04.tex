@@ -180,12 +180,63 @@ reject the remainder of the incident beam.
 For each experimental run, we aim to measure the experimental yield at
 the detector in order to compare it to the theoretical yield for a given
 angular and energy acceptance. The experimental yield is dependent on
-the beam current, the run time, and the target properties.
+the beam current, the run time, and the target properties. For each run,
+the incident beam must be prepared, and the tuning of St.\ George must
+match the expected energy of the produced $\alpha$ particles. Auxiliary
+runs are performed to ensure that the beam rejection is within an
+acceptable range, that the produced particle current is not too high,
+and that the beam spot on the detector is centered. Once all of the
+preparations are complete, a run at the desired energy can be performed.
+All data was collected by the DAQ and stored as binary files for later
+processing.
 
-\subsection{beam preparation/initial tuning}
+The process below describes the steps taken for each individual energy
+point. For each energy point, multiple runs are performed, with the
+final run taking place with the final separator settings. The magnetic
+settings for St.\ George are based on an altered tune to transport the
+$\alpha$ particles to the Wien filter focal plane $F_2$ such that the
+beam spot of the produced $\alpha$ particles is contained within the
+physical extent of the Si detector. The desired rays through St.\ George
+are shown in Fig.~\ref{fig:raytrace-altered}
 
--- includes magnet recycling if necessary
--- check logbook for additional details
+\begin{figure}
+    \begin{center}
+        \centerline{
+            \includegraphics[width=0.8\textwidth]{figures/raytrace.png}}
+        \caption[Horizontal and vertical rays through St.\
+            George for $\alpha$ particles]{Horizontal (upper plot) and
+            vertical (lower plot) rays through St.\ George for the
+            altered tune transporting $\alpha$ particles to the
+            post-Wien filter focal plane $F_2$. The pole tip fields are
+            given in Table~\ref{tab:poletip}.}
+        \label{fig:raytrace-altered}
+    \end{center}
+\end{figure}
+
+The initial St.\ George magnetic settings were first found in a similar
+manner to the energy and angular acceptance commissioning, with the
+primary difference being the initial COSY settings for the magnets.
+
+\subsection{Beam Preparation}
+
+The incident proton beam must be tuned for the desired energy. The beam
+energy is set by adjusting the 5U and the analyzing magnet, with the
+remainder of the transport beam line adjusted for the new energy. In
+situations where the previous energy is close (within a few keV) to the
+desired energy, this energy change is relatively straightforward as it
+requires smaller changes to the beam line settings.
+
+The incident beam must also be aligned with the magnetic optical axis of
+St.\ George in the same manner as described in Sec.~\ref{sec:tuning}.
+The magnets at the entrance of St.\ George, namely $Q_1Q_2B_1$ must be
+brought down to zero in order to align the incident beam. The collimator
+position is also determined in the same manner as the commissioning work
+in order to determine the position of the Al target.
+
+Once the beam is aligned, the target is put in place and $Q_1Q_2B_1$ are
+recycled and brought to their scaled values for the $\alpha$ particle
+energy in question. The recycling procedure ensures that the ...
+% self-magnetization? I don't remember the term
 
 \subsection{detector moving}
 
