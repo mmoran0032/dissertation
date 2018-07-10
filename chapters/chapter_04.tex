@@ -235,8 +235,8 @@ in order to determine the position of the Al target.
 
 Once the beam is aligned, the target is put in place and $Q_1Q_2B_1$ are
 recycled and brought to their scaled values for the $\alpha$ particle
-energy in question. The recycling procedure ensures that the ...
-% self-magnetization? I don't remember the term
+energy in question. The recycling procedure ensures that the magnetic
+field produced by the magnet is not affected by self-magnetization.
 
 \subsection{Measuring Beam Suppression}
 
@@ -264,26 +264,79 @@ plane. This suppression does not include the target effects, so it can be
 considered as an initial estimate of the rejection of the separator. The
 rejection is calculated by
 \[
-    R = \frac{N_{\rm beam at target}}{N_{\rm beam at detector}}.
+    S = \frac{N_{\rm beam at target}}{N_{\rm beam at detector}}.
 \]
 Initial measurements of the suppression of St.\ George for the altered
 tune are approximately $10^{13}$. Once the suppression is determined to
 be adequate for the experiment, the detector is again retracted to
-behind the shield.
+behind the shield. The beam at this point is stopped before the target
+location to allow for the moving of the detector and target.
 
 \subsection{Target Effects}
 
--- use known position from beam preparation
--- could change count rate from beam
--- want to make sure on resonance not a lot of counts
+The initial beam suppression does not include the effects of the target
+on the incident beam. Once the initial suppression has been shown to be
+acceptable for the detector, the target is placed into the beam line.
+Its position is based on the found collimator position from the initial
+beam tuning and alignment.
 
-\subsection{Wien Filter Optimization}
+Once the target is in place, the detector will see $\alpha$ particles
+produced in the reaction and any residual beam protons that are
+transported to the focal plane. When the beam energy is on resonance,
+there is a possibility that the produced $\alpha$ particle count rate is
+high enough that there could be damage to the detector when combined
+with the potential residual beam. With the detector still behind the
+shield, the beam is sent into the target chamber.
 
--- want count distribution across the strips centered
--- E field set by known equation, but physical electrodes could
-   cause some difference from that (plus B fringe field)
+As before, the detector is slowly moved up while monitoring the total
+count rate at the detector. This count rate will primarily be due to the
+produced $\alpha$ particles. Once the detector is fully extended, the
+initial production runs to fine tune the settings of St.\ George can be
+completed.
 
-\subsection{low detector position}
+\subsection{Final Optimization}
+
+When scaling the elements of St.\ George to the expected $\alpha$
+particle energy, both the magnetic elements and the electrostatic plates
+of the Wien filter need to be adjusted. The Wien filter voltage is set
+according to
+\[
+    V_{\rm WF} = \frac{d E_{\alpha}}}{2 \rho_{\rm WF}},
+\]
+where $d$ is the distance between the Wien filter plates in meters and
+$\rho_{\rm WF}$ is the desired bending radius of the Wien filter. When
+the $\alpha$ energy is given in keV, the final voltage will be in kV and
+is the set point for each of the two electrodes.
+
+The final Wien filter voltage may differ from this value. The central
+energy of the $\alpha$ particles may be slightly different than that
+used, the physical electrodes may have slight imperfections which change
+the resulting electric field, or the voltage supplied to the
+electrostatic plates may be slightly different than the setpoint. For
+these reasons, the final tuning of the Wien filter is to center the
+$\alpha$ particle count distribution horizontally on the Si detector.
+Adjusting the Wien filter voltage to higher (lower) values for a set
+magentic field strength will move the $\alpha$ distribution right (left)
+in the horizontal plane. An example showing the change in the horizontal
+distribution of the $\alpha$ particles is given in
+Fig.~\ref{fig:wf-not-optimal}.
+
+\begin{figure}
+    \begin{center}
+        \label{fig:wf-not-optimal}
+        % \centerline{\includegraphics[width=0.8\textwidth]{figures/raytrace.png}}
+        \caption[Horizontal $\alpha$ particle distribution]{Horizontal
+            $\alpha$ particle distribution at the detector plane before
+            and after the Wien filter settings are optimized. The
+            optimization centers the count distribution on the detector
+            by adjusting the voltage to swing the beam distribution left
+            or right. The proton energy for this run was
+            $E_{\rm p} = $, resulting in a central $\alpha$ energy of
+            $E_{\alpha} = $. This run is near the resonance peak.}
+    \end{center}
+\end{figure}
+
+
 
 -- checks vertical extent of the beam (assume vertical symmetry)
 
