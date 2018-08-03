@@ -15,12 +15,12 @@ the desired design characteristics of the separator.
 
 \section{Acceptance}
 
-The designed angular acceptance of St.\ George is
-$\Delta\theta = 40$~mrad, which is assumed to be cylindrically symmetric
-around the beam axis. The acceptance was determined for each run
-independently, based on the properties of the beam, target, and cross
-section for the \alpa{} reaction. The acceptances are shown in
-Fig.~\ref{fig:final-acceptance} and tabulated in Table~\ref{tab:final-acceptance}.
+The designed angular acceptance of St.\ George is $\Delta\theta =
+40$~mrad, which is assumed to be cylindrically symmetric around the beam
+axis. The acceptance was determined for each run independently, based on
+the properties of the beam, target, and cross section for the \alpa{}
+reaction. The acceptances are shown in Fig.~\ref{fig:final-acceptance}
+and tabulated in Table~\ref{tab:acceptance-uncertainty}.
 
 \begin{figure}
     \begin{center}
@@ -37,23 +37,30 @@ Fig.~\ref{fig:final-acceptance} and tabulated in Table~\ref{tab:final-acceptance
 
 \begin{table}
     \begin{center}
-        \caption{ACCEPTANCE}
-        \label{tab:final-acceptance}
-        \begin{tabular}{cS[table-format=2.4]S[table-format=3.2]}
+        \caption{ACCEPTANCE WITH UNCERTAINTY}
+        \label{tab:acceptance-uncertainty}
+        \begin{tabular}{cS[table-format=2.4]S[table-format=3.2]
+        S[table-format=3.2]S[table-format=3.2]S[table-format=3.2]
+        S[table-format=3.2]S[table-format=3.2]S[table-format=3.2]
+        }
             \toprule
             \midrule
-            \textbf{Run Number} & \textbf{$E_p$ [MeV]} & \textbf{Acceptance [mrad]} &
+            \textbf{Run Number} & \textbf{$E_p$ [MeV]} & \textbf{Acceptance} &
+                \textbf{67\,\%$_{\rm L}$} & \textbf{67\,\%$_{\rm H}$} & \textbf{67\,\%$_{\rm W}$} &
+                \textbf{95\,\%$_{\rm L}$} & \textbf{95\,\%$_{\rm H}$} & \textbf{95\,\%$_{\rm W}$} \\
             \midrule
-            264           & 1.374 & 24.8 & \\
-            270$^\dagger$ & 1.369 & 38.9 & \\
-            277           & 1.364 & 68.1 & \\
-            282           & 1.359 & 56.6 & \\
-            288           & 1.353 & 61.6 & \\
-            248           & 1.198 & 27.3 & \\
-            255           & 1.193 & 24.0 & \\
-            260$^\dagger$ & 1.188 & 40.3 & \\
-            234           & 1.183 & 33.4 & \\
-            241           & 1.178 & 43.8 & \\
+
+264           & 1.374 & 24.8 & 21.3 & 25.0 &  3.7 & 20.7 & 32.0 & 11.3 \\
+270$^\dagger$ & 1.369 & 38.9 & 37.9 & 39.8 &  1.9 & 37.0 & 40.9 &  3.9 \\
+277           & 1.364 & 68.1 & 55.7 & 80.9 & 25.2 & 41.5 & 92.0 & 50.6 \\
+282           & 1.359 & 56.6 & 52.5 & 59.8 &  7.3 & 49.7 & 64.2 & 14.5 \\
+288           & 1.353 & 61.6 & 59.0 & 65.1 &  6.1 & 55.4 & 67.4 & 12.0 \\
+248           & 1.198 & 27.3 & 24.8 & 28.7 &  3.8 & 23.4 & 31.5 &  8.2 \\
+255           & 1.193 & 24.0 & 21.9 & 24.7 &  2.8 & 21.0 & 27.4 &  6.4 \\
+260$^\dagger$ & 1.188 & 40.3 & 39.2 & 41.3 &  2.1 & 38.3 & 42.4 &  4.1 \\
+234           & 1.183 & 33.4 & 16.7 & 42.7 & 26.0 & 13.8 & 55.6 & 41.8 \\
+241           & 1.178 & 43.8 & 40.9 & 46.7 &  5.8 & 38.2 & 49.9 & 11.7 \\
+
             \bottomrule
         \end{tabular}
 
@@ -62,16 +69,16 @@ Fig.~\ref{fig:final-acceptance} and tabulated in Table~\ref{tab:final-acceptance
     \end{center}
 \end{table}
 
-The acceptance values have different uncertainties based on the specifics
-of the run, such as the beam energy used and the underlying cross section.
-The values for the uncertainty bands are tabulated in
-Table~\ref{tab:acceptance-uncertainty}. The uncertainty around the
-on-resonance runs are the smallest due to the higher count rate, shorter
-run times, and the underlying cross section. The cross section peaks for
-the on-resonance runs peaks near the center of the energy range covered
-by the target, resulting in a slight shift in beam energy having a smaller
-effect on the final yield and thus a lower final uncertainty due to the
-uncertainty in the beam energy (see Fig.~\ref{fig:example-cross-section}).
+The acceptance values have different uncertainties based on the
+specifics of the run, such as the beam energy used and the underlying
+cross section. The uncertainty around the on-resonance runs are the
+smallest due to the higher count rate, shorter run times, and the
+underlying cross section. The cross section peaks for the on-resonance
+runs peaks near the center of the energy range covered by the target,
+resulting in a slight shift in beam energy having a smaller effect on
+the final yield and thus a lower final uncertainty due to the
+uncertainty in the beam energy (see
+Fig.~\ref{fig:example-cross-section}).
 
 \begin{figure}
     \begin{center}
@@ -85,6 +92,149 @@ uncertainty in the beam energy (see Fig.~\ref{fig:example-cross-section}).
             drastically affected by the uncertainty in the beam energy.}
     \end{center}
 \end{figure}
+
+From our analysis, we can also decompose the uncertainty for each run
+into the contributions from individual uncertainties through our Monte
+Carlo method. By focusing in the four uncertainties that are primarily
+under the control of the experimenter\---{}the beam energy uncertainty
+$E_{\rm beam}$, the run time uncertainty $t_{\rm run}$, the beam current
+uncertainty $i_{\rm beam}$, and the target thickness uncertainty
+$\Delta_{rm target}$\---{}the focus of subsequent experiments can be on
+minimizing the largest uncertainty where necessary. The contributions
+ofthe uncertainties are shown in
+Tables~\ref{tab:acceptance-uncertainty-67} and
+\ref{tab:acceptance-uncertainty-95}, where the values are the percentage
+of the 67\,\% and the 95\,\% (respectively) confidence intervals that
+remains when holding the given variable or variables constant.
+
+\begin{table}
+    \begin{center}
+        \caption{ACCEPTANCE BOUNDS WITH HELD VARIABLES, 67\,\%}
+        \label{tab:acceptance-uncertainty-67}
+        \begin{tabular}{cS[table-format=4.2]S[table-format=4.2]S[table-format=4.2]S[table-format=4.2]
+        S[table-format=4.2]S[table-format=4.2]S[table-format=4.2]S[table-format=4.2]S[table-format=4.2]S[table-format=4.2]
+        }
+            \toprule
+            \midrule
+            \textbf{Variables Held Constant} &
+                \textbf{241} & \textbf{234} & \textbf{260}$^\dagger$ & \textbf{255} & \textbf{248} &
+                \textbf{288} & \textbf{282} & \textbf{277} & \textbf{270}$^\dagger$ & \textbf{264} \\
+            \midrule
+
+$E_{\rm beam}$
+    &  49.0 &   5.8 &  96.0 &  92.1 &  95.7 &  64.2 &  37.8 &  13.8 & 106.2 &  68.8 \\
+$t_{\rm run}$
+    & 101.4 &  93.5 &  98.3 & 103.3 & 101.8 &  97.4 & 101.4 & 100.2 & 105.0 &  99.2 \\
+$i_{\rm beam}$
+    &  90.7 &  96.1 &  24.7 &  29.3 &  61.1 &  78.1 &  90.8 & 101.9 &  27.0 &  87.4 \\
+$\Delta_{rm target}$
+    & 102.1 &  96.1 &  99.6 &  95.9 &  82.2 &  99.3 &  99.9 &  99.5 & 105.9 &  85.6 \\
+$E_{\rm beam}$, $t_{\rm run}$
+    &  51.0 &   5.9 &  97.8 &  89.5 &  92.5 &  62.9 &  38.3 &  13.3 & 101.3 &  66.7 \\
+$E_{\rm beam}$, $i_{\rm beam}$
+    &  12.8 &   1.3 &  23.5 &  20.2 &  56.1 &  19.5 &  12.3 &   3.2 &  24.3 &  57.8 \\
+$E_{\rm beam}$, $\Delta_{rm target}$
+    &  49.0 &   5.8 &  97.8 &  88.9 &  76.7 &  59.0 &  37.5 &  13.6 & 101.3 &  31.1 \\
+$t_{\rm run}$, $i_{\rm beam}$
+    &  92.3 &  99.7 &  11.4 &  23.3 &  63.0 &  75.9 &  92.0 & 100.0 &  12.5 &  87.2 \\
+$t_{\rm run}$, $\Delta_{rm target}$
+    & 101.8 &  94.7 &  98.1 &  98.4 &  80.3 &  91.9 &  98.2 &  98.6 & 102.7 &  83.2 \\
+$i_{\rm beam}$, $\Delta_{rm target}$
+    &  88.9 &  98.8 &  25.2 &  22.4 &  24.1 &  76.1 &  92.6 &  98.9 &  26.1 &  77.1 \\
+$E_{\rm beam}$, $t_{\rm run}$, $i_{\rm beam}$
+    &  11.2 &   0.8 &   7.8 &  17.4 &  56.0 &  18.9 &  11.4 &   1.3 &   5.4 &  58.2 \\
+$E_{\rm beam}$, $t_{\rm run}$, $\Delta_{rm target}$
+    &  49.8 &   5.8 &  95.7 &  88.4 &  76.5 &  58.8 &  37.7 &  13.3 &  98.8 &  29.0 \\
+$E_{\rm beam}$, $i_{\rm beam}$, $\Delta_{rm target}$
+    &   7.8 &   1.3 &  21.3 &  10.1 &   5.0 &   8.5 &   7.1 &   2.8 &  22.8 &   6.6 \\
+$t_{\rm run}$, $i_{\rm beam}$, $\Delta_{rm target}$
+    &  89.4 &  99.6 &  10.9 &  17.9 &  21.5 &  78.6 &  93.4 & 102.3 &  10.9 &  76.2 \\
+All
+    &   5.6 &   0.7 &   3.9 &   3.6 &   3.8 &   6.4 &   5.0 &   0.9 &   3.9 &   2.0 \\
+
+            \bottomrule
+        \end{tabular}
+
+        \vspace{0.5em}
+        $\dagger$: Denotes runs at resonance energy
+    \end{center}
+\end{table}
+
+\begin{table}
+    \begin{center}
+        \caption{ACCEPTANCE BOUNDS WITH HELD VARIABLES, 95\,\%}
+        \label{tab:acceptance-uncertainty-95}
+        \begin{tabular}{cS[table-format=4.2]S[table-format=4.2]S[table-format=4.2]S[table-format=4.2]
+        S[table-format=4.2]S[table-format=4.2]S[table-format=4.2]S[table-format=4.2]S[table-format=4.2]S[table-format=4.2]
+        }
+            \toprule
+            \midrule
+            \textbf{Variables Held Constant} &
+                \textbf{241} & \textbf{234} & \textbf{260}$^\dagger$ & \textbf{255} & \textbf{248} &
+                \textbf{288} & \textbf{282} & \textbf{277} & \textbf{270}$^\dagger$ & \textbf{264} \\
+            \midrule
+
+$E_{\rm beam}$
+    &  49.4 &   7.5 & 101.1 &  75.8 &  93.0 &  64.1 &  39.6 &  13.2 & 102.4 &  50.9 \\
+$t_{\rm run}$
+    & 101.8 &  95.3 & 101.3 &  99.8 &  99.6 & 102.7 & 101.0 &  97.9 &  99.0 & 107.6 \\
+$i_{\rm beam}$
+    &  86.6 &  97.3 &  26.8 &  51.1 &  66.3 &  77.7 &  93.9 &  93.6 &  26.5 & 102.0 \\
+$\Delta_{rm target}$
+    &  95.4 &  98.2 & 101.4 &  80.4 &  82.9 &  98.7 & 104.2 &  95.8 & 103.5 &  75.8 \\
+$E_{\rm beam}$, $t_{\rm run}$
+    &  47.4 &   7.2 &  96.7 &  73.4 &  93.4 &  63.8 &  39.6 &  13.2 & 101.4 &  50.2 \\
+$E_{\rm beam}$, $i_{\rm beam}$
+    &  12.0 &   1.7 &  23.0 &  18.1 &  55.5 &  20.1 &  12.5 &   3.0 &  24.0 &  42.7 \\
+$E_{\rm beam}$, $\Delta_{rm target}$
+    &  46.8 &   7.6 & 100.3 &  72.0 &  73.8 &  60.4 &  38.0 &  12.9 & 103.5 &  20.6 \\
+$t_{\rm run}$, $i_{\rm beam}$
+    &  88.0 &  97.2 &  13.4 &  50.1 &  64.6 &  78.2 &  96.8 &  96.9 &  15.2 &  94.7 \\
+$t_{\rm run}$, $\Delta_{rm target}$
+    &  98.5 &  98.3 &  98.2 &  86.7 &  83.5 &  99.4 & 102.0 &  98.8 &  99.8 &  75.9 \\
+$i_{\rm beam}$, $\Delta_{rm target}$
+    &  87.7 &  95.9 &  26.6 &  29.7 &  29.1 &  76.9 &  93.4 &  93.5 &  25.6 &  72.9 \\
+$E_{\rm beam}$, $t_{\rm run}$, $i_{\rm beam}$
+    &  11.1 &   1.0 &   8.1 &  18.6 &  54.0 &  17.8 &  11.5 &   1.5 &   8.3 &  43.5 \\
+$E_{\rm beam}$, $t_{\rm run}$, $\Delta_{rm target}$
+    &  47.4 &   7.2 &  96.8 &  70.1 &  76.0 &  59.9 &  39.0 &  12.9 &  99.4 &  20.4 \\
+$E_{\rm beam}$, $i_{\rm beam}$, $\Delta_{rm target}$
+    &   7.9 &   1.6 &  21.4 &   8.4 &   5.0 &   8.4 &   7.4 &   2.7 &  22.4 &   4.6 \\
+$t_{\rm run}$, $i_{\rm beam}$, $\Delta_{rm target}$
+    &  86.2 &  98.6 &  13.1 &  29.6 &  27.0 &  78.2 &  94.2 &  96.5 &  14.5 &  68.0 \\
+All
+    &   5.4 &   1.0 &   4.0 &   2.8 &   3.8 &   6.6 &   5.2 &   0.9 &   3.7 &   1.3 \\
+
+            \bottomrule
+        \end{tabular}
+
+        \vspace{0.5em}
+        $\dagger$: Denotes runs at resonance energy
+    \end{center}
+\end{table}
+
+Since the final contributions to the uncertainty are not known, and the
+correlations between different variables not explicitly taken into
+account, these values should be used as a guide instead of for their
+absolute values. From the above tables, we can make generalizations
+about which uncertainties may have the largest impact on further
+studies. The on-resonance runs are extremely dependent on the beam
+current uncertainty, as the beam current directly affects what the final
+yield at the detector will be, and if a smaller uncertainty band is
+required, controlling the beam current and reducing its uncertainty
+should be the most important aspect of the experiment. Conversely, the
+point just below the resonance in energy has an extremely large final
+uncertainty, mainly due to the beam energy uncertainty. Due to the
+nature of the cross section, a small shift in beam energy can result in
+drastically different final yields due to the rapidly changing cross
+section below the resonance. Subsequent below-resonance runs should
+focus on reducing the uncertainty from the beam energy, which requires
+spending more time fine-tuning the accelerator to provide a more
+energy-stable beam to the experimental area.
+
+Additionally, the complete uncertainty for our acceptance values cannot
+be reduced to
+
 
 \section{Advantages and Disadvantages}
 % from call with Manoel: 2018-05-16
