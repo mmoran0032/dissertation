@@ -256,18 +256,6 @@ Advantage: can avoid killing detectors, check zero degree
 \section{Uncertainties}
 \label{sec:uncertainties}
 
-%% NOTES
-
-systematic: alphas hitting interior walls, energy cutoff at detector,
-transmission (faraday cup offset?)
-
-Missed counts can be measured, say that target cup roughly restricts to
-40 mrad in all directions, so those additional counts could be from
-within 40 mrad (I feel weird about this, so don't directly add it in,
-but mention the amounts either here or in potential sources of error)
-
-%% END NOTES
-
 The final uncertainties on the acceptances at each run energy are skewed
 distributions. Since basic error propagation relies on the errors being
 gaussian distributed, the fact that our uncertainties are not partially
@@ -303,7 +291,10 @@ are discrete counts. From the peak shifts due to energy loss when the
 $\alpha$ particles passed through the target, the number of target nuclei
 could be determined. The original spectra were used as the base properties
 to generate new count distributions, each of which when combined with the
-energy loss would lead to a unique number of target nuclei. For subsequent
+energy loss would lead to a unique number of target nuclei. The SRIM
+tabulated values that were used to relate the energy loss through the
+target to the target thickness were assumed to have a gaussian distribution,
+where the standard deviation was taken as 3\,\% of the nominal value. For subsequent
 uses of the target thickness, a number was drawn from the generated distribution.
 If a model for the target thickness were desired, the shape was approximately
 Gaussian with parameters $\mu = 1.42$ and $\sigma = 0.03$ ($\times 10^{18}$
@@ -366,7 +357,56 @@ during the experiment and shown in Table~\ref{tab:beam-current-uncertainty}.
     \end{center}
 \end{table}
 
-\textbf{Time:} gaussian distribution.
+\textbf{Time:} gaussian distribution. Our run times were recorded both
+as a coarse clock time for the start and end of the run and with the DAQ.
+For those runs lasting longer than 15 minutes, additional stopages in the
+measurement were made in the middle of the run without stopping the DAQ.
+Values recorded by the DAQ also differed from the set values for the total
+run time. As each of these factors has a role in the total run time of
+the experiment and are approximately additive in nature, a gaussian
+distribution makes sense here. The longer runs had both the stopage time
+estimated and subtracted from the total run time, and the uncertainty was
+also taken to be larger. The uncertainties for the run time are given
+in Table~\ref{tab:run-time-uncertainty}.
+
+\begin{table}
+    \begin{center}
+        \caption{RUN TIME UNCERTAINTY}
+        \label{tab:run-time-uncertainty}
+        \begin{tabular}{cS[table-format=2.4]S[table-format=5]S[table-format=3]}
+            \toprule
+            \midrule
+            \textbf{Run} & \textbf{$E_{\rm p}$ [MeV]} & \textbf{$t$ [s]} &
+                \textbf{$\delta t$ [s]} \\
+            \midrule
+                264           & 1.374 &  910 & 10 \\
+                270$^\dagger$ & 1.369 &  906 & 10 \\
+                277           & 1.364 &  989 & 10 \\
+                282           & 1.359 & 3182 & 22 \\
+                288           & 1.353 & 9436 & 53 \\
+                248           & 1.198 & 5455 & 26 \\
+                255           & 1.193 &  907 & 10 \\
+                260$^\dagger$ & 1.188 &  907 & 10 \\
+                234           & 1.183 & 1078 & 10 \\
+                241           & 1.178 & 6503 & 51 \\
+            \bottomrule
+        \end{tabular}
+
+        \vspace{0.5em}
+        $\dagger$: Denotes runs at resonance energy
+    \end{center}
+\end{table}
+
+\textbf{Detector counts:} Poisson distribution. As each bin within the
+Si detector spectra counts the particles that fall within that energy
+bucket, a Poisson distribution was adopted for the detector counts. This
+choice is common for counting experiments.
+
+\textbf{SRIM tabulated values:} gaussian distribution. The target stopping
+power and those values related to finding the target thickness were taken
+from SRIM. Due to the fact that the \alpa{} reaction is relativvely well
+studied, a conservative estimate of 3\,\% was adopted for all values
+arising from SRIM results.
 
 The final uncertainty bands for each of the acceptance measurements can
 be analyzed by what values affect the range for the uncertainty. We can
@@ -407,6 +447,17 @@ accounted for by the inputs that are not held constant.
 
 \subsection{Systematic}
 
+%% NOTES
+
+systematic: alphas hitting interior walls, energy cutoff at detector,
+transmission (faraday cup offset?)
+
+Missed counts can be measured, say that target cup roughly restricts to
+40 mrad in all directions, so those additional counts could be from
+within 40 mrad (I feel weird about this, so don't directly add it in,
+but mention the amounts either here or in potential sources of error)
+
+%% END NOTES
 
 \section{Uniformity of Acceptances}
 \label{sec:uniformity-of-acceptances}
