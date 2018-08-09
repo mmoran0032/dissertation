@@ -266,6 +266,26 @@ protons can have a prohibitivve count rate
 Disadvantage: no angular distribution, requires recoil separator
 Advantage: can avoid killing detectors, check zero degree
 
+% end notes
+
+The choice of measuring $({\rm p},\alpha)$ reactions using a recoil
+separator such as St.\ George has a number of advantages and
+disadvantages over other methods. As the general differences for using
+recoil separators for reaction studies was discussed in
+Ch.~\ref{ch:introduction} and will not be repeated here.
+
+The primary advantage of using a recoil separator is that the reaction
+can be studied at zero degrees. As more common experimental setups have
+no way to stop the incident high-intensity beam and not the produced
+particles along zero degrees, any detector placed at zero degrees would
+either be destroyed due to the high particle rate or the signal
+completely obscured by the noise from the high proton peak. By using a
+recoil separator to reject that incident beam, the particles produced at
+zero degrees can be directly studied in a relatively safe way (in
+reference to the detector). The tradeoff is that the recoil separator
+can \textit{only} measure those particles produced at zero degrees, and
+thus cannot measure the full angular distribution.
+
 
 \section{Uncertainties}
 \label{sec:uncertainties}
@@ -463,18 +483,6 @@ accounted for by the inputs that are not held constant.
 
 \subsection{Systematic}
 
-%% NOTES
-
-systematic: alphas hitting interior walls, energy cutoff at detector,
-transmission (faraday cup offset?)
-
-Missed counts can be measured, say that target cup roughly restricts to
-40 mrad in all directions, so those additional counts could be from
-within 40 mrad (I feel weird about this, so don't directly add it in,
-but mention the amounts either here or in potential sources of error)
-
-%% END NOTES
-
 Potential sources of systematic uncertainty must also be considered when
 discussing the acceptance results. As low yield future experiments would
 not have the relatively high count rates at the detector seen during
@@ -483,10 +491,27 @@ could drastically affect the final yield and thus the cross section
 measurements. Potential sources of systematic uncertainty can be divided
 into experimental sources and analytical sources.
 
-\textbf{Experimental sources} are those sources that affect the
-assumptions behind how many $\alpha$ particles reach the detector. The
-first assumption is the 100\,\% transmission of the beam and the
-simulated recoil particles to the detector plane. The particle
+\subsubsection{Analytical sources}
+The analytical sources are much less complex and numerous due to the
+relatively straightforward analysis required. The assumption of the
+symmetry of the acceptance cone is discussed in
+Sec.~\ref{sec:uniformity-of-acceptances} and will not be repreated here.
+
+The energy threshold used to discriminate against the possible protons
+that reached the detector also discriminates against some of the
+produced $\alpha$ particles. Adjusting this threshold opens up the
+possibility of some proton particles being interpreted as $\alpha$
+particles or reduce the number of detected $\alpha$ particles. The
+choice of the value was to ideally eliminate any false positives
+(protons interpreted as $\alpha$ particles). As the number of counts
+below this threshold was small, the effect on the final yield is
+minimal (>>1\,\%).
+
+\subsubsection{Experimental sources}
+The experimental sources of systematic uncertainty are those sources
+that affect the assumptions behind how many $\alpha$ particles reach the
+detector. The first assumption is the 100\,\% transmission of the beam
+and the simulated recoil particles to the detector plane. The particle
 transmission was measured before the experiment, for a variety of
 particle rigidities, between the target Faraday cup and the Wien filter
 detector cup and shown to be consistent with 100\,\% transmission.
@@ -507,11 +532,33 @@ Within the separator between the target chamber and the detector plane,
 there is a possibility that the produced $\alpha$ particles do not reach
 the detector by interacting with something within the beamline. The
 particles could strike the interior walls, scattering and losing energy,
-or one of the removed pieces of diagnostic equipment. In these cases,
-the particles produced within the acceptance cone do not reach the
-detector plane.
+or one of the removed pieces of diagnostic equipment, or scatter off of
+the residual vacuum within the beamline. In these cases, the particles
+produced within the acceptance cone do not reach the detector plane.
+Those that may reach the detector plane could either be outside of the
+physical extent of the detector or never reach the detector plane due
+to these interactions. In all of these cases, the yield measured at the
+detector will be lower than what was produced within the acceptance
+cone, leading to a lower acceptance value.
 
-
+The settings of St.\ George were determined by previous runs and
+optimized to transport $\alpha$ particles from within a 40~mrad cone and
+with a small energy spread to the active surface of the detector. Since
+not every possible $\alpha$ energy could be checked, a single setting
+for the separator was determined then scaled to the settings that would
+match the expected $\alpha$ energy. This choice has the possibility of
+under- and over-estimating the final acceptance. The systematic shift
+would be caused by the produced particle being under- or over-focused at
+different points along the separator, leading to a change in the final
+position of the particles at the detector plane. While the scaling of
+the elements in St.\ George are based on the rigidity of the particles
+and the fields required, there is still a possibility of a systematic
+shift in the magnetic field. This shift may come from magnetic
+hysteresis that was not fully corrected for or an offset or differential
+scaling in the power supplies for the magnets. This possibility may
+especially affect the guadrupole magnets, since they are set only by the
+current setting for the power supply and not a magnetic field
+measurement.
 
 
 \section{Uniformity of Acceptances}
@@ -528,8 +575,9 @@ dispersive elements in the vertical plane.
 
 The strips of the Si detector were aligned such that an individual strip
 was oriented in the vertical direction, or a particle that is deflected
-horizontally would be detected on a different strip (see FIGURE). This
-orientation allowed for improved tuning in the horizontal plane with the
+horizontally would be detected on a different strip (see
+Fig.~\ref{fig:detector-orientation}). This orientation allowed for
+improved tuning in the horizontal plane but with the tradeoff of the
 lack of sensitivity in the vertical plane. The auxiliary runs performed
 where the detector was place in the ``low'' position (where the top of
 the detector is located where the bottom of the detector would be in the
@@ -542,6 +590,20 @@ segmented in both the horizontal and vertical plane would give a full
 description of the alpha-particle beam spot density at the detector
 plane and could be used to better relate the distribution of counts at
 the detector plane to the acceptance cone at the target location.
+
+\begin{figure}
+    \begin{center}
+        \label{fig:detector-orientation}
+        % \centerline{
+        %     \includegraphics[width=0.8\textwidth]{figures/acceptance_uncertainty.png}}
+        \caption[Detector orientation]{Orientation of the installed Si
+            detector. The individual strips are aranged such that
+            different strips are struck in the dispersive $x$-plane.
+            This orientation was chosen due to the assumed vertical
+            symmetry of St.\ George and matches the orientation for the
+            final detector plane.}
+    \end{center}
+\end{figure}
 
 In the final configuration of the target system, a series of conical
 collimators will be located following the target location to defined the
@@ -556,14 +618,6 @@ emitted within that known acceptance cone. This restriction would
 improve the tuning of the separator for similar experiments, as the
 emitted particle beam spot at the detector plane can be more easily
 tuned to fit completely on the detector.
-
-
-% \section{Potential Sources of Error}
-% \label{sec:potential-sources-of-error}
-
-% The preliminary tunes were determined by keeping a beam with a given
-% energy and angular deviation from the mean reached the detector plane
-% within the physical space of the detector as measured on a quartz.
 
 
 \section{The $({\rm p},\alpha_1)$ channel}
