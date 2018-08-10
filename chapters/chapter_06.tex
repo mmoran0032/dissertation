@@ -254,15 +254,6 @@ described in Section~\ref{sec:uncertainties}.
 
 
 \section{Advantages and Disadvantages}
-% from call with Manoel: 2018-05-16
-(p,a) can suffer from elastic scattering, but St. George can avoid that
-by looking at zero degrees. Ratio of alphas to elastically scattered
-protons can have a prohibitivve count rate
-
-Disadvantage: no angular distribution, requires recoil separator
-Advantage: can avoid killing detectors, check zero degree
-
-% end notes
 
 The choice of measuring $({\rm p},\alpha)$ reactions using a recoil
 separator such as St.\ George has a number of advantages and
@@ -281,6 +272,12 @@ zero degrees can be directly studied in a relatively safe way (in
 reference to the detector). The tradeoff is that the recoil separator
 can \textit{only} measure those particles produced at zero degrees, and
 thus cannot measure the full angular distribution.
+
+Even when using a standard setup to measure the angular distribution,
+the elastically scattered protons can still be seen at the detectors.
+There is still a possibility that the count rate from these particles is
+prohibitive for measuring the produced $\alpha$ particles. In this case,
+some energy ranges might be inaccessible for study.
 
 
 \section{Uncertainties}
@@ -623,7 +620,30 @@ At the resonances probed, the $({\rm p},\alpha_1)$ reaction channel is
 also open. Measuring the cross section for this reaction at the two
 desired resonances is a more difficult experiment due to the lower
 rigidity of the produced alpha particles due to the lower energy. The
-kinematics for this reaction are given in TABLE.
+kinematics for this reaction are given in Table~\ref{tab:alpha-one}.
+
+\begin{table}
+    \begin{center}
+        \caption{KINEMATICS FOR $({\rm p},\alpha_1)$}
+        \label{tab:alpha-one}
+        \begin{tabular}{cc}
+            \toprule
+            \midrule
+            \textbf{Quantity [units]} & \textbf{Value} \\
+            \midrule
+                Field [G]                   & 1690.37 \\
+                $E_{\rm p}$ [MeV]           & 1.359 \\
+                $i_{\rm target}$ [$\mu$A]   & 2.6 \\
+                $E_{\alpha}$ [MeV]          & 1.397 \\
+                $B\rho$ [MeV]               & \\
+                $E\rho$ [Tm]                & \\
+            \bottomrule
+        \end{tabular}
+
+        \vspace{0.5em}
+        $\dagger$: Denotes runs at resonance energy
+    \end{center}
+\end{table}
 
 The lower rigidity is still within the design parameters of St.\ George,
 but due to the altered tune required to direct the produced alpha
@@ -634,7 +654,17 @@ levels would not be high enough to avoid damaging the Si detector,
 preventing the measurement of the cross section without either
 additional rejection capabilities or an improvement in the tune.
 
-MORE DETAILS FROM LOGBOOK
+There is still the possibility that, for different energies, the beam
+rejection properties of St.\ George would be adequate for measuring
+particles from excited states of the compound nucleus. An additional
+possibility is utilizing the remaining third of St.\ George for its
+final rejection capabilities. This solution has the added benefit of not
+requiring an altered tune to transport the produced particles to the
+detector. With the addition of the post-target collimators, the detected
+recoils will only come from within 40~mrad, allowing for a more accurate
+measurement of the yield for the reaction. Since the measured resonances
+in this experiment are isotropic, it becomes much simpler to extrapolate
+from the detector yield to the full, angle-integrated yield.
 
 
 \section{Next Steps}
@@ -663,6 +693,15 @@ combined prevented the direct identification of the produced $\alpha$
 particles and the final rejection of the remaining incident protons such
 that an energy threshold was used to discriminate between the two
 particles.
+
+For follow-up experiments, there are multiple options that can provide
+an improved outcome for the experiment, based on the limitations and
+findings presented within. The possibilities of utilizing St.\ George
+for experiments past the planned and designed $(\alpha,\gamma)$
+reactions allows for a wider set of potential astrophysical studies to
+be performed. When combined with a future supersonic jet gas target, the
+full TOF-vs.-$\Delta E$ detector, and the full separator system, St.\
+George will quickly become a premier facility for nuclear astrophysics.
 
 
 \section{Closing Thoughts}
