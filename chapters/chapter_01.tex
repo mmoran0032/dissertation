@@ -42,7 +42,7 @@ primarily focused on strong resonances in this low-energy regime.
 
 \section{Stellar Burning}
 
-Stars in hydrostatiic equilibrium can produce energy through a number of
+Stars in hydrostatic equilibrium can produce energy through a number of
 different reaction channels based on the mass, temperature, and isotopic
 enrichment of the stellar interior where the burning process takes
 place. The net result of stellar burning is the fusion of lighter
@@ -60,7 +60,7 @@ available in the stellar interior during the lifespan of the star.
 \subsection{Low-Mass Hydrogen Burning}
 
 The fusion of four \nuc{1}{H} nuclei into a single \nuc{4}{He} nucleus
-is called \emph{hydrogen burning}, and can take place through numerous
+is called \emph{hydrogen burning}, and can take place through a few
 reaction sequences at within vastly different temperature ranges. The
 overall outcome of the reaction chain given by
 \[
@@ -91,7 +91,9 @@ where the PP-2 and PP-3 chains are branches off from the PP-1 and PP-2
 chains, respectively, at the point after the initial nuclei is created
 within the chain. Typical temperatures for this burning process are on
 the order of $T_6 \approx 8-55$, which the core temperature of our sun
-($T_6 = 15.6$) falls squarely within~\cite{Iliadis} and others?.
+($T_6 = 15.6$) falls squarely within~\cite{Iliadis}.
+
+% Look up additional sources from within
 
 The Carbon-Nitrogen-Oxygen (CNO) cycle is an additional pathway for
 stable hydrogen burning accessible when the stellar interior has been
@@ -175,19 +177,20 @@ termeratures at the higher end create a more-efficient environment for
 the CNO reactions~\cite{Boeltzig2016}.
 
 During these shell flashes, additional He burning reactions activate.
-Two such reactions, \react{\mnuc{13}{C}}{\alpha}{\rm{p}}{\mnuc{16}{O}}
-and \react{\mnuc{22}{Ne}}{\alpha}{\rm{n}}{\mnuc{25}{Mg}}, are sources
-for the strong and weak $s$-process, respectively~\cite{Aliotta2016}.
-The strong $s$-process is responsible for approximately half of the
-cosmic abundances for isotopes with mass $A \geq 90$, while the weak
-$s$-process contributes to the isotopic abundances for isotopes with
-mass within the range $60 \leq A \leq 90$~\cite{Aliotta2016}.
+Two such reactions, \react{\mnuc{13}{C}}{\alpha}{\rm n}{\mnuc{16}{O}}
+and \react{\mnuc{22}{Ne}}{\alpha}{\rm n}{\mnuc{25}{Mg}}, are the neutron
+sources for the strong and weak $s$-process,
+respectively~\cite{Aliotta2016}. The strong $s$-process is responsible
+for approximately half of the cosmic abundances for isotopes with mass
+$A \geq 90$, while the weak $s$-process contributes to the isotopic
+abundances for isotopes with mass within the range $60 \leq A \leq
+90$~\cite{Aliotta2016}.
 
 \subsection{Additional Burning Processes}
 
 While the above reation sequences play a large role in the energy
 production of stars, additional burning sequences are available for more
-massive and hotter stars. These burning cycles can be through of in
+massive and hotter stars. These burning cycles can be thought of in
 similar terms to the CNO cycles, where baseline processes convert
 $4\mnuc{1}{H}\rightarrow\mnuc{4}{He}$ and additional reactions provide a
 ``breakout'' channel to higher burning processes. The reaction \alpa{}
@@ -205,14 +208,15 @@ experimental facilities. The remainder of the discussion will focus on
 
 \begin{figure}[t]
     \begin{center}
-        \label{fig:mgal}
         \centerline{\includegraphics[width=0.95\textwidth]%
-            {figures/cno_nena_mgal.pdf}} \caption[Schematic of burning
+            {figures/cno_nena_mgal.pdf}}
+        \caption[Schematic of burning
             cycles]{Schematic of burning cycles in the $12 \leq A \leq
             27$ mass range. These catalytic cycles play a large role in
             various abundance measurements and burning processes in red
             giant stars. The reaction in question is indicated. Figure
             adapted from \cite{Boeltzig2016}.}
+        \label{fig:mgal}
     \end{center}
 \end{figure}
 
@@ -232,16 +236,16 @@ two particles $b$ and $B$. The overall reaction can be written as
     \mreact{A}{a}{b}{B},
 \]
 where $A$ and $B$ denote our heavy particles and $a$ and $b$ denote our
-lighter particles. In most reactions, we consider the lighter particle
-to be impinging on the heavier particle in the entrance channel $a + A$.
-The compound nucleus $C$ is not explicitly denoted in this equation. The
-reaction \alpa{} can be considered as this type of compound reaction,
-where a compound nucleus \nuc{28}{Si} is created by the direct capture
-of the proton by \nuc{27}{Al}, followed by the emission of the $\alpha$
-particle, leaving behind \nuc{24}{Mg}. If the light particle $b$ is a
-$\gamma$ ray, the reaction is a \emph{radiative capture reaction},
-written as \react{A}{a}{\gamma}. Both types of reactions can be studied
-and understood in similar ways.
+lighter particles. When discussing reactions, we commonly consider the
+lighter particle to be impinging on the heavier particle in the entrance
+channel $a + A$. The compound nucleus $C$ is not explicitly denoted in
+this equation. The reaction \alpa{} can be considered as this type of
+compound reaction, where a compound nucleus \nuc{28}{Si} is created by
+the direct capture of the proton by \nuc{27}{Al}, followed by the
+emission of the $\alpha$ particle, leaving behind \nuc{24}{Mg}. If the
+light particle $b$ is a $\gamma$ ray, the reaction is a \emph{radiative
+capture reaction}, written as \react{A}{a}{\gamma}. Both types of
+reactions can be studied and understood in similar ways.
 
 The amount of energy either released in the reaction or required for the
 reaction to take place is called the reaction $Q$-value. The $Q$-value
@@ -294,28 +298,24 @@ described later.
 
 \begin{figure}[t]
     \begin{center}
-        \label{fig:alpa-cross-section}
-        % \centerline{\includegraphics[width=0.95\textwidth]%
-        %     {figures/cno_nena_mgal.pdf}}
+        \centerline{\includegraphics[width=0.95\textwidth]%
+            {figures/r_matrix_lab.pdf}}
         \caption[Cross section for the \alpa{} reaction]{Cross section
             for the \alpa{} reaction around the energy range of interest
             for the experiment. Shown is the differential cross section
             at $\theta_{\rm{lab}} = 0\degree$, as St.\ George is
             designed to study reactions at 0\degree.}
+        \label{fig:alpa-cross-section}
     \end{center}
 \end{figure}
 
 The cross section for charged particle reactions drops off precipitously
-as the energy decreases due to repulsion from the Coulomb barrier. At
-the energy decreases, the cross section drops by orders of magnitude,
-which can make analysis of low energy phenomena more difficult. A
-solution to this problem is to define the \emph{astrophysical
-$S$-factor} which helps to mitigate this problem.
-
-% Samuel Adams' Boston Lager
-
-The $S$-factor is defined in reference to the energy-dependent cross
-section $\sigma(E)$ as
+by orders of magnitude as the energy decreases due to repulsion from the
+Coulomb barrier. To aide in visualization of the cross section, we can
+remove the contribution to the cross section of the Coulomb repulsion,
+where our resulting energy-dependent component is called the
+\emph{astrophysical $S$-factor}. The $S$-factor is defined in reference
+to the energy-dependent cross section $\sigma(E)$ as
 \[
     \sigma(E) \equiv S(E)e^{-2\pi\eta} / E,
 \]
@@ -363,39 +363,41 @@ and the width of the peak describing the \emph{Gamow window} given by
 where $Z_i$ is the atomic number of the particle in
 question~\cite{Iliadis}. This energy window has been the focus of low
 energy nuclear astrophysics and improves the extrapolation of the
-$S$-factor to lower energies.
+$S$-factor to lower energies. When there are no resonances within the
+energy range, the extrapolation to these lower energies is much easier,
+as the energy dependence of the cross section is more well-behaived.
 
 \subsection{Resonances}
 
 In the absence of nuclear structure, the above description encompasses
 what is necessary to determine how the nuclear reaction progresses in
 stellar interiors. For the \alpa{} reaction, the compound nucleus
-\nuc{28}{Si} has a number of energy levels that can affect the progress
+\nuc{28}{Si} has a number of energy levels that can affect the yield
 of the reaction, with some of those levels shown schematically in
 Fig.~\ref{fig:alpa}.
 
 \begin{figure}[t]
     \begin{center}
-        \label{fig:alpa}
         % \centerline{\includegraphics[width=0.95\textwidth]%
-        %     {figures/cno_nena_mgal.pdf}}
+        %     {figures/alpa_energy_levels.pdf}}
         \caption[Energy diagram for the \alpa{} reaction]{Energy diagram
             for the \alpa{} reaction, showing major resonances
             accessible when measured at zero degrees for the energy
             range of interest.}
+        \label{fig:alpa}
     \end{center}
 \end{figure}
 
 In cases where the center of mass energy of the system is close to one
-of these energy levels, the reaction progresses through a
-\emph{resonance}. Resonances can be observed in the cross section (see
-Fig.~\ref{fig:alpa-cross-section}) where there is a large increase in
-the cross section over a narrow energy range. Resonances dominate the
-overall reaction due to their higher cross section and can contribute
-massively to the reaction rate even in cases where the resonance falls
-outside of the Gamow window. In cases where resonances dominate, the
-reaction rate can be simplified to only consider the contributions from
-the resonances as
+of these energy levels, the reaction is said to be through a
+\emph{resonance} or a resonant reaction. Resonances can be observed in
+the cross section (see Fig.~\ref{fig:alpa-cross-section}) where there is
+a large increase in the cross section over a narrow energy range.
+Resonances dominate the overall reaction due to their higher cross
+section and can contribute massively to the reaction rate even in cases
+where the resonance falls outside of the Gamow window. In cases where
+resonances dominate, the reaction rate can be simplified to only
+consider the contributions from the resonances as
 \[
     N_A\langle\sigma\nu\rangle = N_A\left(\frac{2\pi}{\mu_{01}kT}\right)^{3/2}
         \hbar^2e^{-E_r/kT}\omega\gamma,
@@ -407,10 +409,10 @@ summation over the resonances, or
 \[
     \sum_i e^{-E_{r,i}/kT}\omega\gamma_i.
 \]
-Resonances are studied both to understand the reaction processes in the
-interior of stars and to determine the properties of the energy levels
-within the compound nucleus, and one can be used to inform the
-properties of the other.
+Resonances are studied both to understand what reactions are important
+and in what way in the interior of stars and to determine the properties
+of the energy levels within the compound nucleus, and one can be used to
+inform the properties of the other.
 
 \subsection{Angular Properties}
 
@@ -434,19 +436,43 @@ where the properties of the compound nuclear state in \nuc{28}{Si} are
 $J_{\mnuc{28}{Si}}$ and $\pi_{\mnuc{28}{Si}}$, and $\ell_{\rm{p}}$ is
 the orbital angular momentum of the incident proton. Given that the
 ground state of \nuc{27}{Al} is $5/2+$ and the spin-parity of protons is
-$1/2+$, we have an entrance channel spin of $j_s = 2\rm{ or }3$, where
-$j_s = j_{\rm{p}} + j_{\mnuc{27}{Al}}$. Both of our studied resonances
-have $J^{\pi} = 2+$~\cite{Nelson1984}. Our allowed values for
-$\ell_{\rm{p}}$ are 0, 2, and 4 due to parity, where $\ell_{\rm{p}} = 0$
-only contributes in the $j_s = 2$ case. The entrance channel thus is a
-mixture of different components, based on the allowed angular momenta.
+$1/2+$, we have an entrance channel spin of $j_s = 2$ or 3, where
+$j_s = j_{\rm{p}} + j_{\mnuc{27}{Al}}$.
+
+For the remainder of the discussion, we will focus on the two resonances
+that are studied as part of this dissertation, with the properties shown
+in Table~\ref{tab:resonance-properties}.
+
+\begin{table}
+    \begin{center}
+        \caption{RESONANCE PARAMETERS}
+        \label{tab:resonance-properties}
+        \begin{tabular}{SSS}
+            \toprule
+            \midrule
+                \textbf{Property [Units]} & \textbf{Low} & \textbf{High} \\
+            \midrule
+                $E_{x}$ [MeV] & & \\
+                $E_{\rm CM}$ [MeV] & & \\
+                $J^{\pi}$ \cite{Nelson1984}     & 2+ & 2+ \\
+                $W(\theta)$ \cite{Andersen1961} & 1  & 1 \\
+                $Q$ [MeV]                       & \multicolumn{2}{c}{VALUE} \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{table}
+
+Our allowed values for $\ell_{\rm{p}}$ are 0, 2, and 4 due to parity,
+where $\ell_{\rm{p}} = 0$ only contributes in the $j_s = 2$ case. The
+entrance channel thus is a mixture of different components, based on the
+allowed angular momenta.
 
 In the exit channel $\mnuc{24}{Mg} + \alpha$, we can perform similar
 calculations. Since both the ground state of \nuc{24}{Mg} and the
 spin-parity of $\alpha$ are $0+$, we are restricted to natural parity
 states within \nuc{28}{Si} ($J^{\pi} = 0+$,~$1-$,~$2+$,~$\ldots$), which
-includes our resonances. Since our resonance is $J^{\pi} = 2+$, the only
-allowed orbital angular momentum for the $\alpha$ particle is
+includes our resonances. Since our resonances are $J^{\pi} = 2+$, the
+only allowed orbital angular momentum for the $\alpha$ particle is
 $\ell_{\alpha} = 2$, which means that there is no mixing in the exit
 channel.
 
@@ -492,17 +518,19 @@ the target. In this thin target case, the incident beam will likely pass
 through the target as well, making it a source of background at the
 detector plane. In the cases of interest for nuclear astrophysics, this
 background count rate could be $\times 10^{15}$ that of the particles of
-interest and may cause damage to the detector.
+interest and will damage the detector.
 
 The produced recoils may be filtered out from the incident beam by
 electromagnetic elements situated between the target and the detector.
-The interaction between the heavy incident beam with mass $A$ and linear
-momentum $p$ and the $\alpha$ particles within the target produces a
-heavy compound nucleus with mass $A + 4$ and momentum $p$. Ignoring the
-effect of the emitted $\gamma$ ray on the momentum and assuming that
-there is no spread in the momentum, the use of electrostatic elements
-can separate the recoils from the beam based on their different magnetic
-and electric rigidities. The magnetic rigidity is defined as
+For example, if we are looking at radiative alpha capture reactions
+\react{A}{\alpha}{\gamma}{B}, the interaction between the heavy incident
+beam with mass $A$ and linear momentum $p$ and the $\alpha$ particles
+within the target produces a heavy compound nucleus with mass $A + 4$
+and momentum $p$. Ignoring the effect of the emitted $\gamma$ ray on the
+momentum and assuming that there is no spread in the momentum, the use
+of electrostatic elements can separate the recoils from the beam based
+on their different magnetic and electric rigidities. The magnetic
+rigidity is defined as
 \begin{equation}
     \label{eq:brho}
     B\rho = \frac{p}{q} = \frac{\sqrt{2mT}}{q}\textrm{ [Tm],}
@@ -539,19 +567,22 @@ ejectile being the particle to be detected by the detector system. We
 will write this reaction as \react{A}{a}{b}{B}, where $A$ and $B$ are
 the heavy particles. For radiative capture reactions, the light ejectile
 $b$ is a $\gamma$ ray which must be detected by a Ge detector which has
-a relatively low efficiency and is subject to high background. In cases
-where the emitted $\gamma$ has energy similar to exceedingly strong
-background lines, the detection of the produced $\gamma$ can be almost
-impossible. As many reactions of astrophysical interest are radiative
-capture ($(\rm{p},\gamma)$ or $(\alpha,\gamma)$), these complications
-can prevent the study of some important reactions. Additionally, it may
-be impossible to produce a target with the desired hevy nuclei, or the
-targets that can be produced containing the desired heavy nuclei may
-have undesireable properties. These properties might be due to the
-additional induced background due to energy levels within the supporting
-nuclei, or the target itself is not stable under experimental conditions
-due to accelerated degredation under incident beam or transient
-evaporation of the desired target nuclei.
+a relatively low efficiency and is subject to background. In cases where
+the emitted $\gamma$ has energy similar to exceedingly strong background
+lines, the detection of the produced $\gamma$ can be almost impossible.
+As many reactions of astrophysical interest are radiative capture
+($(\rm{p},\gamma)$ or $(\alpha,\gamma)$), these complications can
+prevent the study of some important reactions.
+
+REWRITE CONTENT HERE
+% Additionally, it may be
+% impossible to produce a target with the desired hevy nuclei, or the
+% targets that can be produced containing the desired heavy nuclei may
+% have undesireable properties. These properties might be due to the
+% additional induced background due to energy levels within the supporting
+% nuclei, or the target itself is not stable under experimental conditions
+% due to accelerated degredation under incident beam or transient
+% evaporation of the desired target nuclei.
 
 Performing a reaction in reverse kinematics can help avoid some of these
 problems. In reverse kinematics, a heavy projectile is impinged on a
@@ -577,14 +608,14 @@ direction, colinearly with the unreacted beam that passes through the
 thin, light nuclei target. In order to detect those produced recoils,
 the must be separated or filtered out from the unreacted beams, which
 can be accomplished through an electromagnetic separator such as a
-spectrograph or a recoil mass separator.
+recoil mass separator.
 
 \subsubsection{Radiative Capture}
 When studying radiative capture reactions \react{A}{a}{\gamma}{B}, the
 emitted $\gamma$ arises from the decay of the excited state within the
 compound nucleus $B$ as it is emitted. Radiative capture reactions
 produce a compound nucleus in an excited state that has the same linear
-momentum in the lab frame, given as
+momentum as the beam in the lab frame, given as
 \[
     p^*_{\rm{recoil}} = \sqrt{2m_aE_a},
 \]
@@ -616,15 +647,15 @@ smaller momentum change than in the longitudinal case.
 
 In this case, the emitted recoils are confined within a forward cone
 with some opening angle and with some momentum spread. The various
-properties of the separator will be based on these kinematics for the
-reactions of interest, with those reactions that have smaller angular
-and momentum spreads than the initial design reactions still under the
-possibility of study. The final design for the recoil separator will
-take into account both the central value of the recoil momentum
-distribution as well as the limits for the angular and momentum
-distribution. We can consider the momentum and energy distributions as
-essentially interchangeable, since the mass of the desired recoil is
-known.
+properties of the separator will be based on these kinematic properties
+for the reactions of interest. For those reactions that have smaller
+acceptance cones or energy spreads than what the separator was design
+for, studying those reactions becomes easier. The final design for the
+recoil separator will take into account both the central value of the
+recoil momentum distribution as well as the limits for the angular and
+momentum distribution. We can consider the momentum and energy
+distributions as essentially interchangeable, since the mass of the
+desired recoil is known.
 
 \subsection{Beam Optics}
 
@@ -651,7 +682,11 @@ recoils to first order as
     x = (x|x)x_0 + (x|\theta)\theta_0 + (x|\delta_E)\delta_E + (x|\delta_M)\delta_M,
 \]
 where $\delta_E = \Delta E/E_0$ and $\delta_M = \Delta M/M_0$ are the
-energy and mass dispersions, respectively~\cite{Davids2003}. Since we
+energy and mass dispersions, respectively~\cite{Davids2003}.
+
+DESCRIBE THE MEANING OF THE MATRIX ELEMENTS
+
+Since we
 require that there be a mass dispersion, the coefficient $(x|\delta_M)$
 must be non-zero and we must have no energy dispersion, so
 $(x|\delta_E)$ must be zero. Additionally, we would want a focus in the
@@ -664,7 +699,7 @@ codes. Within the physical separator, at least two of the available
 dispersive elements magnetic dipole, electric dipole, or Wien filter
 must be used to achieve a dispersion at a focal plane of
 mass/charge~\cite{Davids2003}. In order to leave that dispersion at the
-focal plane, either magentic and electric dipoles or a magentic dipole
+focal plane, either magnetic and electric dipoles or a magnetic dipole
 and Wien filter must be used. While a single element of each type is the
 minimum requirement, physical separators commonly have multiple elements
 due to the physical nature of the beam envelope within the beam line and
@@ -725,12 +760,15 @@ radioactive isotope beams with near-complete rejection of the incident
 beam before the detector system. The separator achieves the mass
 separation by using a Wien filter to provide initial velocity selection,
 an electrostatic deflector to provide energy selection, and a magnetic
+
+CHECK IF ELECTROSTATIC DEFLECTOR
+
 dipole to provide momentum selection~\cite{Smith1991}. Additional
 experimental choices used for this separator system, such as the use of
 an offset Si detector at the target location to monitor beam current
 indirectly or the use of a $\gamma$ detector in coincidence with the
 final detector system to provide additional beam suppression, have been
-replecated in future systems. During initial experiments, beam
+replicated in future systems. During initial experiments, beam
 suppression on the order of $10^{10}$ was observed~\cite{Smith1991}.
 
 \subsubsection{ARES}
@@ -739,17 +777,17 @@ to study $(\rm{p},\gamma)$ and $(\alpha,\gamma)$ reactions using
 radioactive incident beams provided by the CYCLONE44
 cyclotron~\cite{Angulo2001}. Self-supporting solid targets, containing
 the required H or He, were used for the reaction studies. The system is
-designed with a single magnetic dipole for momentum selection and a Wien
+designed with a single magnetic dipole for charge selection and a Wien
 filter for velocity selection, along with multiple magnetic quadrupoles
-(one triplet and two doublets) to maintain the transportation of the to
-the detector system. The condensed and limited size of the separator is
-based on the constraints of the experimental hall~\cite{Couder2003}. The
-detector system consists of a single $\Delta E − E$ gas telescope which
-separates out the reaction products from the remaining incident beam
-particles. The initial test of the separator used a stable incident beam
-to compare to results obtained by other methods within the lab, and the
-focus of the initial work was on low-lying resonances of astrophysical
-interest.
+(one triplet and two doublets) to maintain the transportation of the
+produced recoil particles to the detector system. The condensed and
+limited size of the separator is based on the constraints of the
+experimental hall~\cite{Couder2003}. The detector system consists of a
+single $\Delta E - E$ gas telescope which separates out the reaction
+products from the remaining incident beam particles. The initial test of
+the separator used a stable incident beam to compare to results obtained
+by other methods within the lab, and the focus of the initial work was
+on low-lying resonances of astrophysical interest.
 
 \subsubsection{DRAGON}
 The DRAGON recoil separator at TRIUMF-ISAC was built for the same
@@ -829,7 +867,8 @@ of astrophysical interest will be presented within. The commissioning
 work discussed covers the energy acceptance up to the final detector
 plane, and the angular acceptance and the beam suppression up to the
 focal plane after the Wien filter. The first reaction study using the
-partially commissioned St.\ George, studying the \alpa{} reaction at two
-prominent resonances, will be discussed. Finally, the plan for improving
-the use of St.\ George for non-standard reactions, namely those that are
-not $(\alpha,\gamma)$ reactions, will be laid out.
+partially commissioned St.\ George will be discussed. The initial
+experiment is a study of the \alpa{} reaction at two prominent
+resonances. Finally, the plan for improving the use of St.\ George for
+non-standard reactions, namely those that are not $(\alpha,\gamma)$
+reactions, will be laid out.
