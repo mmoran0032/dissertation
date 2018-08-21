@@ -25,19 +25,23 @@ Faraday cup designs
 Chapter 3
 =========
 
-Beam divergence from quadrupole
+Completed 2018-08-21 (really shitty, but that's fine)
 
--   changing focal position based on magnetic strength
+.. Beam divergence from quadrupole
 
-Beam steering from misaligned Beam
+.. -   changing focal position based on magnetic strength
 
--   beam looks to move left and right as field strength changed
+.. Beam steering from misaligned Beam
+
+.. -   beam looks to move left and right as field strength changed
 
 
 Chapter 4
 =========
 
 Alpha distribution at detector
+
+-   from ``python``
 
 -   include both optimized and not-optimized distributions
 
@@ -50,6 +54,8 @@ Chapter 5
 =========
 
 Simulated alpha spectrum
+
+-   from ``python``
 
 -   include comparison to experimental data
 
