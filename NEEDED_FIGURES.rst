@@ -45,9 +45,9 @@ Alpha distribution at detector
 
 -   include both optimized and not-optimized distributions
 
-Detector positions
+.. Detector positions
 
--   Show strips, in-beam and below beam positions, basic
+.. -   Show strips, in-beam and below beam positions, basic
 
 
 Chapter 5
@@ -63,6 +63,10 @@ Simulated alpha spectrum
 Chapter 6
 =========
 
-Si strip orientation
+Use figure in Ch04
 
--   this could be handled by "Detector positions" figure in Ch04?
+.. Si strip orientation
+
+.. -   this could be handled by "Detector positions" figure in Ch04?
+
+.. -   Yes, let's just use that figure.
