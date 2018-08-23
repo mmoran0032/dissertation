@@ -35,13 +35,21 @@ chains, causing the accelerator to commonly be referred to as the
 \textit{5U}. Both names will be used interchangeably throughout this
 work.
 
-The 5U, shown schematically in [FIGURE], accelerates a high-intensity
+\begin{figure}
+    \begin{center}
+        % \centerline{\includegraphics[width=0.8\textwidth]{figures/5U.png}}
+        \caption[Schematic of the 5U accelerator]{}
+        \label{fig:5U}
+    \end{center}
+\end{figure}
+
+The 5U, shown schematically in Fig.~\ref{fig:5U}, accelerates a high-intensity
 ion beam produced by the Nanogan Pantechnik ECR source to the desired
 energy by energizing the terminal shell to high voltage. The
 acceleration tube, extending from the bottom of the shell to the bottom
 of the accelerator, steps that voltage down through a series of
 resistors and plates, creating an electric field gradient along the tube
-that accelerates the positively charges ion beam down and out of the
+that accelerates the positively charged ion beam down and out of the
 accelerator. The beam is then bent around a 90\degree dipole magnet,
 called the analyzing magnet, and through a pair of vertical slits,
 called the analyzing slits, that provide energy identification of the
@@ -96,11 +104,13 @@ $A = 40$ with high beam intensities and to fit the separator within the
 physical limitations of the target room at the NSL~\cite{Couder2008}.
 
 The separator is designed to transport recoils within a rigidity phase
-space relevant for measuring $(\alpha,\gamma)$ reaction cross sections,
-determined by the magnetic and electrostatic elements. The design
-parameters restrict the magnetic (Eq.~\ref{eq:brho}) and electric
-(Eq.~\ref{eq:erho}) rigidities within the ranges $0.1 \leq B\rho \leq
-0.45$ and $E\rho \leq 5.7$~\cite{Couder2008}
+space relevant for measuring $(\alpha,\gamma)$ reaction cross sections.
+The transportation of these ions is achieved by setting the magnetic and
+electrostatic elements within the separator, based on the rigidity of
+the ions. The design parameters restrict the magnetic
+(Eq.~\ref{eq:brho}) and electric (Eq.~\ref{eq:erho}) rigidities within
+the ranges $0.1 \leq B\rho \leq 0.45$ and $E\rho \leq
+5.7$~\cite{Couder2008}
 
 \subsection{Subsections of St.\ George}
 
@@ -118,19 +128,19 @@ parameters restrict the magnetic (Eq.~\ref{eq:brho}) and electric
     \end{center}
 \end{figure}
 
-The separator is divided into three sections, based on their purpose:
-the charge selection stage; the mass selection stage; and the clean-up
+The layout of St.\ George is shown in Fig.~\ref{fig:stgeorge}. The
+separator is divided into three sections, based on their purpose: the
+charge selection stage; the mass selection stage; and the clean-up
 stage. The stages are separated by the focal planes. Each of these
-stages will be discussed in turn. The layout of St.\ George is shown in
-Fig.~\ref{fig:stgeorge}.
+stages will be discussed in turn.
 
 The entire separator is tuned for a single $B\rho-E\rho$ rigidity,
 defined by the central energy of the recoils and its mass and charge
 state (see Eqs.~\ref{eq:brho} and \ref{eq:erho}). For commissioning
 purposes, a direct incident beam was used as a ``test beam'' to tune the
 separator without having to perform a reaction. The tuned particles will
-then travel down the central magnetic axis of the separator. Particles
-that differ in energy or angle from these central particles will travel
+travel down the central magnetic axis of the separator. Particles that
+differ in energy or angle from these central particles will travel
 through a different path (see Fig.~\ref{fig:raytrace}).
 
 The first section is the so-called \textit{charge selection} stage,
@@ -138,10 +148,10 @@ consisting of the first quadrupole doublet ($Q_1Q_2$) and the first
 dipole doublet ($B_1B_2$). The doublet $Q_1Q_2$ focuses the recoils
 through the dipole pole gap, and the doublet $B_1B_2$ provides the first
 rejection of beam due to the difference in magnetic rigidity from the
-desired recoils. At the first focal plane $F_1$, a single recoil charge
-state has been selected to transport through the remainder of the
-separator. Horizontal slits may be placed at this focal plane to aide in
-the rejection of incident beam particles that have undergone a charge
+desired recoils. After the first focal plane $F_1$, a single recoil
+charge state will be transported through the remainder of the separator.
+Horizontal slits may be placed at this focal plane to aide in the
+rejection of incident beam particles that have undergone a charge
 exchange event. Slits were not used during the commissioning work or
 during the primary experiment. At the end of this section, both beam and
 recoil particles are present within the separator.
@@ -163,9 +173,8 @@ distribution.
 
 \begin{figure}[t]
     \begin{center}
-        \label{fig:wienfilter}
-        \centerline{\includegraphics[width=0.95\textwidth]%
-            {figures/st_george.png}}
+        % \centerline{\includegraphics[width=0.95\textwidth]%
+            % {figures/wien_filter.png}}
         \caption[Schematic of the St.\ George Wien filter]{Schematic of
             the focusing and bending properties of the Wien filter
             installed in St.\ George. The crossed electric ($E$) and
@@ -175,6 +184,7 @@ distribution.
             simplistic description ignores the effect of the particles
             in question existing within an envelope of energies and
             angles.}
+        \label{fig:wienfilter}
     \end{center}
 \end{figure}
 
@@ -257,8 +267,8 @@ denoted in Figure~\ref{fig:diagnostic}.
 
 \begin{figure}[t]
     \begin{center}
-        \centerline{\includegraphics[width=0.95\textwidth]%
-            {figures/st_george.png}}
+        % \centerline{\includegraphics[width=0.95\textwidth]%
+            % {figures/faraday_cups.png}}
         \caption[Schematics of the two Faraday cup designs]{Schematics
             of the two Faraday cup designs used within St.\ George. The
             \emph{FN-style} cup (left) is used at the target location
@@ -326,13 +336,17 @@ depending on the actual beam particle selected.
 The full St.\ George detector system consists of a pair of microchannel
 plate based time-measurement detectors and a single 16-strip Si detector
 for energy deposition. Combined, this detection system provides particle
-identification by way of the \textit{Time of Flight vs.\ Total Energy}
+identification by way of the \textit{Time\--{}of\--{}Flight vs.\ Total Energy}
 method. As residual beam particles can make it to the detector plane,
 either through scattering or charge exchange events, particle
 identification is required to provide final discrimination and beam
-suppression [CITE ERNA, DRAGON, DRS, etc]. As this experiment did not
+suppression
+[CITE ERNA, DRAGON, DRS, etc].
+As this experiment did not
 require the use of the full detection system, only the Si detector will
 be discussed further.
+
+CITE ERNA, DRAGON, DRS, etc ABOUT DETECTOR SYSTEM
 
 The Si detector is a Canberra PIPS (Passivated Implanted Planar Silicon)
 model PF-16CT-58*58-300EB, which has a detector area of $58\times 58$~mm
@@ -382,15 +396,15 @@ from two single-phase high voltage power supplies and are operated
 remotely using an Arduino-based controller. The properties of the plates
 (length, width, separation, etc.) were determined such that the produced
 electric field would be as homogeneous as possible within the limited
-space and provide a beam deflection of at least 40~mrad from the target
+space and provide a beam deflection of up to 40~mrad from the target
 location, within the physical limits of the chamber. Experimentally,
 deflections of 45~mrad have been achieved, allowing a full angular phase
 space sweep to be performed. Switching the polarity of the deflector
-plates must be done at the power supplies. Since the power supplies have
-a limited upper voltage, the maximum deflection for a test beam is
-limited by its electric rigidity $E\rho$. When not in use, the current
-striking the deflector plates could be monitored at the control console
-to use as an additional beam diagnostic.
+plates must be done at the power supplies. Since the test beam particles
+have a set electric rigidity $E\rho$, the maximum deflection of the
+particles may be limited by the upper voltage of the power supply. When
+not in use, the current striking the deflector plates could be monitored
+at the control console to use as an additional beam diagnostic.
 
 The target ladder contains a 6.35~mm diameter collimator and a 2.06~mm
 collimator, separated by 11.1~mm. The large collimator is primarily used
@@ -403,22 +417,13 @@ thin Al foil was mounted for the experiment described herein.
 
 The Faraday cup following the target chamber is an isolated FN-style
 cup, as shown in Figure~\ref{fig:faraday}. The back of the cup can be
-actuated open to allow beam to pass into the separator. From extended
-usage of the cup, the interior connection to the rear flap had degraded
-to the point that when open it was electrically isolated from the rest
-of the cup. If actuated while beam was hitting the cup, the flat would
-become charged and deflect the beam entering into St.\ George. To
-counter this effect, the cup preceding the target cup was placed into
-the beam before the target cup was removed. Since the commissioning
-chamber was designed to be temporary, this cup was not repaired or
-replaced following this discovery.
-
-The Faraday cup allowed for beam with a maximum deflection of $\approx
-45$~mrad to enter St.\ George, as measured using the deflector plates.
-This larger angular acceptance at the beginning of the separator ensured
-that the diagnostic equipment did not have a detrimental affect on the
-experiment and based the final acceptance at $F_2$ to be based on the
-specific tune of the separator. During some tests, the deflector plates
-were seen to intercept some of the beam when deflecting to 45~mrad, but
-since this value is again larger than the designed acceptance of St.\
-George, this was deemed to not be detrimental.
+actuated open to allow beam to pass into the separator. The Faraday cup
+allowed for beam with a maximum deflection of $\approx 45$~mrad to enter
+St.\ George, as measured using the deflector plates. This larger angular
+acceptance at the beginning of the separator ensured that the diagnostic
+equipment did not have a detrimental affect on the experiment and based
+the final acceptance at $F_2$ to be based on the specific tune of the
+separator. During some tests, the deflector plates were seen to
+intercept some of the beam when deflecting to 45~mrad, but since this
+value is again larger than the designed acceptance of St.\ George, this
+was deemed to not be detrimental.

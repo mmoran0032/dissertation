@@ -11,6 +11,10 @@ Energy diagram for the 27Al(p,a)24Mg reaction
 Chapter 2
 =========
 
+5U schematic
+
+-   basics: ion source, terminal, acceleration tube, analyzing magnet
+
 Schematic of the Wien filter
 
 -   crossed electric/magnetic fields
