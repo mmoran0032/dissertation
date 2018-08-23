@@ -15,9 +15,11 @@ Schematic of the Wien filter
 
 -   crossed electric/magnetic fields
 
-Locations of diagnostics within St. George
+-   show view from above
 
--   slits (S), faraday cups (F), and quartz viewers (Q)
+.. Locations of diagnostics within St. George
+.. -   slits (S), faraday cups (FC), and quartz viewers (QV)
+.. -   we have the STG schematic already, just need to edit the figure
 
 Faraday cup designs
 
