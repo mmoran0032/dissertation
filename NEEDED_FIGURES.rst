@@ -5,6 +5,8 @@ Energy diagram for the 27Al(p,a)24Mg reaction
 
 -   Show major resonances accessible when studying at zero degrees
 
+-   Picture I have in my head is from TUNL, but only goes up to mass 20
+
 
 Chapter 2
 =========
@@ -28,11 +30,8 @@ Chapter 3
 Completed 2018-08-21 (really shitty, but that's fine)
 
 .. Beam divergence from quadrupole
-
 .. -   changing focal position based on magnetic strength
-
 .. Beam steering from misaligned Beam
-
 .. -   beam looks to move left and right as field strength changed
 
 
@@ -46,7 +45,6 @@ Alpha distribution at detector
 -   include both optimized and not-optimized distributions
 
 .. Detector positions
-
 .. -   Show strips, in-beam and below beam positions, basic
 
 
@@ -66,7 +64,5 @@ Chapter 6
 Use figure in Ch04
 
 .. Si strip orientation
-
 .. -   this could be handled by "Detector positions" figure in Ch04?
-
 .. -   Yes, let's just use that figure.
