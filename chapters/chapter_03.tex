@@ -81,11 +81,12 @@ to better recreate the conditions under which St.\ George will be used.
             % $E_{\textrm{recoil}} = 15.6\pm1.155$~MeV.
             The beam rigidities are $B\rho = 0.331$~Tm and $E\rho =
             2.907$~MV, and the recoil rigidities are $B\rho = 0.331$~Tm
-            and $E\rho = 2.836$~MV. Both the beam and recoil are taken
-            to be in the $11^+$ charge state. The COSY calculation
-            assumes that the recoil particles are spread within an
-            acceptance range of $\Delta E/E \approx7.5$\,\% and
-            $\Delta\theta = 40$~mrad. The transverse scale is highly
+            and $E\rho = 2.836$~MV. Both the beam and recoil are in the
+            $11^+$ charge state. Differing charge states would lead to a
+            greater separation in the two beam profiles. The COSY
+            calculation assumes that the recoil particles are spread
+            within an acceptance range of $\Delta E/E \approx7.5$\,\%
+            and $\Delta\theta = 40$~mrad. The transverse scale is highly
             exaggerated to show detail.}
         \label{fig:raytrace}
     \end{center}
@@ -97,9 +98,9 @@ to better recreate the conditions under which St.\ George will be used.
 
 % Possibly move this to Chapter 2...
 
-St.\ George was modeled using COSY Infinity (COSY-$\infty$, henceforth
-\emph{COSY}), a beam optics and transport language developed at Michigan
-State University~\cite{COSY}. The initial ion optics solution for the
+St.\ George was modeled using COSY Infinity (henceforth \emph{COSY}), a
+beam optics and transport language developed at Michigan State
+University~\cite{COSY}. The initial ion optics solution for the
 separator was calculated by Drs.\ Couder and Berg at the University of
 Notre Dame to maximize the angular and energy acceptance for a
 point-like target located prior to the separator. Optimization of the
@@ -118,16 +119,19 @@ shown, the quadrupole pole tip fields are given in
 Table~\ref{tab:poletip}, where negative values represent a quadrupole
 focusing in the $y$-direction. The pole tip fields for $(\alpha,\gamma)$
 experiments are for the test particles shown, while those for $({\rm
-p},\alpha)$ experiments are specific to this work (see
-Section~[REFERENCE]). The actual fields used will depend on the rigidity
-of the desired particle to transport through the separator and can be
-scaled from these values.
+p},\alpha)$ experiments are specific to this work. The actual fields
+used will depend on the rigidity of the desired particle to transport
+through the separator and can be scaled from these values.
 
 The initial ion optics solution creates a transport map for particles
 passing through the entire separator that can be analyzed independently
 of the ray traces and provide the mathematical backing to the particles'
 trajectories within St.\ George. The transport map is dependent on the
 quantities
+
+FIGURE OUT HOW TO CONDENSE THE COSY/BEAM OPTICS DISCUSSION INTO A SINGLE
+SECTION (HERE OR INTRODUCTION)
+
 \begin{equation}
     \label{eq:cosyvars}
     \begin{split}
@@ -176,17 +180,16 @@ differ based on what diagnostic equipment is available.
 
 The magnetic settings for the dipole magnets, determined by the rigidity
 of the particles, can be determined by observing the trajectory of the
-particles within the separator. Those trajectories which direct the
-particles along the central optical axis are desired. This trajectory
-can be directly observed using diagnostic equipment aligned with the
-optical axis. The search for the required current powering the dipole
-magnet is then easier to identify experimentally. The final setting of
-the dipole magnets must be found by observing the effect of the focusing
-quadrupole magnets following the dipole. If the beam is aligned with the
-magnetic optical axis of the quadrupoles, the off-axis steering effects
-will be minimized. This fine adjustment to the dipole fields is within a
-small window of current settings for the dipole near the coarse value
-found through direct observation of the beam.
+particles within the separator. This trajectory can be directly observed
+using diagnostic equipment aligned with the optical axis. The search for
+the required current powering the dipole magnet is then easier to
+identify experimentally. The final setting of the dipole magnets must be
+found by observing the effect of the focusing quadrupole magnets
+following the dipole. If the beam is aligned with the magnetic optical
+axis of the quadrupoles, the off-axis steering effects will be
+minimized. This fine adjustment to the dipole fields is within a small
+window of current settings for the dipole near the coarse value found
+through direct observation of the beam.
 
 Setting the Wien filter can be done in a similar manner. The electric
 field strength is determined from the analyzed energy of the particle,
@@ -258,7 +261,7 @@ specifications. Higher order corrections to the particle trajectory were
 achieved by shaping the entrance and exit faces of the dipoles instead
 of using higher order multipole magnets~\cite{Couder2008}. Additionally,
 the shape of the Wien filter electrostatic plates were designed such
-that the electric and magnetic fields, inclusing the fringe fields, were
+that the electric and magnetic fields, including the fringe fields, were
 closely matched.
 
 
@@ -270,9 +273,17 @@ good field region for each magnet and provide a description of the
 fringe fields. Field strengths at each location (distance along the beam
 axis and at a radial distance from the beam axis) are measured in mT.
 From this data, the shape of the fringe field and the effective field
-length of the magnetic elements can be determined. As these values are
-essential to setting the necessary values for the quadrupoles, the
-analysis of the field maps focused on these elements.
+length of the magnetic elements can be determined. The effective field
+length, defined as
+\begin{equation}
+    \label{eq:efl}
+    L = \frac{1}{B_0}\int_{-\infty}^{\infty} B(z)\, \textrm{d}z,
+\end{equation}
+where $B_0$ is the field strength at the center of the magnet, is the
+field length if the field were described with a pure ``hard edge'' or
+Heavyside function at the entrance and exit, i.e.\ no fringe fields. As
+these values are essential to setting the necessary values for the
+quadrupoles, the analysis of the field maps focused on these elements.
 
 A single edge fringe field is described by the Enge function given by
 \begin{equation}
@@ -297,15 +308,7 @@ Enge function, given by
 where $k_0$ is a scaling parameter for the central field and $L$ is the
 effective field length~\cite{Baartman2007}. This formulation assumes a
 symmetric field profile, as both the entrance and exit fringe fields are
-modeled with the same Enge function. The effective field length, defined
-as
-\begin{equation}
-    \label{eq:efl}
-    L = \frac{1}{B_0}\int_{-\infty}^{\infty} B(z)\, \textrm{d}z,
-\end{equation}
-where $B_0$ is the field strength at the center of the magnet, is the
-field length if the field were described with a pure ``hard edge'' or
-Heavyside function at the entrance and exit, i.e.\ no fringe fields.
+modeled with the same Enge function.
 
 \begin{figure}[t]
     \begin{center}
@@ -348,13 +351,13 @@ The field profiles at each radial distance were fit simultaneously.
 Using the default Enge coefficients as the initial parameter guesses,
 the summed mean squared error between the data and
 Eq.~\ref{eq:shortquad} was minimized using the Nelder-Mead downhill
-simplex minimization (see \cite{Simplex}) provided by SciPy. The
-additional factor $k_0$ was included in the fit, but is not needed when
-defining a fringe field within COSY. The process was repeated for each
-quadrupole separately. The updated Enge coefficients and their
-comparison to the default values used by COSY for $Q_{10}$ can be seen
-in Table~\ref{tab:enge}, and the difference in the shape of the fringe
-field can be seen in Fig.~\ref{fig:enge_comparison}.
+simplex minimization (see \cite{Simplex}) provided by
+SciPy~\cite{SciPy}. The additional factor $k_0$ was included in the fit,
+but is not needed when defining a fringe field within COSY. The process
+was repeated for each quadrupole separately. The updated Enge
+coefficients and their comparison to the default values used by COSY for
+$Q_{10}$ can be seen in Table~\ref{tab:enge}, and the difference in the
+shape of the fringe field can be seen in Fig.~\ref{fig:enge_comparison}.
 
 \begin{table}[t]
     \begin{center}
@@ -410,16 +413,16 @@ for $Q_{10}$ is shown in Fig.~\ref{fig:enge_comparison}.
 
 These new terms describing the effective field length and the fringe
 field can be used to provide a more realistic beam optics solution for
-St.\ George. To create this realistic solution, the magnetic elements
-within the separator were redefined with these newly found values. The
-beam optics solution was refit by minimizing a cost function defined in
-terms of our desired transfer matrix properties at our focal planes,
-such as the mass and energy dispersion at the post-Wien filter focal
-plane $F_2$, the beam spot size at the final detector plane $F_3$, and
-other properties. From this recalculated solution, new pole tip fields
-for the focusing quadrupoles are determined which can provide a more
-accurate estimate of the actual experimental field required for the
-experiment.
+St.\ George. To create this realistic solution, the magnetic fields of
+the various elements within the separator were redefined with these
+newly found values. The beam optics solution was refit by minimizing a
+cost function defined in terms of our desired transfer matrix properties
+at our focal planes, such as the mass and energy dispersion at the
+post-Wien filter focal plane $F_2$, the beam spot size at the final
+detector plane $F_3$, and other properties. From this recalculated
+solution, new pole tip fields for the focusing quadrupoles are
+determined which can provide a more accurate estimate of the actual
+experimental field required for the experiment.
 
 
 \section{Energy and Angular Acceptance}
@@ -454,29 +457,30 @@ operators.
 Acceptance measurements first probed the energy acceptance within the
 designed $B\rho-E\rho$ phase space. The rigidity phase space limits,
 along with measured acceptances and ranges for proposed future
-experiments is shown in Figure~\ref{fig:rigidity-phase-space}. While it
-is not possible to produce test beams with the 5U that completely span
-this phase space, the regions of astrophysical interest are accessible,
-and work focused on this region.
+experiments is shown in Figure~\ref{fig:rigidity-phase-space}. The
+regions of astrophysical interest are accessible by various test beams
+that can be produced by the 5U, allowing the phase space to be
+adequately studied.
 
 \begin{figure}[t]
-   \begin{center}
-       \label{fig:rigidity-phase-space}
-       \centerline{\includegraphics[width=0.8\textwidth]
-           {figures/rigidity_phase_space.png}} \caption[Designed
-           $B\rho-E\rho$ rigidity phase space for St.\ George]{Designed
-           $B\rho-E\rho$ rigidity phase space for St.\ George. Stars
-           represent rigidities that have been shown to have the full
-           $\Delta E/E = 8$\,\% energy acceptance. Reactions shown are
-           probable first experiments using St.\ George that use beam
-           energies accessible with the 5U: \nuc{14}{N} at
-           $E_{\rm{beam}}\approx 0.7-5.0$~MeV (solid blue line),
-           \nuc{3}{He} at $E_{\rm{beam}}\approx 0.25-1.2$~MeV (dashed
-           orange line), and \nuc{12}{C} at $E_{\rm{beam}}\approx
-           3.0-10.0$~MeV (dotted green line). These energy ranges cover
-           some of the astrophysically important ranges for the given
-           reactions. Adapted from~\cite{Meisel2017}.}
-   \end{center}
+    \begin{center}
+        \centerline{\includegraphics[width=0.8\textwidth]%
+            {figures/rigidity_phase_space.png}}
+        \caption[Designed $B\rho-E\rho$ rigidity phase space for St.\
+            George]{Designed $B\rho-E\rho$ rigidity phase space for St.\
+            George. Stars represent rigidities that have been shown to
+            have the full $\Delta E/E = 8$\,\% energy acceptance.
+            Reactions shown are probable first experiments using St.\
+            George that use beam energies accessible with the 5U:
+            \nuc{14}{N} at $E_{\rm{beam}}\approx 0.7-5.0$~MeV (solid
+            blue line), \nuc{3}{He} at $E_{\rm{beam}}\approx
+            0.25-1.2$~MeV (dashed orange line), and \nuc{12}{C} at
+            $E_{\rm{beam}}\approx 3.0-10.0$~MeV (dotted green line).
+            These energy ranges cover some of the astrophysically
+            important ranges for the given reactions. Adapted
+            from~\cite{Meisel2017}.}
+        \label{fig:rigidity-phase-space}
+    \end{center}
 \end{figure}
 
 
@@ -526,18 +530,18 @@ Fig.~\ref{fig:divergence}.
 
 \begin{figure}[t]
     \begin{center}
-        \centerline{\includegraphics[width=0.8\textwidth]
+        \centerline{\includegraphics[width=0.8\textwidth]%
             {figures/quad_focus_divergence.png}}
-            \caption[Sketch of beam divergence due to focusing
+        \caption[Sketch of beam divergence due to focusing
             strength]{Sketch of the beam divergence caused by the
             focusing strength of a quadrupole magnet. The short-dashed
             lines show the beam path when the quadrupole is over-focused
             and the long-dashed lines show the beam path when the
-            quadrupole is underfocused. At a set distance
-            from the magnet and for a set particle rigidity, the
-            physical extent of the beam envelope and the angular spread
-            of particle trajectories changes depending on the focusing
-            strength of the magnet.}
+            quadrupole is underfocused. At a set distance from the
+            magnet and for a set particle rigidity, the physical extent
+            of the beam envelope and the angular spread of particle
+            trajectories changes depending on the focusing strength of
+            the magnet.}
         \label{fig:divergence}
     \end{center}
 \end{figure}
@@ -564,7 +568,7 @@ described below. Major subsections of the procedure will begin with a
 short title in bold to guide the reader. The elements on the main
 transport line that may be necessary to adjust are the switching magnet
 with the $X_6$ steerer, and the $Y_5$ and $Y_6$ steerers (locations
-shown in Figure~[FIGURE]). The steerers are labeled as such based on
+shown in Figure~\ref{fig:5U}). The steerers are labeled as such based on
 their position along the main transport line. Steerers $X_6$ and $Y_6$
 are part of the same physical steerer but can be operated independently.
 Additionally, the quadrupole triplet directly before the target location
@@ -619,15 +623,16 @@ Figure~\ref{fig:steering}.
 
 \begin{figure}[t]
     \begin{center}
-        \centerline{\includegraphics[width=0.8\textwidth]
-        {figures/quad_steering.png}}
-        \caption[Sketch of quadrupole steering of misaligned beam]{Sketch
-        of the steering caused by a quadrupole magnet due to the beam
-        being misaligned to the magnetic optical axis. Assuming that no
-        higher order corrections are made, the beam appears to scan
-        across the observation plane as the magnetic field is
-        increased, with the field strength increasing for line styles
-        long-dashed, solid, short-dashed.}
+        \centerline{\includegraphics[width=0.8\textwidth]%
+            {figures/quad_steering.png}}
+        \caption[Sketch of quadrupole steering of misaligned
+            beam]{Sketch of the steering caused by a quadrupole magnet
+            due to the beam being misaligned to the magnetic optical
+            axis. Assuming that no higher order corrections are made,
+            the beam appears to scan across the observation plane as the
+            magnetic field is increased, with the field strength
+            increasing for line styles long-dashed, solid,
+            short-dashed.}
         \label{fig:steering}
     \end{center}
 \end{figure}
@@ -839,13 +844,20 @@ relative distance between the collimator and the foil is used to
 properly align the foil to the beam.
 
 \subsubsection{Additional Considerations}
-% fill out the rest of this...?
-Within St.\ George, this equates to the
-$y$-focusing quadrupoles ($Q_{1,\,4,\,7,\,8,\,11}$) potentially steering
-minorly in the vertical direction despite the best efforts of the
-operator. As there are no elements within St.\ George that could correct
-for this, the steering effect of these quadrupoles may not be able to be
-eliminated.
+The steering minimization routine can never fully eliminate the beam
+steering because of possible misalignments of the magnetic elements and
+the properties of the beam. Especially of concern would be the vertical
+steering of the $y$-focusing quadrupoles ($Q_{1,\,4,\,7,\,8,\,11}$), as
+the alignment of the beam to their axis is primarily affected by the
+beam preparation steps before the beam enters St.\ George. These
+quadrupoles may steer minorly in the vertical direction despite the best
+efforts of the operator. As there are no elements within St.\ George
+that could correct for this, the steering effect of these quadrupoles
+may not be able to be eliminated.
+
+As the process is repeated, the required field strengths for the magnetic
+dipoles within St.\ George will be better known, and additional global
+settings for St.\ George
 
 \subsection{Energy Acceptance}
 

@@ -15,6 +15,9 @@ Chapter 2
 
 -   basics: ion source, terminal, acceleration tube, analyzing magnet
 
+-   include basic transport line? I think I make a reference to it in
+    chapter 3
+
 Schematic of the Wien filter
 
 -   crossed electric/magnetic fields
@@ -33,7 +36,9 @@ Faraday cup designs
 Chapter 3
 =========
 
-Completed 2018-08-21 (really shitty, but that's fine)
+Location of steerers? I think I can group this in with the 5U schematic
+
+.. Completed 2018-08-21 (really shitty, but that's fine)
 
 .. Beam divergence from quadrupole
 .. -   changing focal position based on magnetic strength
