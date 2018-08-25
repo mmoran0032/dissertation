@@ -11,12 +11,11 @@ Energy diagram for the 27Al(p,a)24Mg reaction
 Chapter 2
 =========
 
-5U schematic
-
--   basics: ion source, terminal, acceleration tube, analyzing magnet
-
--   include basic transport line? I think I make a reference to it in
-    chapter 3
+Use figure from Meisel et al, 2017
+.. 5U schematic
+.. -   basics: ion source, terminal, acceleration tube, analyzing magnet
+.. -   include basic transport line? I think I make a reference to it in
+..     chapter 3
 
 Schematic of the Wien filter
 
@@ -38,6 +37,8 @@ Chapter 3
 
 Location of steerers? I think I can group this in with the 5U schematic
 
+Rethink how to show the quads in two figures
+
 .. Completed 2018-08-21 (really shitty, but that's fine)
 
 .. Beam divergence from quadrupole
@@ -53,7 +54,7 @@ Alpha distribution at detector
 
 -   from ``python``
 
--   include both optimized and not-optimized distributions
+-   include both optimized and not-optimized distributions (?)
 
 .. Detector positions
 .. -   Show strips, in-beam and below beam positions, basic
