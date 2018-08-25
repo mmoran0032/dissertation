@@ -11,17 +11,14 @@ Energy diagram for the 27Al(p,a)24Mg reaction
 Chapter 2
 =========
 
-Use figure from Meisel et al, 2017
-.. 5U schematic
+.. 5U schematic (Use figure from Meisel et al, 2017)
 .. -   basics: ion source, terminal, acceleration tube, analyzing magnet
 .. -   include basic transport line? I think I make a reference to it in
 ..     chapter 3
 
-Schematic of the Wien filter
-
--   crossed electric/magnetic fields
-
--   show view from above
+.. Schematic of the Wien filter
+.. -   crossed electric/magnetic fields
+.. -   show view from above
 
 .. Locations of diagnostics within St. George
 .. -   slits (S), faraday cups (FC), and quartz viewers (QV)
