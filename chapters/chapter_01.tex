@@ -26,8 +26,8 @@ gamma ray burst, or at the beginning of the universe itself.
 Additionally, the decay of various isotopes can also play a major role
 within this domain, either as part of a sequence of reactions or
 independently. The entire field of nuclear astrophysics was conceived in
-the seminal papers [B2FH] and [Other], which have been used as a basis
-for much of the work following.
+the seminal papers \cite{B2FH} and \cite{Cameron1957}, which have been
+used as a basis for much of the work following.
 
 For astrophysical reactions, the properties of the environment can play
 a major role in how quickly the reaction proceeds or if it is even
@@ -37,8 +37,6 @@ detection methods in order for the energy dependence of the cross
 section to be determined. Due to the decreasing cross sections, work has
 primarily focused on strong resonances in this low-energy regime.
 
-
-%%% section %%%
 
 \section{Stellar Burning}
 
@@ -220,8 +218,6 @@ experimental facilities. The remainder of the discussion will focus on
     \end{center}
 \end{figure}
 
-
-%%% section %%%
 
 \section{Capture Reactions}
 \label{sec:01-capture-reactions}
@@ -446,7 +442,6 @@ in Table~\ref{tab:resonance-properties}.
 \begin{table}
     \begin{center}
         \caption{RESONANCE PARAMETERS}
-        \label{tab:resonance-properties}
         \begin{tabular}{ccc}
             \toprule
             \midrule
@@ -459,6 +454,7 @@ in Table~\ref{tab:resonance-properties}.
                 $Q$, MeV                        & \multicolumn{2}{c}{1.601} \\
             \bottomrule
         \end{tabular}
+        \label{tab:resonance-properties}
     \end{center}
 \end{table}
 
@@ -492,8 +488,6 @@ used to determine the angular correlation of the produced particles and
 can inform the assignment of state spins and parities (see for example
 \cite{deBoer2015}).
 
-
-%%% section %%%
 
 \section{Recoil Separation}
 \label{sec:ch01-recoil-separation}
@@ -571,18 +565,11 @@ a relatively low efficiency and is subject to background. In cases where
 the emitted $\gamma$ has energy similar to exceedingly strong background
 lines, the detection of the produced $\gamma$ can be almost impossible.
 As many reactions of astrophysical interest are radiative capture
-($(\rm{p},\gamma)$ or $(\alpha,\gamma)$), these complications can
-prevent the study of some important reactions.
-
-REWRITE CONTENT HERE
-% Additionally, it may be
-% impossible to produce a target with the desired hevy nuclei, or the
-% targets that can be produced containing the desired heavy nuclei may
-% have undesireable properties. These properties might be due to the
-% additional induced background due to energy levels within the supporting
-% nuclei, or the target itself is not stable under experimental conditions
-% due to accelerated degredation under incident beam or transient
-% evaporation of the desired target nuclei.
+($({\rm p},\gamma)$ or $(\alpha,\gamma)$), these complications can
+prevent the study of some important reactions. Contaminanting nuclei
+within the target can have the same effect, where a reaction channel
+with the contaminant nuclei has the same $\gamma$ energy as the desired
+reaction, preventing the direct detection of the desired reaction.
 
 Performing a reaction in reverse kinematics can help avoid some of these
 problems. In reverse kinematics, a heavy projectile is impinged on a
@@ -682,15 +669,33 @@ recoils to first order as
     x = (x|x)x_0 + (x|\theta)\theta_0 + (x|\delta_E)\delta_E + (x|\delta_M)\delta_M,
 \]
 where $\delta_E = \Delta E/E_0$ and $\delta_M = \Delta M/M_0$ are the
-energy and mass dispersions, respectively~\cite{Davids2003}.
+energy and mass dispersions, respectively~\cite{Davids2003}. The matrix
+elements can be understood as their effect on the final position of the
+particle in question in relation to its position at the target location,
+where the coefficient in question either represents a focusing or a
+divergence along the horizontal axis. Each coefficient is the amount of
+focus or divergence given the particle trajectory at the target location
+and is based on all of the intervening magnetic and electrostatic
+elements along the beamline.
 
-DESCRIBE THE MEANING OF THE MATRIX ELEMENTS
-
-Since we
-require that there be a mass dispersion, the coefficient $(x|\delta_M)$
-must be non-zero and we must have no energy dispersion, so
-$(x|\delta_E)$ must be zero. Additionally, we would want a focus in the
-$x$ plane, which required that the coefficient $(x|\theta)$ be zero.
+The coefficient $(x|x)$ is the magnification of the beam spot, so
+independent of any other effects, the spot at the detector plane is
+larger or smaller based on the magnitude of the coefficient. Similarly,
+the coefficient $(x|\theta)$ describes the angular dependence of the
+horizontal beam spot. Since we want a focus in the $x$ plane, we
+require that this coefficient be zero or as close to zero as possible.
+The coefficient $(x|\delta_E)$ is the energy dispersion, so the change
+in beam spot size due to the difference in energy from the central tuned
+energy for the separator. St.\ George is designed to have a $\pm7.5$\,\%
+energy acceptance, so this value should be zero or close to zero for a
+range of values. For alternate tunes of the separator, this requirement
+may be relaxed. Finally, the coefficient $(x|\delta_M)$ is the mass
+dispersion, which describes the change in horizontal position based on
+the difference in mass from the central tuned particle. As St.\ George
+is designed to provide a mass separation following a reaction, this
+coefficient should be non-zero and preferably large in order to
+separate out the incident beam particles from the produced reaction
+particles.
 
 To higher orders, the design of the transport matrix and through that
 the decision on what electromagnetic elements and their properties for
@@ -760,17 +765,16 @@ the study of radiative capture reactions in inverse kinematics using
 radioactive isotope beams with near-complete rejection of the incident
 beam before the detector system. The separator achieves the mass
 separation by using a Wien filter to provide initial velocity selection,
-an electrostatic deflector to provide energy selection, and a magnetic
-
-CHECK IF ELECTROSTATIC DEFLECTOR
-
-dipole to provide momentum selection~\cite{Smith1991}. Additional
-experimental choices used for this separator system, such as the use of
-an offset Si detector at the target location to monitor beam current
-indirectly or the use of a $\gamma$ detector in coincidence with the
-final detector system to provide additional beam suppression, have been
-replicated in future systems. During initial experiments, beam
-suppression on the order of $10^{10}$ was observed~\cite{Smith1991}.
+an electrostatic deflector created by extending the Wien filter's
+electrostatic plates beyond the magnetic field limits to provide energy
+selection, and a magnetic dipole to provide momentum
+selection~\cite{Smith1991}. Additional experimental choices used for
+this separator system, such as the use of an offset Si detector at the
+target location to monitor beam current indirectly or the use of a
+$\gamma$ detector in coincidence with the final detector system to
+provide additional beam suppression, have been replicated in future
+systems. During initial experiments, beam suppression on the order of
+$10^{10}$ was observed~\cite{Smith1991}.
 
 \subsubsection{ARES}
 The Astrophysics REcoil Separator (ARES) was built at Louvain-la-Neuve
