@@ -114,6 +114,18 @@ circles (outside of statistics where
 R\footnote{https://www.r-project.org/} is still the primary language),
 an adopting it for nuclear astrophysics should not be far behind.
 
+There is a current package
+\verb+becquerel+\footnote{\url{https://github.com/lbl-anp/becquerel}}
+that has been under development since October 2016 by users at LBNL. As
+this package was not known about at the start of my analysis, it was not
+used, but it could be possible to use it as a replacement for SAP with
+a transformation layer between PyNE and the routines within Becquerel.
+There are some very interesting examples of using Becquerel for nuclear
+physics analysis that can be viewed in the examples folder in the GitHub
+repo. If I were completing this analysis now, I would have stopped at
+the data translation layer in PyNE and moved into writing routines that
+use Becquerel for the heavy analysis work.
+
 For those thinking that the ``slow'' speed of python will hold them back
 from performing large-scale analysis, or that python might not fit with
 the use cases that the researcher has, I emplore you to watch Jake
