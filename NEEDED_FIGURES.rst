@@ -11,8 +11,8 @@ Energy diagram for the 27Al(p,a)24Mg reaction
 Chapter 3
 =========
 
-Rework the following images: beam divergence from quadrupole strength,
-beam steering from misaligned beam
+.. Rework the following images: beam divergence from quadrupole strength,
+.. beam steering from misaligned beam
 
 .. Beam divergence from quadrupole
 .. -   changing focal position based on magnetic strength
