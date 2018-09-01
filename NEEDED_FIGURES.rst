@@ -24,9 +24,9 @@ Chapter 2
 .. -   slits (S), faraday cups (FC), and quartz viewers (QV)
 .. -   we have the STG schematic already, just need to edit the figure
 
-Faraday cup designs
-
--   both FN and 5U version
+.. Don't need this figure, since I didn't design them
+.. Faraday cup designs
+.. -   both FN and 5U version
 
 
 Chapter 3
@@ -47,12 +47,9 @@ Rethink how to show the quads in two figures
 Chapter 4
 =========
 
-Alpha distribution at detector
-
--   from ``python``
-
--   include both optimized and not-optimized distributions (?)
-
+.. Alpha distribution at detector
+.. -   from ``python``
+.. -   include both optimized and not-optimized distributions (?)
 .. Detector positions
 .. -   Show strips, in-beam and below beam positions, basic
 

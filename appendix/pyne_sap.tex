@@ -19,12 +19,12 @@ using Python and a small set of standard scientific python packages:
         root finding, signal processing and more
 \end{description}
 
-These three packages are standard components of the Python Scientific
-Stack, and their usage and internals are well-documented and trusted by
-many scientists in multiple fields. The usage of Python in the
-scientific community has increased steadily over the years, with
-multiple special purpose packages built on top of the foundation of
-these three packages, particularly NumPy.
+These packages are standard components of the Python Scientific Stack,
+and their usage and internals are well-documented and trusted by many
+scientists in multiple fields. The usage of Python in the scientific
+community has increased steadily over the years, with multiple special
+purpose packages built on top of the foundation of these three packages,
+particularly NumPy.
 
 For the actual analysis, a two-part analysis framework was developed in
 tandem with the analysis work: Python for Nuclear Experiments (PyNE) and
@@ -54,36 +54,88 @@ underlying purpose for PyNE is not to be an end-to-end analysis package,
 but provide the necessary structure to such an end-to-end analysis
 package with a common and simple API.
 
+The primary functionality is the organizing of experimental data. From
+binary files in either (currently) \verb+.Chn+ or \verb+.evt+ format,
+the data is converted into \verb+numpy.ndarray+ format. A logical
+directory structure is set up, with run metadata extracted from the
+binary files stored in a local JSON file.
+
+Within the API, the data can be easily queried and worked with. The
+provided \verb+pyne.Data+ objects (subclassed for channel and event
+data) implement the iterator protocol over the ADCs. In this way,
+concise and clear analysis on the entire 16-strip detector can be
+accomplished through code as simple as the following:
+
+\begin{python}
+import pyne
+from local_analysis import determine_counts
+
+data_obj = pyne.EVTData('data/run0808')
+data_obj.load_data()
+
+total_counts = sum(
+    determine_counts(d) for d in data_obj.adc
+)
+\end{python}
+
+By creating objects that encapsulate the data and meta-data, the
+end-to-end analysis becomes much easier, as details about a run and
+exploratory work are vastly simplified.
 
 \section{St. George Analysis Package}
+
+For most analysis, there is a need for more work than just finding the
+total number of counts. For the experiment conducted within this
+dissertation, a few routines were standardized within an add-on package
+to PyNE called SAP. Since PyNE just provides the primitive
+classes for analysis, any number of extension packages may be produced
+building upon that core functionality.
 
 
 \section{Justification}
 
-The \texttt{pyne} (Python for Nuclear Experiments) data framework is
-based on two main analysis codes and frameworks: the \texttt{ROOT} data
-analysis framework, and Dr. Karl Smith's \texttt{evt2root} conversion
-utility. The pyne environment is designed to be similar to these
-packages, but since its development was alongside the analysis done for
-this experiment, additional functionality not needed for this analysis
-was not included. In particular, the buffer file processing only handles
-\texttt{.evt} and \texttt{.Chn} files, and the crate focus was on just a
-single ADC module. Additionally, most of the analysis work with these
-basic structures should be done using a separate package (such as the
-sap (St. George Analysis Package)), and keeping the two responsibilities
-of data conversion and structure and analysis of said data results in
-cleaner code for the user.
+Python has become a leading programming language across a range of uses
+and industry, led primarily by its data analysis, data science, and
+machine learning applications\footnote{Why is Python Growing So Quickly?
+\url{https://stackoverflow.blog/2017/09/14/python-growing-quickly/}}.
+The three main data analysis packages for python\---{}numpy, pandas, and
+matplotlib\---{}have become essential tools in a variety of cases,
+especially within the sciences. Packages built upon this base, such as
+SunPy\footnote{\url{https://github.com/sunpy/sunpy}} (Python for Solar
+Physics), AstroPy\footnote{\url{https://github.com/astropy/astropy}},
+Biopython\footnote{\url{https://github.com/biopython/biopython}}, and
+many others have been written, tested, and used by researchers all
+around the globe. Ground-breaking scientific discoveries, such as the
+detection of gravitational waves by LIGO, have been made using Python
+as one of the primary analysis
+languages\footnote{\url{https://losc.ligo.org/s/events/GW150914/GW150914_tutorial.html}}.
+Python has become a \emph{de facto} language for data analysis in many
+circles (outside of statistics where
+R\footnote{https://www.r-project.org/} is still the primary language),
+an adopting it for nuclear astrophysics should not be far behind.
 
-Development of \texttt{pyne} started in March 2016, and the current
-version can be found on the package's GitHub page. Within that same
-repository is the \texttt{sap} package, but that code is not reproduced
-here. The code listed is from version 0.6.0 (updated on May 12, 2017).
-The packages outside of the Python standard library required for use are
-\texttt{numpy}, a standard numeric package for scientific Python,
-\texttt{scipy}, a scientific analysis package built on top of
-\texttt{numpy}, and \texttt{matplotlib}, a 2D plotting interface. All
-three of these packages are standards for scientific computing with
-Python. Currently, only Python 3.X is supported. As official support for
-Python 2.7 is set to terminate in 2020, and most scientific package
-managers have already switched to Python 3.X, this decision is
-warranted.
+For those thinking that the ``slow'' speed of python will hold them back
+from performing large-scale analysis, or that python might not fit with
+the use cases that the researcher has, I emplore you to watch Jake
+VanderPlas's
+keynote\footnote{https://www.youtube.com/watch?v=ZyjCqQEUa8o} from PyCon
+2017. One additional point is that the speed of execution is most likely
+not the limiting factor in the analysis, but the speed of the researcher
+to write, debug, and understand the code may very well be that
+bottleneck. Additionally, the use of Jupyter
+Notebooks\footnote{\url{https://jupyter.org/}} for code alongside
+documentation allows for a lower barrier to entry for rerunning and
+understanding experimental analyses years later.
+
+As a user of python since 2007, I have seen large changes in the python
+ecosystem and have gradually included python more and more into my own
+work. Right now, I owe my career to python and the open source data
+analysis packages, and I don't expect that fact to change any time soon.
+While my work has shifted from curve fitting to gradient boosted trees
+and neural networks, it is still in python, and in many cases the final
+understanding of my complex models comes down to dot products in
+\verb+numpy+ and plotting with \verb+matplotlib+.
+
+This dissertation would not have been possible without the countless
+hours of work and throusands of open source contributions to these core
+data analysis libraries and python itself.

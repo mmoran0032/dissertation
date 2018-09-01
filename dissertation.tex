@@ -5,6 +5,12 @@
 
 \usepackage{gensymb}
 \usepackage{siunitx}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
 
 \newcommand{\nuc}[2]{${}^{#1}\textrm{#2}$}
 \newcommand{\mnuc}[2]{{}^{#1}\textrm{#2}}
@@ -13,6 +19,19 @@
 \newcommand{\alpa}{\react{\mnuc{27}{Al}}{\textrm{p}}{\alpha}{\mnuc{24}{Mg}}}
 \newcommand{\nag}{\react{\mnuc{14}{N}}{\alpha}{\gamma}{\mnuc{18}{F}}}
 \newcommand{\squared}{${}^{2}$}
+
+\newcommand\pythonstyle{\lstset{
+    language=Python,
+    basicstyle=\ttm,
+    otherkeywords={self},             % Add keywords here
+    keywordstyle=\ttb\color{deepblue},
+    emph={MyClass,__init__},          % Custom highlighting
+    emphstyle=\ttb\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    frame=tb,                         % Any extra options here
+    showstringspaces=false            %
+}}
+\lstnewenvironment{python}[1][]{\pythonstyle\lstset{#1}}{}
 
 \begin{document}
 
