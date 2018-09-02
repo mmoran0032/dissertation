@@ -60,7 +60,7 @@ limitied to the species in question, the charge state, energy, and
 intensity of the beam, and the overall stability of the system. Here
 stability is diagnosed by the beam current at the diagnostic equipment:
 a current with constant mean and small variance over time is considered
-a "stable" beam. This stability is based on the entirety of the
+a ``stable'' beam. This stability is based on the entirety of the
 experimental system, from the initial beam produced at the ion source to
 the power supplies used for the various tuning elements along the beam
 line. The commissioning work was divided between focusing on the energy
@@ -363,7 +363,6 @@ shape of the fringe field can be seen in Fig.~\ref{fig:enge_comparison}.
 \begin{table}[t]
     \begin{center}
         \caption{ENGE COEFFICIENTS FOR $Q_{10}$ COMPARED TO COSY DEFAULTS}
-        \label{tab:enge}
         \begin{tabular}{c S[table-format=2.8]S[table-format=2.6]}
             \toprule
             \midrule
@@ -379,6 +378,7 @@ shape of the fringe field can be seen in Fig.~\ref{fig:enge_comparison}.
             $a_5$ &  1.3135787 &  0.022261 \\
             \bottomrule
         \end{tabular}
+        \label{tab:enge}
     \end{center}
 \end{table}
 
@@ -652,22 +652,20 @@ and $+y$ direction entering into a quadrupole focusing in the $y$ plane
 will be steered in both the $+x$ and $-y$ direction. When minimizing
 steering in a single direction, the other direction must be periodically
 checked to ensure that a minimal steering solution is reached for both
-directions at the same time.
-%
-At the end of this process, the beam is not deflected when the field
-strength for either $Q_1$ or $Q_2$ is increased or decreased
-independently of the other quadrupole. The beam may be said to be
-entering St.\ George along the optical magnetic axis. Due to the short
-distance between the first quadrupole doublet and the $B_1$ quartz, it
-may be necessary to increase the sensitivity of the steering to ensure
-that we are as aligned as possible to the axis.
+directions at the same time. At the end of this process, the beam is not
+deflected when the field strength for either $Q_1$ or $Q_2$ is increased
+or decreased independently of the other quadrupole. The beam may be said
+to be entering St.\ George along the optical magnetic axis. Due to the
+short distance between the first quadrupole doublet and the $B_1$
+quartz, it may be necessary to increase the sensitivity of the steering
+to ensure that we are as aligned as possible to the axis.
 
 \textbf{Increase sensitivity:}
 The beam is then sent further into St.\ George, first to the $B_2$
 quartz located within the beamline then the $B_3$ quartz. The steering
 of $Q_1Q_2$ is again checked in the same fashion as before. As these
 quartzes are located further from the quadrupoles, they give a higher
-sensitivity to steering effects from misalignment than just using the  % check effects/affects for this case
+sensitivity to steering effects from misalignment than just using the
 $B_1$ quartz at the trade-off that the the quadrupoles can only be set
 to lower field strengths. Since the quartz is further from the focusing
 elements, the same focusing strength will create a larger beam spot on
@@ -851,14 +849,18 @@ the properties of the beam. Especially of concern would be the vertical
 steering of the $y$-focusing quadrupoles ($Q_{1,\,4,\,7,\,8,\,11}$), as
 the alignment of the beam to their axis is primarily affected by the
 beam preparation steps before the beam enters St.\ George. These
-quadrupoles may steer minorly in the vertical direction despite the best
-efforts of the operator. As there are no elements within St.\ George
-that could correct for this, the steering effect of these quadrupoles
-may not be able to be eliminated.
+quadrupoles may steer in the vertical direction despite the best efforts
+of the operator. As there are no elements within St.\ George that could
+correct for this, the steering effect of these quadrupoles may not be
+able to be eliminated.
 
-As the process is repeated, the required field strengths for the magnetic
-dipoles within St.\ George will be better known, and additional global
-settings for St.\ George
+As the process is repeated, the required field strengths for the
+magnetic dipoles within St.\ George will be better known, and additional
+global settings for St.\ George will be iteratively updated to provide a
+better starting point for minimization. Over time, the magnetic field
+strengths will be known with enough accuracy across a range of rigidity
+values that a simple scaling to the selected beam energy can provide the
+final setpoints for the magnets without much further tuning.
 
 \subsection{Energy Acceptance}
 
