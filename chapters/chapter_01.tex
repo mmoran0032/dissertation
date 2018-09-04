@@ -6,7 +6,7 @@ The elements making up the universe were formed during a variety of
 processes, beginning with Big Bang Nucleosynthesis (BBN) that formed the
 lightest elements. Those elements common to life on Earth were primarily
 formed through burning processes inside of stars, grouped together under
-the title of Stellar Nucleosynthesis. Depending on the conditions within
+the title of stellar nucleosynthesis. Depending on the conditions within
 the stellar environment, which are characterized by macroscopic
 qualities about the star (temperature, pressure, mass, etc.) and the
 elemental composition of the stellar interior where the burning process
@@ -14,20 +14,18 @@ takes place, the reactions accessible to the nuclei within the star
 differ. The creation and destruction of different elements and isotopes
 may be inhibited or enhanced by these differing conditions, and the
 study of these processes at the nuclear level has spawned the field of
-nuclear astrophysics in order to understand the inner workings of these
-stars.
-
-The specific and directed study of those nuclear reactions that have an
-effect on the properties or life cycle of celestial bodies can be
-grouped under the umbrella term \emph{nuclear astrophysics}. These
-reactions may take place during the lifecycle of a star, during a
-cataclysmic event within the universe such as a black hole merger or
-gamma ray burst, or at the beginning of the universe itself.
-Additionally, the decay of various isotopes can also play a major role
-within this domain, either as part of a sequence of reactions or
-independently. The entire field of nuclear astrophysics was conceived in
-the seminal papers \cite{B2FH} and \cite{Cameron1957}, which have been
-used as a basis for much of the work following.
+\emph{nuclear astrophysics} in order to understand the inner workings of
+these stars. Nuclear astrophysics can be described as the specific and
+directed study of those nuclear reactions that have an effect on the
+properties or life cycle of celestial bodies. These reactions may take
+place during the lifecycle of a star, during a cataclysmic event within
+the universe such as a black hole merger or gamma ray burst, or at the
+beginning of the universe itself. Additionally, the decay of various
+isotopes can also play a major role within this domain, either as part
+of a sequence of reactions or independently. The entire field of nuclear
+astrophysics was conceived in the seminal papers \cite{B2FH} and
+\cite{Cameron1957}, which have been used as a basis for much of the work
+in the following decades.
 
 For astrophysical reactions, the properties of the environment can play
 a major role in how quickly the reaction proceeds or if it is even
@@ -51,7 +49,7 @@ temperatures until a point at which the energy produced cannot maintain
 hydrostatic equilibrium.
 
 The isotopic abundances in the stellar interior at a given point in time
-is based on the initial abundances within the interstellar medium when
+are based on the initial abundances within the interstellar medium when
 the cloud condensed into the star, and the reaction channels that are
 available in the stellar interior during the lifespan of the star.
 
@@ -59,8 +57,8 @@ available in the stellar interior during the lifespan of the star.
 
 The fusion of four \nuc{1}{H} nuclei into a single \nuc{4}{He} nucleus
 is called \emph{hydrogen burning}, and can take place through a few
-reaction sequences at within vastly different temperature ranges. The
-overall outcome of the reaction chain given by
+reaction sequences within different temperature ranges. The overall
+outcome of the reaction chain given by
 \[
     4\mnuc{1}{H} \rightarrow{} \mnuc{4}{He} + 2e^+ + 2\nu_e
 \]
@@ -186,13 +184,13 @@ abundances for isotopes with mass within the range $60 \leq A \leq
 
 \subsection{Additional Burning Processes}
 
-While the above reation sequences play a large role in the energy
-production of stars, additional burning sequences are available for more
-massive and hotter stars. These burning cycles can be thought of in
-similar terms to the CNO cycles, where baseline processes convert
-$4\mnuc{1}{H}\rightarrow\mnuc{4}{He}$ and additional reactions provide a
-``breakout'' channel to higher burning processes. The reaction \alpa{}
-is the final step in the MgAl burning cycle (shown in
+While the previously-discussed reation sequences play a large role in
+the energy production of stars, additional burning sequences are
+available for more massive and hotter stars. These burning cycles can be
+thought of in similar terms to the CNO cycles, where baseline processes
+convert $4\mnuc{1}{H}\rightarrow\mnuc{4}{He}$ and additional reactions
+provide a ``breakout'' channel to higher burning processes. The reaction
+\alpa{} is the final step in the MgAl burning cycle (shown in
 Figure~\ref{fig:mgal}) that provides for the cycling of the catalytic
 nuclei. These burning cycles activate at elevated temperatures in the
 range of $T_6 = 60 - 100$ within massive AGB stars~\cite{Boeltzig2016}.
@@ -200,7 +198,7 @@ range of $T_6 = 60 - 100$ within massive AGB stars~\cite{Boeltzig2016}.
 The \alpa{} reaction is relatively well-understood due to the
 availability of target and beam material (see, for example,
 \cite{Nelson1984}). The known characteristics of the reaction across a
-range of center of mass energies makes it a useful test reaction for new
+range of center of mass energies make it a useful test reaction for new
 experimental facilities. The remainder of the discussion will focus on
 \alpa{} as an example.
 
@@ -240,7 +238,7 @@ compound reaction, where a compound nucleus \nuc{28}{Si} is created by
 the direct capture of the proton by \nuc{27}{Al}, followed by the
 emission of the $\alpha$ particle, leaving behind \nuc{24}{Mg}. If the
 light particle $b$ is a $\gamma$ ray, the reaction is a \emph{radiative
-capture reaction}, written as \react{A}{a}{\gamma}. Both types of
+capture reaction}, written as \react{A}{a}{\gamma}{B}. Both types of
 reactions can be studied and understood in similar ways.
 
 The amount of energy either released in the reaction or required for the
@@ -288,9 +286,10 @@ angle to obtain the total cross section
     \sigma = \int \left(\frac{\rm{d}\sigma}{\rm{d}\Omega}\right)\,\rm{d}\Omega.
 \]
 The cross section is the primary quantity of interest when studying
-nuclear reactions. The cross section for the \alpa{} reaction is shown
-in Fig.~\ref{fig:alpa-cross-section}, where the structure will be
-described later.
+nuclear reactions. The cross section for the \alpa{} reaction near the
+energy range of interest for this experiment is shown in
+Fig.~\ref{fig:alpa-cross-section}, where the structure will be described
+later.
 
 \begin{figure}[t]
     \begin{center}
@@ -505,15 +504,17 @@ perform this task.
 
 Recoil mass separation was conceived as an alternate way to measure the
 cross sections of radiative capture reactions. These reactions had
-previously been studied by detecting the produced $\gamma$ rays, subject
-to the limitations previously discussed. The heavy reaction product can
-instead be detected by a detector situated behind the target, assuming
-that the target is thin enough to allow the produced recoils to leave
-the target. In this thin target case, the incident beam will likely pass
-through the target as well, making it a source of background at the
-detector plane. In the cases of interest for nuclear astrophysics, this
-background count rate could be $\times 10^{15}$ that of the particles of
-interest and will damage the detector.
+previously been studied by detecting the produced $\gamma$ rays, which
+are potentially subject to high background count rates near the energy
+of interest and low detection efficiency for the produced $\gamma$ rays.
+The heavy reaction product can instead be detected by a detector
+situated behind the target, assuming that the target is thin enough to
+allow the produced recoils to leave the target. In this thin target
+case, the incident beam will likely pass through the target as well,
+making it a source of background at the detector plane. In the cases of
+interest for nuclear astrophysics, this background count rate could be
+$\times 10^{15}$ that of the particles of interest and will damage the
+detector.
 
 The produced recoils may be filtered out from the incident beam by
 electromagnetic elements situated between the target and the detector.
@@ -617,7 +618,7 @@ momentum of the recoil.
 If the $\gamma$ is emitted along the $z$-axis (the incident beam
 direction), the momentum of the final recoil is given by
 \[
-    p_{\rm{recoil}} = \sqrt{2m_aE_a} \pm p_{\gamma},
+    p_{{\rm recoil}} = \sqrt{2m_aE_a} \pm p_{\gamma},
 \]
 where $p_{\gamma} = E_{\gamma}/c$. In this case, no angular change is
 imparted to the recoil, so it can be assumed to still be traveling along
@@ -625,7 +626,7 @@ the beam axis. At the opposite end, if the $\gamma$ is emitted
 perpendicular to the beam axis, there is a maximal angular change, where
 the lab angle of the recoil is given by
 \[
-    \theta_{\rm{recoil}} = \rm{atan}\left(\frac{p_{\gamma}}{\sqrt{2m_aE_a}}\right).
+    \theta_{{\rm recoil}} = {\rm atan}\left(\frac{p_{\gamma}}{\sqrt{2m_aE_a}}\right).
 \]
 There is a small change to the total momentum of the recoil from the
 imparted transverse momentum from the emitted $\gamma$. In cases where
