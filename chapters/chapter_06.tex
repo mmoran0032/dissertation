@@ -299,7 +299,7 @@ for the beam energy. While the beam energy can never be negative and
 thus may be better modeled by a log-normal distribution, the values of
 the beam energy are sufficiently far from zero such that the assumption
 of a normal distribution can be used. The mean of the distribution is
-based on the setpoint for the run, which the standard deviation is
+based on the set point for the run, which the standard deviation is
 constant for all runs. A value of 500~eV was taken as a conservative
 value from previous energy calibration runs. Since no explicit energy
 calibration was performed using the exact setup for this experiment,
@@ -313,10 +313,10 @@ such that a log-normal distribution did not need to be assumed. During
 experimental runs, samples of the beam current were taken. Without a
 direct measurement of the beam current during the run, which could be
 obtained using an offset Faraday cup or Si detector, no more information
-about the beam current could be obtained. A cauchy distribution may be
+about the beam current could be obtained. A Cauchy distribution may be
 considered as an alternative, especially when the accelerator system is
 producing extremely variable currents, due to the heavier tails of the
-distribution. For our pruposes, conservative estimates of the beam
+distribution. For our purposes, conservative estimates of the beam
 current were obtained from a gaussian distribution based on the current
 observations performed during the experiment and shown in
 Table~\ref{tab:beam-current-uncertainty}.
@@ -351,13 +351,13 @@ Table~\ref{tab:beam-current-uncertainty}.
 
 \textbf{Time:} gaussian distribution. Our run times were recorded both
 as a coarse clock time for the start and end of the run and with the
-DAQ. For those runs lasting longer than 15 minutes, additional stopages
+DAQ. For those runs lasting longer than 15 minutes, additional stoppages
 in the measurement were made in the middle of the run without stopping
 the DAQ. Values recorded by the DAQ also differed from the set values
 for the total run time. As each of these factors has a role in the total
 run time of the experiment and are approximately additive in nature, a
 gaussian distribution makes sense here. The longer runs had both the
-stopage time estimated and subtracted from the total run time, and the
+stoppage time estimated and subtracted from the total run time, and the
 uncertainty was also taken to be larger. The uncertainties for the run
 time are given in Table~\ref{tab:run-time-uncertainty}.
 
@@ -397,7 +397,7 @@ choice is common for counting experiments.
 \textbf{SRIM tabulated values:} gaussian distribution. The target
 stopping power and those values related to finding the target thickness
 were taken from SRIM. Due to the fact that the \alpa{} reaction is
-relativvely well studied, a conservative estimate of 3\,\% was adopted
+relatively well studied, a conservative estimate of 3\,\% was adopted
 for all values arising from SRIM results.
 
 The final uncertainty bands for each of the acceptance measurements can
@@ -430,7 +430,7 @@ these inputs by setting the uncertainty to zero within the analysis
 pipeline, which would return a different uncertainty band for the run in
 question. Since these uncertainties are not necessarily independent of
 each other, we should also look at all combinations of these four inputs
-being controlled for to get a full picture of the impartances.
+being controlled for to get a full picture of the importances.
 Additionally, the irreducible uncertainty can be determined by keeping
 all of the inputs constant. The contribution to the final uncertainty is
 expressed as a percent of the total uncertainty band for both the 67\,\%
@@ -451,7 +451,7 @@ into experimental sources and analytical sources.
 The analytical sources are much less complex and numerous due to the
 relatively straightforward analysis required. The assumption of the
 symmetry of the acceptance cone is discussed in
-Sec.~\ref{sec:uniformity-of-acceptances} and will not be repreated here.
+Sec.~\ref{sec:uniformity-of-acceptances} and will not be repeated here.
 
 The energy threshold used to discriminate against the possible protons
 that reached the detector also discriminates against some of the
@@ -475,7 +475,7 @@ Additionally, $\alpha$ particles at similar energies to those found in
 the experiment were shown to reach the actual detector for the full
 40~mrad acceptance cone, as shown by the Wien filter quartz viewer. In
 both of these tests, the possibility for a transmission value that is
-not 100\,\%, either due to unforseen energy losses or a shift or offset
+not 100\,\%, either due to unforeseen energy losses or a shift or offset
 in the Faraday cup measurements, opens up the possibility of the
 detector system not measuring the full yield produced in the reaction.
 This produced yield would be the yield within the measurable acceptance
@@ -512,7 +512,7 @@ and the fields required, there is still a possibility of a systematic
 shift in the magnetic field. This shift may come from magnetic
 hysteresis that was not fully corrected for or an offset or differential
 scaling in the power supplies for the magnets. This possibility may
-especially affect the guadrupole magnets, since they are set only by the
+especially affect the quadrupole magnets, since they are set only by the
 current setting for the power supply and not a magnetic field
 measurement.
 
@@ -657,7 +657,7 @@ Fully commissioning a recoil separator requires a vast amount of
 coordinated resources and time, and is something that would not be
 possible without a large and motivated team behind it. The attention to
 detail required for each individual magnet setting and the process
-through which that megnet is set can only be accomplished through
+through which that magnet is set can only be accomplished through
 extreme rigor on the experimental side as well as on the logging and
 information dissemination side. A long memory for the experimental
 accomplishments and a short memory for the experimental failings is
@@ -699,11 +699,11 @@ reactions that test the limits of the separator are outlined in
 \ref{Couder2008}.
 
 The work described sets the initial footing for these following tests.
-The cummulative usage and understanding of the separator iteratively
+The cumulative usage and understanding of the separator iteratively
 improves the operation of the system for all subsequent runs.
 Eventually, the improved magnetic field settings will minimize the long
 tuning process, allowing for future experiments to spend less time
-tuning between runs and more time measruing the low count rate,
+tuning between runs and more time measuring the low count rate,
 off-resonance regions of the cross section. These regions can be
 extremely informative for the $R$-matrix formulation of the cross
 section, and using St.\ George provides the unique ability to probe
