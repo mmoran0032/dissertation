@@ -69,31 +69,6 @@ the angular acceptance measurements, a small energy spread was included
 to better recreate the conditions under which St.\ George will be used.
 
 
-\begin{figure}
-    \begin{center}
-        \centerline{
-            \includegraphics[width=0.8\textwidth]{figures/raytrace.png}}
-        \caption[Horizontal and vertical rays through St.\
-            George]{Horizontal (upper plot) and vertical (lower plot)
-            rays through St.\ George. Recoil \nuc{41}{Sc} rays are shown
-            in black and beam \nuc{40}{Ca} rays are shown in red.
-            % The beam energy is $E_{\textrm{beam}} =
-            % 15.99\pm0.001$~MeV, and the recoil energy is
-            % $E_{\textrm{recoil}} = 15.6\pm1.155$~MeV.
-            The beam rigidities are $B\rho = 0.331$~Tm and $E\rho =
-            2.907$~MV, and the recoil rigidities are $B\rho = 0.331$~Tm
-            and $E\rho = 2.836$~MV. Both the beam and recoil are in the
-            $11^+$ charge state. Differing charge states would lead to a
-            greater separation in the two beam profiles. The COSY
-            calculation assumes that the recoil particles are spread
-            within an acceptance range of $\Delta E/E \approx7.5$\,\%
-            and $\Delta\theta = 40$~mrad. The transverse scale is highly
-            exaggerated to show detail.}
-        \label{fig:raytrace}
-    \end{center}
-\end{figure}
-
-
 \section{Theoretical and Experimental Considerations}
 \label{sec:cosy}
 
@@ -123,16 +98,38 @@ experiments are for the test particles shown, while those for $({\rm
 p},\alpha)$ experiments are specific to this work. The actual fields
 used will depend on the rigidity of the desired particle to transport
 through the separator and can be scaled from these values.
+% INCLUDE THIS TO BREAK (NOT SURE IF THIS IS THE BEST WAY)
+\newpage
+
+\begin{figure}[h]
+    \begin{center}
+        \centerline{
+            \includegraphics[width=0.8\textwidth]{figures/raytrace.png}}
+        \caption[Horizontal and vertical rays through St.\
+            George]{Horizontal (upper plot) and vertical (lower plot)
+            rays through St.\ George. Recoil \nuc{41}{Sc} rays are shown
+            in black and beam \nuc{40}{Ca} rays are shown in red.
+            % The beam energy is $E_{\textrm{beam}} =
+            % 15.99\pm0.001$~MeV, and the recoil energy is
+            % $E_{\textrm{recoil}} = 15.6\pm1.155$~MeV.
+            The beam rigidities are $B\rho = 0.331$~Tm and $E\rho =
+            2.907$~MV, and the recoil rigidities are $B\rho = 0.331$~Tm
+            and $E\rho = 2.836$~MV. Both the beam and recoil are in the
+            $11^+$ charge state. Differing charge states would lead to a
+            greater separation in the two beam profiles. The COSY
+            calculation assumes that the recoil particles are spread
+            within an acceptance range of $\Delta E/E \approx7.5$\,\%
+            and $\Delta\theta = 40$~mrad. The transverse scale is highly
+            exaggerated to show detail.}
+        \label{fig:raytrace}
+    \end{center}
+\end{figure}
 
 The initial ion optics solution creates a transport map for particles
 passing through the entire separator that can be analyzed independently
 of the ray traces and provide the mathematical backing to the particles'
 trajectories within St.\ George. The transport map is dependent on the
 quantities
-
-FIGURE OUT HOW TO CONDENSE THE COSY/BEAM OPTICS DISCUSSION INTO A SINGLE
-SECTION (HERE OR INTRODUCTION)
-
 \begin{equation}
     \label{eq:cosyvars}
     \begin{split}
@@ -153,7 +150,9 @@ where $a$ and $b$ are treated similarly to angles within each plane,
 $\delta_K$ is the relative energy difference from the desired energy
 $K_0$, $\delta_m$ is the relative mass difference from the desired mass
 $m_0$, and $\delta_z$ is the relative charge from the desired charge
-state $z_0$~\cite{COSY}. The desired quantities are the values used to
+state $z_0$~\cite{COSY}. These values are related to the parameters in
+the transport map (see Sec.~\ref{sec:ch1-beam-optics}), but defined for
+use within the code. The desired quantities are the values used to
 calculate the magnetic (Eq.~\ref{eq:brho}) and electric
 (Eq.~\ref{eq:erho}) rigidity, and thus set the fields of the elements
 within St.\ George, of the particle to be transported through the
@@ -360,6 +359,13 @@ coefficients and their comparison to the default values used by COSY for
 $Q_{10}$ can be seen in Table~\ref{tab:enge}, and the difference in the
 shape of the fringe field can be seen in Fig.~\ref{fig:enge_comparison}.
 
+In some cases, the field maps were not recorded far enough away from the
+center of the magnet for the fitting routine to converge, primarily due
+to the field not adequately reaching zero. In those cases, ``dummy''
+points of zero field were pre\---{} and post\---{}pended to the
+individual ``traces'' at distances greater than 5~m from the center of
+the magnet to aide in convergence.
+
 \begin{table}[t]
     \begin{center}
         \caption{ENGE COEFFICIENTS FOR $Q_{10}$ COMPARED TO COSY DEFAULTS}
@@ -396,13 +402,6 @@ shape of the fringe field can be seen in Fig.~\ref{fig:enge_comparison}.
         \label{fig:enge_comparison}
     \end{center}
 \end{figure}
-
-In some cases, the field maps were not recorded far enough away from the
-center of the magnet for the fitting routine to converge, primarily due
-to the field not adequately reaching zero. In those cases, ``dummy''
-points of zero field were pre\---{} and post\---{}pended to the
-individual ``traces'' at distances greater than 5~m from the center of
-the magnet to aide in convergence.
 
 The default COSY coefficients for the fringe field were compared against
 the data and shown to not adequately describe the field maps. The summed
@@ -512,7 +511,8 @@ highlighted below.
 
 Test beam preparation before St.\ George is required to prepare the beam
 for the experimental requirements of the commissioning runs: the beam
-\begin{enumerate}
+% \begin{enumerate}[leftmargin=2\parindent]
+\begin{enumerate}[\indent(1)]  % I'm not sure which will work
     \item must enter along the magnetic optical axis;
     \item must have a narrow waist point with circular cross section at
         the target location;

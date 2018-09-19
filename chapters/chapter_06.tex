@@ -114,7 +114,7 @@ of the 67\,\% and the 95\,\% (respectively) confidence intervals that
 remains when holding the given variable or variables constant.
 
 % \begin{landscape}
-\begin{table}
+\begin{table}[t]
 \small
     \begin{center}
         \label{tab:acceptance-uncertainty-67}
@@ -147,11 +147,12 @@ All &   5.6 &   0.7 &   3.9 &   3.6 &   3.8 &   6.4 &   5.0 &   0.9 &   3.9 &   
         \end{tabular}
 
         \vspace{0.5em}
-        $\dagger$: Denotes runs at resonance energy
+        {\fontsize{10}{12}\selectfont $\dagger$: Denotes runs at
+        resonance energy}
     \end{center}
 \end{table}
 
-\begin{table}
+\begin{table}[t]
 \small
     \begin{center}
         \label{tab:acceptance-uncertainty-95}
@@ -184,10 +185,13 @@ All &   5.4 &   1.0 &   4.0 &   2.8 &   3.8 &   6.6 &   5.2 &   0.9 &   3.7 &   
         \end{tabular}
 
         \vspace{0.5em}
-        $\dagger$: Denotes runs at resonance energy
+        {\fontsize{10}{12}\selectfont$\dagger$: Denotes runs at
+        resonance energy}
     \end{center}
 \end{table}
 % \end{landscape}
+
+% there's extra space here because of the tables...?
 
 Since the final contributions to the uncertainty are not known, and the
 correlations between different variables not explicitly taken into
@@ -273,7 +277,8 @@ of our acceptance, a log-normal distribution would be more apt. For each
 uncertainty, a brief description of the underlying assumptions will be
 presented.
 
-\textbf{Target thickness:} no assumed underlying distribution. The
+\subsubsection{Target Thickness}
+No assumed underlying distribution. The
 target thickness measurements performed before the experiment were used
 to determine the particle density within the target. The counts at the
 detector for the runs were assumed to be Poisson distributed since they
@@ -291,7 +296,8 @@ target thickness were desired, the shape was approximately Gaussian with
 parameters $\mu = 1.42$ and $\sigma = 0.03$ ($\times 10^{18}$
 nuclei/cm\squared{}).
 
-\textbf{Beam energy:} gaussian distributed. The underlying statistical
+\subsubsection{Beam Energy}
+Gaussian distributed. The underlying statistical
 fluctuation of the multiple additive and multiplicative values that
 determine the beam energy\---{}the power supplies for the ion source,
 accelerator, and analyzing magnet\---{}result in a gaussian distribution
@@ -305,7 +311,8 @@ value from previous energy calibration runs. Since no explicit energy
 calibration was performed using the exact setup for this experiment,
 this conservative value represents that additional uncertainty.
 
-\textbf{Beam current:} gaussian distributed. For similar reasons as the
+\subsubsection{Beam Current}
+Gaussian distributed. For similar reasons as the
 beam energy uncertainty, a gaussian distribution for the beam current
 was chosen. Observations on the beam current roughly showed a normal
 distribution around a central value, and the values and fluctuation were
@@ -349,7 +356,8 @@ Table~\ref{tab:beam-current-uncertainty}.
     \end{center}
 \end{table}
 
-\textbf{Time:} gaussian distribution. Our run times were recorded both
+\subsubsection{Time}
+Gaussian distribution. Our run times were recorded both
 as a coarse clock time for the start and end of the run and with the
 DAQ. For those runs lasting longer than 15 minutes, additional stoppages
 in the measurement were made in the middle of the run without stopping
@@ -389,12 +397,14 @@ time are given in Table~\ref{tab:run-time-uncertainty}.
     \end{center}
 \end{table}
 
-\textbf{Detector counts:} Poisson distribution. As each bin within the
+\subsubsection{Detector Counts}
+Poisson distribution. As each bin within the
 Si detector spectra counts the particles that fall within that energy
 bucket, a Poisson distribution was adopted for the detector counts. This
 choice is common for counting experiments.
 
-\textbf{SRIM tabulated values:} gaussian distribution. The target
+\subsubsection{SRIM Tabulated Values}
+Gaussian distribution. The target
 stopping power and those values related to finding the target thickness
 were taken from SRIM. Due to the fact that the \alpa{} reaction is
 relatively well studied, a conservative estimate of 3\,\% was adopted
@@ -447,7 +457,7 @@ could drastically affect the final yield and thus the cross section
 measurements. Potential sources of systematic uncertainty can be divided
 into experimental sources and analytical sources.
 
-\subsubsection{Analytical sources}
+\subsubsection{Analytical Sources}
 The analytical sources are much less complex and numerous due to the
 relatively straightforward analysis required. The assumption of the
 symmetry of the acceptance cone is discussed in
@@ -463,7 +473,7 @@ choice of the value was to ideally eliminate any false positives
 below this threshold was small, the effect on the final yield is
 minimal (>>1\,\%).
 
-\subsubsection{Experimental sources}
+\subsubsection{Experimental Sources}
 The experimental sources of systematic uncertainty are those sources
 that affect the assumptions behind how many $\alpha$ particles reach the
 detector. The first assumption is the 100\,\% transmission of the beam
@@ -562,7 +572,7 @@ emitted particle beam spot at the detector plane can be more easily
 tuned to fit completely on the detector.
 
 
-\section{The $({\rm p},\alpha_1)$ channel}
+\section{The $({\rm p},\alpha_1)$ Channel}
 \label{sec:the-palpha_1-channel}
 
 At the resonances probed, the $({\rm p},\alpha_1)$ reaction channel is

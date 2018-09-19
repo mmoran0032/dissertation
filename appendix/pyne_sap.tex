@@ -66,6 +66,8 @@ data) implement the iterator protocol over the ADCs. In this way,
 concise and clear analysis on the entire 16-strip detector can be
 accomplished through code as simple as the following:
 
+% better separation here...?
+\newpage
 \begin{python}
 import pyne
 from local_analysis import determine_counts
@@ -111,8 +113,9 @@ as one of the primary analysis
 languages\footnote{\url{https://losc.ligo.org/s/events/GW150914/GW150914_tutorial.html}}.
 Python has become a \emph{de facto} language for data analysis in many
 circles (outside of statistics where
-R\footnote{https://www.r-project.org/} is still the primary language),
-an adopting it for nuclear astrophysics should not be far behind.
+R\footnote{\url{https://www.r-project.org/}} is still the primary
+language), an adopting it for nuclear astrophysics should not be far
+behind.
 
 There is a current package
 \verb+becquerel+\footnote{\url{https://github.com/lbl-anp/becquerel}}
@@ -130,11 +133,11 @@ For those thinking that the ``slow'' speed of python will hold them back
 from performing large-scale analysis, or that python might not fit with
 the use cases that the researcher has, I emplore you to watch Jake
 VanderPlas's
-keynote\footnote{https://www.youtube.com/watch?v=ZyjCqQEUa8o} from PyCon
-2017. One additional point is that the speed of execution is most likely
-not the limiting factor in the analysis, but the speed of the researcher
-to write, debug, and understand the code may very well be that
-bottleneck. Additionally, the use of Jupyter
+keynote\footnote{\url{https://www.youtube.com/watch?v=ZyjCqQEUa8o}} from
+PyCon 2017. One additional point is that the speed of execution is most
+likely not the limiting factor in the analysis, but the speed of the
+researcher to write, debug, and understand the code may very well be
+that bottleneck. Additionally, the use of Jupyter
 Notebooks\footnote{\url{https://jupyter.org/}} for code alongside
 documentation allows for a lower barrier to entry for rerunning and
 understanding experimental analyses years later.

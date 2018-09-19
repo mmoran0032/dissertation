@@ -58,6 +58,8 @@ To be conservative, an uncertainty of 5\,\% is
 adopted for all calculations. When taking the SRIM uncertainty into
 account, our measured thickness is
 $63.8^{+6.7}_{-6.6}$~$\mu$g/cm\squared{} (95\,\% confidence interval).
+For subsequent calculations, the thickness used was sampled from this
+distribution.
 
 % see foil_thickness/target_thickness_20180403.ipynb
 
@@ -80,10 +82,6 @@ $63.8^{+6.7}_{-6.6}$~$\mu$g/cm\squared{} (95\,\% confidence interval).
         \end{tabular}
     \end{center}
 \end{table}
-
-% rework below...?
-For subsequent calculations, the thickness used was sampled from this
-distribution.
 
 The uncertainties present in each step of the procedure laid out above
 are automatically propagated forward due to the methods chosen. The
@@ -178,7 +176,7 @@ The detector efficiency was not directly measured and assumed to be
 supporting the St.\ George detector system resulted in efficiencies
 above 99\,\% for all strips.
 
-\subsection{Simulating the energy spectrum}
+\subsection{Simulating the Energy Spectrum}
 \label{sec:05-simulating-spectrum}
 
 A simulation of the expected energy spectrum at the target location was
@@ -321,21 +319,17 @@ previously described.
 The acceptance of St.\ George can be found for each energy value by
 comparing the detected counts to the expected yield for that incident
 beam energy. The yield is found from:
-
 \begin{equation}
     Y(E) = \frac{N_r}{N_b},
 \end{equation}
-
 where $N_r$ is the number of reaction products produced and $N_b$ is the
 number of incident beam particles. We can determine $N_b$ from the beam
 current and the total run time. The value for $N_r$ is determined by the
 total counts at the detector (for the experimental yield) or the
 integration of target and cross section properties following
-
 \begin{equation}
-    Y(E_0) = \int \frac{\sigma(E)}{\epsilon(E)}\,\rm{d}E
+    Y(E_0) = \int \frac{\sigma(E)}{\epsilon(E)}\,\rm{d}E.
 \end{equation}
-
 In both cases, the detector efficiency and St.\ George transport
 efficiency are 100\,\%, as previously discussed.
 
@@ -343,13 +337,13 @@ If we assume that the angular acceptance is symmetric, the angular
 acceptance in mrad is given by
 \begin{equation}
     \label{eq:acceptance}
-    \theta = \arccos\left(1 - 2 \frac{Y_{\rm experiment}}{Y_{\rm theory}}\right)
+    \theta = \arccos\left(1 - 2 \frac{Y_{\rm experiment}}
+        {Y_{\rm theory}}\right).
 \end{equation}
-
 The angular acceptance can be calculated in this way for each run
-individually, as shown in FIGURE and TABLE. The process for calculating
-the uncertainty bounds is given by the following, repeated 2000 times to
-have enough confidence in the final values:
+individually. The process for calculating the uncertainty bounds is
+given by the following, repeated 2000 times to have enough confidence in
+the final values:
 
 \textbf{Step 1:}
   The beam energy, beam current, and time are sampled from a normal
