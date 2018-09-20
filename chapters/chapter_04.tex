@@ -60,7 +60,7 @@ here.
         \caption{POLE TIP FIELDS FOR $(\alpha,\gamma)$ AND
             $(\rm{p},\alpha)$ STUDIES}
         \label{tab:poletip}
-        \begin{tabular}{cS[table-format=2.9]S[table-format=2.6]}
+        \begin{tabular}{cS[table-format=2.9]S[table-format=3.6]}
             \toprule
             \midrule
              & \multicolumn{2}{c}{\textbf{Pole Tip Field [T]}} \\
@@ -190,21 +190,12 @@ preparations are complete, a run at the desired energy can be performed.
 All data was collected by the DAQ and stored as binary files for later
 processing.
 
-The process below describes the steps taken for each individual energy
-point. For each energy point, multiple runs are performed, with the
-final run taking place with the final separator settings. The magnetic
-settings for St.\ George are based on an altered tune to transport the
-$\alpha$ particles to the Wien filter focal plane $F_2$ such that the
-beam spot of the produced $\alpha$ particles is contained within the
-physical extent of the Si detector. The desired rays through St.\ George
-are shown in Fig.~\ref{fig:raytrace-altered}
-
-\begin{figure}[h]
+\begin{figure}
     \begin{center}
         \centerline{
-            \includegraphics[width=0.9\textwidth]{figures/optimal_tune_x.png}
-            \newline
-            \includegraphics[width=0.9\textwidth]{figures/optimal_tune_y.png}}
+            \includegraphics[width=0.8\textwidth]{figures/optimal_tune_x.png}}
+        \centerline{
+            \includegraphics[width=0.8\textwidth]{figures/optimal_tune_y.png}}
         \caption[Horizontal and vertical rays through St.\
             George for $\alpha$ particles]{Horizontal (upper plot) and
             vertical (lower plot) rays through St.\ George for the
@@ -216,10 +207,20 @@ are shown in Fig.~\ref{fig:raytrace-altered}
     \end{center}
 \end{figure}
 
+The process below describes the steps taken for each individual energy
+point. For each energy point, multiple runs are performed, with the
+final run taking place with the final separator settings. The magnetic
+settings for St.\ George are based on an altered tune to transport the
+$\alpha$ particles to the Wien filter focal plane $F_2$ such that the
+beam spot of the produced $\alpha$ particles is contained within the
+physical extent of the Si detector. The desired rays through St.\ George
+are shown in Fig.~\ref{fig:raytrace-altered}
+
 The initial St.\ George magnetic settings were first found in a similar
 manner to the energy and angular acceptance commissioning, with the
 primary difference being the initial COSY settings for the magnets.
 
+\newpage
 \subsection{Beam Preparation}
 
 The incident proton beam must be tuned for the desired energy. The beam
@@ -327,8 +328,9 @@ Fig.~\ref{fig:alpha-distribution-strips}.
 \begin{figure}
     \begin{center}
         \centerline{
-            \includegraphics[width=0.5\textwidth]{figures/low_resonance_detector_strips.png}
-            \includegraphics[width=0.5\textwidth]{figures/high_resonance_detector_strips.png}
+            \includegraphics[width=0.6\textwidth]{figures/low_resonance_detector_strips.png}}
+        \centerline{
+            \includegraphics[width=0.6\textwidth]{figures/high_resonance_detector_strips.png}
         }
         \caption[Horizontal $\alpha$ particle distribution]{Horizontal
             $\alpha$ particle distribution at the detector plane after
@@ -341,6 +343,7 @@ Fig.~\ref{fig:alpha-distribution-strips}.
     \end{center}
 \end{figure}
 
+\newpage
 The $\alpha$ particle distribution potentially extends past the physical
 limits of the Si detector in the horizontal and vertical direction.
 Centering the distribution horizontally may still miss a small
@@ -368,6 +371,10 @@ position as the bottom of the detector when it is in its final position.
 A figure displaying these positions is shown in
 Fig.~\ref{fig:det-position}
 
+Once these final checks are performed, the detector is returned to its
+final position in the center of the beam line. At this point, the actual
+measurement of the reaction yield can be measured.
+
 \begin{figure}
     \begin{center}
         \centerline{\includegraphics[width=0.8\textwidth]{figures/detector_position.png}}
@@ -385,10 +392,7 @@ Fig.~\ref{fig:det-position}
     \end{center}
 \end{figure}
 
-Once these final checks are performed, the detector is returned to its
-final position in the center of the beam line. At this point, the actual
-measurement of the reaction yield can be measured.
-
+\newpage
 \subsection{Experimental Run}
 
 At each energy, the yield of the produced $\alpha$ particles at the
