@@ -1,16 +1,17 @@
 \chapter{DISCUSSION AND CONCLUSION}
 \label{ch:discussion-and-conclusion}
 
-The experiment was designed to experimentally confirm an aspect of the
-acceptance for St.\ George, specifically the angular acceptance at small
-energy deviations, using the well-known \alpa{} reaction. Additionally,
-the experiment aimed to allow for an additional set of reactions to be
-studied using the facility. The technical capabilities of the separator
-system were shown to be adequate even with sub-optimal characteristics
-in the experimental setup, opening up the possibilities of studying low
-energy $({\rm p},\alpha)$ reactions in the future. The angular
-acceptance at the peak of the resonances was shown to be consistent with
-the desired design characteristics of the separator.
+The experiment to measure the \alpa{} cross section at zero degrees was
+designed to experimentally confirm the angular acceptance at small
+energy deviations of St.\ George. Additionally, the experiment aimed to
+allow for an additional set of reactions to be studied using St.\ George
+to extend its usage beyond $(\alpha,\gamma)$ reactions of astrophysical
+interest. The technical capabilities of the separator system were shown
+to be adequate even with sub-optimal characteristics in the experimental
+setup, opening up the possibilities of studying low energy $({\rm
+p},\alpha)$ reactions in the future. The angular acceptance at the peak
+of the resonances was shown to be consistent with the desired design
+characteristics of the separator.
 
 
 \section{Acceptance}
@@ -31,7 +32,7 @@ Table~\ref{tab:acceptance-uncertainty}.
         \caption[Final acceptances]{Final acceptances for St.\ George
             determined by measuring the \alpa{} yield and comparing to
             the expected value from the beam, target, and cross section
-            properties. The \textit{maximum a posterior} acceptance
+            properties. The \textit{maximum a posteriori} acceptance
             values are shown as the black tick marks. The displayed
             uncertainty bounds are the 67\,\% band (dark green) and the
             95\,\% band (light green). The dotted horizontal line is the
@@ -115,22 +116,23 @@ remains when holding the given variable or variables constant.
 
 Since the final contributions to the uncertainty are not known, and the
 correlations between different variables not explicitly taken into
-account, these values should be used as a guide instead of for their
-absolute values. From the above tables, we can make generalizations
-about which uncertainties may have the largest impact on further
-studies. The on-resonance runs are extremely dependent on the beam
-current uncertainty, as the beam current directly affects what the final
-yield at the detector will be, and if a smaller uncertainty band is
-required, controlling the beam current and reducing its uncertainty
-should be the most important aspect of the experiment. Conversely, the
-point just below the resonance in energy has an extremely large final
-uncertainty, mainly due to the beam energy uncertainty. Due to the
-nature of the cross section, a small shift in beam energy can result in
-drastically different final yields due to the rapidly changing cross
-section below the resonance. Subsequent below-resonance runs should
-focus on reducing the uncertainty from the beam energy, which requires
-spending more time fine-tuning the accelerator to provide a more
-energy-stable beam to the experimental area.
+account, these values should be used as a guide for future improvements
+instead of relying on the absolute values directly. From the above
+tables, we can make generalizations about which uncertainties may have
+the largest impact on further studies. The on-resonance runs are
+extremely dependent on the beam current uncertainty, as the beam current
+directly affects what the final yield at the detector will be, and if a
+smaller uncertainty band is required, controlling the beam current and
+reducing its uncertainty should be the most important aspect of the
+experiment. Conversely, the point just below the resonance in energy has
+an extremely large final uncertainty, mainly due to the beam energy
+uncertainty. Due to the nature of the cross section, a small shift in
+beam energy can result in drastically different final yields due to the
+rapidly changing cross section below the resonance. Subsequent
+below-resonance runs should focus on reducing the uncertainty from the
+beam energy, which requires spending more time fine-tuning the
+accelerator to provide a more energy-stable beam to the experimental
+area.
 
 Additionally, the complete uncertainty for our acceptance values cannot
 be reduced to zero. The irreducible uncertainty present (in the last row
@@ -169,9 +171,9 @@ some energy ranges might be inaccessible for study.
 \begin{table}
 \small
     \begin{center}
-        \label{tab:acceptance-uncertainty-67}
         \caption{ACCEPTANCE BOUNDS WITH HELD VARIABLES, 67\,\%}
         \begin{tabular}{crrrrrrrrrr}
+            \label{tab:acceptance-uncertainty-67}
             \toprule
             \midrule
             \textbf{Held}
@@ -207,9 +209,9 @@ All &   5.6 &   0.7 &   3.9 &   3.6 &   3.8 &   6.4 &   5.0 &   0.9 &   3.9 &   
 \begin{table}
 \small
     \begin{center}
-        \label{tab:acceptance-uncertainty-95}
         \caption{ACCEPTANCE BOUNDS WITH HELD VARIABLES, 95\,\%}
         \begin{tabular}{crrrrrrrrrr}
+            \label{tab:acceptance-uncertainty-95}
             \toprule
             \midrule
             \textbf{Held}
@@ -274,55 +276,57 @@ uncertainty, a brief description of the underlying assumptions will be
 presented.
 
 \subsubsection{Target Thickness}
-No assumed underlying distribution. The
-target thickness measurements performed before the experiment were used
-to determine the particle density within the target. The counts at the
-detector for the runs were assumed to be Poisson distributed since they
-are discrete counts. From the peak shifts due to energy loss when the
-$\alpha$ particles passed through the target, the number of target
-nuclei could be determined. The original spectra were used as the base
-properties to generate new count distributions, each of which when
-combined with the energy loss would lead to a unique number of target
-nuclei. The SRIM tabulated values that were used to relate the energy
-loss through the target to the target thickness were assumed to have a
-gaussian distribution, where the standard deviation was taken as 3\,\%
-of the nominal value. For subsequent uses of the target thickness, a
-number was drawn from the generated distribution. If a model for the
-target thickness were desired, the shape was approximately Gaussian with
-parameters $\mu = 1.42$ and $\sigma = 0.03$ ($\times 10^{18}$
-nuclei/cm\squared{}).
+No specific underlying distribution was assumed for the target
+thickness, although a Gaussian distribution could be used for
+simplicity. The target thickness measurements performed before the
+experiment were used to determine the particle density within the
+target. The counts at the detector for the runs were assumed to be
+Poisson distributed since they are discrete counts. From the peak shifts
+due to energy loss when the $\alpha$ particles passed through the
+target, the number of target nuclei could be determined. The original
+spectra were used as the base properties to generate new count
+distributions, each of which when combined with the energy loss would
+lead to a unique number of target nuclei. The SRIM tabulated values that
+were used to relate the energy loss through the target to the target
+thickness were assumed to have a gaussian distribution, where the
+standard deviation was taken as 3\,\% of the nominal value. For
+subsequent uses of the target thickness, a number was drawn from the
+generated distribution. If a model for the target thickness were
+desired, the shape was approximately Gaussian with parameters $\mu =
+1.42$ and $\sigma = 0.03$ ($\times 10^{18}$ nuclei/cm\squared{}).
 
 \subsubsection{Beam Energy}
-Gaussian distributed. The underlying statistical
-fluctuation of the multiple additive and multiplicative values that
-determine the beam energy\---{}the power supplies for the ion source,
-accelerator, and analyzing magnet\---{}result in a gaussian distribution
-for the beam energy. While the beam energy can never be negative and
-thus may be better modeled by a log-normal distribution, the values of
-the beam energy are sufficiently far from zero such that the assumption
-of a normal distribution can be used. The mean of the distribution is
-based on the set point for the run, which the standard deviation is
-constant for all runs. A value of 500~eV was taken as a conservative
-value from previous energy calibration runs. Since no explicit energy
-calibration was performed using the exact setup for this experiment,
-this conservative value represents that additional uncertainty.
+The beam energy was modeled with a Gaussian distribution. The underlying
+statistical fluctuation of the multiple additive and multiplicative
+values that determine the beam energy\---{}the power supplies for the
+ion source, accelerator, and analyzing magnet\---{}result in a gaussian
+distribution for the beam energy. While the beam energy can never be
+negative and thus may be better modeled by a log-normal distribution,
+the values of the beam energy are sufficiently far from zero such that
+the assumption of a normal distribution can be used. The mean of the
+distribution is based on the set point for the run, which the standard
+deviation is constant for all runs. A value of 500~eV was taken as a
+conservative value from previous energy calibration runs. Since no
+explicit energy calibration was performed using the exact setup for this
+experiment, this conservative value represents that additional
+uncertainty.
 
 \subsubsection{Beam Current}
-Gaussian distributed. For similar reasons as the
-beam energy uncertainty, a gaussian distribution for the beam current
-was chosen. Observations on the beam current roughly showed a normal
-distribution around a central value, and the values and fluctuation were
-such that a log-normal distribution did not need to be assumed. During
-experimental runs, samples of the beam current were taken. Without a
-direct measurement of the beam current during the run, which could be
-obtained using an offset Faraday cup or Si detector, no more information
-about the beam current could be obtained. A Cauchy distribution may be
-considered as an alternative, especially when the accelerator system is
-producing extremely variable currents, due to the heavier tails of the
-distribution. For our purposes, conservative estimates of the beam
-current were obtained from a gaussian distribution based on the current
-observations performed during the experiment and shown in
-Table~\ref{tab:beam-current-uncertainty}.
+The beam current was modeled with a Gaussian distribution. For similar
+reasons as the beam energy uncertainty, a gaussian distribution for the
+beam current was chosen. Observations on the beam current roughly showed
+a normal distribution around a central value, and the values and
+fluctuation were such that a log-normal distribution did not need to be
+assumed. During experimental runs, samples of the beam current were
+taken. Without a direct measurement of the beam current during the run,
+which could be obtained using an offset Faraday cup or Si detector, no
+more information about the beam current could be obtained. A Cauchy
+distribution may be considered as an alternative, especially when the
+accelerator system is producing extremely variable currents, due to the
+heavier tails of the distribution. For our purposes, conservative
+estimates of the beam current were obtained from a gaussian distribution
+based on the current observations performed during the experiment and
+shown in Table~\ref{tab:beam-current-uncertainty}.
 
 \begin{table}
     \begin{center}
@@ -353,17 +357,18 @@ Table~\ref{tab:beam-current-uncertainty}.
 \end{table}
 
 \subsubsection{Time}
-Gaussian distribution. Our run times were recorded both
-as a coarse clock time for the start and end of the run and with the
-DAQ. For those runs lasting longer than 15 minutes, additional stoppages
-in the measurement were made in the middle of the run without stopping
-the DAQ. Values recorded by the DAQ also differed from the set values
-for the total run time. As each of these factors has a role in the total
-run time of the experiment and are approximately additive in nature, a
-gaussian distribution makes sense here. The longer runs had both the
-stoppage time estimated and subtracted from the total run time, and the
-uncertainty was also taken to be larger. The uncertainties for the run
-time are given in Table~\ref{tab:run-time-uncertainty}.
+The time was modeled with a Gaussian distribution. Our run times were
+recorded both as a coarse clock time for the start and end of the run
+and with the DAQ. For those runs lasting longer than 15 minutes,
+additional stoppages in the measurement were made in the middle of the
+run without stopping the DAQ. Values recorded by the DAQ also differed
+from the set values for the total run time. As each of these factors has
+a role in the total run time of the experiment and are approximately
+additive in nature, a gaussian distribution makes sense here. The longer
+runs had both the stoppage time estimated and subtracted from the total
+run time, and the uncertainty was also taken to be larger. The
+uncertainties for the run time are given in
+Table~\ref{tab:run-time-uncertainty}.
 
 \begin{table}
     \begin{center}
@@ -394,18 +399,19 @@ time are given in Table~\ref{tab:run-time-uncertainty}.
 \end{table}
 
 \subsubsection{Detector Counts}
-Poisson distribution. As each bin within the
-Si detector spectra counts the particles that fall within that energy
-bucket, a Poisson distribution was adopted for the detector counts. This
-choice is common for counting experiments.
+The total counts at the detector was modeled as a Poisson distribution.
+As each bin within the Si detector spectra counts the particles that
+fall within that energy bucket, a Poisson distribution was adopted for
+the detector counts. This choice is common for counting experiments.
 
 \subsubsection{SRIM Tabulated Values}
-Gaussian distribution. The target
-stopping power and those values related to finding the target thickness
-were taken from SRIM. Due to the fact that the \alpa{} reaction is
-relatively well studied, a conservative estimate of 3\,\% was adopted
-for all values arising from SRIM results.
+The uncertainty of the values obtained from SRIM were taken to be
+Gaussian distributed. The target stopping power and those values related
+to finding the target thickness were taken from SRIM. Due to the fact
+that the \alpa{} reaction is relatively well studied, a conservative
+estimate of 3\,\% was adopted for all values arising from SRIM results.
 
+\subsubsection{Final Bands}
 The final uncertainty bands for each of the acceptance measurements can
 be analyzed by what values affect the range for the uncertainty. We can
 limit this discussion to inputs that are controllable by the
@@ -467,7 +473,7 @@ particles or reduce the number of detected $\alpha$ particles. The
 choice of the value was to ideally eliminate any false positives
 (protons interpreted as $\alpha$ particles). As the number of counts
 below this threshold was small, the effect on the final yield is
-minimal (>>1\,\%).
+minimal ($\ll 1$\,\%).
 
 \subsubsection{Experimental Sources}
 The experimental sources of systematic uncertainty are those sources
@@ -646,6 +652,37 @@ particles and the final rejection of the remaining incident protons such
 that an energy threshold was used to discriminate between the two
 particles.
 
+For each of the sources of uncertainty, a solution can be implemented to
+reduce those uncertainties in future experiments. These solutions can be
+both procedural, where the process to measure a reaction is altered, and
+physical, where diagnostic equipment could be utilized to provide a
+better understanding of the underlying assumptions. Some of the
+uncertainty will be irreducible, but the reducible portion of the
+uncertainty can be minimized in future experiments.
+
+The first such
+change is to include an offset Si detector at the target location. This
+offset detector would be used to monitor the live beam current by
+measuring the elastically-scattered incident beam and relating that to
+the incident beam current. The scattered particles would be detected at
+a small, fixed angle where the count rate at that detector can be
+expressed in terms of the incident beam current as
+\[
+    EQUATION (ILIADIS)
+\]
+The scattered particles can also be used as a measure of the energy of
+the incident beam beyond what the accelerator is calibrated to deliver.
+By using this detector, the beam current and energy do not have to be
+estimated based on periodic measurements or settings of the accelerator,
+which allows for the contribution of these factors to be more precisely
+known. The live monitoring will also reduce the timing uncertainty, as
+interuptions during the data collection process would be eliminated in
+the best-case scenario, which adjusts the procedure through which a
+cross section is measured. Finally, a full acceptance check, where the
+energy and angle are adjusted within the entire range of values, can
+provide a limit to the systematic uncertainty caused by the potential
+for an asymmetric angular acceptance.
+
 For follow-up experiments, there are multiple options that can provide
 an improved outcome for the experiment, based on the limitations and
 findings presented within. The possibilities of utilizing St.\ George
@@ -702,7 +739,7 @@ St.\ George. For instance, the reaction
 energy spread near the maximums (39.2~mrad and 7.8\%, respectively),
 when measured at $E_{\rm beam} = 1.94$~MeV (lab energy). Additional
 reactions that test the limits of the separator are outlined in
-\ref{Couder2008}.
+\cite{Couder2008}.
 
 The work described sets the initial footing for these following tests.
 The cumulative usage and understanding of the separator iteratively
