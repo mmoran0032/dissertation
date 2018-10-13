@@ -64,7 +64,7 @@ outcome of the reaction chain given by
 \]
 is the conversion of \nuc{1}{H} into \nuc{4}{He} and the release of
 approximately 26.7~MeV in energy from that fusion. The underlying
-processes that are undergone within stars under steady state conditions
+reaction processes within stars under steady state conditions
 are grouped under \emph{hydrostatic hydrogen burning}. Common
 environments for such burning processes are core hydrogen burning in
 stars similar to our sun in mass and metallicity, and in hydrogen
@@ -113,8 +113,9 @@ rates. The CNO cycles are described by the cyclic reaction sequences
     \rm{CNO-4:\,}& \mreact{\mnuc{16}{O}}{\rm{p}}{\gamma}{\mnuc{17}{F}}\left(\beta^+\right)
         \mreact{\mnuc{17}{O}}{\rm{p}}{\gamma}{\mnuc{18}{F}}\left(\beta^+\right)
         \mreact{\mnuc{18}{O}}{\rm{p}}{\gamma}{
-            \mreact{\mnuc{19}{F}}{\rm{p}}{\alpha}{\mnuc{16}{O}}}
+            \mreact{\mnuc{19}{F}}{\rm{p}}{\alpha}{\mnuc{16}{O}}}.
 \end{align*}
+A schematic of these cycles can be seen in Fig.~\ref{fig:mgal}.
 
 For the CNO cycles, the temperature of the interior of the star and the
 individual reaction rates in question determine which cycle dominates as
@@ -183,6 +184,21 @@ $A \geq 90$, while the weak $s$-process contributes to the isotopic
 abundances for isotopes with mass within the range $60 \leq A \leq
 90$~\cite{Aliotta2016}.
 
+\begin{figure}
+    \begin{center}
+        \centerline{\includegraphics[width=0.95\textwidth]%
+            {figures/cno_nena_mgal.pdf}}
+        \caption[Schematic of burning
+            cycles]{Schematic of hydrogen burning cycles in the
+            $12 \leq A \leq 27$ mass range, including the CNO cycle.
+            These catalytic cycles play a large role in various
+            abundance measurements and burning processes in red giant
+            stars. The reaction in question is indicated. Figure adapted
+            from \cite{Boeltzig2016}.}
+        \label{fig:mgal}
+    \end{center}
+\end{figure}
+
 \subsection{Additional Burning Processes}
 
 While the previously-discussed reaction sequences play a large role in
@@ -202,20 +218,6 @@ availability of target and beam material (see, for example,
 range of center of mass energies make it a useful test reaction for new
 experimental facilities. The remainder of the discussion will focus on
 \alpa{} as an example.
-
-\begin{figure}[t]
-    \begin{center}
-        \centerline{\includegraphics[width=0.95\textwidth]%
-            {figures/cno_nena_mgal.pdf}}
-        \caption[Schematic of burning
-            cycles]{Schematic of burning cycles in the $12 \leq A \leq
-            27$ mass range. These catalytic cycles play a large role in
-            various abundance measurements and burning processes in red
-            giant stars. The reaction in question is indicated. Figure
-            adapted from \cite{Boeltzig2016}.}
-        \label{fig:mgal}
-    \end{center}
-\end{figure}
 
 
 \section{Capture Reactions}
@@ -364,16 +366,7 @@ $S$-factor to lower energies. When there are no resonances within the
 energy range, the extrapolation to these lower energies is much easier,
 as the energy dependence of the cross section is more well-behaved.
 
-\subsection{Resonances}
-
-In the absence of nuclear structure, the above description encompasses
-what is necessary to determine how the nuclear reaction progresses in
-stellar interiors. For the \alpa{} reaction, the compound nucleus
-\nuc{28}{Si} has a number of energy levels that can affect the yield
-of the reaction, with some of those levels shown schematically in
-Fig.~\ref{fig:alpa}.
-
-\begin{figure}[t]
+\begin{figure}
     \begin{center}
         \centerline{\includegraphics[width=0.55\textwidth]%
             {figures/reaction_energy_diagram.png}}
@@ -383,6 +376,15 @@ Fig.~\ref{fig:alpa}.
         \label{fig:alpa}
     \end{center}
 \end{figure}
+
+\subsection{Resonances}
+
+In the absence of nuclear structure, the above description encompasses
+what is necessary to determine how the nuclear reaction progresses in
+stellar interiors. For the \alpa{} reaction, the compound nucleus
+\nuc{28}{Si} has a number of energy levels that can affect the yield
+of the reaction, with some of those levels shown schematically in
+Fig.~\ref{fig:alpa}.
 
 In cases where the center of mass energy of the system is close to one
 of these energy levels, the reaction is said to be through a
@@ -573,7 +575,7 @@ within the target can have the same effect, where a reaction channel
 with the contaminant nuclei has the same $\gamma$ energy as the desired
 reaction, preventing the direct detection of the desired reaction.
 
-Performing a reaction in reverse kinematics can help avoid some of these
+Studying a reaction in reverse kinematics can help avoid some of these
 problems. In reverse kinematics, a heavy projectile is impinged on a
 target made up of lighter nuclei, and the heavy recoil is detected by
 the detection system, or \react{a}{A}{B}{b}. For radiative capture
@@ -595,8 +597,8 @@ kinematics is beam-induced background. The emitted recoils are emitted
 within a small solid angle cone oriented along the incident beam
 direction, co-linearly with the unreacted beam that passes through the
 thin, light nuclei target. In order to detect those produced recoils,
-the must be separated or filtered out from the unreacted beams, which
-can be accomplished through an electromagnetic separator such as a
+the recoils must be separated or filtered out from the unreacted beams,
+which can be accomplished through an electromagnetic separator such as a
 recoil mass separator.
 
 \subsubsection{Radiative Capture}
@@ -657,11 +659,11 @@ particles can be modeled and optimized to transport particles with
 various properties down a beam line to a desired location.
 
 \subsubsection{Mass Dispersion}
-A recoil separator is designed to have a mass dispersion at at least one
-point within the separator where the incident beam with a different mass
-is rejected. This location is commonly before the detector plane to
-avoid the potentially high count rates from the high intensity incident
-beam.
+A recoil separator is designed to have a mass dispersion such that at
+least one point within the separator causes the incident beam with a
+different mass to be rejected. This location is commonly before the
+detector plane to avoid the potentially high count rates from the high
+intensity incident beam.
 
 Mass dispersion can be described by the coefficients within the designed
 transport matrix at the point where the mass dispersion should be
@@ -682,23 +684,30 @@ and is based on all of the intervening magnetic and electrostatic
 elements along the beamline.
 
 The coefficient $(x|x)$ is the magnification of the beam spot, so
-independent of any other effects, the spot at the detector plane is
-larger or smaller based on the magnitude of the coefficient. Similarly,
-the coefficient $(x|\theta)$ describes the angular dependence of the
-horizontal beam spot. Since we want a focus in the $x$ plane, we
-require that this coefficient be zero or as close to zero as possible.
-The coefficient $(x|\delta_E)$ is the energy dispersion, so the change
-in beam spot size due to the difference in energy from the central tuned
-energy for the separator. St.\ George is designed to have a $\pm7.5$\,\%
-energy acceptance, so this value should be zero or close to zero for a
-range of values. For alternate tunes of the separator, this requirement
-may be relaxed. Finally, the coefficient $(x|\delta_M)$ is the mass
-dispersion, which describes the change in horizontal position based on
-the difference in mass from the central tuned particle. As St.\ George
-is designed to provide a mass separation following a reaction, this
-coefficient should be non-zero and preferably large in order to
-separate out the incident beam particles from the produced reaction
-particles.
+independent of any other effects, the spot at the mass separation plane
+is larger or smaller based on the magnitude of the coefficient.
+Similarly, the coefficient $(x|\theta)$ describes the angular dependence
+of the horizontal beam spot. The coefficient $(x|\delta_E)$ is the
+energy dispersion, so the change in beam spot size due to the difference
+in energy from the central tuned energy for the separator.Finally, the
+coefficient $(x|\delta_M)$ is the mass dispersion, which describes the
+change in horizontal position based on the difference in mass from the
+central tuned particle.
+
+At the mass separation plane, the spot size of the beam should be
+independent of the energy and angular properties at the target location.
+In this ideal case, the angular and energy acceptance would be limited
+by the physical constraints of the separator and not its electromagnetic
+settings. To achieve this goal, the coefficients $(x|x)$, $(x|\theta)$,
+and $(x|\delta_E)$ should be zero or as close to zero as possible. In
+reality, these coefficients may be small but non-zero, resulting in a
+limit to the angular and energy acceptance of the separator. At the same
+time, the mass separation properties of St.\ George are controlled by
+the coefficient $(x|\delta_M)$, so this value is required to be non-zero
+and preferably large in magnitude in order to separate out the incident
+beam particles from the produced reaction particles, rejecting the
+former and sending the latter through the rest of the separator toward
+the detector system.
 
 To higher orders, the design of the transport matrix and through that
 the decision on what electromagnetic elements and their properties for
@@ -758,8 +767,7 @@ performing reaction studies with this technique. The design of recoil
 mass separators specifically designed to study reactions of
 astrophysical interest is similar to the design and operating
 characteristics of similar recoil separators designed and built around
-the same time (see for instance DRS at Daresbury
-Laboratory~\cite{James1988}), and many of the decisions made for optimal
+the same time, and many of the decisions made for optimal
 characteristics of the separator system have been replicated by more
 modern separator systems.
 
@@ -836,6 +844,21 @@ important for nuclear astrophysics. For the
 \react{\mnuc{3}{He}}{\alpha}{\gamma}{\mnuc{7}{Be}} reaction, beam
 suppression in the range $10^{10} - 10^{12}$ was
 observed~\cite{DiLeva2008}.
+
+\subsubsection{DRS}
+The Daresbury Recoil Separator~\ref{James1988} was not originally
+designed to study radiative capture reactions, but after being moved to
+Oak Ridge National Laboratory, was successfully used to study numberous
+reactions, such as
+\react{\mnuc{17}{F}}{\rm p}{\gamma}{\mnuc{18}{Ne}}~\ref{Chipps2009}.
+The separator contains two Wien filters, a single dipole magnet, three
+quadrupole triplets, and two magnetic sextupoles to provide higher-order
+corrections to the transport matrix. For reaction studies, auxiliary
+known reactions using stable beams were performed in order to determine
+the separator properties and the phase space location ($\Delta E$
+vs.~$E_{rm TOT}$) for the expected recoils at the detector plane. Due to
+the low particle currents for radioactive beams, studies are focused on
+resonance energies for the reactions.
 
 \subsubsection{St.\ George}
 The separator consists of six dipole magnets, eleven quadrupole magnets,
