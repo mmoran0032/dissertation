@@ -1,3 +1,4 @@
+
 \chapter{COMMISSIONING ST.\ GEORGE}
 \label{ch:commissioning}
 
@@ -98,10 +99,8 @@ experiments are for the test particles shown, while those for $({\rm
 p},\alpha)$ experiments are specific to this work. The actual fields
 used will depend on the rigidity of the desired particle to transport
 through the separator and can be scaled from these values.
-% INCLUDE THIS TO BREAK (NOT SURE IF THIS IS THE BEST WAY)
-\newpage
 
-\begin{figure}[h]
+\begin{figure}
     \begin{center}
         \centerline{
             \includegraphics[width=0.8\textwidth]{figures/raytrace.png}}
@@ -125,6 +124,8 @@ through the separator and can be scaled from these values.
     \end{center}
 \end{figure}
 
+% INCLUDE THIS TO BREAK (NOT SURE IF THIS IS THE BEST WAY)
+\newpage
 The initial ion optics solution creates a transport map for particles
 passing through the entire separator that can be analyzed independently
 of the ray traces and provide the mathematical backing to the particles'
@@ -361,13 +362,6 @@ coefficients and their comparison to the default values used by COSY for
 $Q_{10}$ can be seen in Table~\ref{tab:enge}, and the difference in the
 shape of the fringe field can be seen in Fig.~\ref{fig:enge_comparison}.
 
-In some cases, the field maps were not recorded far enough away from the
-center of the magnet for the fitting routine to converge, primarily due
-to the field not adequately reaching zero. In those cases, ``dummy''
-points of zero field were pre\---{} and post\---{}pended to the
-individual ``traces'' at distances greater than 5~m from the center of
-the magnet to aide in convergence.
-
 \begin{table}[t]
     \begin{center}
         \caption{ENGE COEFFICIENTS FOR $Q_{10}$ COMPARED TO COSY DEFAULTS}
@@ -390,6 +384,22 @@ the magnet to aide in convergence.
     \end{center}
 \end{table}
 
+\newpage
+In some cases, the field maps were not recorded far enough away from the
+center of the magnet for the fitting routine to converge, primarily due
+to the field not adequately reaching zero. In those cases, ``dummy''
+points of zero field were pre\---{} and post\---{}pended to the
+individual ``traces'' at distances greater than 5~m from the center of
+the magnet to aide in convergence.
+
+The default COSY coefficients for the fringe field were compared against
+the data and shown to not adequately describe the field maps. The summed
+mean squared error when using the short quadrupole formalization and the
+default COSY parameters was significantly larger than that found through
+the minimization routine, and the difference was shown to be
+statistically significant. A visual comparison between the two models
+for $Q_{10}$ is shown in Fig.~\ref{fig:enge_comparison}.
+
 \begin{figure}[t]
     \begin{center}
         \centerline{
@@ -404,14 +414,6 @@ the magnet to aide in convergence.
         \label{fig:enge_comparison}
     \end{center}
 \end{figure}
-
-The default COSY coefficients for the fringe field were compared against
-the data and shown to not adequately describe the field maps. The summed
-mean squared error when using the short quadrupole formalization and the
-default COSY parameters was significantly larger than that found through
-the minimization routine, and the difference was shown to be
-statistically significant. A visual comparison between the two models
-for $Q_{10}$ is shown in Fig.~\ref{fig:enge_comparison}.
 
 These new terms describing the effective field length and the fringe
 field can be used to provide a more realistic beam optics solution for

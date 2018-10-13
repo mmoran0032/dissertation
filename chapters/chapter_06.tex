@@ -27,7 +27,6 @@ Table~\ref{tab:acceptance-uncertainty}.
 
 \begin{figure}
     \begin{center}
-        \label{fig:final-acceptance}
         \centerline{
             \includegraphics[width=0.8\textwidth]{figures/acceptance_uncertainty.png}}
         \caption[Final acceptances]{Final acceptances for St.\ George
@@ -38,6 +37,7 @@ Table~\ref{tab:acceptance-uncertainty}.
             uncertainty bounds are the 67\,\% band (dark green) and the
             95\,\% band (light green). The dotted horizontal line is the
             40 mrad designed acceptance for St.\ George.}
+        \label{fig:final-acceptance}
     \end{center}
 \end{figure}
 
@@ -103,15 +103,15 @@ remains when holding the given variable or variables constant.
 
 \begin{figure}
     \begin{center}
-        \label{fig:example-cross-section}
         \centerline{
             \includegraphics[width=0.8\textwidth]{figures/xs_example.png}}
         \caption[Example cross section]{Example cross section from the
-            $R$-matrix fit~\ref{deBoer2017} for a run near the resonance
+            $R$-matrix fit~\cite{deBoer2017} for a run near the resonance
             energy. Note that the scale is linear. As the cross section
             peak is near the center of the energy range that the beam
             has within the target, the final yield is not drastically
             affected by the uncertainty in the beam energy.}
+        \label{fig:example-cross-section}
     \end{center}
 \end{figure}
 
@@ -312,28 +312,11 @@ explicit energy calibration was performed using the exact setup for this
 experiment, this conservative value represents that additional
 uncertainty.
 
-\subsubsection{Beam Current}
-The beam current was modeled with a Gaussian distribution. For similar
-reasons as the beam energy uncertainty, a gaussian distribution for the
-beam current was chosen. Observations on the beam current roughly showed
-a normal distribution around a central value, and the values and
-fluctuation were such that a log-normal distribution did not need to be
-assumed. During experimental runs, samples of the beam current were
-taken. Without a direct measurement of the beam current during the run,
-which could be obtained using an offset Faraday cup or Si detector, no
-more information about the beam current could be obtained. A Cauchy
-distribution may be considered as an alternative, especially when the
-accelerator system is producing extremely variable currents, due to the
-heavier tails of the distribution. For our purposes, conservative
-estimates of the beam current were obtained from a gaussian distribution
-based on the current observations performed during the experiment and
-shown in Table~\ref{tab:beam-current-uncertainty}.
-
 \begin{table}
     \begin{center}
         \caption{BEAM CURRENT UNCERTAINTY}
         \label{tab:beam-current-uncertainty}
-        \begin{tabular}{cS[table-format=4.2]S[table-format=4.2]S[table-format=4.2]}
+        \begin{tabular}{cccc}
             \toprule
             \midrule
             \textbf{Run} & \textbf{$E_{\rm p}$ [MeV]} & \textbf{$i_{\rm
@@ -357,19 +340,22 @@ shown in Table~\ref{tab:beam-current-uncertainty}.
     \end{center}
 \end{table}
 
-\subsubsection{Time}
-The time was modeled with a Gaussian distribution. Our run times were
-recorded both as a coarse clock time for the start and end of the run
-and with the DAQ. For those runs lasting longer than 15 minutes,
-additional stoppages in the measurement were made in the middle of the
-run without stopping the DAQ. Values recorded by the DAQ also differed
-from the set values for the total run time. As each of these factors has
-a role in the total run time of the experiment and are approximately
-additive in nature, a gaussian distribution makes sense here. The longer
-runs had both the stoppage time estimated and subtracted from the total
-run time, and the uncertainty was also taken to be larger. The
-uncertainties for the run time are given in
-Table~\ref{tab:run-time-uncertainty}.
+\subsubsection{Beam Current}
+The beam current was modeled with a Gaussian distribution. For similar
+reasons as the beam energy uncertainty, a gaussian distribution for the
+beam current was chosen. Observations on the beam current roughly showed
+a normal distribution around a central value, and the values and
+fluctuation were such that a log-normal distribution did not need to be
+assumed. During experimental runs, samples of the beam current were
+taken. Without a direct measurement of the beam current during the run,
+which could be obtained using an offset Faraday cup or Si detector, no
+more information about the beam current could be obtained. A Cauchy
+distribution may be considered as an alternative, especially when the
+accelerator system is producing extremely variable currents, due to the
+heavier tails of the distribution. For our purposes, conservative
+estimates of the beam current were obtained from a gaussian distribution
+based on the current observations performed during the experiment and
+shown in Table~\ref{tab:beam-current-uncertainty}.
 
 \begin{table}
     \begin{center}
@@ -398,6 +384,20 @@ Table~\ref{tab:run-time-uncertainty}.
         $\dagger$: Denotes runs at resonance energy
     \end{center}
 \end{table}
+
+\subsubsection{Time}
+The time was modeled with a Gaussian distribution. Our run times were
+recorded both as a coarse clock time for the start and end of the run
+and with the DAQ. For those runs lasting longer than 15 minutes,
+additional stoppages in the measurement were made in the middle of the
+run without stopping the DAQ. Values recorded by the DAQ also differed
+from the set values for the total run time. As each of these factors has
+a role in the total run time of the experiment and are approximately
+additive in nature, a gaussian distribution makes sense here. The longer
+runs had both the stoppage time estimated and subtracted from the total
+run time, and the uncertainty was also taken to be larger. The
+uncertainties for the run time are given in
+Table~\ref{tab:run-time-uncertainty}.
 
 \subsubsection{Detector Counts}
 The total counts at the detector was modeled as a Poisson distribution.
