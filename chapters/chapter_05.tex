@@ -273,7 +273,7 @@ Fig.~\ref{fig:sim-spectra}
             The two distributions are normalized to unit area. There is
             a qualitative match between the two descriptions, with the
             simulated spectrum showing fatter tails but a symmetric
-            distribution. The rough recreation of the distribution from
+            distribution. The rough re-creation of the distribution from
             an ``uncertainty first'' perspective is indicative of the
             potential future use of the procedure.}
     \end{center}
@@ -328,6 +328,7 @@ current and the total run time. The value for $N_r$ is determined by the
 total counts at the detector (for the experimental yield) or the
 integration of target and cross section properties following
 \begin{equation}
+    \label{eq:yield}
     Y(E_0) = \int \frac{\sigma(E)}{\epsilon(E)}\,\rm{d}E.
 \end{equation}
 In both cases, the detector efficiency and St.\ George transport
@@ -361,9 +362,9 @@ the final values:
   atoms/cm\squared{}.
 
 \textbf{Step 4:}
-  The yield is determined by integrating EQUATION between the entrance
-  energy and the lower energy given by that entrance energy minus the
-  target thickness.
+  The yield is determined by integrating Eq.~\ref{eq:yield} between the
+  entrance energy and the lower energy given by that entrance energy
+  minus the target thickness.
 
 \textbf{Step 5:}
   The experimental yield is drawn from a poisson distribution
