@@ -146,20 +146,20 @@ quantities
         r_8 &= \delta_z = (z - z_0)/z_0,
     \end{split}
 \end{equation}
-where $a$ and $b$ are treated similarly to angles within each plane,
-$\delta_K$ is the relative energy difference from the desired energy
-$K_0$, $\delta_m$ is the relative mass difference from the desired mass
-$m_0$, and $\delta_z$ is the relative charge from the desired charge
-state $z_0$~\cite{COSY}. These values are related to the parameters in
-the transport map (see Sec.~\ref{sec:ch1-beam-optics}), but defined for
-use within the code. The desired quantities are the values used to
-calculate the magnetic (Eq.~\ref{eq:brho}) and electric
-(Eq.~\ref{eq:erho}) rigidity, and thus set the fields of the elements
-within St.\ George, of the particle to be transported through the
-entirety of the separator. The time of flight difference $l$ is not
-considered in analyzing the separator. Within the transport map,
-aberrations up to fourth order were calculated, with terms up to third
-order found to affect the design~\cite{Couder2008}.
+where $a$ and $b$ are treated similarly to angles as a first
+approximation within each plane, $\delta_K$ is the relative energy
+difference from the desired energy $K_0$, $\delta_m$ is the relative
+mass difference from the desired mass $m_0$, and $\delta_z$ is the
+relative charge from the desired charge state $z_0$~\cite{COSY}. These
+values are related to the parameters in the transport map (see
+Sec.~\ref{sec:ch1-beam-optics}), but defined for use within the code.
+The desired quantities are the values used to calculate the magnetic
+(Eq.~\ref{eq:brho}) and electric (Eq.~\ref{eq:erho}) rigidity, and thus
+set the fields of the elements within St.\ George, of the particle to be
+transported through the entirety of the separator. The time of flight
+difference $l$ is not considered in analyzing the separator. Within the
+transport map, aberrations up to fourth order were calculated, with
+terms up to third order found to affect the design~\cite{Couder2008}.
 
 The original ion optics calculation describes the fringe fields of the
 optical elements using the default parameters provided by COSY. A change
@@ -171,7 +171,7 @@ elements within St.\ George may be different, the required field
 strength may also be different. Additionally, the physical
 electromagnetic elements produce fringe fields that may further differ
 from the COSY design. Field maps for each of the magnetic elements were
-produced by the production company in order to understand the dependence
+measured by the production company in order to understand the dependence
 of the field strength and fringe fields at differing excitations of the
 magnet. The pole tip fields for a given particle rigidity, determined by
 the current set point for that magnet, must be found experimentally. The
@@ -192,10 +192,10 @@ window of current settings for the dipole near the coarse value found
 through direct observation of the beam.
 
 Setting the Wien filter can be done in a similar manner. The electric
-field strength is determined from the analyzed energy of the particle,
-the known charge state, and the desired bending radius of the filter.
-This bending radius is the radius of the particle's trajectory if only
-the electric or magnetic field were operating. Thus, the electric field
+field strength is determined from the known energy of the particle, the
+known charge state, and the desired bending radius of the filter. This
+bending radius is the radius of the particle's trajectory if only the
+electric or magnetic field were operating. Thus, the electric field
 strength can be set to an exact value, requiring the magnetic field to
 be set to match the properties of the electric field. The strength of
 the magnetic field is set such that the bending radii of the two fields
@@ -240,29 +240,30 @@ The Wien filter electrode power supplies are set separately based on
 their voltage, with voltage stability $dV/V \approx 10^{-5}$ in the
 range commonly used for experiments. The upper limits for these power
 supplies are $\pm110$~kV, with voltages below $\approx 70$~kV used
-during previous work. In order to reach voltages near the top range, the
-voltages need to be slowly ramped up to ``condition'' the plates at the
-higher voltage. This conditioning is required due to minor imperfections
-on the surface of the electrostatic plates, differences in the residual
-vacuum within the vacuum chamber, and buildup of C deposits on the
-plates and interior walls. Directly setting the plates to higher
-voltages without conditioning the plates would lead to large and
-frequent discharges of the electrostatic plates, preventing the Wien
-filter from being used in stable running conditions. For voltages above
-$\approx 50$~kV, the plates were conditioned to voltages at least 10~kV
-above the desired set point to provide a stable running condition. For
-lower voltages, no conditioning is necessary unless the vacuum chamber
-was recently vented (exposed to atmospheric pressure gases).
+during previous work. In order to reach electric potentials near the top
+of the range, the voltages need to be slowly ramped up to ``condition''
+the plates at the higher voltage. This conditioning is required due to
+minor imperfections on the surface of the electrostatic plates,
+differences in the residual vacuum within the vacuum chamber, and
+buildup of C deposits on the plates and interior walls. Directly setting
+the plates to higher voltages without conditioning the plates would lead
+to large and frequent discharges of the electrostatic plates, preventing
+the Wien filter from being used in stable running conditions. For
+voltages above $\approx 50$~kV, the plates were conditioned at settings
+at least 10~kV above the desired set point to provide a stable running
+condition. For lower potentials, no conditioning is necessary unless the
+vacuum chamber was recently vented (exposed to atmospheric pressure
+gases).
 
-The properties (entrance and exit apertures, length, maximum field
-strength, good field region, etc.) were determined within the ion optics
-solution to transport the desired recoils, and built to match those
-specifications. Higher order corrections to the particle trajectory were
-achieved by shaping the entrance and exit faces of the dipoles instead
-of using higher order multipole magnets~\cite{Couder2008}. Additionally,
-the shape of the Wien filter electrostatic plates were designed such
-that the electric and magnetic fields, including the fringe fields, were
-closely matched.
+The properties of each of the electromagnetic elements (entrance and
+exit apertures, length, maximum field strength, good field region, etc.)
+were determined within the ion optics solution to transport the desired
+recoils, and built to match those specifications. Higher order
+corrections to the particle trajectory were achieved by shaping the
+entrance and exit faces of the dipoles instead of using higher order
+multipole magnets~\cite{Couder2008}. Additionally, the shape of the Wien
+filter electrostatic plates were designed such that the electric and
+magnetic fields, including the fringe fields, were closely matched.
 
 
 \subsection{Magnetic Fringe Fields and Effective Field Lengths}
@@ -330,8 +331,9 @@ central axis were not used for determining either the effective field
 length or the Enge coefficients. Additionally, the effective field
 length and the shape of the fringe field were assumed to not differ with
 different magnet excitations, so all available data were used for each
-magnet at the same time. An example using $Q_{10}$ of the normalized
-fields used and the resulting fit is shown in Fig.~\ref{fig:enge_fit}.
+magnet at the same time. An example using the penultimate quadrupole
+$Q_{10}$ of the normalized fields used and the resulting fit is shown in
+Fig.~\ref{fig:enge_fit}.
 
 The effective field lengths were calculated directly from the field maps
 by integrating along the $z$-direction for each radial distance
@@ -413,11 +415,11 @@ for $Q_{10}$ is shown in Fig.~\ref{fig:enge_comparison}.
 
 These new terms describing the effective field length and the fringe
 field can be used to provide a more realistic beam optics solution for
-St.\ George. To create this realistic solution, the magnetic fields of
-the various elements within the separator were redefined with these
-newly found values. The beam optics solution was refit by minimizing a
-cost function defined in terms of our desired transfer matrix properties
-at our focal planes, such as the mass and energy dispersion at the
+St.\ George. Within the COSY description of the separator, the magnetic
+fields for the quadrupoles were defined with the updated fringe field
+parameters. The beam optics solution was refit by minimizing a cost
+function defined in terms of our desired transfer matrix properties at
+our focal planes, such as the mass and energy dispersion at the
 post-Wien filter focal plane $F_2$, the beam spot size at the final
 detector plane $F_3$, and other properties. From this recalculated
 solution, new pole tip fields for the focusing quadrupoles are
@@ -452,8 +454,7 @@ chosen for to provide particles with the desired rigidity and with beam
 currents in the range of $0.5 - 3$~$\mu$A in order for the diagnostic
 equipment to properly measure the beam. Additionally, those beams that
 commonly had highly stable 5U and ion source running conditions over
-extended times were selected to reduce beam preparation steps by the
-operators.
+extended times were selected to reduce beam preparation steps.
 
 Acceptance measurements first probed the energy acceptance within the
 designed $B\rho-E\rho$ phase space. The rigidity phase space limits,
@@ -496,7 +497,8 @@ recoils produced through reactions of astrophysical interest. Both light
 beams were used to probe different regions of that phase space. Angular
 acceptance runs to date have only used lighter beams. The energy
 uncertainty of the beam is approximately 0.3~keV, and a conservative
-value of 0.5~keV will be used when necessary.
+value of 0.5~keV will be used to account for the lack of a direct
+measurement with the exact experimental setup used herein.
 
 Beam preparation can be divided into two segments: preparing the $\Delta
 E = 0$ test beam to enter into St.\ George along the central magnetic
@@ -1092,7 +1094,7 @@ varied. The Hippo gas target has been tested in a prior configuration,
 and work has been started to redesign the upper chamber to improve the
 possibility for monitoring incident beam current and using a $\gamma$
 detector in coincidence with the final detector system. The combined
-$E_{\rm{TOTAL}}$~vs.~TOF detection system has been shown to work for
+$E_{\rm TOTAL}}$~vs.~TOF detection system has been shown to work for
 surface sources. Silicon detectors are known to be very robust, and the
 Si detector and acquisition system has been used for a successful
 measurement with St.\ George for $(\rm{p},\alpha)$ measurements. The
@@ -1112,3 +1114,13 @@ the commissioning chamber and the design of the gas target, some
 specifics of beam tuning and preparation (see Sec.~\ref{sec:tuning})
 will inevitably change as experimental work transitions between
 commissioning and reaction research work.
+
+Due to the ongoing nature of the commissioning work and the intricate
+link between the systems\textemdash{}accelerator, target, separator, and
+detector\textemdash{}involved, the primary \textit{in situ} test of the
+complete system will be the cross section measurement of the \alpa{}
+reaction near two low-energy resonances. This reaction study will
+provide an assessment of the angular acceptance of the separator with a
+small energy acceptance. This reaction was chosen since the properties
+of the reaction are well-known, allowing for the properties of the
+separator to be determined with minimal external uncertainty.
