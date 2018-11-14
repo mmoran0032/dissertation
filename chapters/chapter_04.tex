@@ -32,7 +32,33 @@ settings for the separator, and performing the experiment. The reaction
 of interest produces $\alpha$ particles in the energy range of $2-3$~MeV
 for the desired proton energy range.
 
-\begin{table}
+\section{Altered Tune}
+
+The magnet settings for St.\ George were determined to transport
+$\alpha$ particles from within a 40~mrad angular acceptance cone and
+with at least a 2\,\% energy acceptance. As the produced $\alpha$
+particles have a larger angular emittance than what can be transported
+by St.\ George, only those particles emitted within the desired 40~mrad
+acceptance cone for St.\ George were tuned to reach the detector focal
+plane $F_2$ after the Wien filter and impinge the installed Si strip
+detector.
+
+The restrictions on the beam spot for measuring $(\rm{p},\alpha)$
+reactions at this focal plane require an approximately symmetric spot
+size in both directions and one that is smaller than the physical face
+of the detector, whereas the standard tune for studying
+$(\alpha,\gamma)$ reactions required that beam spot to be asymmetric
+with the beam spot being narrow in the dispersive $x$-plane and tall in
+the $y$-plane. The initial COSY code for St.\ George (see
+Section~\ref{sec:cosy}) was altered to model the shortened separator and
+provide information on the beam characteristics at the new detector
+focal plane. The magnetic field settings for the seven quadrupoles
+$Q_{1-7}$ were adjusted to transport the recoil particles to the
+detector plane with a final beam spot no larger than the face of the Si
+detector of $58\times 58$~mm. Final pole tip fields are given in
+Table~\ref{tab:poletip}.
+
+\begin{table}[h]
     \begin{center}
         \caption{POLE TIP FIELDS FOR $(\alpha,\gamma)$ AND
             $(\rm{p},\alpha)$ STUDIES}
@@ -60,37 +86,32 @@ for the desired proton energy range.
     \end{center}
 \end{table}
 
-\section{Altered Tune}
-
-The magnet settings for St.\ George were determined to transport
-$\alpha$ particles from within a 40~mrad angular acceptance cone and
-with at least a 2\,\% energy acceptance. As the produced $\alpha$
-particles have a larger angular emittance than what can be transported
-by St.\ George, only those particles emitted within the desired 40~mrad
-acceptance cone for St.\ George were tuned to reach the detector focal
-plane $F_2$ after the Wien filter and impinge the installed Si strip
-detector.
-
-The restrictions on the beam spot for measuring $(\rm{p},\alpha)$
-reactions at this focal plane require an approximately symmetric spot
-size in both directions and one that is smaller than the physical face
-of the detector, whereas the standard tune for studying
-$(\alpha,\gamma)$ reactions required that beam spot to be asymmetric
-with the beam spot being narrow in the dispersive $x$-plane and tall in
-the $y$-plane. The initial COSY code for St.\ George (see
-Section~\ref{sec:cosy}) was altered to model the shortened separator and
-provide information on the beam characteristics at the new detector
-focal plane. The magnetic field settings for the seven quadrupoles
-$Q_{1-7}$ were adjusted to transport the recoil particles to the
-detector plane with a final beam spot no larger than the face of the Si
-detector of $58\times 58$~mm. Final pole tip fields are given in
-Table~\ref{tab:poletip}.
-
 For the $(\rm{p},\alpha)$ experiment, the transported $\alpha$ particles
 have the properties listed in Table~\ref{tab:alpha_prop}. The incident
 proton beam is rejected within the COSY ion optics solution after the
 first dipole doublet $B_1B_2$, and the beam properties are not listed
 here.
+
+\begin{table}[h]
+    \begin{center}
+        \caption{ALPHA PARTICLE PROPERTIES}
+        \label{tab:alpha_prop}
+        \begin{tabular}{cc}
+            \toprule
+            \midrule
+            \textbf{Property [Unit]} & \textbf{Value} \\
+            \midrule
+            Average Energy [MeV]  & 2.504 \\
+            $\Delta$Energy [\%]   & 3 \\
+            Angular spread [mrad] & 40 \\
+            Target diameter [mm]  & 3 \\
+            $Q$ [$e$]             & 2 \\
+            $B\rho$ [Tm]          & 0.228 \\
+            $E\rho$ [MV]          & 4.0 \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{table}
 
 \subsection{Separator Properties}
 
@@ -127,27 +148,6 @@ indistinguishable. As this window covers the expected energy spread of
 the produced $\alpha$ particles, there are no energy corrections
 required across the detector strips.
 
-\begin{table}
-    \begin{center}
-        \caption{ALPHA PARTICLE PROPERTIES}
-        \label{tab:alpha_prop}
-        \begin{tabular}{cc}
-            \toprule
-            \midrule
-            \textbf{Property [Unit]} & \textbf{Value} \\
-            \midrule
-            Average Energy [MeV]  & 2.504 \\
-            $\Delta$Energy [\%]   & 3 \\
-            Angular spread [mrad] & 40 \\
-            Target diameter [mm]  & 3 \\
-            $Q$ [$e$]             & 2 \\
-            $B\rho$ [Tm]          & 0.228 \\
-            $E\rho$ [MV]          & 4.0 \\
-            \bottomrule
-        \end{tabular}
-    \end{center}
-\end{table}
-
 Beam currents at the target location were recorded before and after each
 run. For runs lasting longer than 15 minutes, the current was recorded
 every 15 minutes. The beam current was seen to fluctuate around the
@@ -159,11 +159,11 @@ recorded by the acquisition system.
 
 % Glenlivet 12 Year
 
-Incident proton beam reduction on the order of $10^{10} - 10^{14}$ is
-necessary in order to avoid damaging the Si detector and to allow for
-the desired alpha peak to be detected. This reduction factor becomes
-more important for those off-resonance runs where the count rate of the
-produced $\alpha$ particles is much lower.
+Incident proton beam intensity reduction on the order of
+$10^{10} - 10^{14}$ is necessary in order to avoid damaging the Si
+detector and to allow for the desired alphas to be detected. This
+reduction factor becomes more important for those off-resonance runs
+where the count rate of the produced $\alpha$ particles is much lower.
 
 Due to the location of the Si detector at the post-Wien filter focal
 plane $F_2$, incident beam reduction can only be achieved through the
@@ -186,14 +186,14 @@ reject the remainder of the incident beam.
 
 \section{Run Procedure}
 
-For each experimental run, we aim to measure the experimental yield at
-the detector in order to compare it to the theoretical yield for a given
-angular and energy acceptance. The experimental yield is dependent on
-the beam current, the run time, and the target properties. For each run,
-the incident beam must be prepared, and the tuning of St.\ George must
-match the expected energy of the produced $\alpha$ particles. Auxiliary
-runs are performed to ensure that the beam rejection is within an
-acceptable range, that the produced particle current is not too high,
+For each experimental run, the aim was to measure the experimental yield
+at the detector in order to compare it to the theoretical yield for a
+given angular and energy acceptance. The experimental yield is dependent
+on the beam current, the run time, and the target properties. For each
+run, the incident beam must be prepared, and the tuning of St.\ George
+must match the expected energy of the produced $\alpha$ particles.
+Auxiliary runs are performed to ensure that the beam rejection is within
+an acceptable range, that the produced particle current is not too high,
 and that the beam spot on the detector is centered. Once all of the
 preparations are complete, a run at the desired energy can be performed.
 All data was collected by the DAQ and stored as binary files for later
@@ -229,7 +229,7 @@ The initial St.\ George magnetic settings were first found in a similar
 manner to the energy and angular acceptance commissioning, with the
 primary difference being the initial COSY settings for the magnets.
 
-\newpage
+% \newpage
 \subsection{Beam Preparation}
 
 The incident proton beam must be tuned for the desired energy. The beam
@@ -334,7 +334,7 @@ in the horizontal plane. An example showing the horizontal
 distribution of the $\alpha$ particles is given in
 Fig.~\ref{fig:alpha-distribution-strips}.
 
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
         \centerline{
             \includegraphics[width=0.6\textwidth]{figures/low_resonance_detector_strips.png}}
@@ -352,7 +352,7 @@ Fig.~\ref{fig:alpha-distribution-strips}.
     \end{center}
 \end{figure}
 
-\newpage
+% \newpage
 The $\alpha$ particle distribution potentially extends past the physical
 limits of the Si detector in the horizontal and vertical direction.
 Centering the distribution horizontally may still miss a small
@@ -380,11 +380,7 @@ position as the bottom of the detector when it is in its final position.
 A figure displaying these positions is shown in
 Fig.~\ref{fig:det-position}
 
-Once these final checks are performed, the detector is returned to its
-final position in the center of the beam line. At this point, the actual
-measurement of the reaction yield can be measured.
-
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
         \centerline{\includegraphics[width=0.8\textwidth]{figures/detector_position.png}}
         \caption[Detector positions]{Detector positions used to measure
@@ -401,19 +397,25 @@ measurement of the reaction yield can be measured.
     \end{center}
 \end{figure}
 
-\newpage
+\textbf{BUT WHY IS THERE NO DATA SHOWING ALPHA COUNTS AT LOW POSITION?}
+
+Once these final checks are performed, the detector is returned to its
+final position in the center of the beam line. At this point, the actual
+measurement of the reaction yield can be measured.
+
+% \newpage
 \subsection{Experimental Run}
 
 At each energy, the yield of the produced $\alpha$ particles at the
 detector is measured until a given threshold is met. For runs at or near
 the resonance energy, data was collected for 15 minutes. The minimum run
 time used reduces the possibility that minor fluctuations in the beam
-current during the run have an outsized effect on the final yield. For
+current during the run have a significant effect on the final yield. For
 runs away from the resonance energy, the run was ended once
 approximately 20k counts were detected within the expected energy range
 of the produced $\alpha$ particles summed across all 16 Si strips. This
-minimum count threshold ensures that the statistical uncertainty due to
-the counts is less than 1\,\%.
+minimum count threshold ensures that the statistical uncertainty is less
+than 1\,\%.
 
 For the final run, the incident beam current and the detector yield are
 monitored throughout the run. A beam current measurement is taken before
