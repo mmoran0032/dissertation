@@ -2,26 +2,26 @@
 \chapter{COMMISSIONING ST.\ GEORGE}
 \label{ch:commissioning}
 
-The St.\ George recoil separator was designed in order to study a set of
-$(\alpha,\gamma)$ reactions of astrophysical importance. In order to
-study these reactions, an energy acceptance of $\Delta E/E = \pm7.5$\,\%
-and an angular acceptance of $\Delta\theta = \pm40$~mrad were chosen
-based on the kinematic properties of those reactions~\cite{Couder2008}.
-When the separator is set such that it achieves the optimal ion optics
-for the system, the separator maximizes the total acceptance (angular
-and energy) and the beam rejection; these settings must be
+The St.\ George recoil separator was designed to study a set of
+$(\alpha,\gamma)$ reactions of astrophysical importance. To study these
+reactions, an energy acceptance of $\Delta E/E = \pm7.5$\,\% and an
+angular acceptance of $\Delta\theta = \pm40$~mrad were necessarily based
+on the kinematic properties of those reactions~\cite{Couder2008}. When
+the separator is set such that it achieves the optimal ion optics for
+the system, the separator exhibits full acceptance of the recoils of
+interest while maximizing the beam rejection; these settings must be
 experimentally determined. These settings are the currents and voltages
 required to operate the electromagnetic elements, which may differ from
 those directly determined from the ion optics design. Measuring the
 acceptance achieved through various tunes and techniques is one way to
-determine if the desired calculated transport properties have or have
-not been achieved experimentally. Recently, the energy acceptance was
-studied separately from the angular acceptance to provide a relation
-between the predicted and experimentally determined field
-values~\cite{Meisel2017}. The angular acceptance was then studied
-through a variety of methods, both in conjunction and without a
-corresponding energy acceptance requirement. Measuring the acceptance of
-a separator is paramount to using it for experimental measurements.
+determine if the desired transport properties have or have not been
+achieved experimentally. Recently, the energy acceptance was studied
+separately from the angular acceptance to provide a relation between the
+predicted and experimentally determined field values~\cite{Meisel2017}.
+The angular acceptance was then studied through a variety of methods,
+both in conjunction and without a corresponding energy acceptance
+requirement. Measuring the acceptance of a separator is paramount to
+using it for experimental measurements.
 
 Two primary commissioning campaigns, determining the angular and energy
 acceptances for a given desired global setting of the separator, have
@@ -100,6 +100,9 @@ p},\alpha)$ experiments are specific to this work. The actual fields
 used will depend on the rigidity of the desired particle to transport
 through the separator and can be scaled from these values.
 
+\textbf{IT WOULD BE NICE TO HAVE SOME INDICATION OF TRANSVERSE AND
+LONGITUDINAL DIMENSIONS}
+
 \begin{figure}
     \begin{center}
         \centerline{
@@ -169,28 +172,25 @@ particles within the separator, as the total field that the particle
 interacts with changes in magnitude. Since the fringe fields used to
 find the ion optics solution and those created by the actual magnetic
 elements within St.\ George may be different, the required field
-strength may also be different. Additionally, the physical
-electromagnetic elements produce fringe fields that may further differ
-from the COSY design. Field maps for each of the magnetic elements were
-measured by the production company in order to understand the dependence
-of the field strength and fringe fields at differing excitations of the
-magnet. The pole tip fields for a given particle rigidity, determined by
-the current set point for that magnet, must be found experimentally. The
-procedures for each of the three different types of elements necessarily
-differ based on what diagnostic equipment is available.
+strength may also be different. Field maps for each of the magnetic
+elements were measured by the production company in order to understand
+the dependence of the field strength and fringe fields at differing
+excitations of the magnet. The pole tip fields for a given particle
+rigidity, determined by the current set point for that magnet, must be
+found experimentally. The procedures for each of the three different
+types of elements necessarily differ based on what diagnostic equipment
+is available.
 
 The magnetic settings for the dipole magnets, determined by the rigidity
 of the particles, can be determined by observing the trajectory of the
 particles within the separator. This trajectory can be directly observed
-using diagnostic equipment aligned with the optical axis. The search for
-the required current powering the dipole magnet is then easier to
-identify experimentally. The final setting of the dipole magnets must be
-found by observing the effect of the focusing quadrupole magnets
-following the dipole. If the beam is aligned with the magnetic optical
-axis of the quadrupoles, the off-axis steering effects will be
-minimized. This fine adjustment to the dipole fields is within a small
-window of current settings for the dipole near the coarse value found
-through direct observation of the beam.
+using diagnostic equipment aligned with the optical axis. The final
+setting of the dipole magnets must be found by observing the effect of
+the focusing quadrupole magnets following the dipole. If the beam is
+aligned with the magnetic optical axis of the quadrupoles, the off-axis
+steering effects will be minimized. This fine adjustment to the dipole
+fields is within a small window of current settings for the dipole near
+the coarse value found through direct observation of the beam.
 
 Setting the Wien filter can be done in a similar manner. The electric
 field strength is determined from the known energy of the particle, the
@@ -312,18 +312,6 @@ effective field length~\cite{Baartman2007}. This formulation assumes a
 symmetric field profile, as both the entrance and exit fringe fields are
 modeled with the same Enge function.
 
-\begin{figure}[t]
-    \begin{center}
-        \centerline{
-            \includegraphics[width=0.85\textwidth]{figures/enge_fit.png}}
-        \caption[Normalized field with Enge fit]{Normalized field and
-            the resultant fit to the fringe field for the example
-            quadrupole $Q_{10}$. The parameters of the fit are given in
-            Table~\ref{tab:enge}.}
-        \label{fig:enge_fit}
-    \end{center}
-\end{figure}
-
 Using the field maps provided by Bruker, we can determine the Enge
 coefficients and the effective field lengths for our magnets. For all
 calculations, since the field near the center of the magnet is
@@ -335,6 +323,18 @@ different magnet excitations, so all available data were used for each
 magnet at the same time. An example using the penultimate quadrupole
 $Q_{10}$ of the normalized fields used and the resulting fit is shown in
 Fig.~\ref{fig:enge_fit}.
+
+\begin{figure}[h]
+    \begin{center}
+        \centerline{
+            \includegraphics[width=0.85\textwidth]{figures/enge_fit.png}}
+        \caption[Normalized field with Enge fit]{Normalized field and
+            the resultant fit to the fringe field for the example
+            quadrupole $Q_{10}$. The parameters of the fit are given in
+            Table~\ref{tab:enge}.}
+        \label{fig:enge_fit}
+    \end{center}
+\end{figure}
 
 The effective field lengths were calculated directly from the field maps
 by integrating along the $z$-direction for each radial distance
@@ -362,7 +362,7 @@ coefficients and their comparison to the default values used by COSY for
 $Q_{10}$ can be seen in Table~\ref{tab:enge}, and the difference in the
 shape of the fringe field can be seen in Fig.~\ref{fig:enge_comparison}.
 
-\begin{table}[t]
+\begin{table}[h]
     \begin{center}
         \caption{ENGE COEFFICIENTS FOR $Q_{10}$ COMPARED TO COSY DEFAULTS}
         \begin{tabular}{c S[table-format=2.8]S[table-format=2.6]}
@@ -384,7 +384,22 @@ shape of the fringe field can be seen in Fig.~\ref{fig:enge_comparison}.
     \end{center}
 \end{table}
 
-\newpage
+\begin{figure}[h]
+    \begin{center}
+        \centerline{
+            \includegraphics[width=0.85\textwidth]{figures/enge_comparison.png}}
+        \caption[Comparison between fringe fields]{Comparison between
+            fringe fields for the example quadrupole $Q_{10}$. The COSY
+            default parameterization for the fringe field is the dashed
+            orange line, and the fitted fringe field is the solid blue
+            line. The distinct difference between the two field
+            characterization requires the higher order effects arising
+            from the fringe field to be taken into account.}
+        \label{fig:enge_comparison}
+    \end{center}
+\end{figure}
+
+% \newpage
 In some cases, the field maps were not recorded far enough away from the
 center of the magnet for the fitting routine to converge, primarily due
 to the field not adequately reaching zero. In those cases, ``dummy''
@@ -399,21 +414,6 @@ default COSY parameters was significantly larger than that found through
 the minimization routine, and the difference was shown to be
 statistically significant. A visual comparison between the two models
 for $Q_{10}$ is shown in Fig.~\ref{fig:enge_comparison}.
-
-\begin{figure}[t]
-    \begin{center}
-        \centerline{
-            \includegraphics[width=0.85\textwidth]{figures/enge_comparison.png}}
-        \caption[Comparison between fringe fields]{Comparison between
-            fringe fields for the example quadrupole $Q_{10}$. The COSY
-            default parameterization for the fringe field is the dashed
-            orange line, and the fitted fringe field is the solid blue
-            line. The distinct difference between the two field
-            characterization requires the higher order effects arising
-            from the fringe field to be taken into account.}
-        \label{fig:enge_comparison}
-    \end{center}
-\end{figure}
 
 These new terms describing the effective field length and the fringe
 field can be used to provide a more realistic beam optics solution for
@@ -452,7 +452,7 @@ energy, and charge state, which determines the magnetic and electric
 rigidity. Test beams with different rigidities were chosen to adequately
 cover the possible rigidity phase space during the commissioning
 experiments (see Fig.~\ref{fig:rigidity-phase-space}). These beams were
-chosen for to provide particles with the desired rigidity and with beam
+chosen to provide particles with the desired rigidity and with beam
 currents in the range of $0.5 - 3$~$\mu$A in order for the diagnostic
 equipment to properly measure the beam. Additionally, those beams that
 commonly had highly stable 5U and ion source running conditions over
@@ -466,7 +466,7 @@ regions of astrophysical interest are accessible by various test beams
 that can be produced by the 5U, allowing the phase space to be
 adequately studied.
 
-\begin{figure}[t]
+\begin{figure}[h]
     \begin{center}
         \centerline{\includegraphics[width=0.8\textwidth]%
             {figures/rigidity_phase_space.png}}
@@ -502,14 +502,15 @@ uncertainty of the beam is approximately 0.3~keV, and a conservative
 value of 0.5~keV will be used to account for the lack of a direct
 measurement with the exact experimental setup used herein.
 
-Beam preparation can be divided into two segments: preparing the $\Delta
-E = 0$ test beam to enter into St.\ George along the central magnetic
-optical axis, and transporting that beam along the central magnetic
-optical axis within St.\ George. The following procedures were used for
-all acceptance measurements, with differences being minor. The
-diagnostic equipment described in Section~\ref{sec:diagnostic} was
-essential to performing the beam preparation steps and their use is
-highlighted below.
+Beam preparation can be divided into two segments: preparing the
+incident test beam with no energy difference and no angular difference
+($\Delta E = 0$\,\% and $\Delta\theta = 0$~mrad) to enter into St.\
+George along the central magnetic optical axis, and transporting that
+beam along the central magnetic optical axis within St.\ George. The
+following procedures were used for all acceptance measurements, with
+differences being minor. The diagnostic equipment described in
+Section~\ref{sec:diagnostic} was essential to performing the beam
+preparation steps and their use is highlighted below.
 
 \subsubsection{Before St.\ George}
 
@@ -533,7 +534,7 @@ focus the beam and the properties of the beam, such as beam extent and
 rigidity. A graphical description of these dependencies is shown in
 Fig.~\ref{fig:divergence}.
 
-\begin{figure}[t]
+\begin{figure}[h]
     \begin{center}
         \centerline{\includegraphics[width=0.8\textwidth]%
             {figures/quad_focus_divergence.png}}
@@ -624,7 +625,7 @@ motion to the focal point will be viewed as a lateral motion along the
 focusing axis of the quadrupole. A sketch of this effect can be seen in
 Figure~\ref{fig:steering}.
 
-\begin{figure}[t]
+\begin{figure}[h]
     \begin{center}
         \centerline{\includegraphics[width=0.8\textwidth]%
             {figures/quad_steering.png}}
@@ -775,14 +776,12 @@ have a weak field in $B_5$ in order to see the beam on the $B_5$ quartz
 for the same reasons as explained previously for $B_3$.
 
 \textbf{Setting the WF:}
-For a test beam with $\Delta E = 0$ and $\Delta\theta = 0$, the elements
-within St.\ George will be set to transport this along the central axis
-based on the test beam's rigidity. Since the energy of the beam is well
-known and the charge of the beam is exact, the electric rigidity $E\rho$
-is also well known when tuning for a set bending radius. For St.\
-George, the Wien filter bending radius is $\rho_{\rm WF} = 4.348$~m. The
-electric dipole within the WF is set for this rigidity and held constant
-for the remainder of the tuning process.
+For the incident test beam's rigidity, the properties of the beam, such
+as the energy and charge state, are well known or exactly known. Thus,
+the electric rigidity $E\rho$ is also well known when tuning for a set
+bending radius. For St.\ George, the Wien filter bending radius is
+$\rho_{\rm WF} = 4.348$~m. The electric dipole within the WF is set for
+this rigidity and held constant for the remainder of the tuning process.
 
 The magnetic field is set similarly to the other dipoles: to minimize
 the steering induced by the next set of quadrupoles ($Q_8Q_9$). Since
@@ -840,7 +839,7 @@ is immediately known. Empirically, a small range of possible values for
 the rotation and extension of the target ladder have been found to be
 optimal, restricting the search space when tuning.
 
-For acceptance measurements, the collimator is used to create a focal
+For acceptance measurements, the collimator is used to create an object
 point at the target location. Once the beam preparation is complete, it
 is retracted from the beamline. In situations where a target foil is
 used as a ``degrader'' to provide an angular and energy spread, the
