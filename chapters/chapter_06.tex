@@ -25,7 +25,7 @@ section for the \alpa{} reaction. The acceptances are shown in
 Fig.~\ref{fig:final-acceptance} and tabulated in
 Table~\ref{tab:acceptance-uncertainty}.
 
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
         \centerline{
             \includegraphics[width=0.8\textwidth]{figures/acceptance_uncertainty.png}}
@@ -40,6 +40,8 @@ Table~\ref{tab:acceptance-uncertainty}.
         \label{fig:final-acceptance}
     \end{center}
 \end{figure}
+
+\textbf{RETHINK HOW TO SHOW THIS TABLE}
 
 \begin{landscape}
 \begin{table}
@@ -87,21 +89,7 @@ the final yield and thus a lower final uncertainty due to the
 uncertainty in the beam energy (see
 Fig.~\ref{fig:example-cross-section}).
 
-From our analysis, we can also decompose the uncertainty for each run
-into the contributions from individual uncertainties through our Monte
-Carlo method. By focusing in the four uncertainties that are primarily
-under the control of the experimenter\---{}the beam energy uncertainty
-$\delta E$, the run time uncertainty $\delta t$, the beam current
-uncertainty $\delta i$, and the target thickness uncertainty
-$\delta\Delta$\---{}the focus of subsequent experiments can be on
-minimizing the largest uncertainty where necessary. The contributions of
-the uncertainties are shown in
-Tables~\ref{tab:acceptance-uncertainty-67} and
-\ref{tab:acceptance-uncertainty-95}, where the values are the percentage
-of the 67\,\% and the 95\,\% (respectively) confidence intervals that
-remains when holding the given variable or variables constant.
-
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
         \centerline{
             \includegraphics[width=0.8\textwidth]{figures/xs_example.png}}
@@ -114,6 +102,20 @@ remains when holding the given variable or variables constant.
         \label{fig:example-cross-section}
     \end{center}
 \end{figure}
+
+From our analysis, we can also decompose the uncertainty for each run
+into the contributions from individual uncertainties through our Monte
+Carlo method. By focusing on the four uncertainties that are primarily
+under the control of the experimenter\---{}the beam energy uncertainty
+$\delta E$, the run time uncertainty $\delta t$, the beam current
+uncertainty $\delta i$, and the target thickness uncertainty
+$\delta\Delta$\---{}the focus of subsequent experiments can be on
+minimizing the largest uncertainty where necessary. The contributions of
+the uncertainties are shown in
+Tables~\ref{tab:acceptance-uncertainty-67} and
+\ref{tab:acceptance-uncertainty-95}, where the values are the percentage
+of the 67\,\% and the 95\,\% (respectively) confidence intervals that
+remains when holding the given variable or variables constant.
 
 Since the final contributions to the uncertainty are not known, and the
 correlations between different variables not explicitly taken into
@@ -292,9 +294,8 @@ were used to relate the energy loss through the target to the target
 thickness were assumed to have a gaussian distribution, where the
 standard deviation was taken as 3\,\% of the nominal value. For
 subsequent uses of the target thickness, a number was drawn from the
-generated distribution. If a model for the target thickness were
-desired, the shape was approximately Gaussian with parameters $\mu =
-1.42$ and $\sigma = 0.03$ ($\times 10^{18}$ nuclei/cm\squared{}).
+generated distribution. The model thickness is approximately Gaussian
+with thickness $1.42 \pm 0.03 \times 10^{18}$~nuclei/cm\squared{}.
 
 \subsubsection{Beam Energy}
 The beam energy was modeled with a Gaussian distribution. The underlying
@@ -312,7 +313,24 @@ explicit energy calibration was performed using the exact setup for this
 experiment, this conservative value represents that additional
 uncertainty.
 
-\begin{table}
+\subsubsection{Beam Current}
+The beam current was modeled with a Gaussian distribution. For similar
+reasons as the beam energy uncertainty, a gaussian distribution for the
+beam current was chosen. Observations on the beam current roughly showed
+a normal distribution around a central value, and the values and
+fluctuation were such that a log-normal distribution did not need to be
+assumed. During experimental runs, samples of the beam current were
+taken. Without a direct measurement of the beam current during the run,
+which could be obtained using an offset Faraday cup or Si detector, no
+more information about the beam current could be obtained. A Cauchy
+distribution may be considered as an alternative, especially when the
+accelerator system is producing extremely variable currents, due to the
+heavier tails of the distribution. For our purposes, conservative
+estimates of the beam current were obtained from a gaussian distribution
+based on the current observations performed during the experiment and
+shown in Table~\ref{tab:beam-current-uncertainty}.
+
+\begin{table}[h]
     \begin{center}
         \caption{BEAM CURRENT UNCERTAINTY}
         \label{tab:beam-current-uncertainty}
@@ -340,24 +358,21 @@ uncertainty.
     \end{center}
 \end{table}
 
-\subsubsection{Beam Current}
-The beam current was modeled with a Gaussian distribution. For similar
-reasons as the beam energy uncertainty, a gaussian distribution for the
-beam current was chosen. Observations on the beam current roughly showed
-a normal distribution around a central value, and the values and
-fluctuation were such that a log-normal distribution did not need to be
-assumed. During experimental runs, samples of the beam current were
-taken. Without a direct measurement of the beam current during the run,
-which could be obtained using an offset Faraday cup or Si detector, no
-more information about the beam current could be obtained. A Cauchy
-distribution may be considered as an alternative, especially when the
-accelerator system is producing extremely variable currents, due to the
-heavier tails of the distribution. For our purposes, conservative
-estimates of the beam current were obtained from a gaussian distribution
-based on the current observations performed during the experiment and
-shown in Table~\ref{tab:beam-current-uncertainty}.
+\subsubsection{Time}
+The time was modeled with a Gaussian distribution. Our run times were
+recorded both as a coarse clock time for the start and end of the run
+and with the DAQ. For those runs lasting longer than 15 minutes,
+additional stoppages in the measurement were made in the middle of the
+run without stopping the DAQ. Values recorded by the DAQ also differed
+from the set values for the total run time. As each of these factors has
+a role in the total run time of the experiment and are approximately
+additive in nature, a gaussian distribution makes sense here. The longer
+runs had both the stoppage time estimated and subtracted from the total
+run time, and the uncertainty was also taken to be larger. The
+uncertainties for the run time are given in
+Table~\ref{tab:run-time-uncertainty}.
 
-\begin{table}
+\begin{table}[h]
     \begin{center}
         \caption{RUN TIME UNCERTAINTY}
         \label{tab:run-time-uncertainty}
@@ -384,20 +399,6 @@ shown in Table~\ref{tab:beam-current-uncertainty}.
         $\dagger$: Denotes runs at resonance energy
     \end{center}
 \end{table}
-
-\subsubsection{Time}
-The time was modeled with a Gaussian distribution. Our run times were
-recorded both as a coarse clock time for the start and end of the run
-and with the DAQ. For those runs lasting longer than 15 minutes,
-additional stoppages in the measurement were made in the middle of the
-run without stopping the DAQ. Values recorded by the DAQ also differed
-from the set values for the total run time. As each of these factors has
-a role in the total run time of the experiment and are approximately
-additive in nature, a gaussian distribution makes sense here. The longer
-runs had both the stoppage time estimated and subtracted from the total
-run time, and the uncertainty was also taken to be larger. The
-uncertainties for the run time are given in
-Table~\ref{tab:run-time-uncertainty}.
 
 \subsubsection{Detector Counts}
 The total counts at the detector was modeled as a Poisson distribution.
@@ -584,7 +585,7 @@ desired resonances is a more difficult experiment due to the lower
 rigidity of the produced alpha particles due to the lower energy. The
 kinematics for this reaction are given in Table~\ref{tab:alpha-one}.
 
-\begin{table}
+\begin{table}[h]
     \begin{center}
         \caption{KINEMATICS FOR $({\rm p},\alpha_1)$}
         \label{tab:alpha-one}
