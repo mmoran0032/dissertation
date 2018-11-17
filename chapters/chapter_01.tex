@@ -80,9 +80,9 @@ chains, which are described by the reaction sequences
         \mreact{\mnuc{2}{H}}{\rm{p}}{\gamma}{
         \mreact{\mnuc{3}{He}}{\mnuc{3}{He}}{2\rm{p}}{\mnuc{4}{He}}}} \\
     \rm{PP-2:\,}& \mreact{\mnuc{3}{He}}{\alpha}{\gamma}{\mnuc{7}{Be}}
-        \left(e^-,\bar{\nu}_e\right)\mreact{\mnuc{7}{Li}}{\rm{p}}{\alpha}{\mnuc{4}{He}} \\
+        \left(e^-,\nu_e\right)\mreact{\mnuc{7}{Li}}{\rm{p}}{\alpha}{\mnuc{4}{He}} \\
     \rm{PP-3:\,}& \mreact{\mnuc{7}{Be}}{\rm{p}}{\gamma}{\mnuc{8}{B}}
-        \left(\beta^+\right)\mnuc{8}{Be}\left(\alpha\right)\mnuc{4}{He},
+        \left(e^+\nu_e\right)\mnuc{8}{Be}\left(\alpha\right)\mnuc{4}{He},
 \end{align*}
 where the PP-2 and PP-3 chains are branches off from the PP-1 and PP-2
 chains, respectively, at the point after the initial nuclei is created
@@ -135,7 +135,7 @@ helium burning becomes an open channel for stellar energy production.
 
 \subsection{Helium Burning}
 
-The primary nucleosynthesis products of Helium burning are \nuc{12}{C}
+The primary nucleosynthesis products of helium burning are \nuc{12}{C}
 and \nuc{16}{O}, produced through the \emph{triple-$\alpha$ process}
 given by \react{\mnuc{4}{He}}{\alpha\alpha}{\gamma}{\mnuc{12}{C}} and
 \react{\mnuc{12}{C}}{\alpha}{\gamma}{\mnuc{16}{O}},
@@ -227,10 +227,10 @@ experimental facilities. The remainder of the discussion will focus on
 Most astrophysical reactions in the low mass regime can be considered as
 capture reactions, where a lighter particle with mass $m_a$ combines or
 \textit{fuses} with a heavier particle with mass $m_A$, forming a
-compound nucleus with mass $m_C = m_a + m_A$. This compound nucleus is
-produced within an excited state, and will decay through particle
-emission, resulting in two particles $b$ and $B$. The overall reaction
-can be written as
+compound nucleus with mass $m_C = m_a + m_A$ in an excited state. This
+compound nucleus will de-excite through particle emission, in the
+simplest case resulting in two particles $b$ and $B$. The overall
+reaction can be written as
 \[
     \mreact{A}{a}{b}{B},
 \]
@@ -261,7 +261,9 @@ required in order for the reaction to take place.
 
 For reactions that go through a compound nucleus, the energy states
 accessible in the reaction are based on the beam energy and the reaction
-$Q$-value. The excitation energy in the compound nucleus is given as
+$Q$-value. The excitation energy in the compound nucleus, as commonly
+expressed in nuclear experiments where the particle $A$ is at rest, is
+given as
 \[
     E_x = Q + E_{\rm CM} = Q + E_a\frac{m_A}{m_a + m_A},
 \]
@@ -481,18 +483,21 @@ channel.
 Since we are observing our reaction products within a small solid angle,
 we need to consider the angular correlation of the produced $\alpha$
 particles to the incident proton beam. We can relate the differential
-cross section to the angular correlation $W(\theta)$ with
+cross section to the angular correlation $W(\theta)$ between the two
+outgoing particles $b$ and $B$ (in our case the $\alpha$ and the heavy
+recoil) with
 \[
     \left(\frac{\rm{d}\sigma}{\rm{d}\Omega}\right)_{\theta} =
         \frac{1}{4\pi}\sigma W(\theta),
 \]
-where $\sigma$ is the cross section at the energy of
-interest~\cite{Iliadis}. The two resonances in question have been shown
-to be isotropic, so $W(\theta) = 1$~\cite{Andersen1961}. For those
-resonances that are not isotropic, the measurement of particle yields at
-multiple angles can be used to determine the angular correlation of the
-produced particles and can inform the assignment of state spins and
-parities (see for example \cite{deBoer2015}).
+where $\theta$ is the angle between the two outgoing particles and
+$\sigma$ is the cross section at the energy of interest~\cite{Iliadis}.
+The two resonances in question have been shown to be isotropic, so
+$W(\theta) = 1$~\cite{Andersen1961}. For those resonances that are not
+isotropic, the measurement of particle yields at multiple angles can be
+used to determine the angular correlation of the produced particles and
+can inform the assignment of state spins and parities (see for example
+\cite{deBoer2015}).
 
 
 \section{Recoil Separation}
