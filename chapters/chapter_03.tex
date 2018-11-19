@@ -203,8 +203,8 @@ the magnetic field is set such that the bending radii of the two fields
 are the same and so that the particle beam continues along the optical
 axis in the same manner as described previously with the standard
 dipoles. The Wien filter was designed with magnetic field clamps at the
-entrance and exit of the filter to match the magnetic field field to the
-electric fringe field. These clamps must be adjusted to their proper
+entrance and exit of the filter to match the magnetic fringe field to
+the electric fringe field. These clamps must be adjusted to their proper
 positions before the magnetic field can be set.
 
 The magnetic quadrupoles require a more complex procedure in order to
@@ -392,9 +392,11 @@ shape of the fringe field can be seen in Fig.~\ref{fig:enge_comparison}.
             fringe fields for the example quadrupole $Q_{10}$. The COSY
             default parameterization for the fringe field is the dashed
             orange line, and the fitted fringe field is the solid blue
-            line. The distinct difference between the two field
-            characterization requires the higher order effects arising
-            from the fringe field to be taken into account.}
+            line. Due to the different parameters used for the fringe
+            field, the shape is qualitatively different, which will
+            affect the actual setting of the magnetic element. Refitting
+            the magnetic field in St.\ George within the COSY program
+            can be used to guide this procedure.}
         \label{fig:enge_comparison}
     \end{center}
 \end{figure}
@@ -441,9 +443,9 @@ different beam rigidities covering the phase space region for recoils
 created by reactions of astrophysical importance~\cite{Meisel2017}. The
 angular acceptance has been shown to meet the desired
 $\Delta\theta = \pm 40$~mrad in limited cases with an energy spread of
-$\Delta E/E = \pm 3$\,\%. The full total acceptance has not yet been
-measured within the designed phase space limits of St.\ George, with
-work ongoing.
+$\Delta E/E = \pm 3$\,\%. The full total acceptance where the angle and
+energy are allowed to deviate up to their maximum design limits has not
+yet been measured for the entirety of St.\ George, with work ongoing.
 
 Within the following discussion, the term ``test beam'' will be used in
 reference to an incident beam produced by the 5U with a desired
@@ -739,7 +741,7 @@ dipoles and quadrupoles. The procedure for this second alignment is
 straightforward, as the only elements used to adjust the steering of the
 quadrupoles are the two dipoles immediately prior.
 
-\textbf{Tuning to the WF:}
+\textbf{Tuning to the Wien Filter:}
 With the beam striking the $B_3$ quartz, quadrupoles $Q_{3-5}$ are
 checked for steering. The primary focus of these steering checks will be
 on $Q_3$ and $Q_5$ which focus in the horizontal plane. The magnetic
@@ -775,11 +777,11 @@ remainder of St.\ George should be negligible. It may be necessary to
 have a weak field in $B_5$ in order to see the beam on the $B_5$ quartz
 for the same reasons as explained previously for $B_3$.
 
-\textbf{Setting the WF:}
+\textbf{Setting the Wien Filter:}
 For the incident test beam's rigidity, the properties of the beam, such
 as the energy and charge state, are well known or exactly known. Thus,
 the electric rigidity $E\rho$ is also well known when tuning for a set
-bending radius. For St.\ George, the Wien filter bending radius is
+bending radius. For St.\ George, the Wien filter (WF) bending radius is
 $\rho_{\rm WF} = 4.348$~m. The electric dipole within the WF is set for
 this rigidity and held constant for the remainder of the tuning process.
 
@@ -925,23 +927,23 @@ the quadrupoles were recorded to map regions of field strengths were
 100\,\% transmission was achieved for different energy changes.
 
 \textbf{Changing energy:}
-The beam energy was changed to $\Delta E/E = -8$\,\% by changing the
-accelerator. The transport beamline was scaled automatically to account
-for the change in rigidity. The beam was shown to enter into St.\ George
-along the optical magnetic axis by putting the fields within $Q_1$,
-$Q_2$, and $B_1$ to zero and checking the steering of the first two
-quadrupoles. Since this energy change is minor, in most cases only the
-switching magnet needed to be changed. The magnets $Q_1Q_2B_1$ were
-brought back to their required values and transmission between the two
-cups was checked.
+The beam energy was changed to $E = 0.92 \cdot E_0$
+($\Delta E/E = -8$\,\%) by changing the accelerator. The transport
+beamline was scaled automatically to account for the change in rigidity.
+The beam was shown to enter into St.\ George along the optical magnetic
+axis by putting the fields within $Q_1$, $Q_2$, and $B_1$ to zero and
+checking the steering of the first two quadrupoles. Since this energy
+change is minor, in most cases only the switching magnet needed to be
+changed. The magnets $Q_1Q_2B_1$ were brought back to their required
+values and transmission between the two cups was checked.
 
 If the beam was fully transmitted to the $F_3$ cup, the settings for
 St.\ George were said to have an energy acceptance of $\Delta E/E =
--8$\,\%. The beam energy was then changed to $\Delta E/E = + 8$\,\%,
-following the same procedure, and transmission was checked. If the beam
-also was fully transmitted, the separator tune was said to have an
-energy acceptance of $\Delta E/E = \pm 8$\,\% and the measurement was
-complete.
+-8$\,\%. The beam energy was then changed to $E = 1.08 \cdot E_0$
+($\Delta E/E = + 8$\,\%), following the same procedure, and transmission
+was checked. If the beam also was fully transmitted, the separator tune
+was said to have an energy acceptance of $\Delta E/E = \pm 8$\,\% and
+the measurement was complete.
 
 Where 100\,\% transmission was not achieved, the quadrupole scaling
 described previously was used. The new tune was recorded, and the beam
@@ -985,10 +987,15 @@ that the test beam be focused at the focal plane $F_2$ following the WF
 and without the beam passing through the slit opening at that location
 for all deflection angles. The measurement was then a single ``proof of
 concept'' that an angular acceptance could be measured using the new
-diagnostic and control equipment installed. Due to complications with
-the measurement process, multiple attempts at measuring the angular
-acceptance, each with a different procedure, were tried. These attempts
-are outlined below.
+diagnostic and control equipment installed.
+
+There are multiple solutions to measuring the angular acceptance, both
+and without an accompanying energy acceptance measurement. Multiple
+procedures, each with their own tradeoffs and outcomes, were attempted.
+The final choice of each measurement option will depend on how the
+measurement will be integrated into the final acceptance measurements
+and commissioning work. For completeness, the procedures for the
+options explored are outlined below.
 
 \textbf{Deflector plates only:}
 A test beam is tuned to provide a non-steering beam with 100\,\%
@@ -1020,7 +1027,7 @@ was used for the single full angular acceptance measurement.
 Additionally, since the angular and energy acceptance is dependent on
 the beam size and shape at focal plane $F_2$, the WF quartz was used to
 aide in tuning $Q_{1-7}$ to their proper values. The beam should move
-minimally at this location when deflected up the the maximum 40~mrad in
+minimally at this location when deflected up to the maximum 40~mrad in
 any direction. The beam profile is required to be horizontally narrow
 for the highest mass separation, requiring the vertical extent to be
 large. Using this intermediate quartz slightly improved the ability to
