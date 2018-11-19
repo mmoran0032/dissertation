@@ -63,7 +63,8 @@ focal plane. The magnetic field settings for the seven quadrupoles
 $Q_{1-7}$ were adjusted to transport the recoil particles to the
 detector plane with a final beam spot no larger than the face of the Si
 detector of $58\times 58$~mm. Final pole tip fields are given in
-Table~\ref{tab:poletip}.
+Table~\ref{tab:poletip}. For the $(\rm{p},\alpha)$ experiment, the $\alpha$ particles are transported to the Wien filter focal plane while the incident
+proton beam is rejected before the detector system.
 
 \begin{table}[h]
     \begin{center}
@@ -88,33 +89,6 @@ Table~\ref{tab:poletip}.
             9  &  0.17439627 & \\
             10 &  0.21092228 & \\
             11 & -0.13962355 & \\
-            \bottomrule
-        \end{tabular}
-    \end{center}
-\end{table}
-
-For the $(\rm{p},\alpha)$ experiment, the transported $\alpha$ particles
-have the properties listed in Table~\ref{tab:alpha_prop}. The incident
-proton beam is rejected within the COSY ion optics solution after the
-first dipole doublet $B_1B_2$, and the beam properties are not listed
-here.
-
-\begin{table}[h]
-    \begin{center}
-        \caption{ALPHA PARTICLE PROPERTIES}
-        \label{tab:alpha_prop}
-        \begin{tabular}{cc}
-            \toprule
-            \midrule
-            \textbf{Property [Unit]} & \textbf{Value} \\
-            \midrule
-            Average Energy [MeV]  & 2.504 \\
-            $\Delta$Energy [\%]   & 3 \\
-            Angular spread [mrad] & 40 \\
-            Target diameter [mm]  & 3 \\
-            $Q$ [$e$]             & 2 \\
-            $B\rho$ [Tm]          & 0.228 \\
-            $E\rho$ [MV]          & 4.0 \\
             \bottomrule
         \end{tabular}
     \end{center}
@@ -208,6 +182,15 @@ preparations are complete, a run at the desired energy can be performed.
 All data was collected by the DAQ and stored as binary files for later
 processing.
 
+The process below describes the steps taken for each individual energy
+point. For each energy point, multiple runs are performed, with the
+final run taking place with the final separator settings. The magnetic
+settings for St.\ George are based on an altered tune to transport the
+$\alpha$ particles to the Wien filter focal plane $F_2$ such that the
+beam spot of the produced $\alpha$ particles is contained within the
+physical extent of the Si detector. The desired rays through St.\ George
+are shown in Fig.~\ref{fig:raytrace-altered}
+
 \begin{figure}
     \begin{center}
         \centerline{
@@ -224,19 +207,6 @@ processing.
         \label{fig:raytrace-altered}
     \end{center}
 \end{figure}
-
-The process below describes the steps taken for each individual energy
-point. For each energy point, multiple runs are performed, with the
-final run taking place with the final separator settings. The magnetic
-settings for St.\ George are based on an altered tune to transport the
-$\alpha$ particles to the Wien filter focal plane $F_2$ such that the
-beam spot of the produced $\alpha$ particles is contained within the
-physical extent of the Si detector. The desired rays through St.\ George
-are shown in Fig.~\ref{fig:raytrace-altered}
-
-The initial St.\ George magnetic settings were first found in a similar
-manner to the energy and angular acceptance commissioning, with the
-primary difference being the initial COSY settings for the magnets.
 
 % \newpage
 \subsection{Beam Preparation}
@@ -346,9 +316,9 @@ Fig.~\ref{fig:alpha-distribution-strips}.
 \begin{figure}[h]
     \begin{center}
         \centerline{
-            \includegraphics[width=0.6\textwidth]{figures/low_resonance_detector_strips.png}}
+            \includegraphics[width=0.5\textwidth]{figures/low_resonance_detector_strips.png}}
         \centerline{
-            \includegraphics[width=0.6\textwidth]{figures/high_resonance_detector_strips.png}
+            \includegraphics[width=0.5\textwidth]{figures/high_resonance_detector_strips.png}
         }
         \caption[Horizontal $\alpha$ particle distribution]{Horizontal
             $\alpha$ particle distribution at the detector plane after
@@ -358,7 +328,8 @@ Fig.~\ref{fig:alpha-distribution-strips}.
             The runs near each of the resonance peaks are shown. Strip 1
             is on the ``beam right'' side of the detector. The
             distributions shown are in the horizontal direction, and are
-            asymmetric due to the horizontal asymmetry of St.\ George.}
+            asymmetric due to the horizontal asymmetry of St.\ George. The
+            count rate at the low position is not shown for simplicity.}
         \label{fig:alpha-distribution-strips}
     \end{center}
 \end{figure}
@@ -407,8 +378,6 @@ Fig.~\ref{fig:det-position}
         \label{fig:det-position}
     \end{center}
 \end{figure}
-
-\textbf{BUT WHY IS THERE NO DATA SHOWING ALPHA COUNTS AT LOW POSITION?}
 
 Once these final checks are performed, the detector is returned to its
 final position in the center of the beam line. At this point, the actual

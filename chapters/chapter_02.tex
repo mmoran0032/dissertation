@@ -15,8 +15,7 @@ detection system, and the third run was the primary data collection run.
 The accelerator provided a high intensity proton beam to St.\ George for
 the first and third runs, and a high intensity $\mnuc{4}{He}^{+}$ beam
 for the second characterization run. A 16-strip Si detector was
-installed at the two proposed focal planes ($F_1$ and $F_2$, see
-Fig.~\ref{fig:stgeorge}) to detect the produced $\alpha$-particles from
+installed at the two different focal planes to detect the produced $\alpha$-particles from
 the \alpa{} reaction. Incident beam rejection was on the order of
 $1.5\times 10^{12}$ for the runs at the resonance peak.
 
@@ -32,11 +31,11 @@ the manufacturer, National Electrostatics Corporation, was the 5U-4,
 denoting the five individual acceleration sections and the four charging
 chains, causing the accelerator to commonly be referred to as the
 \textit{5U}. Both names will be used interchangeably throughout this
-work.
+work. The 5U is shown schematically in Fig.~\ref{fig:5U}
 
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
-        \centerline{\includegraphics[width=0.8\textwidth]%
+        \centerline{\includegraphics[width=0.9\textwidth]%
             {figures/schematic_5U_transport.png}}
         \caption[Schematic of the 5U accelerator]{Schematic of the 5U
             accelerator and transport beamline. The steering elements
@@ -49,7 +48,7 @@ work.
     \end{center}
 \end{figure}
 
-The 5U, shown schematically in Fig.~\ref{fig:5U}, accelerates a high-intensity
+The 5U accelerates a high-intensity
 ion beam produced by the Nanogan Pantechnik ECR source to the desired
 energy by energizing the terminal shell to high voltage. The
 acceleration tube, extending from the bottom of the shell to the bottom
@@ -97,19 +96,33 @@ target location.
 \label{sec:stg}
 
 The St.\ George is a recoil mass separator at the NSL~\cite{Couder2008}
-and one of the experimental beamlines accessible to the 5U. The design
+and one of the experimental beamlines accessible to the 5U.
+The layout of St.\ George is shown in Fig.~\ref{fig:stgeorge}.
+The design
 and operation is based on previous recoil separators (see
 Sec.~\ref{sec:prevwork}). The separator consists of six dipole magnets,
 eleven quadrupole magnets, and a Wien filter. The separator was designed
 to accept recoils with a maximum energy and angular spread of $\Delta
 E/E = \pm7.5\%$ and $\Delta\theta = \pm40$~mrad, respectively, and to
 provide a mass separation of $m/\Delta m = 100$ and beam suppression of
-a factor $\geq 10^{15}$. At lower angular spreads, the transported ions
-may have a larger energy spread limited by the good field region within
-the third quadrupole $Q_3$. The design was guided by the desire to
+a factor $\geq 10^{15}$. The design was guided by the desire to
 efficiently measure $(\alpha,\gamma)$ reactions with a beam mass up to
 $A = 40$ with high beam intensities and to fit the separator within the
 physical limitations of the target room at the NSL~\cite{Couder2008}.
+
+\begin{figure}[h]
+    \begin{center}
+        \centerline{\includegraphics[width=0.85\textwidth]%
+            {figures/st_george.png}}
+        \caption[Layout of the St.\ George recoil separator]{Layout of
+            the St.\ George recoil separator. Quadrupoles are identified
+            by \emph{Q}, dipoles by \emph{B}, and focal planes by
+            \emph{F}. Section labels are placed near the dipole doublet
+            within that section, and boundaries are the intervening
+            focal planes. Adapted from Reference~\cite{Couder2008}.}
+        \label{fig:stgeorge}
+    \end{center}
+\end{figure}
 
 The separator is designed to transport recoils within a rigidity phase
 space relevant for measuring $(\alpha,\gamma)$ reaction cross sections.
@@ -122,21 +135,7 @@ $E\rho \leq 5.7$~MV~\cite{Couder2008}
 
 \subsection{Subsections of St.\ George}
 
-\begin{figure}[t]
-    \begin{center}
-        \centerline{\includegraphics[width=0.95\textwidth]%
-            {figures/st_george.png}}
-        \caption[Layout of the St.\ George recoil separator]{Layout of
-            the St.\ George recoil separator. Quadrupoles are identified
-            by \emph{Q}, dipoles by \emph{B}, and focal planes by
-            \emph{F}. Section labels are placed near the dipole doublet
-            within that section, and boundaries are the intervening
-            focal planes. Adapted from Reference~\cite{Couder2008}.}
-        \label{fig:stgeorge}
-    \end{center}
-\end{figure}
-
-The layout of St.\ George is shown in Fig.~\ref{fig:stgeorge}. The
+ The
 separator is divided into three sections, based on their purpose: the
 charge selection stage; the mass selection stage; and the clean-up
 stage. The stages are separated by the focal planes. Each of these
@@ -179,23 +178,6 @@ being focused and spatially separated at this position, and that the
 tail of the beam distribution minimally overlaps with the recoil
 distribution.
 
-\begin{figure}[t]
-    \begin{center}
-        \centerline{\includegraphics[width=0.95\textwidth]%
-            {figures/wien_filter.png}}
-        \caption[Schematic of the St.\ George Wien filter]{Schematic of
-            the focusing and bending properties of the Wien filter
-            installed in St.\ George. The crossed electric ($E$) and
-            magnetic ($B$) fields would deflect a given particle in
-            opposite directions, such that a particle passing through
-            with the desired velocity would remain unreflected. This
-            simplistic description ignores the effect of the particles
-            in question existing within an envelope of energies and
-            angles. Adapted from \cite{Couder2008}.}
-        \label{fig:wienfilter}
-    \end{center}
-\end{figure}
-
 The Wien filter operates by having crossed electric and magnetic fields,
 oriented such that individually they would bend a particle beam in
 opposite horizontal directions, as shown in Figure~\ref{fig:wienfilter}.
@@ -204,7 +186,9 @@ right while the magnetic field bends the beam to the left. The fields
 are provided by a pair of electrostatic plates within the vacuum chamber
 and a magnetic dipole outside of the chamber. A Wien filter is set to
 allow for a single velocity to pass through the center of the element
-undeflected, according to $v = E/B$. For St.\ George, the Wien filter
+undeflected, according to $v = E/B$.
+
+For St.\ George, the Wien filter
 provides the final mass selection for our recoils, allowing the beam
 particles to be filtered out from the recoil particles, since the mass
 difference between the two ($\Delta m = 4$ when performing
@@ -221,6 +205,19 @@ have a mono-energetic recoil distribution passing through the center of
 the WF. When taken as a whole, the elements up to and including the WF
 create the proper beam and recoil properties to reject the incident beam
 based on their mass difference.
+
+\begin{figure}[h]
+    \begin{center}
+        \centerline{\includegraphics[width=0.8\textwidth]%
+            {figures/wien_filter.png}}
+        \caption[Schematic of the St.\ George Wien filter]{Schematic of
+            the focusing and bending properties of the Wien filter
+            installed in St.\ George. The crossed electric ($E$) and
+            magnetic ($B$) fields allow particles with a single velocity to pass through undeflected.
+            Adapted from \cite{Couder2008}.}
+        \label{fig:wienfilter}
+    \end{center}
+\end{figure}
 
 At this point, our beam envelope can be thought of as just our
 \textit{recoil} envelope, where the particles still being transported
@@ -248,23 +245,6 @@ physical extent of the recoil envelope within this space.
 \subsection{Diagnostic Equipment}
 \label{sec:diagnostic}
 
-\begin{figure}[t]
-    \begin{center}
-        \centerline{\includegraphics[width=0.95\textwidth]%
-            {figures/st_george_diagnostics.png}}
-        \caption[Locations of diagnostic equipment]{Locations of various
-            diagnostic equipment within St.\ George. The slits (denoted
-            \emph{S}) are installed at entrance and exit ports of
-            dipoles and at the Wien filter focal plane. The isolated
-            Faraday cups (denoted \emph{FC}) are located near focal
-            planes and saddle points within the separator. The quartz
-            camera viewers (denoted \emph{QV}) are located at the exit
-            ports of the dipoles and within the beam line at focal
-            planes. Adapted from Reference~\cite{Couder2008}.}
-        \label{fig:diagnostic}
-    \end{center}
-\end{figure}
-
 To aide tuning the beam, additional diagnostic equipment has been
 developed and installed at various points along the separator. This
 diagnostic equipment can be divided between three basic types: Faraday
@@ -291,6 +271,23 @@ emitted with energies in the rough range of $20-100$~eV when the beam
 strikes the physical cup. By biasing the suppressor to $-300$~eV, those
 electrons are directed back toward the cup, giving an accurate reading
 of the beam current actually hitting the cup.
+
+\begin{figure}[h]
+    \begin{center}
+        \centerline{\includegraphics[width=0.85\textwidth]%
+            {figures/st_george_diagnostics.png}}
+        \caption[Locations of diagnostic equipment]{Locations of various
+            diagnostic equipment within St.\ George. The slits (denoted
+            \emph{S}) are installed at entrance and exit ports of
+            dipoles and at the Wien filter focal plane. The isolated
+            Faraday cups (denoted \emph{FC}) are located near focal
+            planes and saddle points of the particle envelope within the separator. The quartz
+            camera viewers (denoted \emph{QV}) are located at the exit
+            ports of the dipoles and within the beam line at focal
+            planes. Adapted from Reference~\cite{Couder2008}.}
+        \label{fig:diagnostic}
+    \end{center}
+\end{figure}
 
 Slits are an additional way to determine the passing beam current but
 also provide information about the spatial size of the beam. These slits

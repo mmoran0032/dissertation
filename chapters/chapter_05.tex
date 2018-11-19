@@ -240,6 +240,21 @@ Fig.~\ref{fig:sim-spectra}
 % spectrum, as we don't know the full characteristics for the detector
 % response.
 
+
+\section{Additional Parameters}
+\label{sec:05-additional-parameters}
+
+Additional inputs into the final calculation of the acceptance of St.
+George are the cross section determined from an R-matrix fit on several
+low-lying resonances, the stopping power of protons in aluminum from
+SRIM, the run time, and the counts at the detector. For those parameters
+that are derived from external programs (AZURE2 and SRIM), the
+uncertainty is assumed to be negligible. The uncertainty in the time was
+assumed to be 10 seconds for those runs that only lasted for a single
+15-minute span, and higher for those runs that required the periodic
+measurement of the beam current which resulted in stopping the incident
+beam for an unspecified duration of time.
+
 \begin{figure}[h]
     \begin{center}
         \centerline{\includegraphics[width=0.75\textwidth]%
@@ -259,22 +274,7 @@ Fig.~\ref{fig:sim-spectra}
         \label{fig:sim-spectra}
     \end{center}
 \end{figure}
-
-
-\section{Additional Parameters}
-\label{sec:05-additional-parameters}
-
-Additional inputs into the final calculation of the acceptance of St.
-George are the cross section determined from an R-matrix fit on several
-low-lying resonances, the stopping power of protons in aluminum from
-SRIM, the run time, and the counts at the detector. For those parameters
-that are derived from external programs (AZURE2 and SRIM), the
-uncertainty is assumed to be negligible. The uncertainty in the time was
-assumed to be 10 seconds for those runs that only lasted for a single
-15-minute span, and higher for those runs that required the periodic
-measurement of the beam current which resulted in stopping the incident
-beam for an unspecified duration of time.
-
+\newpage
 The counts at each detector were the sum of all events above the
 threshold defined by the beam energy and detector resolution. The counts
 are Poisson distributed, with the length of time for the run was such

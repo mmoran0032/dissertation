@@ -18,7 +18,7 @@ study of these processes at the nuclear level has spawned the field of
 these stars. Nuclear astrophysics can be described as the specific and
 directed study of those nuclear reactions that have an effect on the
 properties or life cycle of celestial bodies. These reactions may take
-place during the lifecycle of a star, during a cataclysmic event within
+place during the life cycle of a star, during a cataclysmic event within
 the universe such as a black hole merger or gamma ray burst, or at the
 beginning of the universe itself. Additionally, the decay of various
 isotopes can also play a major role within this domain, either as part
@@ -116,7 +116,22 @@ rates. The CNO cycles are described by the cyclic reaction sequences
         \mreact{\mnuc{18}{O}}{\rm{p}}{\gamma}{
             \mreact{\mnuc{19}{F}}{\rm{p}}{\alpha}{\mnuc{16}{O}}}.
 \end{align*}
-A schematic of these cycles can be seen in Fig.~\ref{fig:mgal}.
+A schematic of these cycles can be seen on the left side of Fig.~\ref{fig:mgal}.
+
+\begin{figure}[h]
+    \begin{center}
+        \centerline{\includegraphics[width=0.95\textwidth]%
+            {figures/cno_nena_mgal.pdf}}
+        \caption[Schematic of burning
+            cycles]{Schematic of hydrogen burning cycles in the
+            $12 \leq A \leq 27$ mass range, including the CNO cycle.
+            These catalytic cycles play a large role in various
+            abundance measurements and burning processes in red giant
+            stars. The reaction in question is indicated. Figure adapted
+            from \cite{Boeltzig2016}.}
+        \label{fig:mgal}
+    \end{center}
+\end{figure}
 
 For the CNO cycles, the temperature of the interior of the star and the
 individual reaction rates in question determine which cycle dominates as
@@ -184,21 +199,6 @@ for approximately half of the cosmic abundances for isotopes with mass
 $A \geq 90$, while the weak $s$-process contributes to the isotopic
 abundances for isotopes with mass within the range $60 \leq A \leq
 90$~\cite{Aliotta2016}.
-
-\begin{figure}
-    \begin{center}
-        \centerline{\includegraphics[width=0.95\textwidth]%
-            {figures/cno_nena_mgal.pdf}}
-        \caption[Schematic of burning
-            cycles]{Schematic of hydrogen burning cycles in the
-            $12 \leq A \leq 27$ mass range, including the CNO cycle.
-            These catalytic cycles play a large role in various
-            abundance measurements and burning processes in red giant
-            stars. The reaction in question is indicated. Figure adapted
-            from \cite{Boeltzig2016}.}
-        \label{fig:mgal}
-    \end{center}
-\end{figure}
 
 \subsection{Additional Burning Processes}
 
@@ -298,7 +298,7 @@ range of interest for this experiment is shown in
 Fig.~\ref{fig:alpa-cross-section}, where the structure will be described
 later.
 
-\begin{figure}[t]
+\begin{figure}[h]
     \begin{center}
         \centerline{\includegraphics[width=0.90\textwidth]%
             {figures/zero_degree_pa0.pdf}}
@@ -320,7 +320,7 @@ repulsion, where our resulting energy-dependent component is called the
 \emph{astrophysical $S$-factor}. The $S$-factor is defined in reference
 to the energy-dependent cross section $\sigma(E)$ as
 \[
-    \sigma(E) \equiv S(E)e^{-2\pi\eta} / E,
+    \sigma(E) \equiv \frac{1}{E}e^{-2\pi\eta}S(E),
 \]
 where $\eta = Z_0Z_1e^2\sqrt{\mu_{01} / 2E\hbar^2}$ is the Sommerfeld
 parameter and $Z_i$ is the charge state of the particles in question.
@@ -328,8 +328,7 @@ The term $\mu_{01}$ is the reduced mass of the system, given as
 $\mu_{01} = m_0m_1/(m_0 + m_1)$. The full Gamow factor
 $\rm{exp}(-2\pi\eta)$ is the probability that an s-wave nuclei
 penetrates the Coulomb barrier and represents the strong decrease in the
-cross section at lower energies. Finally, \textbf{WRITE WHY THERE IS A
-1/E TERM.}
+cross section at lower energies. This formulation removes the s-wave contribution and the known low-energy dependence of nuclear cross sections on $E$, resulting in a much more slowly varying function.
 
 \subsection{Reaction Rate}
 
@@ -372,7 +371,16 @@ reaction. When there are no resonances within this energy range, the
 extrapolation of the $S$-factor to these lower energies is much easier,
 as the energy dependence of the cross section can be well estimated.
 
-\begin{figure}
+\subsection{Resonances}
+
+Neglecting nuclear structure effects, the above description encompasses
+what is necessary to determine how the nuclear reaction progresses in
+stellar interiors. This simplistic interpretation, however, cannot be applied to most reactions due to the effect of the energy levels within the compound nucleus that is formed in the reaction. For the \alpa{} reaction, the compound nucleus
+\nuc{28}{Si} has a number of energy levels that can affect the yield
+of the reaction, with two of those levels shown schematically in
+Fig.~\ref{fig:alpa}.
+
+\begin{figure}[h]
     \begin{center}
         \centerline{\includegraphics[width=0.55\textwidth]%
             {figures/reaction_energy_diagram.png}}
@@ -383,15 +391,7 @@ as the energy dependence of the cross section can be well estimated.
     \end{center}
 \end{figure}
 
-\subsection{Resonances}
-
-Neglecting nuclear structure effects, the above description encompasses
-what is necessary to determine how the nuclear reaction progresses in
-stellar interiors. For the \alpa{} reaction, the compound nucleus
-\nuc{28}{Si} has a number of energy levels that can affect the yield
-of the reaction, with some of those levels shown schematically in
-Fig.~\ref{fig:alpa}.
-
+\newpage
 In cases where the center of mass energy of the system is close to one
 of these energy levels, the reaction is said to be \emph{on resonance}
 or a resonant reaction. Resonances can be observed in the cross section
@@ -445,6 +445,22 @@ For the remainder of the discussion, we will focus on the two resonances
 that are studied as part of this dissertation, with the properties shown
 in Table~\ref{tab:resonance-properties}.
 
+
+
+% \textbf{THINK ABOUT REWRITING THE NEXT TWO PARAGRAPHS}
+
+Our allowed values for $\ell_{\rm{p}}$ are 0, 2, and 4 due to parity,
+where $\ell_{\rm{p}} = 0$ only contributes in the $j_s = 2$ case. The
+entrance channel thus is a mixture of different components, based on the
+allowed angular momenta. In the exit channel $\mnuc{24}{Mg} + \alpha$, we can perform similar
+calculations. Since both the ground state of \nuc{24}{Mg} and the
+spin-parity of $\alpha$ are $0+$, we are restricted to natural parity
+states within \nuc{28}{Si} ($J^{\pi} = 0+$,~$1-$,~$2+$,~$\ldots$), which
+includes our resonances. Since our resonances are $J^{\pi} = 2+$, the
+only allowed orbital angular momentum for the $\alpha$ particle is
+$\ell_{\alpha} = 2$, which means that there is no mixing in the exit
+channel.
+
 \begin{table}[h]
     \begin{center}
         \caption{RESONANCE PARAMETERS}
@@ -463,22 +479,6 @@ in Table~\ref{tab:resonance-properties}.
         \label{tab:resonance-properties}
     \end{center}
 \end{table}
-
-\textbf{THINK ABOUT REWRITING THE NEXT TWO PARAGRAPHS}
-
-Our allowed values for $\ell_{\rm{p}}$ are 0, 2, and 4 due to parity,
-where $\ell_{\rm{p}} = 0$ only contributes in the $j_s = 2$ case. The
-entrance channel thus is a mixture of different components, based on the
-allowed angular momenta.
-
-In the exit channel $\mnuc{24}{Mg} + \alpha$, we can perform similar
-calculations. Since both the ground state of \nuc{24}{Mg} and the
-spin-parity of $\alpha$ are $0+$, we are restricted to natural parity
-states within \nuc{28}{Si} ($J^{\pi} = 0+$,~$1-$,~$2+$,~$\ldots$), which
-includes our resonances. Since our resonances are $J^{\pi} = 2+$, the
-only allowed orbital angular momentum for the $\alpha$ particle is
-$\ell_{\alpha} = 2$, which means that there is no mixing in the exit
-channel.
 
 Since we are observing our reaction products within a small solid angle,
 we need to consider the angular correlation of the produced $\alpha$
@@ -774,9 +774,7 @@ separator was designed to be used primarily for reaction studies focused
 on nuclear astrophysics, our discussion will focus on those separators
 also aligned with this goal.
 
-\textbf{MIGHT NEED A SECTION DESCRIBING ION OPTICAL ELEMENTS HERE:
-QUADS, DIPOLES, WIEN FILTER.} I think I have this section when I
-describe STG, but it doesn't hurt to have a small section here too.
+The primary distinction between recoil separator design comes from the choice of elements to provide the recoil separation and transport through the entirety of the separator. These elements may be magnetic dipoles, which bend the beam and provide a $p/q$ selection, electrostatic analyzers that provide an $E/q$ selection, or a cross electric-magnetic field setup called a Wien filter that selects for a single velocity $v = E/B$. Additionally, focusing elements such as magnetic quadrupoles (or higher order pole configurations) are required to aide in transport of the desired particles that enter into the separator to the end within some acceptable bound. The individual choices of these elements and their position within the separator need to be carefully considered in order for the separator to be used to study the required reactions.
 
 \subsubsection{CalTech Separator}
 The design and use of recoil separators for nuclear astrophysics

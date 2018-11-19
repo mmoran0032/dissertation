@@ -355,51 +355,9 @@ Using the default Enge coefficients as the initial parameter guesses,
 the summed mean squared error between the data and
 Eq.~\ref{eq:shortquad} was minimized using the Nelder-Mead downhill
 simplex minimization (see \cite{Simplex}) provided by
-SciPy~\cite{SciPy}. The additional factor $k_0$ was included in the fit,
-but is not needed when defining a fringe field within COSY. The process
-was repeated for each quadrupole separately. The updated Enge
-coefficients and their comparison to the default values used by COSY for
-$Q_{10}$ can be seen in Table~\ref{tab:enge}, and the difference in the
+SciPy~\cite{SciPy}. The process
+was repeated for each quadrupole separately. The difference in the
 shape of the fringe field can be seen in Fig.~\ref{fig:enge_comparison}.
-
-\begin{table}[h]
-    \begin{center}
-        \caption{ENGE COEFFICIENTS FOR $Q_{10}$ COMPARED TO COSY DEFAULTS}
-        \begin{tabular}{c S[table-format=2.8]S[table-format=2.6]}
-            \toprule
-            \midrule
-            \textbf{Coefficient} & \textbf{$Q_{10}$ Values} &
-                \textbf{COSY Defaults} \\
-            \midrule
-            $k_0$ &  0.99731489 & \\
-            $a_0$ &  0.37255261 &  0.296471 \\
-            $a_1$ &  6.18699778 &  4.533219 \\
-            $a_2$ & -5.55514115 & -2.270982 \\
-            $a_3$ &  6.96210851 &  1.068627 \\
-            $a_4$ & -4.82581328 & -0.036391 \\
-            $a_5$ &  1.3135787 &  0.022261 \\
-            \bottomrule
-        \end{tabular}
-        \label{tab:enge}
-    \end{center}
-\end{table}
-
-\begin{figure}[h]
-    \begin{center}
-        \centerline{
-            \includegraphics[width=0.85\textwidth]{figures/enge_comparison.png}}
-        \caption[Comparison between fringe fields]{Comparison between
-            fringe fields for the example quadrupole $Q_{10}$. The COSY
-            default parameterization for the fringe field is the dashed
-            orange line, and the fitted fringe field is the solid blue
-            line. Due to the different parameters used for the fringe
-            field, the shape is qualitatively different, which will
-            affect the actual setting of the magnetic element. Refitting
-            the magnetic field in St.\ George within the COSY program
-            can be used to guide this procedure.}
-        \label{fig:enge_comparison}
-    \end{center}
-\end{figure}
 
 % \newpage
 In some cases, the field maps were not recorded far enough away from the
@@ -430,6 +388,22 @@ solution, new pole tip fields for the focusing quadrupoles are
 determined which can provide a more accurate estimate of the actual
 experimental field required for the experiment.
 
+\begin{figure}[h]
+    \begin{center}
+        \centerline{
+            \includegraphics[width=0.85\textwidth]{figures/enge_comparison.png}}
+        \caption[Comparison between fringe fields]{Comparison between
+            fringe fields for the example quadrupole $Q_{10}$. The COSY
+            default parameterization for the fringe field is the dashed
+            orange line, and the fitted fringe field is the solid blue
+            line. Due to the different parameters used for the fringe
+            field, the shape is qualitatively different, which will
+            affect the actual setting of the magnetic element. Refitting
+            the magnetic field in St.\ George within the COSY program
+            can be used to guide this procedure.}
+        \label{fig:enge_comparison}
+    \end{center}
+\end{figure}
 
 \section{Energy and Angular Acceptance}
 \label{sec:commissioning}
@@ -552,6 +526,7 @@ Fig.~\ref{fig:divergence}.
     \end{center}
 \end{figure}
 
+\newpage
 The chosen beam intensity is dependent on which diagnostic equipment
 will be used. The isolated Faraday cups cannot read current below
 50~$e$nA when read through the logarithmic amplifier at the console, and
@@ -627,25 +602,6 @@ motion to the focal point will be viewed as a lateral motion along the
 focusing axis of the quadrupole. A sketch of this effect can be seen in
 Figure~\ref{fig:steering}.
 
-\begin{figure}[h]
-    \begin{center}
-        \centerline{\includegraphics[width=0.8\textwidth]%
-            {figures/quad_steering.png}}
-        \caption[Sketch of quadrupole steering of misaligned
-            beam]{Sketch of the steering caused by a quadrupole magnet
-            due to the beam being misaligned to the magnetic optical
-            axis. Increasing darkness corresponds to increasing magnetic
-            field strength. From the misalignment, the beam spot appears
-            to move along the focusing axis at some distance. The
-            scanning motion of the spot can be used as a diagnostic
-            tool to determine the beam alignment. If the beam spot is
-            not moving in the focus direction as the magnetic strength
-            is changed, the beam is aligned to that quadrupole's
-            magnetic axis.}
-        \label{fig:steering}
-    \end{center}
-\end{figure}
-
 The goal for adjusting the steering elements before St.\ George is to
 have each quadrupole induce no steering on the beam. In practice, each
 change to the steering elements either increases or decreases the amount
@@ -667,6 +623,25 @@ to be entering St.\ George along the optical magnetic axis. Due to the
 short distance between the first quadrupole doublet and the $B_1$
 quartz, it may be necessary to increase the sensitivity of the steering
 to ensure that we are as aligned as possible to the axis.
+
+\begin{figure}[h]
+    \begin{center}
+        \centerline{\includegraphics[width=0.8\textwidth]%
+            {figures/quad_steering.png}}
+        \caption[Sketch of quadrupole steering of misaligned
+            beam]{Sketch of the steering caused by a quadrupole magnet
+            due to the beam being misaligned to the magnetic optical
+            axis. Increasing darkness corresponds to increasing magnetic
+            field strength. From the misalignment, the beam spot appears
+            to move along the focusing axis at some distance. The
+            scanning motion of the spot can be used as a diagnostic
+            tool to determine the beam alignment. If the beam spot is
+            not moving in the focus direction as the magnetic strength
+            is changed, the beam is aligned to that quadrupole's
+            magnetic axis.}
+        \label{fig:steering}
+    \end{center}
+\end{figure}
 
 \textbf{Increase sensitivity:}
 The beam is then sent further into St.\ George, first to the $B_2$
