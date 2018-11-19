@@ -318,13 +318,21 @@ thickness in energy for the incident beam. In both cases, the detector
 efficiency and St.\ George transport efficiency are 100\,\%, as
 previously discussed.
 
-\textbf{SHOW THE DERIVATION FOR BELOW}
-
-If we assume that the angular acceptance is symmetric, the angular
-acceptance in mrad is given by
+If we assume that the angular acceptance is symmetric, then we can relate the yield at our detector to the total experimental yield. The area subtended by a symmetric angular acceptance is given by the integral
+\[
+    A = \int_0^{2\pi}\int_0^{\theta^{\prime}} \sin\theta\,\rm{d}\theta\,\rm{d}\phi
+     = 2\pi\left(1 - \cos\theta^{\prime}\right),
+\]
+where $\theta^{\prime}$ is our acceptance angle. This area is a fraction of the total area of the unit sphere. Since our two resonances has an isotropic angular distribution, the areas are proportional to the yield of the cross section. The ratio between the area subtended by our angular acceptance and the total unit sphere area can then be written as the ratio between the yields in each situation, or
+\begin{align*}
+    \frac{Y_{\rm experiment}}{Y_{\rm theory}} &= \frac{A_{\rm experiment}}{A_{\rm theory}} \\
+    &= \frac{2\pi\left(1 - \cos\theta^{\prime}\right)}{4\pi} \\
+    &= \frac{1}{2}\left(1 - \cos\theta^{\prime}\right).
+\end{align*}
+Solving above for our acceptance angle $\theta^{\prime}$, given in mrad, we can relate our experimental yield to the acceptance with
 \begin{equation}
     \label{eq:acceptance}
-    \theta = \arccos\left(1 - 2 \frac{Y_{\rm experiment}}
+    \theta^{\prime} = \arccos\left(1 - 2 \frac{Y_{\rm experiment}}
         {Y_{\rm theory}}\right).
 \end{equation}
 The angular acceptance can be calculated in this way for each run
