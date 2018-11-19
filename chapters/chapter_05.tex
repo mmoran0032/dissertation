@@ -201,7 +201,7 @@ is as follows:
   % for some reason, using \mnuc didn't work...?
   \[
       E_{\alpha,0} = Q + E_{\rm p}\left(
-          1 - \frac{m_{\rm p}}{m_{\rm p} + m_{\mnuc{27}{Al}}} %m_{{}^{27}\rm{Al}}}
+          1 - \frac{m_{\rm p}}{m_{\rm p} + m_{\mnuc{27}{Al}}}
       \right),
   \]
   where $Q$ is the $Q$-value of the reaction (see
@@ -228,7 +228,8 @@ particles entering St.\ George based on the known properties of the
 target, cross section, and beam. Using the known energy resolution of
 the detector, this spectrum can be converted into the detected spectrum
 \[
-    E_{\alpha,{\rm detector},i} \sim {\rm Normal}(E_{\alpha,i},\sigma_{\rm detector}),
+    E_{\alpha,{\rm detector},i} \sim
+        {\rm Normal}(E_{\alpha,i},\sigma_{\rm detector}),
 \]
 where $i$ is for each individual particle within the final distribution.
 An example of the output of this procedure is given in
@@ -311,25 +312,37 @@ total counts at the detector (for the experimental yield) or the
 integration of target and cross section properties following
 \begin{equation}
     \label{eq:yield}
-    Y(E_0) = \int^{E_0}_{E_0 - \Delta E_t} \frac{\sigma(E)}{\epsilon(E)}\,\rm{d}E,
+    Y(E_0) = \int^{E_0}_{E_0 - \Delta E_t}
+        \frac{\sigma(E)}{\epsilon(E)}\,\rm{d}E,
 \end{equation}
 where $E_0$ is the incident beam energy and $\Delta E_t$ is the target
 thickness in energy for the incident beam. In both cases, the detector
 efficiency and St.\ George transport efficiency are 100\,\%, as
 previously discussed.
 
-If we assume that the angular acceptance is symmetric, then we can relate the yield at our detector to the total experimental yield. The area subtended by a symmetric angular acceptance is given by the integral
+If we assume that the angular acceptance is symmetric, then we can
+relate the yield at our detector to the total experimental yield. The
+area subtended by a symmetric angular acceptance is given by the
+integral
 \[
-    A = \int_0^{2\pi}\int_0^{\theta^{\prime}} \sin\theta\,\rm{d}\theta\,\rm{d}\phi
-     = 2\pi\left(1 - \cos\theta^{\prime}\right),
+    A = \int_0^{2\pi}\int_0^{\theta^{\prime}}
+        \sin\theta\,\rm{d}\theta\,\rm{d}\phi
+      = 2\pi\left(1 - \cos\theta^{\prime}\right),
 \]
-where $\theta^{\prime}$ is our acceptance angle. This area is a fraction of the total area of the unit sphere. Since our two resonances has an isotropic angular distribution, the areas are proportional to the yield of the cross section. The ratio between the area subtended by our angular acceptance and the total unit sphere area can then be written as the ratio between the yields in each situation, or
+where $\theta^{\prime}$ is our acceptance angle. This area is a fraction
+of the total area of the unit sphere. Since our two resonances has an
+isotropic angular distribution, the areas are proportional to the yield
+of the cross section. The ratio between the area subtended by our
+angular acceptance and the total unit sphere area can then be written as
+the ratio between the yields in each situation, or
 \begin{align*}
-    \frac{Y_{\rm experiment}}{Y_{\rm theory}} &= \frac{A_{\rm experiment}}{A_{\rm theory}} \\
-    &= \frac{2\pi\left(1 - \cos\theta^{\prime}\right)}{4\pi} \\
-    &= \frac{1}{2}\left(1 - \cos\theta^{\prime}\right).
+    \frac{Y_{\rm experiment}}{Y_{\rm theory}}
+        &= \frac{A_{\rm experiment}}{A_{\rm theory}} \\
+        &= \frac{2\pi\left(1 - \cos\theta^{\prime}\right)}{4\pi} \\
+        &= \frac{1}{2}\left(1 - \cos\theta^{\prime}\right).
 \end{align*}
-Solving above for our acceptance angle $\theta^{\prime}$, given in mrad, we can relate our experimental yield to the acceptance with
+Solving above for our acceptance angle $\theta^{\prime}$, given in mrad,
+we can relate our experimental yield to the acceptance with
 \begin{equation}
     \label{eq:acceptance}
     \theta^{\prime} = \arccos\left(1 - 2 \frac{Y_{\rm experiment}}
