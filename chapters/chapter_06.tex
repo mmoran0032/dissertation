@@ -573,6 +573,49 @@ emitted particle beam spot at the detector plane can be more easily
 tuned to fit completely on the detector.
 
 
+\section{Charge State Distribution}
+
+The separator and experiment were set up to detect the $\alpha$
+particles produced in the reaction. We can consider our separator to
+then be tuned for $\mnuc{4}{He}^{2+}$. During our reaction, some of the
+produced alphas could be in the $1+$ charge state, based on the
+interactions with the target material. This additional distribution
+could have an effect on the final acceptance measurements, since we are
+assuming that all of the produced $\alpha$ particles enter into St.\
+George in the $2+$ charge state.
+
+The empirical charge state distribution for the interaction between the
+target material and the produced $\alpha$ particles can modeled using
+a phenomenological model, such as \cite{Sayer1977}. Under this
+formulation, our lower resonance energy runs would have 80\,\% of the
+particles in the $2+$ charge state, and our higher resonance energy runs
+would have 89\,\% of the particles in the $2+$ charge state. This model
+assumes an equilibrium for the charge exchange. One limitation of this
+approach is that the model is based on particles with an energy of
+$\sim 1$~MeV/u, whereas the alphas produced are at energies of
+$\sim 0.75$~MeV/u and below.
+
+A more appropriate approach is to use the \textit{ab initio} code
+\verb+ETACHA+ to determine the charge state distribution out of
+equilibrium and at lower energies~\cite{Lamour2015}. Using this code
+for our \nuc{27}{Al} target gives a better than 97\,\% proportion of
+the $\alpha$ particles within the $2+$ charge state after
+2~$\mu$g/cm\squared{}. For our target thickness of
+$63.8^{+2.0}_{-1.7}$~$\mu$g/cm\squared{}, this expected distribution
+should hold for all but a small proportion of $\alpha$ particles
+produced near the exit of the target. For our runs at energies higher
+than our resonance energy, where a larger proportion of the particles
+are produced near the exit, this may be a larger uncertainty for those
+runs, but should still be a negligible fraction for those cross section
+measurements.
+
+Treating the charge state distribution in the same way as the rest of
+the inputs should be done to fully capture the entire experimental
+situation and adds additional complexity to the analysis. Restricting
+the analysis to only have the $1+$ and $2+$ charge states possible does
+reduce this complexity somewhat.
+
+
 \section{The $({\rm p},\alpha_1)$ Channel}
 \label{sec:the-palpha_1-channel}
 
