@@ -96,8 +96,11 @@ the incident proton beam is rejected before the detector system.
 \end{table}
 
 \subsection{Separator Properties}
-
-\textbf{DEFINE RESOLVING POWER AND UNITS}
+The resolving power of a separator is defined as the minimum deviation of the rigidity that can be separated from the rigidity that the separator was tuned for. The deviation of the particle with a different rigidity along the dispersive axis is given by
+\[
+    x = (x|\Delta)\Delta,
+\]
+where $(x|\Delta)$ is the matrix element from the transport matrix. A single matrix element $(a|b)$ can be understood to be the effect on the variable $a$ at the focal plane given the value of variable $b$ at the target location with all the other variable at the target being zero. The resolving power takes into account the distance along the dispersive axis that the differing particles are from the central axis and the width of the image size $2(x|x)x_0$. The resolving power can be defined in terms of the particle property that should be separated at the dispersive plane, such as the rigidity or the energy.
 
 The energy resolving power is the minimum energy difference required to
 resolve a peak from the central image peak assuming that the change in
